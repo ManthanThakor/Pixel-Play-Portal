@@ -28,30 +28,26 @@
   stroke-linecap: round;
 }
 
-.ham8 .top {
-  stroke-dasharray: 40 160;
+.ham6 .top {
+  stroke-dasharray: 40 172;
 }
 
-.ham8 .middle {
-  stroke-dasharray: 40 142;
-  transform-origin: 50%;
-  transition: transform 400ms;
+.ham6 .middle {
+  stroke-dasharray: 40 111;
 }
 
-.ham8 .bottom {
-  stroke-dasharray: 40 85;
-  transform-origin: 50%;
-  transition: transform 400ms, stroke-dashoffset 400ms;
+.ham6 .bottom {
+  stroke-dasharray: 40 172;
 }
 
-.ham8.active .top {
-  stroke-dashoffset: -64px;
+.ham6.active .top {
+  stroke-dashoffset: -132px;
 }
 
-.ham8.active .middle {
-  transform: rotate(90deg);
+.ham6.active .middle {
+  stroke-dashoffset: -71px;
 }
 
-.ham8.active .bottom {
-  stroke-dashoffset: -64px;
+.ham6.active .bottom {
+  stroke-dashoffset: -132px;
 }/*# sourceMappingURL=home.css.map */
