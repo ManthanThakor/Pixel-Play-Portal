@@ -29,15 +29,15 @@
 }
 
 .ham6 .top {
-  stroke-dasharray: 40 172;
+  stroke-dasharray: 40, 172;
 }
 
 .ham6 .middle {
-  stroke-dasharray: 40 111;
+  stroke-dasharray: 40, 111;
 }
 
 .ham6 .bottom {
-  stroke-dasharray: 40 172;
+  stroke-dasharray: 40, 172;
 }
 
 .ham6.active .top {

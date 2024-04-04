@@ -4,26 +4,25 @@
 // 		#0c0d11 86%
 // 	);
 
+@use "_index" as *;
+
 *{
   margin: 0;
   padding: 0;
 }
 
   .ham {
-    cursor: pointer;
-    -webkit-tap-highlight-color: transparent;
-    transition: transform 400ms;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+   @include ham;
   }
+
   .hamRotate.active {
     transform: rotate(45deg);
   }
+
   .hamRotate180.active {
     transform: rotate(180deg);
   }
+
   .line {
     fill:none;
     transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
@@ -33,20 +32,26 @@
   }
 
   .ham6 .top {
-    stroke-dasharray: 40 172;
+    @include  ham-animation( 40, 172);
   }
+
   .ham6 .middle {
-    stroke-dasharray: 40 111;
+    @include  ham-animation( 40 ,111);
   }
+
   .ham6 .bottom {
-    stroke-dasharray: 40 172;
+    @include  ham-animation( 40 ,172);
   }
   .ham6.active .top {
-    stroke-dashoffset: -132px;
+    @include stroke(-132);
   }
+
   .ham6.active .middle {
-    stroke-dashoffset: -71px;
+    @include stroke(-71);
+
   }
+
   .ham6.active .bottom {
-    stroke-dashoffset: -132px;
+    @include stroke(-132);
+
   }
