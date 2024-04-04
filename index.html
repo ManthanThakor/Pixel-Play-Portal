@@ -9,7 +9,7 @@
   <!-- TITLE -->
   <title>PixelPlay Portal</title>
   <!-- CSS FILE -->
-  <link rel="stylesheet" type="text/css" href="SCSS/main.css" />
+  <link rel="stylesheet" type="text/css" href="Scss/home.css" />
   <!-- responsive file -->
   <link rel="stylesheet" type="text/css" href="SCSS/responsive.css" />
   <!--  FAVICON -->
@@ -29,13 +29,40 @@
 </head>
 
 <body>
+<style>
+  @font-face {
+  font-family: 'Starzone';
+  src: url('Font/starzone-scifi-game-font/Web-TT/Starzone.ttf') format('truetype'),
+       url('Font/starzone-scifi-game-font/OpenType-TT/Starzone.ttf') format('truetype'),
+       url('Font/starzone-scifi-game-font/OpenType-PS/Starzone.otf') format('opentype'),
+       url('Font/starzone-scifi-game-font/Web-PS/Starzone.otf') format('opentype');
 
+}
+@font-face {
+  font-family: "CustomFont1";
+  src: url('Font/oxstar-font/OpenType-TT/Oxstars-Regular.ttf');
+}
+@font-face {
+  font-family: "CustomFont2";
+  src: url('Font/oxstar-font/Web-TT/Oxstars-Regular.ttf');
+}
+
+</style>
   <!-- Navbar -->
 
-  <div class="">
-    <!-- <img src="Img/logo/PixelPlay.png" alt="PIXEL PLAY PORTAL"  height=""/> -->
-  </div>
- 
+  <header class="pixel-head" id="pix-head">
+    <div class="pixel-nav" id="pix-nav">
+      <!-- <img src="Img/logo/PixelPlay.png" alt="PIXEL PLAY PORTAL"  height=""/> -->
+      <svg class="ham hamRotate ham8 active" viewBox="0 0 100 100" width="80" onclick="this.classList.toggle('active')">
+        <path class="line top" d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20"></path>
+        <path class="line middle" d="m 30,50 h 40"></path>
+        <path class="line bottom" d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20"></path>
+      </svg>
+  </header>
+
+  <h1 style="font-family: 'Starzone', sans-serif;">Your text here</h1>
+  <h1 style="font-family:  CustomFont1, CustomFont2, sans-serif; ">Custom Fonts Example</h1>
+  <p>This is an example of using custom fonts in an HTML file.</p>
   <!-- ---Copy right section--- -->
 
   <!-- <div class="copyright-section">
@@ -54,6 +81,7 @@
   <!-- -------------------------END------------------------- -->
 
 
+<script src="js/main.js"></script>
 
   <!-- ----------------------- LIBRARIES-PART ------------------------- -->
 
