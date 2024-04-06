@@ -138,7 +138,7 @@
   
   // background img
   
-  @mixin backimg($bi) {
+  @mixin backimg {
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -163,20 +163,20 @@
 
   // for ham burger
 
-//   @mixin ham {
-//     cursor: pointer;
-//     -webkit-tap-highlight-color: transparent;
-//     transition: transform 400ms;
-//     -moz-user-select: none;
-//     -webkit-user-select: none;
-//     -ms-user-select: none;
-//     user-select: none;
-//   }
+  @mixin ham {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: transform 400ms;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
   
-//   @mixin ham-animation($a,$b){
-//     stroke-dasharray: $a,$b ;
+  @mixin ham-animation($a,$b){
+    stroke-dasharray: $a,$b ;
 
-//   }
-// @mixin stroke($aaaaa){
-//   stroke-dashoffset : $aaaaa + px;
-// }
+  }
+@mixin stroke($aaaaa){
+  stroke-dashoffset : $aaaaa + px;
+}

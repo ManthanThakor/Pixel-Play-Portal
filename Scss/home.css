@@ -4,19 +4,13 @@
 }
 
 /* ---------------------- Navbar -------------------- */
-/* ----- LOGO -------- */
-.logo-sec {
-  height: 130px !important;
-  width: 130px !important;
-}
-
 /* ----- background -------- */
 #background-part-sec {
   background-image: url("../Img/background-part/back-3.jpg");
   z-index: -10;
   position: absolute;
-  background-size: cover;
   background-repeat: no-repeat;
+  background-size: cover;
   height: 850px !important;
   width: 100% !important;
 }
@@ -30,6 +24,12 @@
   z-index: -10;
   height: 850px !important;
   width: 100% !important;
+}
+
+/* ----- logo + menu  -------- */
+.logo-sec {
+  height: 130px !important;
+  width: 130px !important;
 }
 
 .ham {
