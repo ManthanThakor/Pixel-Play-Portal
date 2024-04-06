@@ -1,8 +1,3 @@
-// background-image: linear-gradient(
-// 		rgb(48, 48, 48) 13%,
-// 		rgb(30, 30, 30) 40%,
-// 		#0c0d11 86%
-// 	);
 
 @use "_index" as *;
 
@@ -39,14 +34,39 @@
 
 .logo-menu-part{
 @include flex-row;
+background-color: rgba(0, 0, 0,  0.65);
+background-image: linear-gradient(rgba(48, 48, 48, 0.207) 13%, rgba(30, 30, 30, 0.333) 40%, #00000025 86% ) !important;
+
 }
 
 .logo-sec{
   @include h-w(130,130);
   }
-  
 
+  .pixel-menu-section{
+    flex-grow: 1;
+    align-self: center;
+    margin: auto;
+      }
 
+  .pixel-menu{
+    @include flex-row;
+    justify-content: flex-end;
+      @include margin-b(0);
+      gap: 30px;
+  }
+
+.pixel-menu-section > ul > li {
+  list-style-type: none;
+}
+
+// background-image: linear-gradient(rgb(48, 48, 48) 13%, rgb(30, 30, 30) 40%, #0c0d11 86% ) !important;
+
+.nav-link{
+  background-image: linear-gradient(rgba(48, 48, 48, 0.47) 13%, rgba(30, 30, 30, 0.459) 40%, #0c0d118f 86% ) !important;
+  color:  #fff !important;
+  padding: 15px !important;
+}
 
 
 
@@ -94,3 +114,127 @@
     @include stroke(-132);
 
   }
+
+
+
+//   // INIT
+// mainColor = #F0544F
+// secondaryColor = #000
+// bgColor = #FDF0D5
+
+// body, html
+//   overflow: hidden
+//   background-color: bgColor
+//   margin: 0
+//   font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif
+
+// .f
+//   position: fixed
+//   top: 5px
+//   right: 10px
+//   font-family: 'Arial'
+//   font-size: 0.8em
+//   color: mainColor
+  
+//   a
+//     color: secondaryColor
+
+// // MIXINS
+// center()
+//   position absolute
+//   top 50%
+//   left 50%
+//   transform translate(-50%, -50%)
+
+// _circle(size)
+//   width size
+//   height size
+//   border-radius size
+
+// // START
+// projectSize = 20px;
+
+// .Project
+//   center()
+//   width projectSize
+//   height projectSize
+//   cursor pointer
+  
+// .Project:hover  
+  
+//   .imgMasked
+//     clip-path circle(projectSize*5 at center)
+      
+//   .Project-hail
+//     _circle(projectSize*10)
+      
+//   .Project-hail2
+//     _circle(projectSize*10)
+//     border projectSize*4 solid #FFF4E6
+//     opacity 0
+    
+//   .Project-name
+//     left 200%
+//     opacity 1
+    
+//     &:before
+//       width 100%
+
+  
+
+// .Project-hail
+//   center()
+//   background-color mainColor
+//   _circle(projectSize*2)
+//   transition: 0.5s
+//   opacity 0.2
+  
+// .Project-hail2
+//   center()
+//   _circle(0)
+//   transition: 0.7s
+//   border projectSize+2px solid mainColor
+//   border-radius projectSize
+//   pointer-events: none;
+
+
+// .imgMasked
+//   center()
+//   top: 50%;
+//   height: projectSize * 10;
+//   clip-path: circle(projectSize at center);
+//   transition: 0.5s;
+//   pointer-events: none;
+
+// .Project-name
+//   position absolute
+//   max-width: 600px;
+//   min-width 150px;
+//   left: 0;
+//   top: 150%;
+//   pointer-events: none;
+//   transition: 0.5s;
+//   color secondaryColor
+//   padding 3px 6px
+//   z-index 2
+//   opacity 0
+  
+//   &:before
+//       content ''
+//       width 0
+//       height 100%
+//       background-color mainColor
+//       position absolute
+//       top 0
+//       left 0
+//       transition 0.3s
+//       z-index -1
+// <p class="f">Made with love by <a class="gradient" target="_blank"  href="https://twitter.com/JeremBoo">@jeremboo</a></p>
+
+// <div class="Project">
+//   <!-- https://brisseaux.tumblr.com/post/91018371936 -->
+//   <img src="https://45.media.tumblr.com/263e52c5f30e213c099a62a245242289/tumblr_n8bsno0htg1qmzbpoo1_1280.gif" alt="" class="imgMasked" />
+//   <div class="Project-hail"></div>
+//   <div class="Project-hail2"></div>
+//   <p class="Project-name">Project name </p>
+// </div>

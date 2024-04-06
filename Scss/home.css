@@ -30,11 +30,37 @@
 .logo-menu-part {
   display: flex;
   flex-direction: row;
+  background-color: rgba(0, 0, 0, 0.65);
+  background-image: linear-gradient(rgba(48, 48, 48, 0.207) 13%, rgba(30, 30, 30, 0.333) 40%, rgba(0, 0, 0, 0.1450980392) 86%) !important;
 }
 
 .logo-sec {
   height: 130px !important;
   width: 130px !important;
+}
+
+.pixel-menu-section {
+  flex-grow: 1;
+  align-self: center;
+  margin: auto;
+}
+
+.pixel-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-bottom: 0 !important;
+  gap: 30px;
+}
+
+.pixel-menu-section > ul > li {
+  list-style-type: none;
+}
+
+.nav-link {
+  background-image: linear-gradient(rgba(48, 48, 48, 0.47) 13%, rgba(30, 30, 30, 0.459) 40%, rgba(12, 13, 17, 0.5607843137) 86%) !important;
+  color: #fff !important;
+  padding: 15px !important;
 }
 
 .ham {
