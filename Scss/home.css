@@ -27,6 +27,11 @@
 }
 
 /* ----- logo + menu  -------- */
+.logo-menu-part {
+  display: flex;
+  flex-direction: row;
+}
+
 .logo-sec {
   height: 130px !important;
   width: 130px !important;
