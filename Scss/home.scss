@@ -16,18 +16,13 @@
 @include h-w(130,130);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
+.back-one-part{
+  background-image: url("../Img/background-part/back-6.png");
+  position: absolute;
+  z-index: -10;
+  opacity: 0.9;
+  background-color: #000
+}
 
 
 

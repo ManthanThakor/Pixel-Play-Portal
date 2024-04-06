@@ -9,6 +9,14 @@
   width: 130px !important;
 }
 
+.back-one-part {
+  background-image: url("../Img/background-part/back-6.png");
+  position: absolute;
+  z-index: -10;
+  opacity: 0.9;
+  background-color: #000;
+}
+
 .ham {
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
