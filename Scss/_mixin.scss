@@ -75,6 +75,21 @@
     padding-bottom: $pppp !important;
   }
   
+// margin
+  
+@mixin margin($m-t, $m-r, $m-b, $m-l) {
+  margin: $m-t $m-r $m-b $m-l !important;
+}
+
+@mixin margin-t($mm) {
+  margin-top: $mm !important;
+}
+
+@mixin margin-b($mm) {
+  margin-bottom: $mm !important;
+}
+
+
   // for text align and justfy  center
   
   @mixin textalign-c {
@@ -104,18 +119,36 @@
   
   //positon
   
-  @mixin pos($pos) {
+  @mixin posi($pos) {
     position: $pos;
   }
+
+  // z-index
+  
+  @mixin z-index($z-index) {
+    z-index: $z-index;
+  }
+  
+  // box-shadow
+  
+  @mixin box-shadow($value) {
+    box-shadow: $value;
+  }
+  
   
   // background img
   
   @mixin backimg($bi) {
     background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  @mixin backimg-posi($bi) {
+    background-repeat: no-repeat;
     background-position: $bi;
     background-size: cover;
   }
-  
+
   // hadow
   
   @mixin text-shadow{
@@ -126,34 +159,24 @@
   @mixin box-shadow{
       box-shadow: 0px 0px 0px 2px rgba(0, 0, 0, 0.16) inset, 0px 0px 15px 0px #030303;
   }
-  
-  @mixin flex-col{
-    display: flex;
-    flex-direction: column;
-  }
-  @mixin flex-resp{
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
+ 
 
   // for ham burger
 
-  @mixin ham {
-    cursor: pointer;
-    -webkit-tap-highlight-color: transparent;
-    transition: transform 400ms;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-  }
+//   @mixin ham {
+//     cursor: pointer;
+//     -webkit-tap-highlight-color: transparent;
+//     transition: transform 400ms;
+//     -moz-user-select: none;
+//     -webkit-user-select: none;
+//     -ms-user-select: none;
+//     user-select: none;
+//   }
   
-  @mixin ham-animation($a,$b){
-    stroke-dasharray: $a,$b ;
+//   @mixin ham-animation($a,$b){
+//     stroke-dasharray: $a,$b ;
 
-  }
-@mixin stroke($aaaaa){
-  stroke-dashoffset : $aaaaa + px;
-}
+//   }
+// @mixin stroke($aaaaa){
+//   stroke-dashoffset : $aaaaa + px;
+// }

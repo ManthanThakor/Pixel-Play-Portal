@@ -11,19 +11,40 @@
   padding: 0;
 }
 
-/* ----- LOGO -------- */ 
-.logo-sec{
-@include h-w(130,130);
-}
+/* ---------------------- Navbar -------------------- */ 
 
-.back-one-part{
-  background-image: url("../Img/background-part/back-6.png");
-  position: absolute;
+/* ----- background -------- */ 
+
+#background-part-sec{
+  background-image: url("../Img/background-part/back-3.jpg");
   z-index: -10;
-  opacity: 0.9;
-  background-color: #000
+  @include posi(absolute);
+  // object-position: 51%;
+@include backimg;
+  @include  hh-ww(850px,100%);
+  
 }
 
+#background-part-sec::after{
+  content: "";
+  @include posi(absolute);
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -10;
+  @include  hh-ww(850px,100%);
+}
+
+/* ----- logo + menu  -------- */ 
+
+.logo-menu-part{
+
+}
+
+.logo-sec{
+  @include h-w(130,130);
+  }
+  
 
 
 
