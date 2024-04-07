@@ -58,6 +58,10 @@
   
   // padding
   
+  @mixin pad($a){
+    padding: $a;
+  }
+  
   @mixin padd($p-t, $p-r, $p-b, $p-l) {
     padding: $p-t $p-r $p-b $p-l !important;
   }

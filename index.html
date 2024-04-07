@@ -91,9 +91,16 @@
           <li class="nav-item">
             <a href="contact.html" class="nav-link text-uppercase">Contact</a>
           </li>
-          <li class="nav-item">
-            <a href="contact.html" class="nav-link text-uppercase">more</a>
-          </li>
+          <div class="dropdown">
+            <button type="button" class="btn btn-primary dropdown-toggle nav-link text-uppercase" data-bs-toggle="dropdown">
+             More
+            </button>
+            <ul class="dropdown-menu more-section" style="transition: 0.3s;"> 
+              <li><a class="dropdown-item nav-link text-uppercase" href="#">news</a></li>
+              <li><a class="dropdown-item nav-link text-uppercase" href="#">tournament</a></li>
+              <li><a class="dropdown-item nav-link text-uppercase" href="#">Video</a></li>
+            </ul>
+          </div>
           <div class=" nav-link search-box ">
             <i class="fa-solid fa-magnifying-glass search-icon"></i>
             <!-- <input type="text" placeholder="Search here..." /> -->
