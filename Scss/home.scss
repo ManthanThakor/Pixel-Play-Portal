@@ -109,8 +109,7 @@ left: -25px !important;
  .setting-part:before {
   -webkit-transition: all 1s;
   transition: all 1s;
-  font-size: 30px;
-
+  font-size: $font-size-big;
 }
  .setting-part:after{
   -webkit-transition: right .4s, -webkit-transform .2s;
@@ -123,12 +122,11 @@ left: -25px !important;
   top: -17px;
 }
 .setting-part:hover:after {
-  -webkit-transform: rotate(3000deg);
-          transform: rotate(3000deg);
+          @include t-r (3000deg);
 }
 .setting-part:hover:before {
-  -webkit-transform: rotate(360deg);
-          transform: rotate(360deg);
+  
+          @include t-r (360deg);
         
 }
 .setting-part:after, .setting-part:before {

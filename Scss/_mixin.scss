@@ -184,3 +184,82 @@
 @mixin stroke($aaaaa){
   stroke-dashoffset : $aaaaa + px;
 }
+
+// transform
+
+@mixin transform($trans) {
+  transform: $trans;
+}
+
+@mixin transform-scale($scale) {
+  transform: scale($scale);
+}
+
+@mixin t-r($rotate) {
+  -webkit-transform: rotate($rotate);
+  transform: rotate($rotate);
+}
+
+
+@mixin t-r-x($rotate) {
+  -webkit-transform: rotateX($rotate);
+  transform: rotateX($rotate);
+}
+@mixin t-r-y($rotate) {
+  -webkit-transform: rotateY($rotate);
+  transform: rotateY($rotate);
+}
+@mixin t-r-z($rotate) {
+  -webkit-transform: rotateZ($rotate);
+  transform: rotateZ($rotate);
+}
+
+// top left right  bottom
+
+@mixin top-left-right($top, $left, $right, $bottom) {
+  top: $top + px;
+  left: $left + px;
+  right: $right + px;
+  bottom: $bottom + px;
+}
+
+@mixin top-left($top, $left) {
+  top: $top + px;
+  left: $left + px;
+}
+
+@mixin top-right($top, $right) {
+  top: $top + px;
+  right: $right + px;
+}
+
+@mixin bottom-left($bottom, $left) {
+  bottom: $bottom + px;
+  left: $left + px;
+}
+
+@mixin bottom-right($bottom, $right) {
+  bottom: $bottom + px;
+  right: $right + px;
+}
+
+@mixin top-bottom($top, $bottom) {
+  top: $top + px;
+  bottom: $bottom + px;
+}
+
+@mixin top($top) {
+  top: $top + px;
+}
+
+@mixin left($left) {
+  left: $left + px;
+}
+
+@mixin right($right) {
+  right: $right + px;
+}
+
+@mixin bottom($bottom) {
+  bottom: $bottom + px;
+}
