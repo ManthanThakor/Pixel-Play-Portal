@@ -1,7 +1,7 @@
 // for fontsize and font family
 
-@mixin fonts($weight, $size) {
-    font-family: "Raleway" !important;
+@mixin text-w-s($weight, $size) {
+  font-family:sans-serif, serif !important;
     font-weight: $weight !important;
     font-size: $size + px;
   }
@@ -59,7 +59,7 @@
   // padding
   
   @mixin pad($a){
-    padding: $a;
+    padding: $a !important;
   }
   
   @mixin padd($p-t, $p-r, $p-b, $p-l) {

@@ -51,7 +51,7 @@
   flex-direction: row;
   justify-content: flex-end;
   margin-bottom: 0 !important;
-  gap: 30px;
+  gap: 15px;
 }
 
 .pixel-menu-section > ul > li {
@@ -62,9 +62,16 @@
   background-image: linear-gradient(rgba(48, 48, 48, 0.47) 13%, rgba(30, 30, 30, 0.459) 40%, rgba(12, 13, 17, 0.5607843137) 86%) !important;
   color: #fefefe !important;
   padding: 15px !important;
-  font-size: 18px !important;
-  font-weight: 600 !important;
   font-family: sans-serif, serif !important;
+  font-weight: 600 !important;
+  font-size: 18px;
+}
+
+.more-section {
+  left: -25px !important;
+  background-color: #000000 !important;
+  text-align: center !important;
+  transition: 0.3s;
 }
 
 .ham {
