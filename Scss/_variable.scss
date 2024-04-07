@@ -1,13 +1,20 @@
+
+// colors
 $black-color: #000000;
 $fefe: #fefefe;
 $hov-red: #e62646;
+$background-color: #3B3350;
 
-
-$font-one: "Brush Script Std";
+//fonts
+$font-big: "Starzone";
+$font-main: "sans-serif", "serif";
 $font-two: "Raleway";
-$font-three: "Myriad Pro";
-$font-four:"Open Sans";
+$font-big-two:"CustomFont1" , "CustomFont2";
+
+
 $border-radius: 4px !default;
+
+// font-size
 $font-size: 16px;
 $font-size-two: 18px;
 
@@ -23,9 +30,9 @@ $theme-colors: (
 );
 
 $theme-padding: (
-  pading: 10px,
-  pading-two: 12px,
-  pading-three: 15px,
+  padding: 10px,
+  padding-two: 12px,
+  padding-three: 15px,
 );
 
 $f-size-zone: (
@@ -38,7 +45,11 @@ $f-size-zone: (
 //   background-color: map-get($theme-colors, primary);
 // }
 
+// responsive font-size
+
+
 $font-size-res-big: 40px !important;
+$font-size-res-big-small: 30px !important;
 $font-size-res-zero: 20px !important;
 $font-size-res-one: 18px !important;
 $font-size-res-two: 16px !important;
