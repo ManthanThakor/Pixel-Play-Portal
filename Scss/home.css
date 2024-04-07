@@ -181,4 +181,47 @@
 
 .ham6.active .bottom {
   stroke-dashoffset: -132px;
+}
+
+/*-------TITLE PART-------*/
+.main-name-part {
+  text-align: center;
+}
+
+.main-name {
+  font-family: "Starzone", "sans-serif", "serif" !important;
+  font-weight: 800 !important;
+  font-size: 100px !important;
+  letter-spacing: 10px;
+  color: aliceblue;
+}
+
+.main-name-two {
+  letter-spacing: 1px;
+  color: aliceblue;
+  font-family: "CustomFont1", "CustomFont2";
+  font-weight: 800;
+  font-size: 100px;
+  letter-spacing: 1px;
+}
+
+.main-name-three {
+  font-family: "CustomFont1", "CustomFont2";
+  font-weight: 800;
+  font-size: 50px;
+  letter-spacing: 5px;
+}
+
+.glowing-part {
+  color: var(--fontColor);
+  --screenCoeff: calc(1vw + 1vh);
+  --bgColor: rgb(20, 20, 20);
+  --fontColor: rgb(255, 255, 255);
+  --shadowColor: 0 0 0.3em rgb(0 229 215);
+  --glowColor: rgb(160 255 234);
+}
+
+#glowing_text {
+  text-wrap: nowrap;
+  text-overflow: clip;
 }/*# sourceMappingURL=home.css.map */

@@ -193,6 +193,51 @@
   @include stroke(-132);
 }
 
+
+/*-------TITLE PART-------*/
+
+.main-name-part{
+  text-align: center;
+}
+.main-name{
+@include text-w-s-two( 800, 100 );
+letter-spacing: 10px;
+color: map-get($theme-colors, third);
+}
+
+.main-name-two{
+  letter-spacing: 1px;
+  color: map-get($theme-colors, third);
+  font-family: $font-big-two;
+  font-weight: 800;
+  font-size: 100px ;
+  letter-spacing: 1px;
+}
+
+.main-name-three{
+  font-family: $font-big-two;
+  font-weight: 800;
+  font-size: 50px ;
+  letter-spacing: 5px;
+}
+
+
+
+.glowing-part {
+  color: var(--fontColor);
+  --screenCoeff: calc(1vw + 1vh);
+  --bgColor: rgb(20, 20, 20);
+  --fontColor: rgb(255, 255, 255);
+  --shadowColor: 0 0 0.3em rgb(0 229 215);
+  --glowColor: rgb(160 255 234);
+}
+
+#glowing_text {
+  text-wrap: nowrap;
+  text-overflow: clip;
+}
+
+
 //   // INIT
 // mainColor = #F0544F
 // secondaryColor = #000

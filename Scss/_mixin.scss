@@ -5,6 +5,14 @@
     font-weight: $weight !important;
     font-size: $size + px !important;
   }
+
+  
+@mixin text-w-s-two($weight, $size) {
+  font-family: "Starzone", "sans-serif", "serif" !important;
+    font-weight: $weight !important;
+    font-size: $size + px !important;
+  }
+
   
   @mixin font-part($values) {
     @if $values == xxl {

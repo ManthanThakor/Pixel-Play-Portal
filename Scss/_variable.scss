@@ -1,16 +1,14 @@
-
 // colors
 $black-color: #000000;
 $fefe: #fefefe;
 $hov-red: #e62646;
-$background-color: #3B3350;
+$background-color: #3b3350;
 
 //fonts
 $font-big: "Starzone";
 $font-main: "sans-serif", "serif";
 $font-two: "Raleway";
-$font-big-two:"CustomFont1" , "CustomFont2";
-
+$font-big-two: "CustomFont1", "CustomFont2";
 
 $border-radius: 4px !default;
 
@@ -31,12 +29,7 @@ $font-size-res-five: 10px !important;
 $theme-colors: (
   primary: #ffffff,
   secondary: #9e9e9e,
-  secondary-two: #b8b8b8,
-  secondary-three: #bdbdbd,
-  secondary-four: #999999,
-  secondary-five: #696969,
-  danger: #e62646,
-  cool: #18aebf,
+  third: aliceblue,
 );
 
 $theme-padding: (
@@ -54,4 +47,3 @@ $f-size-zone: (
 // . {
 //   background-color: map-get($theme-colors, primary);
 // }
-
