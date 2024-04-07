@@ -64,7 +64,7 @@
   padding: 15px !important;
   font-family: sans-serif, serif !important;
   font-weight: 600 !important;
-  font-size: 18px;
+  font-size: 18px !important;
 }
 
 .more-section {
@@ -78,17 +78,11 @@
   border: none;
   border-radius: 4px;
   overflow: hidden;
-  font-size: 20px;
   position: relative;
-  color: white;
+  color: #fefefe;
   outline: none;
   width: 200px !important;
   transition: background-position 0.7s, box-shadow 0.4s;
-  background-size: 110%;
-}
-
-.setting-part:hover {
-  background-position: 0% 30%;
 }
 
 .setting-part:hover:after {
@@ -96,7 +90,8 @@
   transition: right 0.4s, transform 30s 0.2s linear;
 }
 
-.setting-part:before, .setting-part:after {
+.setting-part:before,
+.setting-part:after {
   font-family: FontAwesome;
   display: block;
   position: absolute;
@@ -104,15 +99,15 @@
 
 .setting-part:before {
   transition: all 1s;
-  font-size: 30px;
+  font-size: 25px !important;
 }
 
 .setting-part:after {
   transition: right 0.4s, transform 0.2s;
   font-size: 100px;
   opacity: 0.3;
-  right: -120px;
   top: -17px;
+  right: -120px;
 }
 
 .setting-part:hover:after {
@@ -123,14 +118,22 @@
   transform: rotate(360deg);
 }
 
-.setting-part:after, .setting-part:before {
+.setting-part:after,
+.setting-part:before {
   content: "\f1cd";
 }
 
 .setting-part:before {
-  top: 5px;
+  top: 8px;
+  left: 15px;
 }
 
+.login-logo {
+  font-size: 22px !important;
+  margin-right: 10px !important;
+}
+
+/*-------Ham burger part ---------*/
 .ham {
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;

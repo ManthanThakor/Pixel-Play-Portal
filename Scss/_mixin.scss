@@ -3,7 +3,7 @@
 @mixin text-w-s($weight, $size) {
   font-family:sans-serif, serif !important;
     font-weight: $weight !important;
-    font-size: $size + px;
+    font-size: $size + px !important;
   }
   
   @mixin font-part($values) {
@@ -92,6 +92,20 @@
 @mixin margin-b($mm) {
   margin-bottom: $mm !important;
 }
+
+@mixin margin-left($mm) {
+  margin-left: $mm !important;
+}
+
+@mixin margin-right($mm) {
+  margin-right: $mm !important;
+}
+
+@mixin margin-t-b($mmm, $mm) {
+  margin-top: $mmm !important;
+  margin-bottom: $mm !important;
+}
+
 
 
   // for text align and justfy  center

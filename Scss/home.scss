@@ -1,60 +1,62 @@
-
 @use "_index" as *;
 
-*{
+* {
   margin: 0;
   padding: 0;
 }
 
-/* ---------------------- Navbar -------------------- */ 
+/* ---------------------- Navbar -------------------- */
 
-/* ----- background -------- */ 
+/* ----- background -------- */
 
-#background-part-sec{
+#background-part-sec {
   background-image: url("../Img/background-part/back-3.jpg");
   z-index: -10;
   @include posi(absolute);
   // object-position: 51%;
-@include backimg;
-  @include  hh-ww(850px,100%);
-  
+  @include backimg;
+  @include hh-ww(850px, 100%);
 }
 
-#background-part-sec::after{
+#background-part-sec::after {
   content: "";
   @include posi(absolute);
   top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: -10;
-  @include  hh-ww(850px,100%);
+  @include hh-ww(850px, 100%);
 }
 
-/* ----- logo + menu  -------- */ 
+/* ----- logo + menu  -------- */
 
-.logo-menu-part{
-@include flex-row;
-background-color: rgba(0, 0, 0,  0.65);
-background-image: linear-gradient(rgba(48, 48, 48, 0.207) 13%, rgba(30, 30, 30, 0.333) 40%, #00000025 86% ) !important;
-@include padd(40px, 80px , 40px , 80px);
+.logo-menu-part {
+  @include flex-row;
+  background-color: rgba(0, 0, 0, 0.65);
+  background-image: linear-gradient(
+    rgba(48, 48, 48, 0.207) 13%,
+    rgba(30, 30, 30, 0.333) 40%,
+    #00000025 86%
+  ) !important;
+  @include padd(40px, 80px, 40px, 80px);
 }
 
-.logo-sec{
-  @include h-w(130,130);
-  }
+.logo-sec {
+  @include h-w(130, 130);
+}
 
-  .pixel-menu-section{
-    flex-grow: 1;
-    align-self: center;
-    margin: auto;
-      }
+.pixel-menu-section {
+  flex-grow: 1;
+  align-self: center;
+  margin: auto;
+}
 
-  .pixel-menu{
-    @include flex-row;
-    justify-content: flex-end;
-      @include margin-b(0);
-      gap: 15px;
-  }
+.pixel-menu {
+  @include flex-row;
+  justify-content: flex-end;
+  @include margin-b(0);
+  gap: 15px;
+}
 
 .pixel-menu-section > ul > li {
   list-style-type: none;
@@ -62,130 +64,134 @@ background-image: linear-gradient(rgba(48, 48, 48, 0.207) 13%, rgba(30, 30, 30, 
 
 // background-image: linear-gradient(rgb(48, 48, 48) 13%, rgb(30, 30, 30) 40%, #0c0d11 86% ) !important;
 
-.nav-link{
-  background-image: linear-gradient(rgba(48, 48, 48, 0.47) 13%, rgba(30, 30, 30, 0.459) 40%, #0c0d118f 86% ) !important;
-  color:  $fefe !important;
+.nav-link {
+  background-image: linear-gradient(
+    rgba(48, 48, 48, 0.47) 13%,
+    rgba(30, 30, 30, 0.459) 40%,
+    #0c0d118f 86%
+  ) !important;
+  color: $fefe !important;
   @include pad(15px);
-  @include text-w-s(600 ,18);
+  @include text-w-s(600, 18);
 }
 
-.more-section{
-left: -25px !important;
+.more-section {
+  left: -25px !important;
   background-color: $black-color !important;
   text-align: center !important;
   transition: 0.3s;
 }
 
-
-
 .setting-part {
   border: none;
   border-radius: 4px;
   overflow: hidden;
-  font-size: 20px;
-  position: relative;
-  color: white;
+  @include posi(relative);
+  color: $fefe;
   outline: none;
   width: 200px !important;
-  -webkit-transition: background-position .7s,box-shadow .4s;
-  transition: background-position .7s,box-shadow .4s;
-  background-size: 110%;
+  -webkit-transition: background-position 0.7s, box-shadow 0.4s;
+  transition: background-position 0.7s, box-shadow 0.4s;
 }
-.setting-part:hover {
-  background-position: 0% 30%;
+
+.setting-part:hover:after {
+  @include right(-40);
+  -webkit-transition: right 0.4s, -webkit-transform 30s 0.2s linear;
+  transition: right 0.4s, -webkit-transform 30s 0.2s linear;
+  transition: right 0.4s, transform 30s 0.2s linear;
+  transition: right 0.4s, transform 30s 0.2s linear,
+    -webkit-transform 30s 0.2s linear;
 }
- .setting-part:hover:after{
-  right: -40px;
-  -webkit-transition: right .4s,-webkit-transform 30s .2s linear;
-  transition: right .4s,-webkit-transform 30s .2s linear;
-  transition: right .4s,transform 30s .2s linear;
-  transition: right .4s,transform 30s .2s linear,-webkit-transform 30s .2s linear;
-}
-.setting-part:before,.setting-part:after{
+
+.setting-part:before,
+.setting-part:after {
   font-family: FontAwesome;
   display: block;
-  position: absolute;
+  @include posi(absolute);
 }
- .setting-part:before {
+
+.setting-part:before {
   -webkit-transition: all 1s;
   transition: all 1s;
-  font-size: $font-size-big;
+  font-size: $font-size-three;
 }
- .setting-part:after{
-  -webkit-transition: right .4s, -webkit-transform .2s;
-  transition: right .4s, -webkit-transform .2s;
-  transition: right .4s, transform .2s;
-  transition: right .4s, transform .2s, -webkit-transform .2s;
+
+.setting-part:after {
+  -webkit-transition: right 0.4s, -webkit-transform 0.2s;
+  transition: right 0.4s, -webkit-transform 0.2s;
+  transition: right 0.4s, transform 0.2s;
+  transition: right 0.4s, transform 0.2s, -webkit-transform 0.2s;
   font-size: 100px;
-  opacity: .3;
-  right: -120px;
-  top: -17px;
+  opacity: 0.3;
+  @include top-right(-17, -120);
 }
+
 .setting-part:hover:after {
-          @include t-r (3000deg);
+  @include t-r(3000deg);
 }
+
 .setting-part:hover:before {
-  
-          @include t-r (360deg);
-        
+  @include t-r(360deg);
 }
-.setting-part:after, .setting-part:before {
+
+.setting-part:after,
+.setting-part:before {
   content: "";
 }
-.setting-part:before {
-  top: 5px;
 
+.setting-part:before {
+  @include top-left(8, 15);
 }
 
+.login-logo {
+  font-size: 22px !important;
+  @include margin-right(10px);
+}
 
+/*-------Ham burger part ---------*/
 
+.ham {
+  @include ham;
+}
 
-  .ham {
-   @include ham;
-  }
+.hamRotate.active {
+  transform: rotate(45deg);
+}
 
-  .hamRotate.active {
-    transform: rotate(45deg);
-  }
+.hamRotate180.active {
+  transform: rotate(180deg);
+}
 
-  .hamRotate180.active {
-    transform: rotate(180deg);
-  }
+.line {
+  fill: none;
+  transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+  stroke: #000;
+  stroke-width: 5.5;
+  stroke-linecap: round;
+}
 
-  .line {
-    fill:none;
-    transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
-    stroke:#000;
-    stroke-width:5.5;
-    stroke-linecap:round;
-  }
+.ham6 .top {
+  @include ham-animation(40, 172);
+}
 
-  .ham6 .top {
-    @include  ham-animation( 40, 172);
-  }
+.ham6 .middle {
+  @include ham-animation(40, 111);
+}
 
-  .ham6 .middle {
-    @include  ham-animation( 40 ,111);
-  }
+.ham6 .bottom {
+  @include ham-animation(40, 172);
+}
+.ham6.active .top {
+  @include stroke(-132);
+}
 
-  .ham6 .bottom {
-    @include  ham-animation( 40 ,172);
-  }
-  .ham6.active .top {
-    @include stroke(-132);
-  }
+.ham6.active .middle {
+  @include stroke(-71);
+}
 
-  .ham6.active .middle {
-    @include stroke(-71);
-
-  }
-
-  .ham6.active .bottom {
-    @include stroke(-132);
-
-  }
-
-
+.ham6.active .bottom {
+  @include stroke(-132);
+}
 
 //   // INIT
 // mainColor = #F0544F
@@ -205,7 +211,7 @@ left: -25px !important;
 //   font-family: 'Arial'
 //   font-size: 0.8em
 //   color: mainColor
-  
+
 //   a
 //     color: secondaryColor
 
@@ -229,28 +235,26 @@ left: -25px !important;
 //   width projectSize
 //   height projectSize
 //   cursor pointer
-  
-// .Project:hover  
-  
+
+// .Project:hover
+
 //   .imgMasked
 //     clip-path circle(projectSize*5 at center)
-      
+
 //   .Project-hail
 //     _circle(projectSize*10)
-      
+
 //   .Project-hail2
 //     _circle(projectSize*10)
 //     border projectSize*4 solid #FFF4E6
 //     opacity 0
-    
+
 //   .Project-name
 //     left 200%
 //     opacity 1
-    
+
 //     &:before
 //       width 100%
-
-  
 
 // .Project-hail
 //   center()
@@ -258,7 +262,7 @@ left: -25px !important;
 //   _circle(projectSize*2)
 //   transition: 0.5s
 //   opacity 0.2
-  
+
 // .Project-hail2
 //   center()
 //   _circle(0)
@@ -266,7 +270,6 @@ left: -25px !important;
 //   border projectSize+2px solid mainColor
 //   border-radius projectSize
 //   pointer-events: none;
-
 
 // .imgMasked
 //   center()
@@ -288,7 +291,7 @@ left: -25px !important;
 //   padding 3px 6px
 //   z-index 2
 //   opacity 0
-  
+
 //   &:before
 //       content ''
 //       width 0

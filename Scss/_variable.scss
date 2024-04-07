@@ -18,7 +18,15 @@ $border-radius: 4px !default;
 $font-size: 16px;
 $font-size-two: 18px;
 $font-size-big: 30px;
-
+$font-size-res-big: 40px !important;
+$font-size-res-big-small: 30px !important;
+$font-size-three: 25px !important;
+$font-size-res-zero: 20px !important;
+$font-size-res-one: 18px !important;
+$font-size-res-two: 16px !important;
+$font-size-res-three: 14px !important;
+$font-size-res-four: 12px !important;
+$font-size-res-five: 10px !important;
 
 $theme-colors: (
   primary: #ffffff,
@@ -47,14 +55,3 @@ $f-size-zone: (
 //   background-color: map-get($theme-colors, primary);
 // }
 
-// responsive font-size
-
-
-$font-size-res-big: 40px !important;
-$font-size-res-big-small: 30px !important;
-$font-size-res-zero: 20px !important;
-$font-size-res-one: 18px !important;
-$font-size-res-two: 16px !important;
-$font-size-res-three: 14px !important;
-$font-size-res-four: 12px !important;
-$font-size-res-five: 10px !important;
