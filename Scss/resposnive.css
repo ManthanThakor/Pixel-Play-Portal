@@ -1,5 +1,6 @@
 /* ---------------------- home -------------------- */
-html, body {
+html,
+body {
   overflow-x: hidden !important;
   margin: 0 !important;
   padding: 0 !important;
@@ -38,6 +39,8 @@ html, body {
     margin: 0%;
     padding: 0;
     margin: 0;
+    top: 140px;
+    right: 0px;
   }
   .pixel-menu {
     animation-duration: 0.5s;

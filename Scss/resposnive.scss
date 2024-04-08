@@ -1,67 +1,62 @@
 @use "_index" as *;
 
-
 /* ---------------------- home -------------------- */
 
-html,body {
-    overflow-x: hidden !important;
-    margin: 0 !important;
-    padding: 0 !important;
-  }
+html,
+body {
+  overflow-x: hidden !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
 
- 
 @media only screen and (max-width: 1298px) {
-.logo-menu-part{
+  .logo-menu-part {
     @include padd(40px, 40px, 40px, 40px);
-}
-.search-box-one{
-  @include top-right( 135,280);
-}
-
-  
+  }
+  .search-box-one {
+    @include top-right(135, 280);
+  }
 }
 
 @media only screen and (max-width: 1215px) {
-    .logo-menu-part{
-        @include padd(40px, 15px, 40px, 15px);
-    }
-    .search-box-one{
-        @include top-right( 135,255);
-      }
-    }
+  .logo-menu-part {
+    @include padd(40px, 15px, 40px, 15px);
+  }
+  .search-box-one {
+    @include top-right(135, 255);
+  }
+}
 
-    @media only screen and (max-width: 1165px) {
-    .ham-part-section{
-        @include  dis(block);
-        // @include posi(absolute);
-        float: right;
-    }
-    
-    .pixel-menu{
-        @include  dis(none);
-        flex-direction: column;
-        width: 500px !important;
-        position: absolute;
-        background-color: $black-color;
-        padding: 0;
-        margin: 0%;
-        @include p-m(0,0);
-    }
- 
-  .pixel-menu{
+@media only screen and (max-width: 1165px) {
+  .ham-part-section {
+    @include dis(block);
+    float: right;
+  }
+
+  .pixel-menu {
+    @include dis(none);
+    flex-direction: column;
+    width: 500px !important;
+    position: absolute;
+    background-color: $black-color;
+    padding: 0;
+    margin: 0%;
+    @include p-m(0, 0);
+    @include top-right(140, 0);
+  }
+
+  .pixel-menu {
     animation-duration: 0.5s;
     animation-name: slideIn;
-  
-}
-@keyframes slideIn {
-  from {
-    opacity: 0;
-    transform: translateY(-30px);
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 }
-        }   
-    
