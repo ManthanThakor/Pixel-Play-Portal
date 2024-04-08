@@ -26,22 +26,31 @@ html, body {
 @media only screen and (max-width: 1165px) {
   .ham-part-section {
     display: block;
+    float: right;
   }
   .pixel-menu {
     display: none;
     flex-direction: column;
     width: 500px !important;
     position: absolute;
-    background-color: black;
+    background-color: #000000;
     padding: 0;
     margin: 0%;
+    padding: 0;
+    margin: 0;
   }
   .pixel-menu {
-    transform: translateY(-20px);
-    transition: all 0.3s ease;
+    animation-duration: 0.5s;
+    animation-name: slideIn;
   }
-  .pixel-menu.show {
-    opacity: 1;
-    transform: translateY(0);
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 }/*# sourceMappingURL=resposnive.css.map */

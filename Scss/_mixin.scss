@@ -64,6 +64,15 @@
     justify-content: $value;
   }
   
+  // padding + margin
+
+  @mixin p-m($vale,$val) {
+    padding: $vale;
+    margin: $val;
+  }
+
+
+
   // padding
   
   @mixin pad($a){
