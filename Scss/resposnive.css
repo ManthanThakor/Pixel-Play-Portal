@@ -36,4 +36,12 @@ html, body {
     padding: 0;
     margin: 0%;
   }
+  .pixel-menu {
+    transform: translateY(-20px);
+    transition: all 0.3s ease;
+  }
+  .pixel-menu.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }/*# sourceMappingURL=resposnive.css.map */
