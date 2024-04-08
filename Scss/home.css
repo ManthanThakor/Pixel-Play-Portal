@@ -3,12 +3,17 @@
   padding: 0;
 }
 
-body > * {
-  overflow: auto;
+.main {
+  overflow-x: hidden !important;
 }
 
 /* ---------------------- Navbar -------------------- */
 /* ----- background -------- */
+.pixel-head {
+  height: 850px !important;
+  width: 100% !important;
+}
+
 #background-part-sec {
   background-image: url("../Img/background-part/back-3.jpg");
   z-index: -10;
@@ -147,6 +152,11 @@ body > * {
 }
 
 /*-------Ham burger part ---------*/
+.ham-part-section {
+  display: none;
+  filter: invert(1);
+}
+
 .ham {
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;

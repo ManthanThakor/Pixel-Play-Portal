@@ -1,0 +1,49 @@
+@use "_index" as *;
+
+
+/* ---------------------- home -------------------- */
+
+html,body {
+    overflow-x: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+ 
+@media only screen and (max-width: 1298px) {
+.logo-menu-part{
+    @include padd(40px, 40px, 40px, 40px);
+}
+.search-box-one{
+  @include top-right( 135,280);
+}
+
+  
+}
+
+@media only screen and (max-width: 1215px) {
+    .logo-menu-part{
+        @include padd(40px, 15px, 40px, 15px);
+    }
+    .search-box-one{
+        @include top-right( 135,255);
+      }
+    }
+
+    @media only screen and (max-width: 1165px) {
+    .ham-part-section{
+        @include  dis(block);
+    }
+    
+    .pixel-menu{
+        @include  dis(none);
+        flex-direction: column;
+        width: 500px !important;
+        position: absolute;
+        background-color: black;
+        padding: 0;
+        margin: 0%;
+    }
+ 
+        }   
+    

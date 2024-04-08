@@ -1,16 +1,24 @@
 @use "_index" as *;
 
 * {
-  margin: 0;
+  margin: 0 ;
   padding: 0;
+  
+}
+.main{
+  overflow-x: hidden !important;
+  //     margin: 0 !important;
+  //     padding: 0 !important;
 }
 
-body > * {
-  overflow: auto;
-}
 /* ---------------------- Navbar -------------------- */
 
 /* ----- background -------- */
+
+
+.pixel-head{
+  @include hh-ww(850px, 100%);
+}
 
 #background-part-sec {
   background-image: url("../Img/background-part/back-3.jpg");
@@ -160,6 +168,11 @@ body > * {
 }
 /*-------Ham burger part ---------*/
 
+.ham-part-section{
+  display: none;
+  filter: invert(1);
+}
+
 .ham {
   @include ham;
 }
@@ -240,7 +253,9 @@ text-shadow:
   letter-spacing: 5px;
     text-shadow: 
     1px -1px 0 map-get($theme-colors, fourth), 
-      5px 5px 10px map-get($theme-colors,  sixth)
+      5px 5px 10px map-get($theme-colors,  sixth);
+      
+      
 }
 
 

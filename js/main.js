@@ -24,34 +24,6 @@ const glowingText = (() => {
 window.addEventListener('load', glowingText, false);
 
 
-// document.querySelector(".search-icon").addEventListener('click', (a) => {
-
-//  if (   document.querySelector(".search-box-one").innerHTML = "") {
-//     document.querySelector(".search-box-one").innerHTML = ('<input type="text" class="nav-link" placeholder="Search here..."/>');
-//  } 
-//  else {
-//     document.querySelector(".search-box-one").innerHTML = "";
-//  }
-// });
-
-
-// document.addEventListener('DOMContentLoaded', () => {
-//   document.querySelector(".search-box").addEventListener('click', (a) => {
-//     const searchBox = document.querySelector(".search-box-one");
-  
-
-// console.log(a.currentTarget);
-
-//     if (searchBox.innerHTML === "") {
-//       searchBox.innerHTML = '<input type="text" class="nav-link" placeholder="Search here..."/>';
-//     } else {
-
-//       searchBox.innerHTML = "";
-     
-//     }
-//   });
-// });
-
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelector(".search-box").addEventListener('click', (event) => {
       if (event.target.classList.contains('search-box') || (event.target.classList.contains('search-icon')) )   {
@@ -61,6 +33,23 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
           searchBox.innerHTML = "";
         }
+      }
+    });
+  });
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const hamPartSection = document.querySelector(".ham-part-section");
+    const pixelMenu = document.querySelector(".pixel-menu");
+    let isMenuVisible = false;
+  
+    hamPartSection.addEventListener('click', () => {
+      if (!isMenuVisible) {
+        pixelMenu.style.display = "flex"; // Show the pixel-menu part
+        isMenuVisible = true;
+      } else {
+        // Add cool animation to hide the pixel-menu part
+        pixelMenu.style.display = "none"; // Hide the pixel-menu part
+        isMenuVisible = false;
       }
     });
   });

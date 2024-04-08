@@ -1,1 +1,39 @@
-/*# sourceMappingURL=resposnive.css.map */
+/* ---------------------- home -------------------- */
+html, body {
+  overflow-x: hidden !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+@media only screen and (max-width: 1298px) {
+  .logo-menu-part {
+    padding: 40px 40px 40px 40px !important;
+  }
+  .search-box-one {
+    top: 135px;
+    right: 280px;
+  }
+}
+@media only screen and (max-width: 1215px) {
+  .logo-menu-part {
+    padding: 40px 15px 40px 15px !important;
+  }
+  .search-box-one {
+    top: 135px;
+    right: 255px;
+  }
+}
+@media only screen and (max-width: 1165px) {
+  .ham-part-section {
+    display: block;
+  }
+  .pixel-menu {
+    display: none;
+    flex-direction: column;
+    width: 500px !important;
+    position: absolute;
+    background-color: black;
+    padding: 0;
+    margin: 0%;
+  }
+}/*# sourceMappingURL=resposnive.css.map */
