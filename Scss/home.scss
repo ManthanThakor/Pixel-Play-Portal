@@ -5,6 +5,9 @@
   padding: 0;
 }
 
+body > * {
+  overflow: auto;
+}
 /* ---------------------- Navbar -------------------- */
 
 /* ----- background -------- */
@@ -148,6 +151,13 @@
   @include margin-right(10px);
 }
 
+.search-box-one{
+  @include posi(absolute);
+@include top-right( 135,320);
+-webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
 /*-------Ham burger part ---------*/
 
 .ham {
@@ -193,7 +203,6 @@
   @include stroke(-132);
 }
 
-
 /*-------TITLE PART-------*/
 
 .main-name-part{
@@ -204,9 +213,11 @@
 letter-spacing: 10px;
 color: map-get($theme-colors, third);
 text-shadow: 
-      1px -1px 0 #a80000, 
-      -5px 5px 1px #08b7b4,
-      5px 5px 10px #ff2929
+      1px -1px 0 map-get($theme-colors, fourth), 
+      // -5px 5px 1px map-get($theme-colors,  fifth),
+      5px 5px 10px map-get($theme-colors,  sixth);
+@include margin-t(100px);
+
 }
 
 .main-name-two{
@@ -217,9 +228,9 @@ text-shadow:
   font-size: 100px ;
   letter-spacing: 1px;
   text-shadow: 
-      1px -1px 0 #a80000, 
-      -5px 5px 1px #08b7b4,
-      5px 5px 10px #ff2929;
+  1px -1px 0 map-get($theme-colors, fourth), 
+  -5px 5px 1px map-get($theme-colors,  fifth),
+  // 5px 5px 10px map-get($theme-colors,  sixth)
 }
 
 .main-name-three{
@@ -228,9 +239,8 @@ text-shadow:
   font-size: 50px ;
   letter-spacing: 5px;
     text-shadow: 
-      1px -1px 0 #a80000, 
-      -2px 2px 1px #08b7b4,
-      3px 3px 3px #ff2929;
+    1px -1px 0 map-get($theme-colors, fourth), 
+      5px 5px 10px map-get($theme-colors,  sixth)
 }
 
 

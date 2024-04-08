@@ -3,6 +3,10 @@
   padding: 0;
 }
 
+body > * {
+  overflow: auto;
+}
+
 /* ---------------------- Navbar -------------------- */
 /* ----- background -------- */
 #background-part-sec {
@@ -133,6 +137,15 @@
   margin-right: 10px !important;
 }
 
+.search-box-one {
+  position: absolute;
+  top: 135px;
+  right: 320px;
+  -webkit-user-select: none; /* Safari */ /* IE 10 and IE 11 */
+  -moz-user-select: none;
+       user-select: none; /* Standard syntax */
+}
+
 /*-------Ham burger part ---------*/
 .ham {
   cursor: pointer;
@@ -194,7 +207,8 @@
   font-size: 100px !important;
   letter-spacing: 10px;
   color: aliceblue;
-  text-shadow: 1px -1px 0 #a80000, -5px 5px 1px #08b7b4, 5px 5px 10px #ff2929;
+  text-shadow: 1px -1px 0 rgba(168, 0, 0, 0.5098039216), 5px 5px 10px rgba(255, 41, 41, 0.5725490196);
+  margin-top: 100px !important;
 }
 
 .main-name-two {
@@ -204,7 +218,7 @@
   font-weight: 800;
   font-size: 100px;
   letter-spacing: 1px;
-  text-shadow: 1px -1px 0 #a80000, -5px 5px 1px #08b7b4, 5px 5px 10px #ff2929;
+  text-shadow: 1px -1px 0 rgba(168, 0, 0, 0.5098039216), -5px 5px 1px rgba(8, 183, 180, 0.4705882353);
 }
 
 .main-name-three {
@@ -212,7 +226,7 @@
   font-weight: 800;
   font-size: 50px;
   letter-spacing: 5px;
-  text-shadow: 1px -1px 0 #a80000, -2px 2px 1px #08b7b4, 3px 3px 3px #ff2929;
+  text-shadow: 1px -1px 0 rgba(168, 0, 0, 0.5098039216), 5px 5px 10px rgba(255, 41, 41, 0.5725490196);
 }
 
 .glowing-part {
