@@ -194,6 +194,7 @@
   font-size: 100px !important;
   letter-spacing: 10px;
   color: aliceblue;
+  text-shadow: 1px -1px 0 #a80000, -5px 5px 1px #08b7b4, 5px 5px 10px #ff2929;
 }
 
 .main-name-two {
@@ -203,6 +204,7 @@
   font-weight: 800;
   font-size: 100px;
   letter-spacing: 1px;
+  text-shadow: 1px -1px 0 #a80000, -5px 5px 1px #08b7b4, 5px 5px 10px #ff2929;
 }
 
 .main-name-three {
@@ -210,6 +212,7 @@
   font-weight: 800;
   font-size: 50px;
   letter-spacing: 5px;
+  text-shadow: 1px -1px 0 #a80000, -2px 2px 1px #08b7b4, 3px 3px 3px #ff2929;
 }
 
 .glowing-part {

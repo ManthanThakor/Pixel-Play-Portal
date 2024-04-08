@@ -15,7 +15,7 @@ const glowingText = (() => {
             coloredText = letters.join('');
             textElement.innerHTML = coloredText;
             index = (index + 1) % letters.length;
-        }, 500);
+        }, 200);
     };
 
     return startGlowing;
