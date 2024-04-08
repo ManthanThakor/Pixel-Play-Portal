@@ -53,3 +53,10 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+
+  // document.getElementById('animationButton').addEventListener('click', function() {
+  //   setTimeout(function() {
+  //     document.getElementById('animationContainer').classList.add('show');
+  //   }, 2000); // 2000 milliseconds = 2 seconds delay
+  // });

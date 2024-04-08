@@ -43,7 +43,19 @@ body {
     margin: 0%;
     @include p-m(0, 0);
     @include top-right(140, 0);
+    text-align: center;
+    gap: 0;
   }
+.search-box {
+  @include dis(none);
+}
+.setting-part{
+  width: 100% !important;
+}
+.more-part-drop{
+  width: 100% !important;
+}
+
 
   .pixel-menu {
     animation-duration: 0.5s;

@@ -74,6 +74,7 @@
   font-family: sans-serif, serif !important;
   font-weight: 600 !important;
   font-size: 18px !important;
+  border-radius: 0.375rem !important;
 }
 
 .more-section {
@@ -228,7 +229,7 @@
   font-weight: 800;
   font-size: 100px;
   letter-spacing: 1px;
-  text-shadow: 1px -1px 0 rgba(168, 0, 0, 0.5098039216), -5px 5px 1px rgba(8, 183, 180, 0.4705882353);
+  text-shadow: 1px -1px 0 rgba(168, 0, 0, 0.5098039216), 5px 5px 10px rgba(7, 255, 251, 0.5294117647);
 }
 
 .main-name-three {

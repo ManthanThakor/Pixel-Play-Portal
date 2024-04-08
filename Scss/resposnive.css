@@ -41,6 +41,17 @@ body {
     margin: 0;
     top: 140px;
     right: 0px;
+    text-align: center;
+    gap: 0;
+  }
+  .search-box {
+    display: none;
+  }
+  .setting-part {
+    width: 100% !important;
+  }
+  .more-part-drop {
+    width: 100% !important;
   }
   .pixel-menu {
     animation-duration: 0.5s;
