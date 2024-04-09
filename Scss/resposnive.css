@@ -63,6 +63,7 @@ body {
     gap: 0;
     animation-duration: 0.5s;
     animation-name: slideIn;
+    z-index: 1;
   }
   @keyframes slideIn {
     from {
