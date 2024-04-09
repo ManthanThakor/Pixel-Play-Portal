@@ -20,8 +20,7 @@
   @include hh-ww(850px, 100%);
 }
 
-#background-part-sec {
-  background-image: url("../Img/background-part/back-3.jpg");
+%shared-styles {
   z-index: -10;
   @include posi(absolute);
   // object-position: 51%;
@@ -29,12 +28,27 @@
   @include hh-ww(850px, 100%);
 }
 
-#background-part-sec::after {
+#background-part-sec {
+  background-image: url("../Img/background-part/back-3.jpg");
+  @extend %shared-styles;
+}
+
+#background-part-sec-two{
+  background-image: url("../Img/background-part/back-2.png");
+  @extend %shared-styles;
+}
+
+#background-part-sec-three{
+  background-image: url("../Img/background-part/back-4.jpg");
+  @extend %shared-styles;
+}
+
+#background-part-sec::after , #background-part-sec-two::after , #background-part-sec-three::after{
   content: "";
   @include posi(absolute);
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.504);
   z-index: -10;
   @include hh-ww(850px, 100%);
 }
