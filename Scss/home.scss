@@ -33,25 +33,25 @@
   @extend %shared-styles;
 }
 
-#background-part-sec-two{
-  background-image: url("../Img/background-part/back-2.png");
-  @extend %shared-styles;
-}
 
-#background-part-sec-three{
-  background-image: url("../Img/background-part/back-4.jpg");
-  @extend %shared-styles;
-}
+// #background-part-sec-three{
+//   background-image: url("../Img/background-part/back-4.jpg");
+//   @extend %shared-styles;
+// }
 
-#background-part-sec::after , #background-part-sec-two::after , #background-part-sec-three::after{
+#background-part-sec::after{
   content: "";
   @include posi(absolute);
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.504);
+  background-color: rgba(0, 0, 0, 0.33);
   z-index: -10;
   @include hh-ww(850px, 100%);
 }
+
+// #background-part-sec-three::after{
+//  @extend #background-part-sec::after;
+// }
 
 /* ----- logo + menu  -------- */
 
@@ -181,6 +181,28 @@
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none; /* Standard syntax */
 }
+
+.nav-link-part-search{
+  display: none;
+  @include posi(absolute);
+@include top-right( 135,320);
+-webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+  // background-image: linear-gradient(
+  //   rgba(39, 36, 36, 0.814) 13%,
+  //   rgba(30, 30, 30, 0.719) 40%,
+  //   #0e0e0f 86%
+  // ) !important;
+  @include pad(15px);
+  @include text-w-s(600, 18);
+  border-radius: 0.375rem !important;
+}
+
+.nav-link-part-search::placeholder{
+  color: $fefe !important;
+}
+
 /*-------Ham burger part ---------*/
 
 .ham-part-section{

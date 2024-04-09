@@ -14,7 +14,7 @@
   width: 100% !important;
 }
 
-#background-part-sec-three, #background-part-sec-two, #background-part-sec {
+#background-part-sec {
   z-index: -10;
   position: absolute;
   background-repeat: no-repeat;
@@ -27,20 +27,12 @@
   background-image: url("../Img/background-part/back-3.jpg");
 }
 
-#background-part-sec-two {
-  background-image: url("../Img/background-part/back-2.png");
-}
-
-#background-part-sec-three {
-  background-image: url("../Img/background-part/back-4.jpg");
-}
-
-#background-part-sec::after, #background-part-sec-two::after, #background-part-sec-three::after {
+#background-part-sec::after {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.504);
+  background-color: rgba(0, 0, 0, 0.33);
   z-index: -10;
   height: 850px !important;
   width: 100% !important;
@@ -161,6 +153,29 @@
   -webkit-user-select: none; /* Safari */ /* IE 10 and IE 11 */
   -moz-user-select: none;
        user-select: none; /* Standard syntax */
+}
+
+.nav-link-part-search {
+  display: none;
+  position: absolute;
+  top: 135px;
+  right: 320px;
+  -webkit-user-select: none; /* Safari */ /* IE 10 and IE 11 */
+  -moz-user-select: none;
+       user-select: none; /* Standard syntax */
+  padding: 15px !important;
+  font-family: sans-serif, serif !important;
+  font-weight: 600 !important;
+  font-size: 18px !important;
+  border-radius: 0.375rem !important;
+}
+
+.nav-link-part-search::-moz-placeholder {
+  color: #fefefe !important;
+}
+
+.nav-link-part-search::placeholder {
+  color: #fefefe !important;
 }
 
 /*-------Ham burger part ---------*/

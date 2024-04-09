@@ -28,7 +28,7 @@ body {
   .pixel-menu {
     display: flex !important;
   }
-  .main-name-part {
+  .main-name-part, #background-part-sec {
     filter: blur(0px) !important;
   }
 }
@@ -54,6 +54,9 @@ body {
     margin: 0;
     margin-left: 26px !important;
     margin-top: -12px !important;
+  }
+  .nav-link-part-search {
+    display: flex;
   }
   .pixel-menu {
     display: none;
