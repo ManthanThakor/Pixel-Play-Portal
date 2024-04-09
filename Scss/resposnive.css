@@ -37,6 +37,9 @@ body {
     display: block;
     float: right;
   }
+  .search-box-two {
+    display: block !important;
+  }
   .search-box {
     display: none !important;
   }

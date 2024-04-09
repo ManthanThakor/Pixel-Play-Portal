@@ -42,7 +42,9 @@ body {
     float: right;
   }
 
-
+  .search-box-two{
+    display: block !important;
+  }
 .search-box {
   display: none !important;
 }
@@ -66,7 +68,6 @@ margin-left: 26px !important;
 .nav-link-part-search{
   display: flex;
 }
-
 
   .pixel-menu {
     @include dis(none);
