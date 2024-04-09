@@ -24,6 +24,14 @@ body {
     right: 255px;
   }
 }
+@media only screen and (min-width: 1165px) {
+  .pixel-menu {
+    display: flex !important;
+  }
+  .main-name-part {
+    filter: blur(0px) !important;
+  }
+}
 @media only screen and (max-width: 1165px) {
   .ham-part-section {
     display: block;
