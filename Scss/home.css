@@ -28,7 +28,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.311);
+  background-color: rgba(0, 0, 0, 0.607);
   z-index: -10;
   height: 850px !important;
   width: 100% !important;
@@ -354,8 +354,8 @@
 }
 
 #arcade-img {
-  width: 70px;
-  height: 70px;
+  height: 70px !important;
+  width: 70px !important;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: right -1em bottom 10px;
@@ -364,10 +364,58 @@
 
 .arcade-head-part {
   padding: 40px 80px 40px 80px !important;
-  background: linear-gradient(rgba(0, 0, 0, 0.767), rgba(0, 0, 0, 0.712)), url(../images/fortnit.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.666), rgba(0, 0, 0, 0.605)), url(../Img/arcade-part/arcade-background/arcade-3.jpg);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  width: 100%;
-  height: 80vh;
+}
+
+/* arcade-cards */
+.arcade-card-part {
+  gap: 20px;
+}
+
+.arcade-card-one {
+  perspective: 2500px;
+  border-radius: 1rem !important;
+  background-color: #191c29 !important;
+}
+
+.arcade-t-card {
+  font-family: sans-serif, serif !important;
+  font-weight: 700 !important;
+  font-size: 25px !important;
+  color: #fefefe !important;
+}
+
+.arcade-b-card {
+  font-family: sans-serif, serif !important;
+  font-weight: 100 !important;
+  font-size: 16px !important;
+  color: #fefefe !important;
+}
+
+.arcade-btn {
+  font-family: sans-serif, serif !important;
+  font-weight: 100 !important;
+  font-size: 20px !important;
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+  -webkit-clip-path: polygon(90% 0, 100% 34%, 100% 100%, 10% 100%, 0 66%, 0 0) !important;
+          clip-path: polygon(90% 0, 100% 34%, 100% 100%, 10% 100%, 0 66%, 0 0) !important;
+}
+
+.arcade-btn:hover:before {
+  transform: rotate(360deg);
+}
+
+.arcade-btn:before {
+  transition: all 1s;
+  font-size: 25px !important;
+  content: "+";
+  font-family: FontAwesome;
+  display: block;
+  position: absolute;
+  margin-top: -7px !important;
 }/*# sourceMappingURL=home.css.map */
