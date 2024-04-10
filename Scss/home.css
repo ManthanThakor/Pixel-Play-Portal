@@ -28,7 +28,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.33);
+  background-color: rgba(0, 0, 0, 0.311);
   z-index: -10;
   height: 850px !important;
   width: 100% !important;
@@ -349,15 +349,14 @@
   border-top: solid 1px #fefefe;
   border-bottom: solid 1px #fefefe;
   box-shadow: 0px -15px 15px -15px #fefefe, 0px 15px 15px -15px #fefefe; /* bottom shadow */
+  justify-content: center;
 }
 
 #arcade-img {
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: bottom 10px right 20px;
-     object-position: bottom 10px right 20px;
-  -o-object-position: right 3em bottom 10px;
-     object-position: right 3em bottom 10px;
+  -o-object-position: right -1em bottom 10px;
+     object-position: right -1em bottom 10px;
 }/*# sourceMappingURL=home.css.map */

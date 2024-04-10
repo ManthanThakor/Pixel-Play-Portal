@@ -35,7 +35,7 @@
   @include posi(absolute);
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.33);
+  background-color: rgba(0, 0, 0, 0.311);
   z-index: -10;
   @include hh-ww(850px, 100%);
 }
@@ -173,26 +173,6 @@
   user-select: none; /* Standard syntax */
 }
 
-// .nav-link-part-search{
-//   display: none;
-//   @include posi(absolute);
-// @include top-right( 135,320);
-// -webkit-user-select: none; /* Safari */
-//   -ms-user-select: none; /* IE 10 and IE 11 */
-//   user-select: none; /* Standard syntax */
-//   // background-image: linear-gradient(
-//   //   rgba(39, 36, 36, 0.814) 13%,
-//   //   rgba(30, 30, 30, 0.719) 40%,
-//   //   #0e0e0f 86%
-//   // ) !important;
-//   @include pad(15px);
-//   @include text-w-s(600, 18);
-//   border-radius: 0.375rem !important;
-// }
-
-// .nav-link-part-search::placeholder{
-//   color: $fefe !important;
-// }
 
 .search-box-two {
   display: none;
@@ -397,17 +377,18 @@ margin-bottom: 0 !important;
   border-bottom: solid 1px $fefe;
   box-shadow: 0px -15px 15px -15px $fefe, /* top shadow */
   0px 15px 15px -15px $fefe;   /* bottom shadow */
+  justify-content: center;
+
 }
 
 #arcade-img{
-  width: 60px; 
-  height: 60px; 
+  width: 70px; 
+  height: 70px; 
   object-fit: cover;
   // object-position: 50% 25%; 
-  object-position: bottom 10px right 20px;
-object-position: right 3em bottom 10px;
+  // object-position: bottom 10px right 20px;
+  object-position: right -1em bottom 10px;
   // clip-path: inset(20px 50px 10px 0 round 50px);
-
 }
 
 
