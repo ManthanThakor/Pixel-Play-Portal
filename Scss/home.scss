@@ -2,21 +2,14 @@
 
 * {
   margin: 0 ;
-  padding: 0;
-  
-}
-.main{
-  overflow-x: hidden !important;
-  //     margin: 0 !important;
-  //     padding: 0 !important;
+  padding: 0 ;
 }
 
 /* ---------------------- Navbar -------------------- */
 
 /* ----- background -------- */
 
-
-.pixel-head{
+.pixel-head {
   @include hh-ww(850px, 100%);
 }
 
@@ -33,13 +26,12 @@
   @extend %shared-styles;
 }
 
-
 // #background-part-sec-three{
 //   background-image: url("../Img/background-part/back-4.jpg");
 //   @extend %shared-styles;
 // }
 
-#background-part-sec::after{
+#background-part-sec::after {
   content: "";
   @include posi(absolute);
   top: 0;
@@ -174,10 +166,10 @@
   @include margin-right(10px);
 }
 
-.search-box-one{
+.search-box-one {
   @include posi(absolute);
-@include top-right( 135,320);
--webkit-user-select: none; /* Safari */
+  @include top-right(135, 320);
+  -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none; /* Standard syntax */
 }
@@ -203,16 +195,15 @@
 //   color: $fefe !important;
 // }
 
-
-.search-box-two{
+.search-box-two {
   display: none;
   width: fit-content;
   height: fit-content;
   position: relative;
   position: absolute;
-  @include top-right(80,100)
+  @include top-right(80, 100);
 }
-.input-search{
+.input-search {
   height: 50px;
   width: 50px;
   border-style: none;
@@ -221,24 +212,22 @@
   letter-spacing: 2px;
   outline: none;
   border-radius: 25px;
-  transition: all .5s ease-in-out;
-  background-color: #000000;
+  transition: all 0.5s ease-in-out;
+  background-color: $black-color;
   padding-right: 40px;
-  color:#fff;
+  color: #fff;
   // box-shadow: rgba(72, 135, 202, 0.8) 0 0 90px 33px;
-  box-shadow:
-  0 0 2px rgba(255, 255, 255, 0.397),
-  0 0 4px rgba(255, 255, 255, 0.462),
-  0 0 8px rgba(255, 255, 255, 0.416),
-  0 0 10px rgba(255, 255, 255, 0.453);
+  box-shadow: 0 0 2px rgba(255, 255, 255, 0.397),
+    0 0 4px rgba(255, 255, 255, 0.462), 0 0 8px rgba(255, 255, 255, 0.416),
+    0 0 10px rgba(255, 255, 255, 0.453);
 }
-.input-search::placeholder{
-  color:rgba(255,255,255,.5);
+.input-search::placeholder {
+  color: rgba(255, 255, 255, 0.5);
   font-size: 18px;
   letter-spacing: 2px;
   font-weight: 100;
 }
-.btn-search{
+.btn-search {
   width: 50px;
   height: 50px;
   border-style: none;
@@ -249,30 +238,28 @@
   border-radius: 50%;
   position: absolute;
   right: 0px;
-  color:$fefe ;
-  background-color:transparent;
-  pointer-events: painted;  
+  color: $fefe;
+  background-color: transparent;
+  pointer-events: painted;
 }
-.btn-search:focus ~ .input-search{
+.btn-search:focus ~ .input-search {
   width: 300px;
   border-radius: 0px;
   background-color: transparent;
-  border-bottom:1px solid rgba(255,255,255,.5);
-  transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  transition: all 500ms cubic-bezier(0, 0.11, 0.35, 2);
 }
-.input-search:focus{
+.input-search:focus {
   width: 300px;
   border-radius: 0px;
   background-color: transparent;
-  border-bottom:1px solid rgba(255,255,255,.5);
-  transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  transition: all 500ms cubic-bezier(0, 0.11, 0.35, 2);
 }
-
-
 
 /*-------Ham burger part ---------*/
 
-.ham-part-section{
+.ham-part-section {
   display: none;
   filter: invert(1);
 }
@@ -320,7 +307,6 @@
   @include stroke(-132);
 }
 
-
 // #animationContainer {
 //   // display: none; /* Hide container initially */
 // }
@@ -339,47 +325,40 @@
 //   animation: fadeIn 1s forwards;
 // }
 
-
 /*-------TITLE PART-------*/
 
-.main-name-part{
+.main-name-part {
   text-align: center;
 }
-.main-name{
-@include text-w-s-two( 800, 100 );
-letter-spacing: 10px;
-color: map-get($theme-colors, third);
-text-shadow: 
-      1px -1px 0 map-get($theme-colors, fourth), 
-      // -5px 5px 1px map-get($theme-colors,  fifth),
-      5px 5px 10px map-get($theme-colors,  sixth);
-@include margin-t(100px);
-
+.main-name {
+  @include text-w-s-two(800, 100);
+  letter-spacing: 10px;
+  color: map-get($theme-colors, third);
+  text-shadow: 1px -1px 0 map-get($theme-colors, fourth),
+    // -5px 5px 1px map-get($theme-colors,  fifth),
+    5px 5px 10px map-get($theme-colors, sixth);
+  @include margin-t(100px);
 }
 
-.main-name-two{
+.main-name-two {
   letter-spacing: 1px;
   color: map-get($theme-colors, third);
   font-family: $font-big-two;
   font-weight: 800;
-  font-size: 100px ;
+  font-size: 100px;
   letter-spacing: 1px;
-  text-shadow: 
-  1px -1px 0 map-get($theme-colors, fourth), 
-  // -5px 5px 1px map-get($theme-colors,  fifth),
-  5px 5px 10px map-get($theme-colors,  fifth)
+  text-shadow: 1px -1px 0 map-get($theme-colors, fourth),
+    // -5px 5px 1px map-get($theme-colors,  fifth),
+    5px 5px 10px map-get($theme-colors, fifth);
 }
 
-.main-name-three{
+.main-name-three {
   font-family: $font-big-two;
   font-weight: 800;
-  font-size: 50px ;
+  font-size: 50px;
   letter-spacing: 5px;
-    text-shadow: 
-    1px -1px 0 map-get($theme-colors, fourth), 
-      5px 5px 10px map-get($theme-colors,  sixth);
-      
-      
+  text-shadow: 1px -1px 0 map-get($theme-colors, fourth),
+    5px 5px 10px map-get($theme-colors, sixth);
 }
 
 .glowing-part {
@@ -395,6 +374,34 @@ text-shadow:
   text-wrap: nowrap;
   text-overflow: clip;
 }
+
+/*------- ARCADE -------*/
+
+.arcade-section-part{
+  @include padd(40px, 80px, 40px, 80px);
+}
+
+.arcade-title{
+  @include text-w-s(800, 30);
+  letter-spacing: 10px;
+  color: map-get($theme-colors, third);
+margin-bottom: 0 !important;
+}
+
+.arcade-title-part{
+  background-color:rgb(20, 20, 20);
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 

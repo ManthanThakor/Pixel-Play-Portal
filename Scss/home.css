@@ -3,10 +3,6 @@
   padding: 0;
 }
 
-.main {
-  overflow-x: hidden !important;
-}
-
 /* ---------------------- Navbar -------------------- */
 /* ----- background -------- */
 .pixel-head {
@@ -329,4 +325,22 @@
 #glowing_text {
   text-wrap: nowrap;
   text-overflow: clip;
+}
+
+/*------- ARCADE -------*/
+.arcade-section-part {
+  padding: 40px 80px 40px 80px !important;
+}
+
+.arcade-title {
+  font-family: sans-serif, serif !important;
+  font-weight: 800 !important;
+  font-size: 30px !important;
+  letter-spacing: 10px;
+  color: aliceblue;
+  margin-bottom: 0 !important;
+}
+
+.arcade-title-part {
+  background-color: rgb(20, 20, 20);
 }/*# sourceMappingURL=home.css.map */
