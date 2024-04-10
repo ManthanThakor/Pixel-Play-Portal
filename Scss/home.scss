@@ -379,7 +379,8 @@
 
 .arcade-section-part{
   @include padd(0px, 80px, 0px, 80px);
-  background-color:$black-color;
+  background-color:rgb(0, 0, 0);
+
 }
 
 .arcade-title{
@@ -388,12 +389,20 @@
   color: map-get($theme-colors, third);
 margin-bottom: 0 !important;
 
+@include textalign-c;
 }
 
 .arcade-title-part{
- 
+  @include flex-row;
+  border-top: solid 1px $fefe;
+  border-bottom: solid 1px $fefe;
+  box-shadow: 0px -15px 15px -15px $fefe, /* top shadow */
+  0px 15px 15px -15px $fefe;   /* bottom shadow */
 }
 
+.arcade-img{
+  object-fit: scale-down;
+}
 
 
 

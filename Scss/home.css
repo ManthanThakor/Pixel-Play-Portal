@@ -330,7 +330,7 @@
 /*------- ARCADE -------*/
 .arcade-section-part {
   padding: 0px 80px 0px 80px !important;
-  background-color: #000000;
+  background-color: rgb(0, 0, 0);
 }
 
 .arcade-title {
@@ -340,4 +340,18 @@
   letter-spacing: 3px;
   color: aliceblue;
   margin-bottom: 0 !important;
+  text-align: center;
+}
+
+.arcade-title-part {
+  display: flex;
+  flex-direction: row;
+  border-top: solid 1px #fefefe;
+  border-bottom: solid 1px #fefefe;
+  box-shadow: 0px -15px 15px -15px #fefefe, 0px 15px 15px -15px #fefefe; /* bottom shadow */
+}
+
+.arcade-img {
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
 }/*# sourceMappingURL=home.css.map */
