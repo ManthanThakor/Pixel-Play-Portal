@@ -80,3 +80,16 @@ document.addEventListener('DOMContentLoaded', () => {
 */
 
 // Init slick slider + animation
+
+
+// <!-- ============SCRIPT FOR slick slider=============== -->
+  // $(document).ready(function () {
+  //   $(".slick-part-one").slick({
+  //     slidesToShow: 1,
+  //     slidesToScroll: 1,
+  //     autoplay: true,
+  //     autoplaySpeed: 2000,
+  //     dots: true,
+  //     arrows: true,
+  //   });
+  // });

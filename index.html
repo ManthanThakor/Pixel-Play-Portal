@@ -79,7 +79,7 @@
           </li>
           <!-- arcade -->
           <li class="nav-item">
-            <a href="about.html" class="nav-link text-uppercase">arcade</a>
+            <a href="#arcade-section" class="nav-link text-uppercase">arcade</a>
           </li>
           <!-- event -->
           <li class="nav-item">
@@ -169,7 +169,7 @@
 
   <!-- ---Arcade section--- -->
 
-  <div class="arcade-section-part">
+  <div class="arcade-section-part" id="arcade-section">
    <div class="arcade-title-part">
     <img src="Img/arcade-part/logo/logo.png" alt="" id="arcade-img">
     <p class="text-uppercase arcade-title">Arcade</p>
@@ -178,6 +178,32 @@
   </div>
 
   <div class="arcade-head-part">
+    <div class="card-group">
+      <div class="card">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+      </div>
+    </div>
 
   </div>
 
@@ -234,27 +260,16 @@
     });
   </script> -->
 
-  <!-- ============SCRIPT FOR slick slider=============== -->
-  <!-- <script>
-    $(document).ready(function () {
-      $(".background-part-changes-slick").slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 2000,
-        dots: false,
-        arrows: false,
-      });
-    });
-  </script> -->
-
-  <!-- <script>
+  
+  <script>
     $(document).ready(function () {
       $('.dance-studio-body-slick').slick({
-        dots: false,
+        dots: true,
         infinite: true,
         arrows: true,
         speed: 500,
+        autoplay: true,
+        autoplaySpeed: 2000,
         fade: true,
         cssEase: 'linear',
         prevArrow: '<button type="button" id="slick-prev" class="slick-prev"><img src="imgs/slick-img/Shape 4.png"  id="prevbutton-slick"/></button>',
@@ -262,7 +277,8 @@
       });
     });
   </script>
-  <script>
+
+  <!-- <script>
     $(document).ready(function () {
       $(".slick-part-three").slick({
         slidesToShow: 1,
@@ -273,7 +289,7 @@
         arrows: false,
       });
     });
-  </script>  -->
+  </script>   -->
 </body>
 
 </html>
