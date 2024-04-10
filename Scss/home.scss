@@ -414,15 +414,23 @@ padding-right: 20px;
 .arcade-t-card{
   @include text-w-s(700, 25);
   color: $fefe !important;
+  @include margin-b(0);
+
 }
 .arcade-b-card{
   @include text-w-s(100, 16);
   color: $fefe !important;
+  font-style: italic;
+  @include margin-b(0);
+  @include pad-t(15px);
 }
 
 .button-card-part{
-  
+  @include flex-row;
+  justify-content: space-between;
+  @include pad-t(25px);
 }
+
 .arcade-btn{
   @include text-w-s(100,20);
   background-color: #4CAF50;
@@ -448,7 +456,12 @@ margin-top: -7px !important;
 }
 
 
-
+.button-card-part-price{
+  @include text-w-s(100,20);
+  color: $fefe;
+  @include margin-b(0);
+  padding: 5px !important;
+}
 
 
 
