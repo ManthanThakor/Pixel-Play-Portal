@@ -367,7 +367,7 @@
   letter-spacing: 3px;
   color: map-get($theme-colors, third);
 margin-bottom: 0 !important;
-
+padding-right: 20px;
 @include textalign-c;
 }
 

@@ -71,3 +71,12 @@ document.addEventListener('DOMContentLoaded', () => {
   //   }, 2000); // 2000 milliseconds = 2 seconds delay
   // });
   
+  // slick slider animation
+
+
+  /*
+** With Slick Slider Plugin : https://github.com/marvinhuebner/slick-animation
+** And Slick Animation Plugin : https://github.com/marvinhuebner/slick-animation
+*/
+
+// Init slick slider + animation
