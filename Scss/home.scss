@@ -378,18 +378,20 @@
 /*------- ARCADE -------*/
 
 .arcade-section-part{
-  @include padd(40px, 80px, 40px, 80px);
+  @include padd(0px, 80px, 0px, 80px);
+  background-color:$black-color;
 }
 
 .arcade-title{
-  @include text-w-s(800, 30);
-  letter-spacing: 10px;
+  @include text-w-s(800, 40);
+  letter-spacing: 3px;
   color: map-get($theme-colors, third);
 margin-bottom: 0 !important;
+
 }
 
 .arcade-title-part{
-  background-color:rgb(20, 20, 20);
+ 
 }
 
 

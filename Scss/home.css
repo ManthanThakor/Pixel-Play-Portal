@@ -329,18 +329,15 @@
 
 /*------- ARCADE -------*/
 .arcade-section-part {
-  padding: 40px 80px 40px 80px !important;
+  padding: 0px 80px 0px 80px !important;
+  background-color: #000000;
 }
 
 .arcade-title {
   font-family: sans-serif, serif !important;
   font-weight: 800 !important;
-  font-size: 30px !important;
-  letter-spacing: 10px;
+  font-size: 40px !important;
+  letter-spacing: 3px;
   color: aliceblue;
   margin-bottom: 0 !important;
-}
-
-.arcade-title-part {
-  background-color: rgb(20, 20, 20);
 }/*# sourceMappingURL=home.css.map */
