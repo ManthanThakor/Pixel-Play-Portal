@@ -16,7 +16,6 @@
 %shared-styles {
   z-index: -10;
   @include posi(absolute);
-  // object-position: 51%;
   @include backimg;
   @include hh-ww(850px, 100%);
 }
@@ -400,8 +399,15 @@ margin-bottom: 0 !important;
   0px 15px 15px -15px $fefe;   /* bottom shadow */
 }
 
-.arcade-img{
-  object-fit: scale-down;
+#arcade-img{
+  width: 60px; 
+  height: 60px; 
+  object-fit: cover;
+  // object-position: 50% 25%; 
+  object-position: bottom 10px right 20px;
+object-position: right 3em bottom 10px;
+  // clip-path: inset(20px 50px 10px 0 round 50px);
+
 }
 
 

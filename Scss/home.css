@@ -351,7 +351,13 @@
   box-shadow: 0px -15px 15px -15px #fefefe, 0px 15px 15px -15px #fefefe; /* bottom shadow */
 }
 
-.arcade-img {
-  -o-object-fit: scale-down;
-     object-fit: scale-down;
+#arcade-img {
+  width: 60px;
+  height: 60px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: bottom 10px right 20px;
+     object-position: bottom 10px right 20px;
+  -o-object-position: right 3em bottom 10px;
+     object-position: right 3em bottom 10px;
 }/*# sourceMappingURL=home.css.map */
