@@ -379,6 +379,12 @@
   perspective: 2500px;
   border-radius: 1rem !important;
   background-color: #191c29 !important;
+  perspective: 2500px !important;
+}
+
+.arcade-card-img {
+  padding: 5px !important;
+  box-shadow: 0 0 1px rgba(255, 255, 255, 0.397), 0 0 1px rgba(255, 255, 255, 0.462), 0 0 1px rgba(255, 255, 255, 0.416), 0 0 1px rgba(255, 255, 255, 0.453);
 }
 
 .arcade-t-card {
@@ -387,6 +393,7 @@
   font-size: 25px !important;
   color: #fefefe !important;
   margin-bottom: 0 !important;
+  padding-top: 10px !important;
 }
 
 .arcade-b-card {
@@ -410,8 +417,9 @@
   font-family: sans-serif, serif !important;
   font-weight: 100 !important;
   font-size: 20px !important;
-  background-color: #4CAF50;
-  color: white;
+  background-color: #ff0000 !important;
+  border: none !important;
+  color: #fefefe !important;
   cursor: pointer;
   -webkit-clip-path: polygon(90% 0, 100% 34%, 100% 100%, 10% 100%, 0 66%, 0 0) !important;
           clip-path: polygon(90% 0, 100% 34%, 100% 100%, 10% 100%, 0 66%, 0 0) !important;

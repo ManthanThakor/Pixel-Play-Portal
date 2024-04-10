@@ -408,14 +408,20 @@ padding-right: 20px;
  border-radius: 1rem !important;
 //  background-color: rgba(0, 0, 0, 0.767) !important;
  background-color: #191c29 !important;
+ perspective: 2500px !important;
 }
 
-
+.arcade-card-img{
+  padding: 5px !important;
+  box-shadow: 0 0 1px rgba(255, 255, 255, 0.397),
+  0 0 1px rgba(255, 255, 255, 0.462), 0 0 1px rgba(255, 255, 255, 0.416),
+  0 0 1px rgba(255, 255, 255, 0.453);
+}
 .arcade-t-card{
   @include text-w-s(700, 25);
   color: $fefe !important;
   @include margin-b(0);
-
+padding-top: 10px !important;
 }
 .arcade-b-card{
   @include text-w-s(100, 16);
@@ -429,12 +435,14 @@ padding-right: 20px;
   @include flex-row;
   justify-content: space-between;
   @include pad-t(25px);
+  // position: fixed !important;
 }
 
 .arcade-btn{
   @include text-w-s(100,20);
-  background-color: #4CAF50;
-  color: white;
+  background-color: $red !important;
+border: none !important;
+  color: $fefe !important;
   cursor: pointer;
   clip-path: $poly !important;
 }
