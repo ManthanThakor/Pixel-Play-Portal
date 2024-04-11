@@ -93,3 +93,75 @@ document.addEventListener('DOMContentLoaded', () => {
   //     arrows: true,
   //   });
   // });
+  
+  // let x = document.querySelector(".arcade-b-card").innerHTML;
+  // let xx = Array.from(x);
+
+  // let readless = () => {
+  // if (xx.length > 139) {
+  //   var text = document.querySelector(".arcade-b-card").textContent.slice(0,139);
+  //   console.log( document.querySelector(".arcade-b-card").textContent);
+  //   console.log( text);
+
+  //   document.querySelector(".arcade-b-card").innerHTML = text + '...';
+  //   console.log(x);
+  //   j = text + '...';
+        
+  //   document.querySelector(".arcade-b-card").innerHTML = j +
+  //           '<span class="remaining-text" style="display: none;">' + '</span>' +
+  //           '<span class="read-more"> Read more</span>';
+  // }
+  // }
+  // readless();
+  
+  // let click_read = () => {
+  //   document.addEventListener('click', function(event) {
+ 
+  //     if (event.target.classList.contains('read-more')) {
+
+  //   document.querySelector(".arcade-b-card").innerHTML = x +  '<span class="remaining-text" style="display: none;">' + '</span>' +
+  //  '<span class="read-less"> Read less </span>';;
+      
+  //  document.querySelector(".read-less").addEventListener('click', function() {
+  //   readless();
+
+  //  });
+  //     }
+  //   });
+  // }
+  // click_read();
+  
+
+
+  // Function to truncate text and add read more button
+  // Select all card elements
+let cards = document.querySelectorAll(".arcade-b-card");
+
+// Function to add "Read more/Read less" functionality to each card
+cards.forEach(card => {
+    let originalContent = card.innerHTML;
+    
+    let readless = () => {
+        if (card.textContent.length > 139) {
+            card.innerHTML = card.textContent.slice(0, 139) + '...' +
+                '<span class="remaining-text" style="display: none;">' + '</span>' +
+                '<span class="read-more"> Read more</span>';
+        }
+    }
+    readless();
+
+    let click_read = () => {
+        card.addEventListener('click', function(event) {
+            if (event.target.classList.contains('read-more')) {
+                card.innerHTML = originalContent +
+                    '<span class="remaining-text" style="display: none;">' + '</span>' +
+                    '<span class="read-less"> Read less </span>';
+
+                document.querySelector(".read-less").addEventListener('click', function() {
+                    readless();
+                });
+            }
+        });
+    }
+    click_read();
+});

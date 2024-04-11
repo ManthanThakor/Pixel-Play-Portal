@@ -371,6 +371,11 @@
 }
 
 /* arcade-cards */
+.card {
+  position: relative !important;
+  padding-bottom: 50px !important;
+}
+
 .arcade-card-part {
   gap: 20px;
 }
@@ -411,6 +416,10 @@
   flex-direction: row;
   justify-content: space-between;
   padding-top: 25px !important;
+  position: absolute !important;
+  bottom: 15px !important; /* 15px from the bottom */
+  left: 0 !important;
+  right: 0 !important; /* Make the button container full width */
 }
 
 .arcade-btn {
@@ -446,4 +455,14 @@
   color: #fefefe;
   margin-bottom: 0 !important;
   padding: 5px !important;
+}
+
+.arcade-b-card .read-more {
+  color: red !important;
+  cursor: pointer;
+}
+
+.read-less {
+  color: red !important;
+  cursor: pointer;
 }/*# sourceMappingURL=home.css.map */

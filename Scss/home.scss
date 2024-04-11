@@ -400,6 +400,10 @@ padding-right: 20px;
 
 /* arcade-cards */ 
 
+.card{
+  position: relative !important;
+  padding-bottom: 50px !important;
+}
 .arcade-card-part{
   gap:20px;
 }
@@ -435,7 +439,10 @@ padding-top: 10px !important;
   @include flex-row;
   justify-content: space-between;
   @include pad-t(25px);
-  // position: fixed !important;
+  position: absolute !important;
+  bottom: 15px !important; /* 15px from the bottom */
+  left: 0 !important;
+  right: 0 !important; /* Make the button container full width */
 }
 
 .arcade-btn{
@@ -445,6 +452,7 @@ border: none !important;
   color: $fefe !important;
   cursor: pointer;
   clip-path: $poly !important;
+ 
 }
 
 .arcade-btn:hover:before {
@@ -471,6 +479,22 @@ margin-top: -7px !important;
   padding: 5px !important;
 }
 
+// .card-text {
+//   display: -webkit-box;
+//   -webkit-line-clamp: 3; /* Limit to 3 lines */
+//   -webkit-box-orient: vertical;
+//   overflow: hidden;
+// }
+
+.arcade-b-card .read-more {
+  color: red !important;
+  cursor: pointer;
+}
+.read-less{
+  color: red !important;
+  cursor: pointer;
+
+}
 
 
 
