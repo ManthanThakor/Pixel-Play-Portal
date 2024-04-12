@@ -421,6 +421,41 @@ padding-right: 20px;
   0 0 1px rgba(255, 255, 255, 0.462), 0 0 1px rgba(255, 255, 255, 0.416),
   0 0 1px rgba(255, 255, 255, 0.453);
 }
+
+.ca-arc-hov-img{
+  height: 420px !important;
+  width: 200px !important;
+  opacity: 0;
+  transition: all 0.5s;
+  position: absolute;
+  top:0;
+  right: 30px;
+}
+.arcade-card-one:hover {
+  .ca-arc-hov-img {
+    opacity: 1;
+    transform: translate3d(0%, -30%, 100px);
+}
+
+
+}
+
+.card:hover{
+  transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
+  box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+  transition: all 0.5s;
+  cursor: pointer;
+  .ca-arc-hov-img{
+    transform: perspective(300px) translateY(-40%) rotateX(-11deg) translateZ(0) !important;
+  }
+  .card-img-top {
+    opacity: 0.5;
+  }
+}
+
+
 .arcade-t-card{
   @include text-w-s(700, 25);
   color: $fefe !important;
