@@ -429,7 +429,7 @@ padding-right: 20px;
   transition: all 0.5s;
   position: absolute;
   top:0;
-  right: 30px;
+  right: 115px;
 }
 .arcade-card-one:hover {
   .ca-arc-hov-img {
@@ -473,8 +473,8 @@ padding-top: 10px !important;
 .button-card-part{
   @include flex-row;
   justify-content: space-between;
-  @include pad-t(25px);
   position: absolute !important;
+  @include padd(0 ,15px ,0, 15px);
   bottom: 15px !important; /* 15px from the bottom */
   left: 0 !important;
   right: 0 !important; /* Make the button container full width */
