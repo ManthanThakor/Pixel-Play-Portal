@@ -340,7 +340,6 @@
   letter-spacing: 3px;
   color: aliceblue;
   margin-bottom: 0 !important;
-  padding-right: 20px;
   text-align: center;
 }
 
@@ -360,6 +359,15 @@
      object-fit: cover;
   -o-object-position: right -1em bottom 10px;
      object-position: right -1em bottom 10px;
+}
+
+#arcade-img-two {
+  height: 70px !important;
+  width: 70px !important;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: right -3em bottom 10px;
+     object-position: right -3em bottom 10px;
 }
 
 .arcade-head-part {
@@ -405,21 +413,6 @@
 .arcade-card-one:hover .ca-arc-hov-img {
   opacity: 1;
   transform: translate3d(0%, -30%, 100px);
-}
-
-.card:hover {
-  transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
-  box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
-  -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
-  transition: all 0.5s;
-  cursor: pointer;
-}
-.card:hover .ca-arc-hov-img {
-  transform: perspective(300px) translateY(-40%) rotateX(-11deg) translateZ(0) !important;
-}
-.card:hover .card-img-top {
-  opacity: 0.5;
 }
 
 .arcade-t-card {
@@ -488,11 +481,33 @@
 }
 
 .arcade-b-card .read-more {
-  color: red !important;
+  color: #ff0000 !important;
   cursor: pointer;
 }
 
 .read-less {
-  color: red !important;
+  color: #ff0000 !important;
   cursor: pointer;
+}
+
+/*----arcade-card-hover----*/
+.card:hover {
+  transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
+  box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.card:hover .ca-arc-hov-img {
+  transform: perspective(300px) translateY(-40%) rotateX(-11deg) translateZ(0) !important;
+}
+.card:hover .card-img-top {
+  opacity: 0.5;
+}
+
+/*--arcade-part-2--*/
+.arcade-card-part-two {
+  padding-top: 3rem !important;
+  gap: 20px;
 }/*# sourceMappingURL=home.css.map */
