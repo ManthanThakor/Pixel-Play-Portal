@@ -2,7 +2,7 @@
 $black-color: #000000;
 $fefe: #fefefe;
 $hov-red: #e62646;
-$red:#ff0000;
+$red: #ff0000;
 $background-color: #3b3350;
 
 //fonts
@@ -33,9 +33,10 @@ $theme-colors: (
   third: aliceblue,
   fourth: #a8000082,
   fifth: #07fffb87,
-  sixth: #ff292992
-  // seventh: #000000,
-  // eighth: #000000,
+  sixth: #ff292992,
+  hsl-one: hsla(155, 100%, 94%, 1%),
+  hsl-two: hsla(155, 100%, 100%, 25%) inset,
+  hsl-three: hsl(156, 51%, 75%),
 );
 
 $theme-padding: (
@@ -56,4 +57,4 @@ $f-size-zone: (
 
 // poly
 
-$poly: polygon(90% 0, 100% 34%, 100% 100%, 10% 100%, 0 66%, 0 0) ;
+$poly: polygon(90% 0, 100% 34%, 100% 100%, 10% 100%, 0 66%, 0 0);

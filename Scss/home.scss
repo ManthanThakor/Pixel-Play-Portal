@@ -540,16 +540,17 @@ margin-top: -7px !important;
 /*--btn-arcade--*/
 
 .arc-btn-mor{
-  // @include text-w-s(100,20);
-  // background-color: $red !important;
   @include padd(20px, 0, 20px ,0);
   @include flx-c;
 
 }
-.arcade-card-more-btn{
-  background-color: hsla(155, 100%, 94%, 1%);;
-  box-shadow: 0px -3px 15px 0px hsla(155, 100%, 100%, 25%) inset;
-  color: hsl(156, 51%, 75%);;
+
+.common-btn-part{
+  background-color: map-get($theme-colors, hsl-one);
+  box-shadow: 0px -3px 15px 0px map-get($theme-colors, hsl-two);
+  color: map-get($theme-colors, hsl-three);
+   @include text-w-s(100,22);
+   @include padd(2px);
 }
 
 

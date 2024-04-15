@@ -519,8 +519,11 @@
   justify-content: center;
 }
 
-.arcade-card-more-btn {
+.common-btn-part {
   background-color: hsla(155, 100%, 94%, 0.01);
   box-shadow: 0px -3px 15px 0px hsla(155, 100%, 100%, 0.25) inset;
   color: hsl(156, 51%, 75%);
+  font-family: sans-serif, serif !important;
+  font-weight: 100 !important;
+  font-size: 22px !important;
 }/*# sourceMappingURL=home.css.map */
