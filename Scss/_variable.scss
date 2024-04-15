@@ -58,3 +58,9 @@ $f-size-zone: (
 // poly
 
 $poly: polygon(90% 0, 100% 34%, 100% 100%, 10% 100%, 0 66%, 0 0);
+
+
+$btn-width: 250px !default;
+$btn-height: 80px !default;
+$btn-full: $btn-height+$btn-width !default;
+$bg-color: #eeeeee !default;

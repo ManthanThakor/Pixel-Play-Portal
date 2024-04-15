@@ -94,47 +94,10 @@ document.addEventListener('DOMContentLoaded', () => {
   //   });
   // });
   
-  // let x = document.querySelector(".arcade-b-card").innerHTML;
-  // let xx = Array.from(x);
-
-  // let readless = () => {
-  // if (xx.length > 139) {
-  //   var text = document.querySelector(".arcade-b-card").textContent.slice(0,139);
-  //   console.log( document.querySelector(".arcade-b-card").textContent);
-  //   console.log( text);
-
-  //   document.querySelector(".arcade-b-card").innerHTML = text + '...';
-  //   console.log(x);
-  //   j = text + '...';
-        
-  //   document.querySelector(".arcade-b-card").innerHTML = j +
-  //           '<span class="remaining-text" style="display: none;">' + '</span>' +
-  //           '<span class="read-more"> Read more</span>';
-  // }
-  // }
-  // readless();
-  
-  // let click_read = () => {
-  //   document.addEventListener('click', function(event) {
- 
-  //     if (event.target.classList.contains('read-more')) {
-
-  //   document.querySelector(".arcade-b-card").innerHTML = x +  '<span class="remaining-text" style="display: none;">' + '</span>' +
-  //  '<span class="read-less"> Read less </span>';;
-      
-  //  document.querySelector(".read-less").addEventListener('click', function() {
-  //   readless();
-
-  //  });
-  //     }
-  //   });
-  // }
-  // click_read();
-  
-
 
   // Function to truncate text and add read more button
   // Select all card elements
+
 let cards = document.querySelectorAll(".arcade-b-card");
 
 // Function to add "Read more/Read less" functionality to each card
@@ -164,4 +127,13 @@ cards.forEach(card => {
         });
     }
     click_read();
+});
+
+
+// Btn animation
+
+// Add this JavaScript to your script
+document.querySelector('.common-btn-part').addEventListener('click', function() {
+  // Add your click event functionality here
+  console.log('Button clicked');
 });

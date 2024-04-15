@@ -514,7 +514,7 @@
 
 /*--btn-arcade--*/
 .arc-btn-mor {
-  padding: 20px 0 20px 0 !important;
+  padding: 25px 0 0px 0 !important;
   display: flex;
   justify-content: center;
 }
@@ -527,4 +527,28 @@
   font-weight: 100 !important;
   font-size: 22px !important;
   padding: 8px 20px 8px 20px !important;
+  border-radius: 10%;
+  border: solid 1px rgba(255, 255, 255, 0.708);
+}
+
+.common-btn-part::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 300px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.6s;
+  pointer-events: none;
+}
+
+.common-btn-part:hover {
+  color: #fefefe;
+  background-color: rgb(0, 0, 0);
+  transform: scale(1.2);
+  transition: 0.8s;
+  box-shadow: 0 0 0.5em 0em rgba(248, 248, 248, 0.712);
 }/*# sourceMappingURL=home.css.map */
