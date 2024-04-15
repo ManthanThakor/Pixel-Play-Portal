@@ -550,7 +550,7 @@ margin-top: -7px !important;
   box-shadow: 0px -3px 15px 0px map-get($theme-colors, hsl-two);
   color: map-get($theme-colors, hsl-three);
    @include text-w-s(100,22);
-   @include padd(2px);
+   @include padd(8px,20px,8px,20px);
 }
 
 
