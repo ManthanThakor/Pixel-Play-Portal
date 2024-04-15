@@ -1,0 +1,87 @@
+/*-----------------------------------*\
+              Tournament
+\*-----------------------------------*/
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  background-color: #363636; /* Lighter background color */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Box shadow for depth */
+}
+
+.title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.prize-info {
+  text-align: center;
+}
+
+.prize-info h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.button {
+  padding: 10px 20px;
+  background-color: #00FF00; /* Green button color */
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #008000; /* Dark green on hover */
+}
+
+.countdown {
+  text-align: center;
+  font-size: 18px;
+}
+
+.container {
+  background-color: #4B0082; /* Purple background color */
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+
+.logo {
+  width: 100px; /* Adjust size as needed */
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #00FF00; /* Green button color */
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin: 0 10px;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #008000; /* Dark green on hover */
+}
+
+#countdown {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+#countdown span {
+  margin: 0 5px;
+}/*# sourceMappingURL=tournament.css.map */
