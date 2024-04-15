@@ -4,6 +4,14 @@
 
 // =========================================================================
 
+@mixin flx{
+  display: flex;
+}
+@mixin flx-c{
+  display: flex;
+  justify-content: center;
+}
+
   @mixin flex-col{
     display: flex;
     flex-direction: column;

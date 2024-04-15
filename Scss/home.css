@@ -510,4 +510,17 @@
 .arcade-card-part-two {
   padding-top: 3rem !important;
   gap: 20px;
+}
+
+/*--btn-arcade--*/
+.arc-btn-mor {
+  padding: 20px 0 20px 0 !important;
+  display: flex;
+  justify-content: center;
+}
+
+.arcade-card-more-btn {
+  background-color: hsla(155, 100%, 94%, 0.01);
+  box-shadow: 0px -3px 15px 0px hsla(155, 100%, 100%, 0.25) inset;
+  color: hsl(156, 51%, 75%);
 }/*# sourceMappingURL=home.css.map */
