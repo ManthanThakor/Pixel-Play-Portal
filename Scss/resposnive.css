@@ -28,7 +28,8 @@ body {
   .pixel-menu {
     display: flex !important;
   }
-  .main-name-part, #background-part-sec {
+  .main-name-part,
+  #background-part-sec {
     filter: blur(0px) !important;
   }
 }
@@ -97,7 +98,82 @@ body {
   }
 }
 @media only screen and (max-width: 500px) {
-  .pixel-menu, .more-section {
+  .pixel-menu,
+  .more-section {
     width: 100% !important;
   }
-}/*# sourceMappingURL=resposnive.css.map */
+  .more-section {
+    position: relative !important;
+  }
+}
+/*-----------------------------------*\
+               Arcade
+\*-----------------------------------*/
+/*-----------------------------------*\
+               Event
+\*-----------------------------------*/
+@media only screen and (max-width: 1406px) {
+  .event-join-t {
+    font-family: "Starzone", "sans-serif", "serif" !important;
+    font-weight: 700 !important;
+    font-size: 35px !important;
+  }
+}
+@media only screen and (max-width: 1290px) {
+  .event-section-part {
+    padding: 0px 40px 40px 40px !important;
+  }
+}
+@media only screen and (min-width: 840px) and (max-width: 992px) {
+  .event-part-two-sec {
+    margin-top: 20px !important;
+  }
+}
+@media only screen and (max-width: 525px) {
+  .event-join-t {
+    font-family: "Starzone", "sans-serif", "serif" !important;
+    font-weight: 600 !important;
+    font-size: 22px !important;
+    padding: 30px 0px 0px 0px !important;
+  }
+  .event-section-part {
+    padding: 0px 15px 30px 15px !important;
+  }
+  .event-part-two-sec {
+    height: 18rem !important;
+  }
+  .event-part-two-one {
+    align-items: center;
+    text-align: center;
+  }
+  .event-part-two-one {
+    margin-bottom: 5px !important;
+  }
+}
+@media only screen and (max-width: 360px) {
+  #arcade-img {
+    height: 50px !important;
+    width: 50px !important;
+    -o-object-position: right -1.6rem bottom 7px;
+       object-position: right -1.6rem bottom 7px;
+  }
+  #arcade-img-two {
+    height: 50px !important;
+    width: 50px !important;
+    -o-object-position: right -1em bottom 8px;
+       object-position: right -1em bottom 8px;
+  }
+  .arcade-title {
+    font-size: 26px !important;
+    padding-top: 3px;
+  }
+  .event-join-t, .common-btn-part {
+    font-size: 18px !important;
+  }
+  .event-dis {
+    font-size: 14px !important;
+  }
+}
+/*-----------------------------------*\
+               content
+\*-----------------------------------*//*# sourceMappingURL=resposnive.css.map */

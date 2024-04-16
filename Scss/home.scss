@@ -1,8 +1,8 @@
 @use "_index" as *;
 
 * {
-  margin: 0 ;
-  padding: 0 ;
+  margin: 0;
+  padding: 0;
 }
 
 /* ---------------------- Navbar -------------------- */
@@ -172,7 +172,6 @@
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none; /* Standard syntax */
 }
-
 
 .search-box-two {
   display: none;
@@ -356,102 +355,99 @@
 
 /*------- ARCADE -------*/
 
-.arcade-section-part{
+.arcade-section-part {
   @include padd(0px, 80px, 0px, 80px);
-  background-color:rgb(0, 0, 0);
-
+  background-color: rgb(0, 0, 0);
 }
 
-.arcade-title{
+.arcade-title {
   @include text-w-s(800, 40);
   letter-spacing: 3px;
   color: map-get($theme-colors, third);
-margin-bottom: 0 !important;
-@include textalign-c;
+  margin-bottom: 0 !important;
+  @include textalign-c;
 }
 
-.arcade-title-part{
+.arcade-title-part {
   @include flex-row;
   border-top: solid 1px $fefe;
   border-bottom: solid 1px $fefe;
-  box-shadow: 0px -15px 15px -15px $fefe, /* top shadow */
-  0px 15px 15px -15px $fefe;   /* bottom shadow */
+  box-shadow: 0px -15px 15px -15px $fefe,
+    /* top shadow */ 0px 15px 15px -15px $fefe; /* bottom shadow */
   justify-content: center;
-
 }
 
-#arcade-img{
-  @include h-w(70,70);
+#arcade-img {
+  @include h-w(70, 70);
   object-fit: cover;
-  // object-position: 50% 25%; 
+  // object-position: 50% 25%;
   // object-position: bottom 10px right 20px;
   object-position: right -1em bottom 10px;
   // clip-path: inset(20px 50px 10px 0 round 50px);
 }
 
-#arcade-img-two{
-  @include h-w(70,70);
+#arcade-img-two {
+  @include h-w(70, 70);
   object-fit: cover;
   object-position: right -3em bottom 10px;
-
 }
 
-.arcade-head-part{
+.arcade-head-part {
   @include padd(40px, 80px, 40px, 80px);
-  background: linear-gradient(rgba(0, 0, 0, 0.666), rgba(0, 0, 0, 0.605)), url(../Img/arcade-part/arcade-background/arcade-3.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.666), rgba(0, 0, 0, 0.605)),
+    url(../Img/arcade-part/arcade-background/arcade-3.jpg);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
 }
 
-/* arcade-cards */ 
+/* arcade-cards */
 
-.card{
+.card {
   position: relative !important;
   padding-bottom: 50px !important;
 }
-.arcade-card-part{
-  gap:20px;
+.arcade-card-part {
+  gap: 20px;
 }
-.arcade-card-one{
+.arcade-card-one {
   perspective: 2500px;
- border-radius: 1rem !important;
-//  background-color: rgba(0, 0, 0, 0.767) !important;
- background-color: #191c29 !important;
- perspective: 2500px !important;
+  border-radius: 1rem !important;
+  //  background-color: rgba(0, 0, 0, 0.767) !important;
+  background-color: #191c29 !important;
+  perspective: 2500px !important;
 }
 
-.arcade-card-img{
+.arcade-card-img {
   padding: 5px !important;
   box-shadow: 0 0 1px rgba(255, 255, 255, 0.397),
-  0 0 1px rgba(255, 255, 255, 0.462), 0 0 1px rgba(255, 255, 255, 0.416),
-  0 0 1px rgba(255, 255, 255, 0.453);
+    0 0 1px rgba(255, 255, 255, 0.462), 0 0 1px rgba(255, 255, 255, 0.416),
+    0 0 1px rgba(255, 255, 255, 0.453);
 }
 
-.ca-arc-hov-img{
+.ca-arc-hov-img {
   height: 420px !important;
   width: 200px !important;
   opacity: 0;
   transition: all 0.5s;
   position: absolute;
-  top:0;
+  top: 0;
   right: 115px;
 }
 .arcade-card-one:hover {
   .ca-arc-hov-img {
     opacity: 1;
     transform: translate3d(0%, -30%, 100px);
-}
+  }
 }
 
-
-.arcade-t-card{
+.arcade-t-card {
   @include text-w-s(700, 25);
   color: $fefe !important;
   @include margin-b(0);
-padding-top: 10px !important;
+  padding-top: 10px !important;
 }
-.arcade-b-card{
+.arcade-b-card {
   @include text-w-s(100, 16);
   color: $fefe !important;
   font-style: italic;
@@ -459,24 +455,23 @@ padding-top: 10px !important;
   @include pad-t(15px);
 }
 
-.button-card-part{
+.button-card-part {
   @include flex-row;
   justify-content: space-between;
   position: absolute !important;
-  @include padd(0 ,15px ,0, 15px);
+  @include padd(0, 15px, 0, 15px);
   bottom: 15px !important; /* 15px from the bottom */
   left: 0 !important;
   right: 0 !important; /* Make the button container full width */
 }
 
-.arcade-btn{
-  @include text-w-s(100,20);
+.arcade-btn {
+  @include text-w-s(100, 20);
   background-color: $red !important;
-border: none !important;
+  border: none !important;
   color: $fefe !important;
   cursor: pointer;
   clip-path: $poly !important;
- 
 }
 
 .arcade-btn:hover:before {
@@ -491,13 +486,11 @@ border: none !important;
   font-family: FontAwesome;
   display: block;
   @include posi(absolute);
-margin-top: -7px !important;
-
+  margin-top: -7px !important;
 }
 
-
-.button-card-part-price{
-  @include text-w-s(100,20);
+.button-card-part-price {
+  @include text-w-s(100, 20);
   color: $fefe;
   @include margin-b(0);
   padding: 5px !important;
@@ -507,22 +500,22 @@ margin-top: -7px !important;
   color: $red !important;
   cursor: pointer;
 }
-.read-less{
+.read-less {
   color: $red !important;
   cursor: pointer;
 }
 
-/*----arcade-card-hover----*/ 
+/*----arcade-card-hover----*/
 
-.card:hover{
+.card:hover {
   transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
   box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
   transition: all 0.5s;
   cursor: pointer;
-  
-  .ca-arc-hov-img{
+
+  .ca-arc-hov-img {
     transform: perspective(300px) translateY(-40%) rotateX(-11deg) translateZ(0) !important;
   }
   .card-img-top {
@@ -532,31 +525,30 @@ margin-top: -7px !important;
 
 /*--arcade-part-2--*/
 
-.arcade-card-part-two{
+.arcade-card-part-two {
   @include pad-t(3rem);
   gap: 20px;
 }
 
 /*--btn-arcade--*/
 
-.arc-btn-mor{
-  @include padd(25px, 0, 0px ,0);
+.arc-btn-mor {
+  @include padd(25px, 0, 0px, 0);
   @include flx-c;
-
 }
 
-.common-btn-part{
+.common-btn-part {
   background-color: map-get($theme-colors, hsl-one);
   box-shadow: 0px -3px 15px 0px map-get($theme-colors, hsl-two);
   color: map-get($theme-colors, hsl-three);
-   @include text-w-s(100,22);
-   @include padd(8px,20px,8px,20px);
-   border-radius: 10%;
-   border: solid 1px rgba(255, 255, 255, 0.708);
+  @include text-w-s(100, 22);
+  @include padd(8px, 20px, 8px, 20px);
+  border-radius: 10%;
+  border: solid 1px rgba(255, 255, 255, 0.708);
 }
 
 .common-btn-part::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 50%;
   left: 50%;
@@ -571,62 +563,58 @@ margin-top: -7px !important;
 
 .common-btn-part:hover {
   color: $fefe;
-  background-color:  rgb(0, 0, 0);
-  transform: scale(1.2); 
+  background-color: rgb(0, 0, 0);
+  transform: scale(1.2);
   transition: 0.8s;
-    box-shadow: 0 0 0.5em 0em rgba(248, 248, 248, 0.712);
-  
+  box-shadow: 0 0 0.5em 0em rgba(248, 248, 248, 0.712);
 }
 
 /*-----------------------------------*\
                 EVENTS
 \*-----------------------------------*/
 
-.event-section-part{
+.event-section-part {
   background-color: map-get($theme-colors, best);
   background-position: center;
-  // background-attachment: fixed;
-    animation: gradientAnimation 15s ease infinite;
-    filter: hue-rotate(45deg);
-    overflow: hidden;
-
-    @include padd(0px, 80px, 40px, 80px);
-  }
-
-.event-join-t{
-@include text-w-s-two(800,50);
- letter-spacing: 0.3rem;
-@include padd(5rem, 0px, 0px, 0px);
-color: map-get($theme-colors, primary);
+  animation: gradientAnimation 15s ease infinite;
+  filter: hue-rotate(45deg);
+  overflow: hidden;
+  @include padd(0px, 80px, 40px, 80px);
 }
 
-#event-gm-join-t{
-color: map-get($theme-colors, sev) !important;
-}
-
-.event-dis{
-  font-family: "Helvetica Neue",;
-  @include text-w-s(400,18);
+.event-join-t {
+  @include text-w-s-two(800, 50);
+  letter-spacing: 0.3rem;
+  @include padd(5rem, 0px, 0px, 0px);
   color: map-get($theme-colors, primary);
 }
-.event-section-part{
- 
+
+#event-gm-join-t {
+  color: map-get($theme-colors, sev) !important;
 }
 
-
-.event-img-part{
+.event-dis {
+  font-family: "Helvetica Neue";
+  @include text-w-s(400, 18);
+  color: map-get($theme-colors, primary);
+}
+.event-part-two-sec{
   @include flex-row;
   justify-content: center;
   width: 40rem;
   height: 28rem;
-  overflow: hidden; /* Hide any overflow content */
+  overflow: hidden;
 }
-.event-one-img{
-  width: 100%;
-  height: 100%;
-  // object-position: right -1em bottom 10px;
-  overflow: hidden; /* Hide the overflow content */
+.event-img-part {
+
+}
+.event-one-img {
+  @include hh-ww(100%, 100%);
   object-fit: cover;
+}
+
+.event-btn {
+  color: map-get($theme-colors, sev) !important;
 }
 
 /*-----------------------------------*\
@@ -656,32 +644,30 @@ color: map-get($theme-colors, sev) !important;
   color: hsl(31, 100%, 51%);
 }
 
-
 //  .container {
 //     background-color: #4B0082; /* Purple background color */
 //     padding: 20px;
 //     text-align: center;
 //     color: white;
 //   }
-  .logo {
-    width: 100px; /* Adjust size as needed */
-    height: auto;
-    margin-bottom: 20px;
-  }
-  .button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #00FF00; /* Green button color */
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    margin: 0 10px;
-    transition: background-color 0.3s ease;
-  }
-  .button:hover {
-    background-color: #008000; /* Dark green on hover */
-  }
-
+.logo {
+  width: 100px; /* Adjust size as needed */
+  height: auto;
+  margin-bottom: 20px;
+}
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #00ff00; /* Green button color */
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin: 0 10px;
+  transition: background-color 0.3s ease;
+}
+.button:hover {
+  background-color: #008000; /* Dark green on hover */
+}
 
 //   // INIT
 // mainColor = #F0544F

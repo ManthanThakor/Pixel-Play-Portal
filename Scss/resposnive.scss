@@ -31,7 +31,8 @@ body {
   .pixel-menu {
     display: flex !important;
   }
-  .main-name-part , #background-part-sec{
+  .main-name-part,
+  #background-part-sec {
     filter: blur(0px) !important;
   }
 }
@@ -42,32 +43,31 @@ body {
     float: right;
   }
 
-  .search-box-two{
+  .search-box-two {
     display: block !important;
   }
-.search-box {
-  display: none !important;
-}
-.setting-part{
-  width: 100% !important;
-}
-.more-part-drop{
-display: none !important;
-}
+  .search-box {
+    display: none !important;
+  }
+  .setting-part {
+    width: 100% !important;
+  }
+  .more-part-drop {
+    display: none !important;
+  }
 
-.more-section{
-  display: flex !important;
-  flex-direction: column;
-width: 500px !important;
-@include p-m(0, 0);
-margin-left: 26px !important;
+  .more-section {
+    display: flex !important;
+    flex-direction: column;
+    width: 500px !important;
+    @include p-m(0, 0);
+    margin-left: 26px !important;
     margin-top: -12px !important;
-   
-}
+  }
 
-.nav-link-part-search{
-  display: flex;
-}
+  .nav-link-part-search {
+    display: flex;
+  }
 
   .pixel-menu {
     @include dis(none);
@@ -85,7 +85,7 @@ margin-left: 26px !important;
     animation-name: slideIn;
     z-index: 1;
   }
-  
+
   @keyframes slideIn {
     from {
       opacity: 0;
@@ -99,12 +99,97 @@ margin-left: 26px !important;
 }
 
 @media only screen and (max-width: 628px) {
-.pixel-menu{
-  @include top-right(170, 0);
-}
+  .pixel-menu {
+    @include top-right(170, 0);
+  }
 }
 @media only screen and (max-width: 500px) {
-  .pixel-menu,.more-section{
-   width: 100% !important;
-  } 
+  .pixel-menu,
+  .more-section {
+    width: 100% !important;
   }
+  .more-section {
+ 
+    position:  relative !important;
+  }
+}
+
+/*-----------------------------------*\
+               Arcade
+\*-----------------------------------*/
+
+@media only screen and (max-width: 1406px) {
+ 
+  }
+
+/*-----------------------------------*\
+               Event
+\*-----------------------------------*/
+
+@media only screen and (max-width: 1406px) {
+  .event-join-t{
+    @include text-w-s-two(700, 35);
+  }
+}
+
+@media only screen and (max-width: 1290px) {
+  .event-section-part {
+    @include padd(0px, 40px, 40px, 40px);
+  }
+}
+@media only screen and (min-width: 840px) and (max-width: 992px) {
+  .event-part-two-sec{
+   margin-top: 20px !important;
+  }
+}
+@media only screen and (max-width: 525px) {
+  .event-join-t{
+    @include text-w-s-two(600, 22);
+    @include padd(30px, 0px, 0px, 0px);
+  }
+  .event-section-part {
+    @include padd(0px, 15px, 30px, 15px);
+  }
+  .event-part-two-sec{
+    height: 18rem !important;
+  }
+  .event-part-two-one{
+    align-items: center;
+    text-align: center;
+  }
+  .event-part-two-one{
+    margin-bottom: 5px !important;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  #arcade-img{
+@include hh-ww(50px,50px);
+    object-position: right -1.6rem bottom 7px;
+  }
+  #arcade-img-two{
+    @include hh-ww(50px,50px);
+    object-position: right -1em bottom 8px;
+  }
+  .arcade-title{
+    font-size: 26px !important;
+    padding-top: 3px;
+  }
+  .event-join-t,.common-btn-part{
+    font-size: 18px !important;
+  }
+  .event-dis{
+    font-size: 14px !important;
+  }
+ 
+.event-part-two-sec{
+ 
+}
+}
+
+/*-----------------------------------*\
+               content
+\*-----------------------------------*/
+
+@media only screen and (max-width: 500px) {
+}
