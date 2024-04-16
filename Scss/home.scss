@@ -605,9 +605,7 @@
   height: 28rem;
   overflow: hidden;
 }
-.event-img-part {
 
-}
 .event-one-img {
   @include hh-ww(100%, 100%);
   object-fit: cover;
@@ -616,6 +614,19 @@
 .event-btn {
   color: map-get($theme-colors, sev) !important;
 }
+
+/*-----------------------------------*\
+              
+\*-----------------------------------*/
+
+
+
+
+
+
+
+
+
 
 /*-----------------------------------*\
               #GO TO TOP
