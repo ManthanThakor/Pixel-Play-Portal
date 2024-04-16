@@ -557,7 +557,7 @@
                 EVENTS
 \*-----------------------------------*/
 .event-section-part {
-  background: linear-gradient(45deg, rgba(255, 27, 217, 0.666), rgba(14, 30, 152, 0.636), rgb(13, 182, 255), rgba(228, 0, 213, 0.666)), url(../Img/arcade-part/arcade-background/arcade-3.jpg);
+  background: linear-gradient(45deg, rgba(255, 27, 217, 0.666), rgba(14, 30, 152, 0.636), rgb(13, 182, 255), rgba(228, 0, 213, 0.666)), url(../Img/arcade-part/arcade-card/minecraft.jpg);
   background-size: 400% 400%;
   animation: gradientAnimation 10s ease infinite;
   filter: hue-rotate(45deg);
