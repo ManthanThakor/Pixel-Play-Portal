@@ -37,6 +37,8 @@ $theme-colors: (
   hsl-one: hsla(155, 100%, 94%, 1%),
   hsl-two: hsla(155, 100%, 100%, 25%) inset,
   hsl-three: hsl(156, 51%, 75%),
+  sev: #00FF00,
+  best: rgb(0 0 0 / 95%)
 );
 
 $theme-padding: (
@@ -65,3 +67,7 @@ $poly: polygon(90% 0, 100% 34%, 100% 100%, 10% 100%, 0 66%, 0 0);
 $tra-1: 0.15s ease-in-out;
 $tra-2: 0.15s ease-in;
 $tra-3: 0.25s ease-out;
+
+// background
+
+$bg-part-1: linear-gradient(45deg, rgba(0, 0, 0, 0.573), rgba(0, 0, 0, 0.529)), url(../Img/event-part/event-back.jpg);

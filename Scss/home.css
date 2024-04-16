@@ -557,35 +557,50 @@
                 EVENTS
 \*-----------------------------------*/
 .event-section-part {
-  background: linear-gradient(45deg, rgba(255, 27, 217, 0.666), rgba(14, 30, 152, 0.636), rgb(13, 182, 255), rgba(228, 0, 213, 0.666)), url(../Img/arcade-part/arcade-card/minecraft.jpg);
-  background-size: 400% 400%;
-  animation: gradientAnimation 10s ease infinite;
+  background-color: rgba(0, 0, 0, 0.95);
+  background-position: center;
+  animation: gradientAnimation 15s ease infinite;
   filter: hue-rotate(45deg);
+  overflow: hidden;
+  padding: 0px 80px 40px 80px !important;
 }
 
-@keyframes gradientAnimation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-.event-btn-part {
-  background-color: #00ffcc;
-  color: #000000;
-  padding: 15px 30px;
-  border-radius: 5px;
-  text-decoration: none;
-  font-size: 18px;
-  transition: background-color 0.3s ease;
+.event-join-t {
+  font-family: "Starzone", "sans-serif", "serif" !important;
+  font-weight: 800 !important;
+  font-size: 50px !important;
+  letter-spacing: 0.3rem;
+  padding: 5rem 0px 0px 0px !important;
+  color: #ffffff;
 }
 
-.event-btn-part:hover {
-  background-color: #00cc99;
+#event-gm-join-t {
+  color: #00FF00 !important;
+}
+
+.event-dis {
+  font-family: "Helvetica Neue";
+  font-family: sans-serif, serif !important;
+  font-weight: 400 !important;
+  font-size: 18px !important;
+  color: #ffffff;
+}
+
+.event-img-part {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 40rem;
+  height: 28rem;
+  overflow: hidden; /* Hide any overflow content */
+}
+
+.event-one-img {
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* Hide the overflow content */
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 /*-----------------------------------*\

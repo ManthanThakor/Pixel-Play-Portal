@@ -583,44 +583,51 @@ margin-top: -7px !important;
 \*-----------------------------------*/
 
 .event-section-part{
-  background: linear-gradient(45deg, rgba(255, 27, 217, 0.666), rgba(14, 30, 152, 0.636), rgb(13, 182, 255), rgba(228, 0, 213, 0.666)), url(../Img/arcade-part/arcade-card/minecraft.jpg);
-  // background: linear-gradient(45deg, #ff00ff, #0000ff, #00ffff, #ff00ff);
-    background-size: 400% 400%;
-    animation: gradientAnimation 10s ease infinite;
+  background-color: map-get($theme-colors, best);
+  background-position: center;
+  // background-attachment: fixed;
+    animation: gradientAnimation 15s ease infinite;
     filter: hue-rotate(45deg);
-  }
-  
-  @keyframes gradientAnimation {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
+    overflow: hidden;
+
+    @include padd(0px, 80px, 40px, 80px);
   }
 
+.event-join-t{
+@include text-w-s-two(800,50);
+ letter-spacing: 0.3rem;
+@include padd(5rem, 0px, 0px, 0px);
+color: map-get($theme-colors, primary);
+}
+
+#event-gm-join-t{
+color: map-get($theme-colors, sev) !important;
+}
+
+.event-dis{
+  font-family: "Helvetica Neue",;
+  @include text-w-s(400,18);
+  color: map-get($theme-colors, primary);
+}
 .event-section-part{
  
 }
 
-.event-btn-part{
-  background-color: #00ffcc;
-  color: #000000;
-  padding: 15px 30px;
-  border-radius: 5px;
-  text-decoration: none;
-  font-size: 18px;
-  transition: background-color 0.3s ease;
+
+.event-img-part{
+  @include flex-row;
+  justify-content: center;
+  width: 40rem;
+  height: 28rem;
+  overflow: hidden; /* Hide any overflow content */
 }
-
-.event-btn-part:hover {
-  background-color: #00cc99;
+.event-one-img{
+  width: 100%;
+  height: 100%;
+  // object-position: right -1em bottom 10px;
+  overflow: hidden; /* Hide the overflow content */
+  object-fit: cover;
 }
-
-
 
 /*-----------------------------------*\
               #GO TO TOP
