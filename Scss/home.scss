@@ -629,7 +629,7 @@
 
   .footer-title {
     letter-spacing: 1px;
-    color: $hov-red;
+    color: #9aff00;
     @include text-w-s-two(700, 25);
   }
 }
@@ -641,7 +641,7 @@
   margin: 10px 0 !important;
   padding: 4px 15px !important;
   font-style: italic;
-  color: #fff;
+  color: map-get($theme-colors, third);;
   outline: none;
 }
 .foot-email,

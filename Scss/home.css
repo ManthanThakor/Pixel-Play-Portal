@@ -619,7 +619,7 @@
 }
 .footer-head .footer-title {
   letter-spacing: 1px;
-  color: #e62646;
+  color: #9aff00;
   font-family: "Starzone", "sans-serif", "serif" !important;
   font-weight: 700 !important;
   font-size: 25px !important;
@@ -635,7 +635,7 @@
   margin: 10px 0 !important;
   padding: 4px 15px !important;
   font-style: italic;
-  color: #fff;
+  color: aliceblue;
   outline: none;
 }
 
