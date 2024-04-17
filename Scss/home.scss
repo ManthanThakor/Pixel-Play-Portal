@@ -621,7 +621,7 @@
 
 .footer-section {
   @include padd(60px, 80px, 60px, 80px);
-  @include box(dark);
+  background-color: rgba(0, 0, 0, 0.95);
 }
 
 .footer-head {
@@ -630,7 +630,7 @@
   .footer-title {
     letter-spacing: 1px;
     color: $hov-red;
-    @include text-w-s(700, 25);
+    @include text-w-s-two(700, 25);
   }
 }
 .foot-name {

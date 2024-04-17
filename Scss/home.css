@@ -611,7 +611,7 @@
 \*-----------------------------------*/
 .footer-section {
   padding: 60px 80px 60px 80px !important;
-  background-color: #000000;
+  background-color: rgba(0, 0, 0, 0.95);
 }
 
 .footer-head {
@@ -620,7 +620,7 @@
 .footer-head .footer-title {
   letter-spacing: 1px;
   color: #e62646;
-  font-family: sans-serif, serif !important;
+  font-family: "Starzone", "sans-serif", "serif" !important;
   font-weight: 700 !important;
   font-size: 25px !important;
 }

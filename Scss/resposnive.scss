@@ -187,5 +187,67 @@ body {
                content
 \*-----------------------------------*/
 
-@media only screen and (max-width: 500px) {
+.footer-section {
+  @media screen and (max-width: 1000px) {
+    @include padd(30px, 40px, 30px, 40px);
+  }
+  @media screen and (max-width:650px) {
+    @include padd(30px, 15px, 30px, 15px);
+  }
 }
+
+@media screen and (max-width:650px) {
+  .footer-head .footer-title {
+    font-size: 18px !important;
+  }
+}
+@media screen and (max-width:  768px) {
+  .footer-title,
+  .foot-button {
+    text-align: center;
+  }
+  .foot-name,
+  .foot-email,
+  .foot-numb,
+  .foot-message {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .footer-head .footer-title {
+  font-size: 14px !important;
+}
+.footer-head {
+  padding: 0 0 15px 0 !important;
+}
+}
+
+
+@media screen and (max-width: 320px) {
+  #num-dis,
+  #mail-dis,
+  #add-dis {
+    font-size: $font-size-res-three;
+  }
+}
+@media screen and (max-width: 270px) {
+  #num-dis,
+  #mail-dis,
+  #add-dis {
+    font-size: $font-size-res-four;
+    padding: 0px !important;
+  }
+  .footer-address-section,
+  .footer-mail-section,
+  .footer-number-section {
+    @include flex-resp;
+  }
+  #foot-icons-part {
+    @include padd(0, 0, 10px, 0);
+  }
+}
+
+/*-----------------------------------*\
+               Footer
+\*-----------------------------------*/

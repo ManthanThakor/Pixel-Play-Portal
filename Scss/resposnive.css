@@ -176,4 +176,69 @@ body {
 }
 /*-----------------------------------*\
                content
+\*-----------------------------------*/
+@media screen and (max-width: 1000px) {
+  .footer-section {
+    padding: 30px 40px 30px 40px !important;
+  }
+}
+@media screen and (max-width: 650px) {
+  .footer-section {
+    padding: 30px 15px 30px 15px !important;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .footer-head .footer-title {
+    font-size: 18px !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  .footer-title,
+  .foot-button {
+    text-align: center;
+  }
+  .foot-name,
+  .foot-email,
+  .foot-numb,
+  .foot-message {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 400px) {
+  .footer-head .footer-title {
+    font-size: 14px !important;
+  }
+  .footer-head {
+    padding: 0 0 15px 0 !important;
+  }
+}
+@media screen and (max-width: 320px) {
+  #num-dis,
+  #mail-dis,
+  #add-dis {
+    font-size: 14px !important;
+  }
+}
+@media screen and (max-width: 270px) {
+  #num-dis,
+  #mail-dis,
+  #add-dis {
+    font-size: 12px !important;
+    padding: 0px !important;
+  }
+  .footer-address-section,
+  .footer-mail-section,
+  .footer-number-section {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  #foot-icons-part {
+    padding: 0 0 10px 0 !important;
+  }
+}
+/*-----------------------------------*\
+               Footer
 \*-----------------------------------*//*# sourceMappingURL=resposnive.css.map */
