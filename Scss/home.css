@@ -646,8 +646,8 @@
   letter-spacing: 1px;
   color: #ffffff;
   font-size: 18px;
-  height: 36px !important;
-  width: 130px !important;
+  height: 50px !important;
+  width: 140px !important;
   border-radius: 18px;
   border: none;
 }
@@ -733,4 +733,8 @@
 
 .button:hover {
   background-color: #008000; /* Dark green on hover */
-}/*# sourceMappingURL=home.css.map */
+}
+
+/*-----------------------------------*\
+              cursor animation
+\*-----------------------------------*//*# sourceMappingURL=home.css.map */

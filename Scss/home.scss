@@ -657,7 +657,7 @@
     color: map-get($theme-colors, primary);
     // font-family: $font-stack-three;
     font-size: $font-size-two;
-    @include h-w(36, 130);
+    @include h-w(50, 140);
     border-radius: 18px;
     background-color: map-get($theme-colors, danger);
     border: none;
@@ -719,6 +719,7 @@
 
 
 
+
 /*-----------------------------------*\
               #GO TO TOP
 \*-----------------------------------*/
@@ -770,6 +771,14 @@
 .button:hover {
   background-color: #008000; /* Dark green on hover */
 }
+
+
+
+/*-----------------------------------*\
+              cursor animation
+\*-----------------------------------*/
+
+
 
 //   // INIT
 // mainColor = #F0544F
@@ -889,3 +898,10 @@
 //   <div class="Project-hail2"></div>
 //   <p class="Project-name">Project name </p>
 // </div>
+
+
+
+
+
+
+

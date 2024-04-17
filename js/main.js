@@ -33,6 +33,14 @@ document.addEventListener('DOMContentLoaded', () => {
   // Call the function initially
   toggleMenu();
   
+
+// cursor animation
+
+
+
+
+
+
   // document.getElementById('animationButton').addEventListener('click', function() {
   //   setTimeout(function() {
   //     document.getElementById('animationContainer').classList.add('show');
