@@ -13,6 +13,10 @@
     font-size: $size + px !important;
   }
 
+  @mixin text-w-s-only($weight, $size) {
+      font-weight: $weight !important;
+      font-size: $size + px !important;
+    }
   
   @mixin font-part($values) {
     @if $values == xxl {

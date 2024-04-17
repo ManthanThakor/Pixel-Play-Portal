@@ -5,7 +5,9 @@
   padding: 0;
 }
 
-/* ---------------------- Navbar -------------------- */
+/*-----------------------------------*\
+              NAVBAR-PART  
+\*-----------------------------------*/
 
 /* ----- background -------- */
 
@@ -235,7 +237,9 @@
   transition: all 500ms cubic-bezier(0, 0.11, 0.35, 2);
 }
 
-/*-------Ham burger part ---------*/
+/*-----------------------------------*\
+          HAM BURGER PART 
+\*-----------------------------------*/
 
 .ham-part-section {
   display: none;
@@ -303,7 +307,9 @@
 //   animation: fadeIn 1s forwards;
 // }
 
-/*-------TITLE PART-------*/
+/*-----------------------------------*\
+              TITLE PART 
+\*-----------------------------------*/
 
 .main-name-part {
   text-align: center;
@@ -353,7 +359,9 @@
   text-overflow: clip;
 }
 
-/*------- ARCADE -------*/
+/*-----------------------------------*\
+              ARCADE 
+\*-----------------------------------*/
 
 .arcade-section-part {
   @include padd(0px, 80px, 0px, 80px);
@@ -401,7 +409,9 @@
   background-attachment: fixed;
 }
 
-/* arcade-cards */
+/*-----------------------------------*\
+              ARCADE CARD 
+\*-----------------------------------*/
 
 .card {
   position: relative !important;
@@ -660,7 +670,6 @@
   .footer-btn {
     letter-spacing: 1px;
     color: map-get($theme-colors, primary);
-    // font-family: $font-stack-three;
     font-size: $font-size-two;
     @include h-w(50, 140);
     border-radius: 18px;
@@ -676,7 +685,7 @@
 
 .footer-address-section{
   @extend %flex-row;
-  
+
 }
 
 .footer-mail-section,
@@ -697,7 +706,16 @@
     @extend %shadoww;
   }
 }
-// box-shadow: 0px 0px 20px 14px hsl(0deg 100% 27.34%) inset;
+#num-dis,#mail-dis{
+  text-decoration: none;
+}
+
+#num-dis:hover,#mail-dis:hover{
+  @extend %shadoww;
+}
+
+
+
 %details-footer {
   letter-spacing: 1px;
   line-height: 25px;
@@ -705,7 +723,7 @@
   font-style: italic;
   font-family: "Roboto";
   font-weight: bold;
-  font-size: 18px;
+  font-size: 20px;
   @include padd(0, 0, 0, 20px);
   margin-bottom: 0;
 }
@@ -723,10 +741,66 @@
 }
 
 
+/*-----------------------------------*\
+              copy-right 
+\*-----------------------------------*/
 
+.copyright-section {
+  @include padd(30px, 80px, 30px, 80px);
+  @extend %flex-row;
+  @include box(dark);
+  border-top: solid 2px $fefe;
+  box-shadow: 0px -15px 15px -15px $fefe;
+}
 
+.copy-right-text {
+  p {
+    letter-spacing: 0px;
+    line-height: 35px;
+    color: $fefe;
+  margin-bottom: 0%;
+  font-family: "Helvetica Neue", Helvetica, Arial !important;
+  @include text-w-s-only(600,22);
+  }
+}
 
+.copyright-fonts {
+  display: flex;
+  margin-left: auto !important;
+  gap: 15px;
+}
 
+#fonts-event{
+  width: 40px;
+  height: 40px;
+  background-color: $fefe;
+  text-align: center;
+  /* line-height: 80px; */
+  font-size: 25px;
+  padding: 5px;
+color: #000;
+  display: block;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  border: 3px solid $fefe;
+  z-index: 1;
+  transition: .5s;
+  box-shadow: 0px -1px 20px 0px hsla(0, 100%, 50%, 0.745);
+
+}
+
+.font-cont{
+  text-decoration: none !important;
+}
+  .font-cont:hover{
+  #fonts-event{
+    color: #00ff00;
+    background-color: $black-color;
+    transform: rotateY(360deg);
+    box-shadow: 3px 1px 15px 0px hsl(0, 100%, 50%) inset;
+  }
+}
 
 
 /*-----------------------------------*\

@@ -204,6 +204,19 @@ body {
   .foot-message {
     width: 100%;
   }
+  .footer-btn {
+    box-shadow: 0px 0px 20px 14px hsl(0, 100%, 27.34%) inset;
+  }
+  .foot-button {
+    padding-bottom: 30px !important;
+  }
+}
+@media screen and (max-width: 500px) {
+  #num-dis,
+  #mail-dis,
+  #add-dis {
+    font-size: 16px !important;
+  }
 }
 @media screen and (max-width: 400px) {
   .footer-head .footer-title {
@@ -240,5 +253,35 @@ body {
   }
 }
 /*-----------------------------------*\
-               Footer
-\*-----------------------------------*//*# sourceMappingURL=resposnive.css.map */
+               copyright
+\*-----------------------------------*/
+@media screen and (max-width: 1000px) {
+  .copyright-section {
+    padding: 30px 40px 20px 30px !important;
+  }
+}
+@media screen and (max-width: 818px) {
+  .copyright-section {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 650px) {
+  .copyright-section {
+    padding: 30px 15px 30px 15px !important;
+  }
+}
+
+@media screen and (max-width: 818px) {
+  .copyright-section {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+  .copyright-fonts {
+    padding-top: 15px;
+    margin-left: 0 !important;
+  }
+}/*# sourceMappingURL=resposnive.css.map */

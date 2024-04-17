@@ -212,8 +212,20 @@ body {
   .foot-message {
     width: 100%;
   }
+  .footer-btn{
+  box-shadow: 0px 0px 20px 14px hsl(0deg 100% 27.34%) inset;
+  }
+  .foot-button {
+    padding-bottom: 30px !important;
+  }
 }
-
+@media screen and (max-width: 500px) {
+  #num-dis,
+  #mail-dis,
+  #add-dis {
+    font-size: 16px !important;
+  }
+}
 @media screen and (max-width: 400px) {
   .footer-head .footer-title {
   font-size: 14px !important;
@@ -249,5 +261,31 @@ body {
 }
 
 /*-----------------------------------*\
-               Footer
+               copyright
 \*-----------------------------------*/
+
+.copyright-section {
+  @media screen and (max-width: 1000px) {
+    @include padd(30px, 40px, 20px, 30px);
+  }
+  @media screen and (max-width: 818px) {
+    @include flex-col;
+    text-align: center;
+  }
+  @media screen and (max-width: 650px) {
+    @include padd(30px, 15px, 30px, 15px);
+  }
+ 
+}
+
+@media screen and (max-width: 818px) {
+  .copyright-section {
+  @include flex-col;
+  text-align: center;
+  align-items: center;
+}
+.copyright-fonts{
+  padding-top: 15px;
+margin-left: 0 !important;
+}
+}

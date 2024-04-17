@@ -3,7 +3,9 @@
   padding: 0;
 }
 
-/* ---------------------- Navbar -------------------- */
+/*-----------------------------------*\
+              NAVBAR-PART  
+\*-----------------------------------*/
 /* ----- background -------- */
 .pixel-head {
   height: 850px !important;
@@ -225,7 +227,9 @@
   transition: all 500ms cubic-bezier(0, 0.11, 0.35, 2);
 }
 
-/*-------Ham burger part ---------*/
+/*-----------------------------------*\
+          HAM BURGER PART 
+\*-----------------------------------*/
 .ham-part-section {
   display: none;
   filter: invert(1);
@@ -280,7 +284,9 @@
   stroke-dashoffset: -132px;
 }
 
-/*-------TITLE PART-------*/
+/*-----------------------------------*\
+              TITLE PART 
+\*-----------------------------------*/
 .main-name-part {
   text-align: center;
 }
@@ -327,7 +333,9 @@
   text-overflow: clip;
 }
 
-/*------- ARCADE -------*/
+/*-----------------------------------*\
+              ARCADE 
+\*-----------------------------------*/
 .arcade-section-part {
   padding: 0px 80px 0px 80px !important;
   background-color: rgb(0, 0, 0);
@@ -378,7 +386,9 @@
   background-attachment: fixed;
 }
 
-/* arcade-cards */
+/*-----------------------------------*\
+              ARCADE CARD 
+\*-----------------------------------*/
 .card {
   position: relative !important;
   padding-bottom: 50px !important;
@@ -655,7 +665,7 @@
   border: none;
 }
 
-.footer-mail-section,
+.copyright-section, .footer-mail-section,
 .footer-number-section, .footer-address-section {
   display: flex;
   flex-direction: row;
@@ -666,7 +676,7 @@
   padding: 30px 0 0 0px !important;
 }
 
-#foot-icons-part:hover {
+#num-dis:hover, #mail-dis:hover, #foot-icons-part:hover {
   cursor: pointer;
   color: #fefefe;
   text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #a19b9e, 0 0 40px #4e4a4c, 0 0 50px #e60073, 0 0 60px #393738, 0 0 70px #96848d;
@@ -677,6 +687,10 @@
   font-size: 25px !important;
   color: #fefefe;
 }
+#num-dis, #mail-dis {
+  text-decoration: none;
+}
+
 #num-dis, #mail-dis, #add-dis {
   letter-spacing: 1px;
   line-height: 25px;
@@ -684,13 +698,69 @@
   font-style: italic;
   font-family: "Roboto";
   font-weight: bold;
-  font-size: 18px;
+  font-size: 20px;
   padding: 0 0 0 20px !important;
   margin-bottom: 0;
 }
 
 .foot-message {
   resize: none;
+}
+
+/*-----------------------------------*\
+              copy-right 
+\*-----------------------------------*/
+.copyright-section {
+  padding: 30px 80px 30px 80px !important;
+  background-color: #000000;
+  border-top: solid 2px #fefefe;
+  box-shadow: 0px -15px 15px -15px #fefefe;
+}
+
+.copy-right-text p {
+  letter-spacing: 0px;
+  line-height: 35px;
+  color: #fefefe;
+  margin-bottom: 0%;
+  font-family: "Helvetica Neue", Helvetica, Arial !important;
+  font-weight: 600 !important;
+  font-size: 22px !important;
+}
+
+.copyright-fonts {
+  display: flex;
+  margin-left: auto !important;
+  gap: 15px;
+}
+
+#fonts-event {
+  width: 40px;
+  height: 40px;
+  background-color: #fefefe;
+  text-align: center;
+  /* line-height: 80px; */
+  font-size: 25px;
+  padding: 5px;
+  color: #000;
+  display: block;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  border: 3px solid #fefefe;
+  z-index: 1;
+  transition: 0.5s;
+  box-shadow: 0px -1px 20px 0px hsla(0, 100%, 50%, 0.745);
+}
+
+.font-cont {
+  text-decoration: none !important;
+}
+
+.font-cont:hover #fonts-event {
+  color: #00ff00;
+  background-color: #000000;
+  transform: rotateY(360deg);
+  box-shadow: 3px 1px 15px 0px hsl(0, 100%, 50%) inset;
 }
 
 /*-----------------------------------*\

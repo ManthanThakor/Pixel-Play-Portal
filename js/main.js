@@ -40,6 +40,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+// contact part 
+// footer-btn
+// document.addEventListener('DOMContentLoaded', () => {
+// document
+
+
+
 
   // document.getElementById('animationButton').addEventListener('click', function() {
   //   setTimeout(function() {
