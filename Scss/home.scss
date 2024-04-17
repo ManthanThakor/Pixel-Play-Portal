@@ -621,7 +621,12 @@
 
 .footer-section {
   @include padd(60px, 80px, 60px, 80px);
-  background-color: rgba(0, 0, 0, 0.95);
+  // background-color: rgba(0, 0, 0, 0.95);
+  background: linear-gradient(rgba(0, 0, 0, 0.725), rgba(0, 0, 0, 0.725)),
+  url(../Img/contact/cont-back-3.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 .footer-head {
@@ -629,7 +634,7 @@
 
   .footer-title {
     letter-spacing: 1px;
-    color: #9aff00;
+    color: map-get($theme-colors, sev);
     @include text-w-s-two(700, 25);
   }
 }
@@ -692,13 +697,17 @@
     @extend %shadoww;
   }
 }
-
+// box-shadow: 0px 0px 20px 14px hsl(0deg 100% 27.34%) inset;
 %details-footer {
   letter-spacing: 1px;
   line-height: 25px;
   color: $fefe;
-  @include text-w-s(200, 18);
+  font-style: italic;
+  font-family: "Roboto";
+  font-weight: bold;
+  font-size: 18px;
   @include padd(0, 0, 0, 20px);
+  margin-bottom: 0;
 }
 .foot-message {
   resize: none;

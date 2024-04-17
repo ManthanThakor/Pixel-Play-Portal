@@ -611,7 +611,10 @@
 \*-----------------------------------*/
 .footer-section {
   padding: 60px 80px 60px 80px !important;
-  background-color: rgba(0, 0, 0, 0.95);
+  background: linear-gradient(rgba(0, 0, 0, 0.725), rgba(0, 0, 0, 0.725)), url(../Img/contact/cont-back-3.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 .footer-head {
@@ -619,7 +622,7 @@
 }
 .footer-head .footer-title {
   letter-spacing: 1px;
-  color: #9aff00;
+  color: #00FF00;
   font-family: "Starzone", "sans-serif", "serif" !important;
   font-weight: 700 !important;
   font-size: 25px !important;
@@ -678,10 +681,12 @@
   letter-spacing: 1px;
   line-height: 25px;
   color: #fefefe;
-  font-family: sans-serif, serif !important;
-  font-weight: 200 !important;
-  font-size: 18px !important;
+  font-style: italic;
+  font-family: "Roboto";
+  font-weight: bold;
+  font-size: 18px;
   padding: 0 0 0 20px !important;
+  margin-bottom: 0;
 }
 
 .foot-message {
