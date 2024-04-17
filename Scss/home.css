@@ -607,8 +607,87 @@
 }
 
 /*-----------------------------------*\
-
+              Contact us
 \*-----------------------------------*/
+.footer-section {
+  padding: 60px 80px 60px 80px !important;
+  background-color: #000000;
+}
+
+.footer-head {
+  padding: 0 0 30px 0 !important;
+}
+.footer-head .footer-title {
+  letter-spacing: 1px;
+  color: #e62646;
+  font-family: sans-serif, serif !important;
+  font-weight: 700 !important;
+  font-size: 25px !important;
+}
+
+.foot-name, .foot-email,
+.foot-numb,
+.foot-message {
+  border-radius: 15px;
+  border: 1px solid;
+  background-color: #000000;
+  width: 90%;
+  margin: 10px 0 !important;
+  padding: 4px 15px !important;
+  font-style: italic;
+  color: #fff;
+  outline: none;
+}
+
+.foot-button {
+  margin-top: 20px !important;
+}
+.foot-button .footer-btn {
+  letter-spacing: 1px;
+  color: #ffffff;
+  font-size: 18px;
+  height: 36px !important;
+  width: 130px !important;
+  border-radius: 18px;
+  border: none;
+}
+
+.footer-mail-section,
+.footer-number-section, .footer-address-section {
+  display: flex;
+  flex-direction: row;
+}
+
+.footer-mail-section,
+.footer-number-section {
+  padding: 30px 0 0 0px !important;
+}
+
+#foot-icons-part:hover {
+  cursor: pointer;
+  color: #fefefe;
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #a19b9e, 0 0 40px #4e4a4c, 0 0 50px #e60073, 0 0 60px #393738, 0 0 70px #96848d;
+  color: #ffffff;
+}
+
+#foot-icons-part {
+  font-size: 25px !important;
+  color: #fefefe;
+}
+#num-dis, #mail-dis, #add-dis {
+  letter-spacing: 1px;
+  line-height: 25px;
+  color: #fefefe;
+  font-family: sans-serif, serif !important;
+  font-weight: 200 !important;
+  font-size: 18px !important;
+  padding: 0 0 0 20px !important;
+}
+
+.foot-message {
+  resize: none;
+}
+
 /*-----------------------------------*\
               #GO TO TOP
 \*-----------------------------------*/

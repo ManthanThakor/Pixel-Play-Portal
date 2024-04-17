@@ -354,31 +354,31 @@
   
     <div class="row">
       <div class="col-md-6 col-12">
-        <input type="text" placeholder="Name" class="foot-name"><br>
-        <input type="mail" placeholder="Email" class="foot-email"><br>
-        <input type="text" placeholder="number" class="foot-numb"><br>
-        <input type="text" placeholder="Message Here" class="foot-message"><br>
+        <form action="#" class="contFrm" method="POST">
+        <input type="text" name="name" placeholder="Your Name" class="inptFld foot-name" required />
+        <input type="email" name="email" placeholder="Email Address" class="inptFld foot-email" required />
+        <input type="text" name="sub" placeholder="Subject" class="inptFld foot-numb" required />
+        <textarea class="inptFld foot-message" rows="" cols="" placeholder="Your Message..." required></textarea>
         <div class="foot-button">
-          <button class="footer-btn">Send
-          </button>
+          <input type="submit" name="submit" value="SUBMIT" class="inptBtn footer-btn" />
+        
         </div>
-      
+      </form>
       </div>
       <div class="col-md-6 col-12">
         <div class="footer-address-section">
           <i class="fa-solid fa-location-dot" id="foot-icons-part"></i>
-          <p id="add-dis">203, 5th Floor, B-Wing, SNS Interio, Althan-
-            Bhatar Tenament Road, Beside CNG Station,
-            Surat-395017, Gujarat, India.
+          <p id="add-dis">
+            92 Cherry Drive Uniondale, NY 11553
           </p>
         </div>
         <div class="footer-mail-section">
           <i class="fa-solid fa-envelope" id="foot-icons-part"></i>
-          <p id="mail-dis">contactus@toshalinfotech.com</p>
+          <p id="mail-dis">pixelplay@gmail.com</p>
         </div>
         <div class="footer-number-section">
           <i class="fa-solid fa-phone" id="foot-icons-part"></i>
-          <p id="num-dis">+91 7575062161</p>
+          <p id="num-dis">+91 123-456-7899</p>
         </div>
       </div>
     </div>

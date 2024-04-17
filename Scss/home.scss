@@ -630,7 +630,7 @@
   .footer-title {
     letter-spacing: 1px;
     color: $hov-red;
-    @include fonts(700, 25);
+    @include text-w-s(700, 25);
   }
 }
 .foot-name {
@@ -655,7 +655,7 @@
   .footer-btn {
     letter-spacing: 1px;
     color: map-get($theme-colors, primary);
-    font-family: $font-stack-three;
+    // font-family: $font-stack-three;
     font-size: $font-size-two;
     @include h-w(36, 130);
     border-radius: 18px;
@@ -669,7 +669,11 @@
   flex-direction: row;
 }
 
-.footer-address-section,
+.footer-address-section{
+  @extend %flex-row;
+  
+}
+
 .footer-mail-section,
 .footer-number-section {
   @extend %flex-row;
@@ -693,10 +697,12 @@
   letter-spacing: 1px;
   line-height: 25px;
   color: $fefe;
-  @include fonts(200, 18);
+  @include text-w-s(200, 18);
   @include padd(0, 0, 0, 20px);
 }
-
+.foot-message {
+  resize: none;
+}
 #add-dis {
   @extend %details-footer;
 }
