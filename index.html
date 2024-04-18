@@ -364,17 +364,17 @@
         <div class="v-c-a">
           <video id="myVideo" autoplay loop playsinline muted> 
             <!-- Added muted attribute -->
-              <source src="video/character-part/girl-charc.mp4" type="video/mp4">
+              <source src="video/character-part/girl-charc.mp4" type="video/mp4" class="video-part-ca-a">
               Your browser does not support the video tag.
           </video>
         </div>
        <div class="video-bar-part-c">
         <div class="video-controls">
           <!-- Add default video controls here -->
-          <button class="play-btn-char" onclick="document.querySelector('video').play()"><i class="fa-solid fa-play"></i></button>
-          <button class="pause-btn-char"  onclick="document.querySelector('video').pause()"><i class="fa-solid fa-pause"></i></button>
-          <button class="svg-butn-part" onclick="toggleMute()">
-              <svg class="vol-sec-svg mute" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1024 768" enable-background="new 0 0 1024 768" xml:space="preserve">
+          <button class="play-btn-char" onclick="document.querySelector('video').play()"><i class="fa-solid fa-play" id="fonts-play"></i></button>
+          <button class="pause-btn-char"  onclick="document.querySelector('video').pause()"><i class="fa-solid fa-pause" id="fonts-play"></i></button>
+          <button class="svg-butn-part"  onclick="toggleMute()">
+              <svg class="vol-sec-svg mute" id="fonts-play" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1024 768" enable-background="new 0 0 1024 768" xml:space="preserve">
                   <path d="M578.135,106.298c-11.136-6.299-24.275-6.076-35.245,0.494c-0.501,0.334-0.994,0.675-1.454,1.058L386.939,238.584H265.662
                       c-6.299,0-11.414,5.123-11.414,11.421v216.649c0,3.063,1.225,5.957,3.334,8.087c2.186,2.103,5.018,3.327,8.08,3.327l120.99-0.056
                       l154.399,141.871c0.612,0.501,1.226,0.96,1.837,1.336c5.632,3.396,11.859,5.065,18.04,5.065c5.902,0,11.805-1.503,17.205-4.564
@@ -397,7 +397,9 @@
        </div>
        
     </div>
-    
+    <div class="char-btn-sec">
+      <button class="text-uppercase  character-btn-p">show more</button>
+    </div>
   </div>
 
 

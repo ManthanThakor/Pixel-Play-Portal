@@ -639,6 +639,9 @@
   margin-bottom: 0%;
 }
 
+/*-----------------------------------*\
+              characters video 
+\*-----------------------------------*/
 .v-c-a {
   text-align: center;
 }
@@ -646,7 +649,7 @@
 .video-bar-part-c {
   display: flex;
   justify-content: center;
-  top: -42px;
+  top: -60px;
   position: relative;
 }
 
@@ -665,13 +668,14 @@
 
 .video-controls {
   position: relative;
-  width: 60%;
   background-color: rgba(0, 0, 0, 0.778);
-  color: #fff; /* Control text color */
+  color: #fff;
   padding: 10px;
   box-sizing: border-box;
-  opacity: 0; /* Hide controls by default */
-  transition: opacity 0.3s ease; /* Add smooth transition for opacity */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  height: 55px !important;
+  width: 60% !important;
 }
 
 .video-container:hover .video-controls {
@@ -684,27 +688,52 @@
   color: #ff0000;
   position: absolute;
   right: 9rem;
-  top: 0px;
+  top: 10px;
 }
 
 .play-btn-char {
   background-color: transparent !important;
   border: none !important;
-  color: #000000;
+  color: #ff0000;
   position: absolute;
+  left: 20px;
+}
+
+#fonts-play {
+  height: 40px !important;
+  width: 40px !important;
+  background-color: #fefefe;
+  text-align: center;
+  font-size: 25px;
+  padding: 5px;
+  color: #000;
+  display: block;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #fefefe;
+  z-index: 1;
+  transition: 0.5s;
+  box-shadow: 0px -1px 20px 0px hsla(0, 100%, 50%, 0.745);
+}
+
+.play-btn-char:hover #fonts-play, .pause-btn-char:hover #fonts-play {
+  color: #00ff00;
+  background-color: #000000;
+  transform: rotateY(360deg);
+  box-shadow: 3px 1px 15px 0px hsl(0, 100%, 50%) inset;
 }
 
 .pause-btn-char {
   background-color: transparent !important;
   border: none !important;
-  color: #000000;
+  color: #ff0000;
   position: absolute;
-  left: 40px;
+  left: 70px;
 }
 
 .vol-sec-svg {
-  height: 35px;
-  width: 37px;
+  height: 35px !important;
+  width: 37px !important;
   cursor: pointer;
   filter: invert(1);
 }
@@ -727,8 +756,47 @@
   opacity: 0;
 }
 
+/*-----------------------------------*\
+ characters video bar customizations
+\*-----------------------------------*/
 .vid-car-bar {
+  -webkit-appearance: none;
+  height: 10px;
+  background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+  border-radius: 5px;
+  outline: none;
+  opacity: 0.7;
+  transition: opacity 0.2s;
   float: right;
+  margin-top: 12px;
+}
+
+.vid-car-bar:hover {
+  opacity: 1;
+}
+
+.vid-car-bar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+}
+
+.vid-car-bar::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+}
+
+.char-btn-sec {
+  text-align: center;
 }
 
 /*-----------------------------------*\
