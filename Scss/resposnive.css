@@ -183,6 +183,82 @@ body {
 /*-----------------------------------*\
                characters
 \*-----------------------------------*/
+@media screen and (max-width: 1137px) {
+  .char-sec-main {
+    padding: 30px 40px 30px 40px !important;
+  }
+}
+@media screen and (max-width: 650px) {
+  .char-sec-main {
+    padding: 30px 15px 30px 15px !important;
+  }
+}
+
+@media screen and (max-width: 1137px) {
+  #myVideo {
+    height: 586px !important;
+    width: 100% !important;
+  }
+  .video-controls {
+    width: 100% !important;
+  }
+}
+@media screen and (max-width: 550px) {
+  #myVideo {
+    height: 185px !important;
+    width: 300px !important;
+  }
+  .video-controls {
+    width: 300px !important;
+  }
+  #fonts-play {
+    height: 35px !important;
+    width: 35px !important;
+    font-size: 20px;
+  }
+  .character-btn-p {
+    padding: 10px 10px !important;
+  }
+  .character-title {
+    font-size: 18px !important;
+  }
+  .video-controls {
+    opacity: 1 !important;
+    margin-top: 0px !important;
+  }
+  .video-bar-part-c {
+    top: 0px;
+  }
+  .video-controls {
+    position: relative !important;
+  }
+}
+@media screen and (max-width: 427px) {
+  .character-title {
+    font-size: medium;
+    padding: 0px 0px 30px 0px !important;
+  }
+  .character-title {
+    font-size: 14px !important;
+  }
+}
+@media screen and (max-width: 331px) {
+  .play-btn-char {
+    left: 0px !important;
+  }
+  .pause-btn-char {
+    left: 40px !important;
+  }
+}
+@media screen and (max-width: 287px) {
+  .video-controls {
+    display: none !important;
+  }
+  #myVideo {
+    height: 180px !important;
+    width: 100% !important;
+  }
+}
 /*-----------------------------------*\
                contact
 \*-----------------------------------*/
