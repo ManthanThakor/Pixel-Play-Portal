@@ -34,7 +34,7 @@ function toggleMenu() {
 
     hamPartSection.addEventListener("click", () => {
       if (!isMenuVisible) {
-        pixelMenu.style.display = "flex"; // Show the pixel-menu part
+        pixelMenu.style.display = "block"; // Show the pixel-menu part
         isMenuVisible = true;
         document.querySelector(".main-name-part").style.filter = "blur(3px)";
         document.querySelector("#background-part-sec").style.filter = "blur(3px)";
