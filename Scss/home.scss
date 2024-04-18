@@ -631,8 +631,7 @@
 
 .char-sec-main{
   @include padd(60px, 80px, 60px, 80px);
-  // background-color: rgba(0, 0, 0, 0.95);
-  background: linear-gradient(rgba(0, 0, 0, 0.725), rgba(0, 0, 0, 0.725)),
+  background: linear-gradient(rgba(0, 0, 0, 0.596), rgba(0, 0, 0, 0.596)),
   url(../Img/contact/cont-back-3.jpg);
   background-size: cover;
   background-position: center;
@@ -640,28 +639,109 @@
 }
 
 
-svg{
-  width: 200px;
-  cursor: pointer;
+.character-title{
+  @include text-w-s-two(600, 24);
+  letter-spacing: 0.3rem;
+text-align: center;
+  color: $red;
+  font-style: italic;
+  @include padd(0px, 0px, 40px, 0px);
+  margin-bottom: 0%;
 }
 
-.circle_lg{
+//  video part 
+.v-c-a{
+  text-align: center;
+}
+.video-bar-part-c{
+  display: flex;
+  justify-content: center;
+  top: -42px;
+  position: relative;
+}
+.video-container {
+  position: relative;
+  overflow: hidden;
+ 
+}
+
+.video-container video {
+ 
+  @include hh-ww(60%, 60%);
+  object-fit: cover; 
+  transition: transform 0.5s ease; 
+}
+
+.video-controls {
+ position: relative;
+  width:60%;
+  background-color: rgba(0, 0, 0, 0.778); 
+  color: #fff; /* Control text color */
+  padding: 10px;
+  box-sizing: border-box;
+  opacity: 0; /* Hide controls by default */
+  transition: opacity 0.3s ease; /* Add smooth transition for opacity */
+
+}
+
+.video-container:hover .video-controls {
+  opacity: 1; /* Show controls on hover */
+}
+
+.svg-butn-part {
+  background-color: transparent !important;
+  border: none!important;
+  color: #ff0000;
+  position: absolute;
+  right: 9rem;
+  top: 0px;
+}
+
+.play-btn-char{
+  background-color: transparent !important;
+  border: none!important;
+  color: #000000;
+  position: absolute;
+}
+
+.pause-btn-char{
+  background-color: transparent !important;
+  border: none!important;
+  color: #000000;
+  position: absolute;
+  left:40px;
+  
+}
+
+.vol-sec-svg {
+  height: 35px;
+  width: 37px;
+  cursor: pointer;
+  filter: invert(1);
+}
+
+.circle_lg {
   stroke-dasharray: 600px 1500px;
   transition: all .5s;
 }
 
-.circle_sm{
+.circle_sm {
   opacity: 1;
   transition: all .25s;
 }
 
-svg.mute .circle_lg{
+.vol-sec-svg.mute .circle_lg {
   stroke-dashoffset: -1360px;
 }
 
-svg.mute .circle_sm{
+.vol-sec-svg.mute .circle_sm {
   opacity: 0;
 }
+
+.vid-car-bar {
+  float: right;
+}
+
 /*-----------------------------------*\
               Contact us
 \*-----------------------------------*/
