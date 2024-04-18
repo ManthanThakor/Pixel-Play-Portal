@@ -667,7 +667,7 @@
 }
 
 .video-controls {
-  position: relative;
+  position: absolute;
   background-color: rgba(0, 0, 0, 0.778);
   color: #fff;
   padding: 10px;
@@ -678,8 +678,9 @@
   width: 60% !important;
 }
 
-.video-container:hover .video-controls {
-  opacity: 1; /* Show controls on hover */
+#myVideo:hover + .video-controls,
+.video-controls:hover {
+  opacity: 1;
 }
 
 .svg-butn-part {
@@ -797,6 +798,46 @@
 
 .char-btn-sec {
   text-align: center;
+  padding: 30px 0 0 0 !important;
+}
+
+.character-btn-p {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: #333; /* Background color */
+  color: #fff; /* Text color */
+  font-size: 18px; /* Font size */
+  text-transform: uppercase; /* Uppercase text */
+  border: none; /* No border */
+  border-radius: 30px; /* Rounded corners */
+  cursor: pointer; /* Cursor style */
+  position: relative; /* Position relative for arrow */
+  overflow: hidden; /* Hide arrow overflow */
+}
+
+/* Style for the arrow */
+.character-btn-p::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 100%;
+  background-color: #000; /* Arrow background color */
+  right: -20px; /* Position the arrow */
+  top: 0;
+  transform: skewX(45deg); /* Skew the arrow */
+  transition: width 0.3s; /* Transition effect for hover */
+}
+
+/* Hover effect for the arrow */
+.character-btn-p:hover::after {
+  width: 100%; /* Increase arrow width on hover */
+  z-index: -1;
+}
+
+/* Center the text */
+.character-btn-p span {
+  position: relative;
+  z-index: 1;
 }
 
 /*-----------------------------------*\
