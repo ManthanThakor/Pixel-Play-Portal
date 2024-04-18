@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .video-container {
+          position: relative;
+          width: 640px; /* Adjust width as needed */
+          height: 360px; /* Adjust height as needed */
+          overflow: hidden;
+        }
+      
+        .video-container video {
+          width: 100%;
+          height: 100%;
+          object-fit: cover; /* Cover the entire container */
+          transition: transform 0.5s ease; /* Add smooth transition */
+        }
+      
+        .video-container:hover video {
+          transform: scale(1.1); /* Scale the video on hover */
+        }
+      
+        .video-controls {
+          display: none; /* Hide controls by default */
+        }
+      
+        .video-container:hover .video-controls {
+          display: block; /* Show controls on hover */
+        }
+      </style>
+      
+      <div class="video-container">
+        <video autoplay loop muted playsinline>
+          <source src="path_to_your_video.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <div class="video-controls">
+          <!-- You can add custom controls here if needed -->
+        </div>
+      </div>
+</body>
+</html>

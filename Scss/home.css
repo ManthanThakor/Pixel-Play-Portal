@@ -619,12 +619,20 @@
 /*-----------------------------------*\
               characters
 \*-----------------------------------*/
+.char-sec-main {
+  padding: 60px 80px 60px 80px !important;
+  background: linear-gradient(rgba(0, 0, 0, 0.725), rgba(0, 0, 0, 0.725)), url(../Img/contact/cont-back-3.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
 /*-----------------------------------*\
               Contact us
 \*-----------------------------------*/
 .footer-section {
   padding: 60px 80px 60px 80px !important;
-  background: linear-gradient(rgba(0, 0, 0, 0.725), rgba(0, 0, 0, 0.725)), url(../Img/contact/cont-back-3.jpg);
+  background-color: rgba(0, 0, 0, 0.95);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
