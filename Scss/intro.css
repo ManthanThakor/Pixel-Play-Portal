@@ -1,10 +1,9 @@
-/* Animation properties */
-.star {
-  animation: star 10s ease-out infinite;
+.pix {
+  animation: x 10s ease-out infinite;
 }
 
-.wars {
-  animation: wars 10s ease-out infinite;
+.play {
+  animation: y 10s ease-out infinite;
 }
 
 .byline span {
@@ -16,7 +15,7 @@
 }
 
 /* Keyframes */
-@keyframes star {
+@keyframes x {
   0% {
     opacity: 0;
     transform: scale(1.5) translateY(-0.75em);
@@ -33,7 +32,7 @@
     transform: translateZ(-1000em);
   }
 }
-@keyframes wars {
+@keyframes y {
   0% {
     opacity: 0;
     transform: scale(1.5) translateY(0.5em);
@@ -74,18 +73,19 @@
     transform: translateZ(0);
   }
 }
-/* Make the 3D work on the container */
-.starwars-demo {
+.pixel-play {
   perspective: 800px;
   transform-style: preserve3d;
 }
 
-/* General styles and layout */
 body {
-  background: #000 url(//cssanimation.rocks/demo/starwars/images/bg.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.666), rgba(0, 0, 0, 0.605)), url(../Img/arcade-part/arcade-background/arcade-3.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
-.starwars-demo {
+.pixel-play {
   height: 17em;
   left: 50%;
   position: absolute;
@@ -98,19 +98,15 @@ body {
   display: inline-block;
 }
 
-img {
-  width: 100%;
-}
-
-.star, .wars, .byline {
+.pix, .play, .byline {
   position: absolute;
 }
 
-.star {
+.pix {
   top: -0.75em;
 }
 
-.wars {
+.play {
   bottom: -0.5em;
 }
 
@@ -128,12 +124,20 @@ img {
 
 /*** Media queries for adjusting to different screen sizes ***/
 @media only screen and (max-width: 600px) {
-  .starwars-demo {
+  .pixel-play {
     font-size: 10px;
+  }
+  .pix {
+    top: -40px !important;
+    left: 90px !important;
+  }
+  .play {
+    top: 100px !important;
+    left: 90px !important;
   }
 }
 @media only screen and (max-width: 480px) {
-  .starwars-demo {
+  .pixel-play {
     font-size: 7px;
   }
 }/*# sourceMappingURL=intro.css.map */

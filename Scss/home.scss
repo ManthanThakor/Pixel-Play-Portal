@@ -319,7 +319,6 @@
   letter-spacing: 10px;
   color: map-get($theme-colors, third);
   text-shadow: 1px -1px 0 map-get($theme-colors, fourth),
-    // -5px 5px 1px map-get($theme-colors,  fifth),
     5px 5px 10px map-get($theme-colors, sixth);
   @include margin-t(100px);
 }
@@ -332,7 +331,6 @@
   font-size: 100px;
   letter-spacing: 1px;
   text-shadow: 1px -1px 0 map-get($theme-colors, fourth),
-    // -5px 5px 1px map-get($theme-colors,  fifth),
     5px 5px 10px map-get($theme-colors, fifth);
 }
 
