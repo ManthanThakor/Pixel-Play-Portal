@@ -85,3 +85,16 @@ cards.forEach(card => {
     click_read();
 });
 
+
+//
+
+document.addEventListener("DOMContentLoaded", function() {
+  const form = document.querySelector(".contFrm");
+
+  form.addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent default form submission behavior
+
+    // Redirect to contact.html
+    window.location.href = "contact.html";
+  });
+});
