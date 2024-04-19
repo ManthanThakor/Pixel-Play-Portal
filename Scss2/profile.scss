@@ -1,12 +1,76 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Profile Card</title>
-  <style>
-    /* Your CSS styles here */
-    body {
+@mixin object-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  $circleSize: 165px;
+  $radius: 100px;
+  $shadow: 0 0 10px 0 rgba(255,255,255,.35);
+  $fontColor: rgb(250,250,250);
+  
+  .profile-pic {
+    color: transparent;
+    transition: all .3s ease;
+    @include object-center;
+    position: relative;
+    transition: all .3s ease;
+    
+    input {
+      display: none;
+    }
+    
+    img {
+      position: absolute;
+      object-fit: cover;
+      width: $circleSize;
+      height: $circleSize;
+      box-shadow: $shadow;
+      border-radius: $radius;
+      z-index: 0;
+    }
+    
+    .-label {
+      cursor: pointer;
+      height: $circleSize;
+      width: $circleSize;
+    }
+    
+    &:hover {
+      .-label {
+        @include object-center;
+        background-color: rgba(0,0,0,.8);
+        z-index: 10000;
+        color: $fontColor;
+        transition: background-color .2s ease-in-out;
+        border-radius: $radius;
+        margin-bottom: 0;
+      }
+    }
+    
+    span {
+      display: inline-flex;
+      padding: .2em;
+      height: 2em;
+    }
+  }
+  
+  /////////////////////////
+  // Body styling 🐾
+  /////////---------->
+  
+  body {
+    height: 100vh;
+    background-color: rgb(0, 0, 0);
+    @include object-center;
+    
+    a:hover {
+      text-decoration: none;
+    }
+  }
+
+
+   body {
       font-family: 'Hind Guntur', sans-serif;
       color: #054231;
       display: flex;
@@ -192,67 +256,3 @@
       transition: all .1s linear;
       cursor: pointer;
     }
-  </style>
-</head>
-<body>
-  <div id="root">
-    <div class="card">
-      <form id="edit-form">
-        <h1>Profile Card</h1>
-        <label for="photo-upload" class="custom-file-upload fas">
-          <div class="img-wrap img-upload">
-            <img id="preview-image" src="https://github.com/OlgaKoplik/CodePen/blob/master/profile.jpg?raw=true"/>
-          </div>
-        </label>
-        <div class="field">
-          <label for="name">Name:</label>
-          <input id="name" type="text" placeholder="Alexa" required/>
-        </div>
-        <div class="field">
-          <label for="status">Status:</label>
-          <input id="status" type="text" placeholder="It's a nice day!" required/>
-        </div>
-        <button type="submit" class="edit">Save</button>
-      </form>
-    </div>
-  </div>
-
-  <script>
-    document.getElementById('edit-form').addEventListener('submit', function(event) {
-      event.preventDefault();
-      
-      const imageSrc = document.getElementById('preview-image').src;
-      const name = document.getElementById('name').value;
-      const status = document.getElementById('status').value;
-
-      const profileCard = `
-        <div class="card">
-          <form id="edit-form">
-            <h1>Profile Card</h1>
-            <label class="custom-file-upload fas">
-              <div class="img-wrap">
-                <img src="${imageSrc}"/>
-              </div>
-            </label>
-            <div class="name">${name}</div>
-            <div class="status">${status}</div>
-            <button type="submit" class="edit">Edit Profile</button>
-          </form>
-        </div>
-      `;
-      
-      document.getElementById('root').innerHTML = profileCard;
-      
-      document.getElementById('edit-form').addEventListener('submit', function(event) {
-        event.preventDefault();
-        renderEditForm();
-      });
-    });
-
-    var loadFile = function (event) {
-    var image = document.getElementById("preview-image");
-    image.src = URL.createObjectURL(event.target.files[0]);
-  };
-  </script>
-</body>
-</html>

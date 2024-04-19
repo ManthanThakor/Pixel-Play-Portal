@@ -121,6 +121,7 @@ body {
   text-transform: uppercase;
   top: 29%;
   font-weight: bold;
+  box-shadow: 5px 7px 16px 2px hsl(0, 100%, 50%);
 }
 
 /*** Media queries for adjusting to different screen sizes ***/
