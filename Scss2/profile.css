@@ -42,28 +42,21 @@
   height: 2em;
 }
 
-body {
-  height: 100vh;
-  background-color: rgb(0, 0, 0);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+@keyframes open {
+  0% {
+    background-position: 166% -25%, 220% -69%;
+  }
+  100% {
+    background-position: 120% -5%, 200% -40%;
+  }
 }
-body a:hover {
-  text-decoration: none;
-}
-
-body {
-  font-family: "Hind Guntur", sans-serif;
-  color: #054231;
-  display: flex;
-  justify-content: center;
-  background: #49afa8;
-  background-image: url("https://github.com/OlgaKoplik/CodePen/blob/master/leaf.png?raw=true");
-  background-repeat: no-repeat, no-repeat;
-  background-position: 200% -40%;
-  background-size: 80%;
-}
+/*-----------------------------------*\
+           BACK TO HOME BTN
+\*-----------------------------------*/
+/*-----------------------------------*\
+            custom scrollbar
+\*-----------------------------------*/
+/* Handle on hover */
 
 .card {
   width: 310px;
@@ -74,22 +67,14 @@ body {
   display: flex;
   justify-content: center;
   box-shadow: 15px 10px 25px 0px #3fa1a9;
-  background: #fff;
-  background-image: url("https://github.com/OlgaKoplik/CodePen/blob/master/leaf2.png?raw=true"), url("https://github.com/OlgaKoplik/CodePen/blob/master/leaf.png?raw=true");
+  background: linear-gradient(rgba(0, 0, 0, 0.997), rgba(0, 0, 0, 0.948));
   background-repeat: no-repeat, no-repeat;
-  background-position: 120% -5%, 200% -40%;
-  background-size: 40%, 80%;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   animation: open 0.5s;
 }
 
-@keyframes open {
-  0% {
-    background-position: 166% -25%, 220% -69%;
-  }
-  100% {
-    background-position: 120% -5%, 200% -40%;
-  }
-}
 form {
   display: flex;
   flex-direction: column;
@@ -124,16 +109,14 @@ input[type=file] {
   overflow: hidden;
   border-radius: 50%;
 }
-
 .img-wrap img {
   width: 100%;
   height: 100%;
 }
 
 label {
-  text-transform: uppercase;
-  font-weight: 700;
-  color: #676767;
+  color: #ffffff;
+  padding: 5px;
 }
 
 input {
@@ -143,16 +126,13 @@ input {
   font-size: 18px;
   transition: 0.2s;
 }
-
 input:focus {
   outline: none;
   border: 1px solid #64d488;
 }
-
 input::-moz-placeholder {
   color: #bebebe;
 }
-
 input::placeholder {
   color: #bebebe;
 }
@@ -161,7 +141,7 @@ input::placeholder {
   text-align: center;
   text-transform: uppercase;
   font-weight: 700;
-  color: #676767;
+  color: #ffffff;
   max-width: 220px;
   overflow-wrap: break-word;
 }
@@ -172,7 +152,7 @@ input::placeholder {
   overflow-wrap: break-word;
 }
 
-button {
+.sav-btn {
   position: relative;
   color: #054231;
   letter-spacing: 1px;
@@ -186,6 +166,16 @@ button {
   border-radius: 25px;
   border: none;
   background: #64d488;
+  width: 180px;
+}
+.sav-btn:hover {
+  left: 0;
+  color: #fff;
+  width: 180px;
+  box-shadow: 0px 0px 20px 0px #63d3a6;
+}
+.sav-btn:focus {
+  outline: none;
 }
 
 .save {
@@ -202,24 +192,12 @@ button {
   width: 180px;
 }
 
-button:hover {
-  left: 0;
-  color: #fff;
-  width: 180px;
-  box-shadow: 0px 0px 20px 0px #63d3a6;
-}
-
-button:focus {
-  outline: none;
-}
-
 .lds-ripple {
   display: inline-block;
   position: relative;
   width: 64px;
   height: 64px;
 }
-
 .lds-ripple div {
   position: absolute;
   border: 4px solid #fff;
@@ -227,7 +205,6 @@ button:focus {
   border-radius: 50%;
   animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
 }
-
 .lds-ripple div:nth-child(2) {
   animation-delay: -0.5s;
 }
@@ -239,10 +216,45 @@ button:focus {
   right: 2%;
   font-size: 38px;
 }
-
 .fa-instagram:hover {
   font-size: 42px;
   color: #caff81;
   transition: all 0.1s linear;
   cursor: pointer;
+}
+
+.cont-btn {
+  position: absolute;
+  margin-right: 150px !important;
+}
+
+.part-btn {
+  color: #054231;
+  letter-spacing: 1px;
+  margin: 20px;
+  font-size: 18px;
+  padding: 10px;
+  text-align: center;
+  transition: 0.5s;
+  border-radius: 10px;
+  cursor: pointer;
+  border-radius: 25px;
+  border: none;
+  background: #64d488;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: rgba(21, 255, 0, 0.7450980392);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ff0000;
 }/*# sourceMappingURL=profile.css.map */
