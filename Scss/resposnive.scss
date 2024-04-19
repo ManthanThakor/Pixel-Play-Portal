@@ -150,9 +150,13 @@ body {
   .ca-arc-hov-img{
     display: none !important;
   }
-
-
 }
+@media only screen and  (max-width: 1064px) {
+  .arcade-card-part-two{
+    display: none !important;
+  }
+}
+
 /*-----------------------------------*\
                Event
 \*-----------------------------------*/

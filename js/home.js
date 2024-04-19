@@ -86,7 +86,7 @@ cards.forEach(card => {
 });
 
 
-//
+// submit the contact part 
 
 document.addEventListener("DOMContentLoaded", function() {
   const form = document.querySelector(".contFrm");
@@ -98,6 +98,9 @@ document.addEventListener("DOMContentLoaded", function() {
     window.location.href = "contact.html";
   });
 });
+
+
+
 
 
 
