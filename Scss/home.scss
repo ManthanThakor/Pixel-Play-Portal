@@ -411,7 +411,12 @@
               ARCADE CARD 
 \*-----------------------------------*/
 
+// .card {
+//   margin-left: 20px; 
+// }
+
 .card {
+  margin-bottom: 20px;
   position: relative !important;
   padding-bottom: 50px !important;
 }
@@ -442,12 +447,7 @@
   top: 0;
   right: 115px;
 }
-.arcade-card-one:hover {
-  .ca-arc-hov-img {
-    opacity: 1;
-    transform: translate3d(0%, -30%, 100px);
-  }
-}
+
 
 .arcade-t-card {
   @include text-w-s(700, 25);
@@ -515,21 +515,21 @@
 
 /*----arcade-card-hover----*/
 
-.card:hover {
-  transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
-  box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
-  -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
-  transition: all 0.5s;
-  cursor: pointer;
+// .card:hover {
+//   transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
+//   box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+//   -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+//   -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+//   transition: all 0.5s;
+//   cursor: pointer;
 
-  .ca-arc-hov-img {
-    transform: perspective(300px) translateY(-40%) rotateX(-11deg) translateZ(0) !important;
-  }
-  .card-img-top {
-    opacity: 0.5;
-  }
-}
+//   .ca-arc-hov-img {
+//     transform: perspective(300px) translateY(-40%) rotateX(-11deg) translateZ(0) !important;
+//   }
+//   .card-img-top {
+//     opacity: 0.5;
+//   }
+// }
 
 /*--arcade-part-2--*/
 

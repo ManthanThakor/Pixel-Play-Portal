@@ -115,10 +115,44 @@ body {
                Arcade
 \*-----------------------------------*/
 
-@media only screen and (max-width: 1406px) {
+@media only screen and  (min-width: 1452px) and (max-width: 1600px) {
+  .arcade-card-one:hover {
+    .ca-arc-hov-img {
+      opacity: 1;
+      transform: translate3d(0%, -30%, 100px);
+    }
+  }
+  .card:hover {
+    transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
+    box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+    transition: all 0.5s;
+    cursor: pointer;
+  
+    .ca-arc-hov-img {
+      transform: perspective(300px) translateY(-40%) rotateX(-11deg) translateZ(0) !important;
+    }
+    .card-img-top {
+      opacity: 0.5;
+    }
+  }
+}
 
+@media only screen and  (max-width: 1452px) {
+  .ca-arc-hov-img{
+    display: none !important;
   }
 
+}
+
+@media only screen and  (min-width: 1600px) {
+  .ca-arc-hov-img{
+    display: none !important;
+  }
+
+
+}
 /*-----------------------------------*\
                Event
 \*-----------------------------------*/
