@@ -973,10 +973,10 @@
 #goToTopBtn {
   display: none;
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 10px;
+  right: 10px;
   z-index: 99;
-  background-color: #007bff;
+  background-color: #ff0000;
   color: #fefefe;
   border: none;
   border-radius: 5px;
@@ -988,32 +988,19 @@
 }
 
 #goToTopBtn:hover {
-  background-color: #0056b3; /* Button background color on hover */
+  background-color: #a40000;
+}
+#goToTopBtn:hover #top-btn-par {
+  color: #000000;
+}
+
+#top-btn-par {
+  font-size: large;
 }
 
 /*-----------------------------------*\
               cursor animation
 \*-----------------------------------*/
-#star-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none; /* Allows clicks to pass through */
-}
-
-.star {
-  position: absolute;
-  width: 10px; /* Adjust size */
-  height: 10px; /* Adjust size */
-  background-color: rgb(26, 255, 0);
-  -webkit-clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
-          clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
-  opacity: 0.8;
-  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
-}
-
 /*-----------------------------------*\
               custom scrollbar
 \*-----------------------------------*/
