@@ -40,6 +40,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+
+window.addEventListener('scroll', function() {
+  var scrollBtn = document.getElementById('scrollBtn');
+  if (window.pageYOffset > 500) { // Adjust 300 to the scroll position where you want the button to appear
+    scrollBtn.style.display = 'block';
+  } else {
+    scrollBtn.style.display = 'none';
+  }
+});
+
+
 // contact part 
 // footer-btn
 // document.addEventListener('DOMContentLoaded', () => {

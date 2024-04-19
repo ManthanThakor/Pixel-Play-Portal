@@ -98,3 +98,28 @@ document.addEventListener("DOMContentLoaded", function() {
     window.location.href = "contact.html";
   });
 });
+
+
+
+
+
+
+
+// // Function to show custom alert
+// function showCustomAlert() {
+//   // Create custom alert box
+//   var alertBox = $('<div>').addClass('custom-alert').text('Please login to Pixel Play Portal');
+//   var loginButton = $('<button>').text('Login').addClass('login-button');
+  
+//   // Add click event to the login button
+//   loginButton.click(function() {
+//     // Redirect to login.html
+//     window.location.href = 'login.html';
+//   });
+  
+//   // Append the login button to the alert box
+//   alertBox.append(loginButton);
+  
+//   // Append the alert box to the body
+//   $('body').append(alertBox);
+// }
