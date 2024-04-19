@@ -79,7 +79,7 @@
 }
 
 body {
-  background: linear-gradient(rgba(0, 0, 0, 0.666), rgba(0, 0, 0, 0.605)), url(../Img/arcade-part/arcade-background/arcade-3.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.666), rgba(0, 0, 0, 0.605)), url(../Img/contact/cont-back-2.jpg);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -111,7 +111,7 @@ body {
 }
 
 .byline {
-  color: #fff;
+  color: #ff0404;
   font-family: "ITC Serif Gothic", Lato;
   font-size: 2.25em;
   left: -2em;
@@ -120,6 +120,7 @@ body {
   text-align: center;
   text-transform: uppercase;
   top: 29%;
+  font-weight: bold;
 }
 
 /*** Media queries for adjusting to different screen sizes ***/
