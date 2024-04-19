@@ -970,21 +970,50 @@
 /*-----------------------------------*\
               #GO TO TOP
 \*-----------------------------------*/
-.go-top:hover {
-  background-color: #960000 !important;
+#goToTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  background-color: #007bff;
+  color: #fefefe;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px 20px;
+  font-size: 16px;
+  -webkit-clip-path: polygon(90% 0, 100% 34%, 100% 100%, 10% 100%, 0 66%, 0 0) !important;
+          clip-path: polygon(90% 0, 100% 34%, 100% 100%, 10% 100%, 0 66%, 0 0) !important;
 }
 
-.go-top {
-  display: none; /* Hide the button by default */
-  position: fixed; /* Fixed position so it stays in the same place when scrolling */
-  bottom: 20px; /* Adjust as needed */
-  right: 20px; /* Adjust as needed */
-  z-index: 1000; /* Ensure it's above other content */
+#goToTopBtn:hover {
+  background-color: #0056b3; /* Button background color on hover */
 }
 
 /*-----------------------------------*\
               cursor animation
 \*-----------------------------------*/
+#star-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Allows clicks to pass through */
+}
+
+.star {
+  position: absolute;
+  width: 10px; /* Adjust size */
+  height: 10px; /* Adjust size */
+  background-color: rgb(26, 255, 0);
+  -webkit-clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+          clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  opacity: 0.8;
+  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+
 /*-----------------------------------*\
               custom scrollbar
 \*-----------------------------------*/

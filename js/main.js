@@ -38,24 +38,52 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+// Get the top button
+var mybutton = document.getElementById("goToTopBtn");
 
+// When the user scrolls down 800px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
 
-
-window.addEventListener('scroll', function() {
-  var scrollBtn = document.getElementById('scrollBtn');
-  if (window.pageYOffset > 500) { // Adjust 300 to the scroll position where you want the button to appear
-    scrollBtn.style.display = 'block';
+function scrollFunction() {
+  if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+    mybutton.style.display = "block";
   } else {
-    scrollBtn.style.display = 'none';
+    mybutton.style.display = "none";
   }
-});
+}
+
+function goToTop() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
 
 
-// contact part 
-// footer-btn
-// document.addEventListener('DOMContentLoaded', () => {
-// document
 
+// Mouse scroll animation
+
+
+// script.js
+// document.addEventListener('mousemove', function(e) {
+//   const container = document.getElementById('star-container');
+//   const star = document.createElement('div');
+//   star.className = 'star';
+//   container.appendChild(star);
+
+//   // Set the initial position of the star
+//   star.style.left = `${e.pageX}px`;
+//   star.style.top = `${e.pageY}px`;
+
+//   // Set the animation for the star
+//   setTimeout(() => {
+//       star.style.transform = 'translate(-50%, -50%) scale(2)'; // Moves and grows
+//       star.style.opacity = '0'; // Fades out
+//   }, 50);
+
+//   // Remove the star after the animation
+//   setTimeout(() => {
+//       container.removeChild(star);
+//   }, 600); // Should match the longest transition time
+// });
 
 
 
