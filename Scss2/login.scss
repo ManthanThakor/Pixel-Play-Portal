@@ -333,3 +333,18 @@ input:not(:focus):valid ~ .my_place
       color: #0073ff;
       cursor: pointer;
   }
+
+
+  ::-webkit-scrollbar {
+	width: 10px;
+}
+::-webkit-scrollbar-track {
+	background-color: $background-color_1;
+}
+::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	background: #15ff00be;
+	&:hover {
+		background: #ff0000;
+	}
+}

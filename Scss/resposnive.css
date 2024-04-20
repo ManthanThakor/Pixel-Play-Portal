@@ -127,6 +127,17 @@ body {
     opacity: 0.5;
   }
 }
+@media screen and (max-width: 1137px) {
+  .arcade-head-part {
+    padding: 30px 40px 30px 40px !important;
+  }
+}
+@media screen and (max-width: 650px) {
+  .arcade-head-part {
+    padding: 30px 15px 30px 15px !important;
+  }
+}
+
 @media only screen and (max-width: 1452px) {
   .ca-arc-hov-img {
     display: none !important;
@@ -138,8 +149,11 @@ body {
   }
 }
 @media only screen and (max-width: 1064px) {
-  .arcade-card-part-two {
-    display: none !important;
+  .arcade-t-card {
+    font-size: 20px !important;
+  }
+  .arcade-b-card {
+    font-size: 16px !important;
   }
 }
 /*-----------------------------------*\

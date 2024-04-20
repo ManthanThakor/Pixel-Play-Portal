@@ -14,9 +14,11 @@
   <link rel="stylesheet" type="text/css" href="Scss/resposnive.css" />
   <!--  FAVICON -->
   <link rel="icon" type="image/x-icon" href="Img/logo/PixelPlay.png" />
-<!--  font awesome -->
+  <!--  font awesome -->
   <script src="https://kit.fontawesome.com/cb104e752f.js" crossorigin="anonymous"></script>
-  <!-- animation -->
+  <!-- Css animation -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <!-- Aos animation -->
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <!-- Bootstrap CSS v5.2.1 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -174,143 +176,166 @@
   <div class="arcade-section-part" id="arcade-section">
     <div class="arcade-title-part">
       <img src="Img/arcade-part/logo/logo.png" alt="" id="arcade-img">
-      <p class="text-uppercase arcade-title">Arcade</p>
+      <p class="text-uppercase arcade-title ">Arcade</p>
       <img src="Img/arcade-part/logo/logo.png" alt="" id="arcade-img-two">
     </div>
   </div>
 
-  <div class="arcade-head-part">
-    <div class="all-arc-cad">
-      <div class="slick-part-one card-group arcade-card-part">
 
-        <div class="card arcade-card-one">
-          <div class="img-part-main-arc">
-            <img src="Img/arcade-part/arcade-card/rdr2.jpg" class="card-img-top arcade-card-img"
-              alt="Red Dead Redemption 2 ">
-            <img src="Img/arcade-part/arcade-card/rdr2_hover.png" class="ca-arc-hov-img" alt="Red Dead Redemption 2">
-          </div>
-          <div class="card-body arcade-body-card">
-            <h5 class="text-uppercase card-title arcade-t-card">Red Dead Redemption 2</h5>
-            <p class="card-text arcade-b-card">Red Dead Redemption 2 is a 2018 action-adventure game developed and
-              published by Rockstar Games.The game is the third entry in the Red Dead series and a prequel to the 2010
-              game Red Dead Redemption.</p>
-            <div class="button-card-part">
-              <button type="button" class="btn text-uppercase btn-primary arcade-btn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;add to
-                cart</button>
-              <p class="button-card-part-price">$59.99</p>
+  <div class="arcade-head-part">
+    <div class="container-fluid">
+      <div class="row slick-slider-one">
+        <div class="col-md-4">
+          <div class=" card arcade-card-one">
+            <div class="img-part-main-arc">
+              <img src="Img/arcade-part/arcade-card/rdr2.jpg" class="card-img-top arcade-card-img"
+                alt="Red Dead Redemption 2 ">
+              <img src="Img/arcade-part/arcade-card/rdr2_hover.png" class="ca-arc-hov-img" alt="Red Dead Redemption 2">
+            </div>
+            <div class="card-body arcade-body-card">
+              <h5 class="text-uppercase card-title arcade-t-card">Red Dead Redemption 2</h5>
+              <p class="card-text arcade-b-card">Red Dead Redemption 2 is a 2018 action-adventure game developed and
+                published by Rockstar Games.The game is the third entry in the Red Dead series and a prequel to the
+                2010
+                game Red Dead Redemption.</p>
+              <div class="button-card-part">
+                <button type="button"
+                  class="btn text-uppercase btn-primary arcade-btn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;add
+                  to
+                  cart</button>
+                <p class="button-card-part-price">$59.99</p>
+              </div>
             </div>
           </div>
         </div>
-  
-        <div class="card arcade-card-one">
-          <div class="img-part-main-arc">
-            <img src="Img/arcade-part/arcade-card/er.jpg" class="card-img-top arcade-card-img"
-              alt="Red Dead Redemption 2 ">
-            <img src="Img/arcade-part/arcade-card/er_hover.png" class="ca-arc-hov-img" alt="Red Dead Redemption 2"
-              style="width: auto!important; top:7px; right: 4rem;">
-          </div>
-          <div class="card-body arcade-body-card">
-            <h5 class="text-uppercase card-title arcade-t-card">Elden Ring</h5>
-            <p class="card-text arcade-b-card">THE NEW FANTASY ACTION RPG. Rise, Tarnished, and be guided by grace to
-              brandish the power of the Elden Ring and become an Elden Lord in the Lands Between.</p>
-            <div class="button-card-part">
-              <button type="button" class="btn text-uppercase btn-primary arcade-btn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;add to
-                cart</button>
-              <p class="button-card-part-price">$75.99</p>
+
+        <div class="col-md-4 gap-3">
+          <div class="card arcade-card-one">
+            <div class="img-part-main-arc">
+              <img src="Img/arcade-part/arcade-card/er.jpg" class="card-img-top arcade-card-img"
+                alt="Red Dead Redemption 2 ">
+              <img src="Img/arcade-part/arcade-card/er_hover.png" class="ca-arc-hov-img" alt="Red Dead Redemption 2"
+                style="width: auto!important; top:7px; right: 4rem;">
+            </div>
+            <div class="card-body arcade-body-card">
+              <h5 class="text-uppercase card-title arcade-t-card">Elden Ring</h5>
+              <p class="card-text arcade-b-card">THE NEW FANTASY ACTION RPG. Rise, Tarnished, and be guided by grace
+                to
+                brandish the power of the Elden Ring and become an Elden Lord in the Lands Between.</p>
+              <div class="button-card-part">
+                <button type="button"
+                  class="btn text-uppercase btn-primary arcade-btn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;add
+                  to
+                  cart</button>
+                <p class="button-card-part-price">$75.99</p>
+              </div>
             </div>
           </div>
         </div>
-  
-        <div class="card arcade-card-one">
-          <div class="img-part-main-arc">
-            <img src="Img/arcade-part/arcade-card/nier.jpg" class="card-img-top arcade-card-img"
-              alt="Red Dead Redemption 2 ">
-            <img src="Img/arcade-part/arcade-card/nier_hover.png" class="ca-arc-hov-img" alt="Red Dead Redemption 2"
-              style="height: 292px !important; width: auto !important; top: 5rem; right: -2rem;">
-          </div>
-          <div class="card-body arcade-body-card">
-            <h5 class="text-uppercase card-title arcade-t-card">NieR: Automata</h5>
-            <p class="card-text arcade-b-card">NieR: Automata tells the story of androids 2B, 9S and A2 and their battle
-              to reclaim the machine-driven dystopia overrun by powerful machines.</p>
-            <div class="button-card-part">
-              <button type="button" class="btn text-uppercase btn-primary arcade-btn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;add to
-                cart</button>
-              <p class="button-card-part-price">$39.99</p>
+        <div class="col-md-4">
+          <div class="card arcade-card-one">
+            <div class="img-part-main-arc">
+              <img src="Img/arcade-part/arcade-card/nier.jpg" class="card-img-top arcade-card-img"
+                alt="Red Dead Redemption 2 ">
+              <img src="Img/arcade-part/arcade-card/nier_hover.png" class="ca-arc-hov-img" alt="Red Dead Redemption 2"
+                style="height: 292px !important; width: auto !important; top: 5rem; right: -2rem;">
+            </div>
+            <div class="card-body arcade-body-card">
+              <h5 class="text-uppercase card-title arcade-t-card">NieR: Automata</h5>
+              <p class="card-text arcade-b-card">NieR: Automata tells the story of androids 2B, 9S and A2 and their
+                battle
+                to reclaim the machine-driven dystopia overrun by powerful machines.</p>
+              <div class="button-card-part">
+                <button type="button"
+                  class="btn text-uppercase btn-primary arcade-btn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;add
+                  to
+                  cart</button>
+                <p class="button-card-part-price">$39.99</p>
+              </div>
             </div>
           </div>
         </div>
-  
-      </div>
-  
-  
-      <div class="card-group arcade-card-part-two">
-  
-        <div class="card arcade-card-one">
-          <div class="img-part-main-arc">
-            <img src="Img/arcade-part/arcade-card/gta5.jpg" class="card-img-top arcade-card-img"
-              alt="Red Dead Redemption 2 ">
-            <img src="Img/arcade-part/arcade-card/gta5_hover.png" style="width: 26rem !important;
+        <div class="col-md-4">
+          <div class="card arcade-card-one">
+            <div class="img-part-main-arc">
+              <img src="Img/arcade-part/arcade-card/gta5.jpg" class="card-img-top arcade-card-img"
+                alt="Red Dead Redemption 2 ">
+              <img src="Img/arcade-part/arcade-card/gta5_hover.png" style="width: 26rem !important;
             height: 18rem !important; top: 5rem; right: -2rem;" class="ca-arc-hov-img" alt="Red Dead Redemption 2">
-          </div>
-          <div class="card-body arcade-body-card">
-            <h5 class="text-uppercase card-title arcade-t-card">Grand Theft Auto V</h5>
-            <p class="card-text arcade-b-card">Grand Theft Auto V is a 2013 action-adventure game developed by Rockstar
-              North and published by Rockstar Games. It is the seventh main entry in the Grand Theft Auto series,
-              following 2008's Grand Theft Auto IV, and the fifteenth instalment overall.</p>
-            <div class="button-card-part">
-              <button type="button" class="btn text-uppercase btn-primary arcade-btn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;add to
-                cart</button>
-              <p class="button-card-part-price">$29.99</p>
+            </div>
+            <div class="card-body arcade-body-card">
+              <h5 class="text-uppercase card-title arcade-t-card">Grand Theft Auto V</h5>
+              <p class="card-text arcade-b-card">Grand Theft Auto V is a 2013 action-adventure game developed by
+                Rockstar
+                North and published by Rockstar Games. It is the seventh main entry in the Grand Theft Auto series,
+                following 2008's Grand Theft Auto IV, and the fifteenth instalment overall.</p>
+              <div class="button-card-part">
+                <button type="button"
+                  class="btn text-uppercase btn-primary arcade-btn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;add
+                  to
+                  cart</button>
+                <p class="button-card-part-price">$29.99</p>
+              </div>
             </div>
           </div>
         </div>
-  
-        <div class="card arcade-card-one">
-          <div class="img-part-main-arc">
-            <img src="Img/arcade-part/arcade-card/minecraft.jpg" class="card-img-top arcade-card-img"
-              alt="Red Dead Redemption 2 ">
-            <img src="Img/arcade-part/arcade-card/mine_hover.png" class="ca-arc-hov-img" alt="Red Dead Redemption 2"
-              style="width: 33rem !important; height: 19rem !important; top: 6rem; right: -2rem;">
-          </div>
-          <div class="card-body arcade-body-card">
-            <h5 class="text-uppercase card-title arcade-t-card">Minecraft</h5>
-            <p class="card-text arcade-b-card">Minecraft is a 2011 sandbox game developed by Mojang Studios and originally
-              released in 2009. The game was created by Markus "Notch" Persson in the Java programming language.</p>
-            <div class="button-card-part">
-              <button type="button" class="btn text-uppercase btn-primary arcade-btn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;add to
-                cart</button>
-              <p class="button-card-part-price">$26.95</p>
+        <div class="col-md-4">
+          <div class="card arcade-card-one">
+            <div class="img-part-main-arc">
+              <img src="Img/arcade-part/arcade-card/minecraft.jpg" class="card-img-top arcade-card-img"
+                alt="Red Dead Redemption 2 ">
+              <img src="Img/arcade-part/arcade-card/mine_hover.png" class="ca-arc-hov-img" alt="Red Dead Redemption 2"
+                style="width: 33rem !important; height: 19rem !important; top: 6rem; right: -2rem;">
+            </div>
+            <div class="card-body arcade-body-card">
+              <h5 class="text-uppercase card-title arcade-t-card">Minecraft</h5>
+              <p class="card-text arcade-b-card">Minecraft is a 2011 sandbox game developed by Mojang Studios and
+                originally
+                released in 2009. The game was created by Markus "Notch" Persson in the Java programming language.
+              </p>
+              <div class="button-card-part">
+                <button type="button"
+                  class="btn text-uppercase btn-primary arcade-btn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;add
+                  to
+                  cart</button>
+                <p class="button-card-part-price">$26.95</p>
+              </div>
             </div>
           </div>
         </div>
-  
-        <div class="card arcade-card-one">
-          <div class="img-part-main-arc">
-            <img src="Img/arcade-part/arcade-card/dota2.jpg" class="card-img-top arcade-card-img"
-              alt="Red Dead Redemption 2 ">
-            <img src="Img/arcade-part/arcade-card/dota2_hover.png" class="ca-arc-hov-img" alt="Red Dead Redemption 2"
-              style="    height: 320px !important; width: auto !important; top: 4rem; right: 0rem;">
-          </div>
-          <div class="card-body arcade-body-card">
-            <h5 class="text-uppercase card-title arcade-t-card">Dota 2</h5>
-            <p class="card-text arcade-b-card">Dota 2 is a 2013 multiplayer online battle arena video game by Valve. The
-              game is a sequel to Defense of the Ancients, a community-created mod for Blizzard Entertainment's Warcraft
-              III: Reign of Chaos.</p>
-            <div class="button-card-part">
-              <button type="button" class="btn text-uppercase btn-primary arcade-btn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;add to
-                cart</button>
-              <p class="button-card-part-price">FREE</p>
+        <div class="col-md-4">
+          <div class="card arcade-card-one">
+            <div class="img-part-main-arc">
+              <img src="Img/arcade-part/arcade-card/dota2.jpg" class="card-img-top arcade-card-img"
+                alt="Red Dead Redemption 2 ">
+              <img src="Img/arcade-part/arcade-card/dota2_hover.png" class="ca-arc-hov-img" alt="Red Dead Redemption 2"
+                style="    height: 320px !important; width: auto !important; top: 4rem; right: 0rem;">
+            </div>
+            <div class="card-body arcade-body-card">
+              <h5 class="text-uppercase card-title arcade-t-card">Dota 2</h5>
+              <p class="card-text arcade-b-card">Dota 2 is a 2013 multiplayer online battle arena video game by
+                Valve. The
+                game is a sequel to Defense of the Ancients, a community-created mod for Blizzard Entertainment's
+                Warcraft
+                III: Reign of Chaos.</p>
+              <div class="button-card-part">
+                <button type="button"
+                  class="btn text-uppercase btn-primary arcade-btn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;add
+                  to
+                  cart</button>
+                <p class="button-card-part-price">FREE</p>
+              </div>
             </div>
           </div>
         </div>
-  
       </div>
     </div>
- 
     <div class="arc-btn-mor">
       <button class="text-uppercase  arcade-card-more-btn common-btn-part">more</button>
     </div>
   </div>
+
+
 
   <!-- ---Event section--- -->
 
@@ -363,45 +388,53 @@
       <p class="text-uppercase character-title">Explore iconic gaming characters from various franchises.</p>
     </div>
 
-      <div class="video-container">
-        <div class="v-c-a">
-          <video id="myVideo" autoplay loop playsinline muted style="#myVideo:hover { .video-controls{ opacity: 1 !important; }} "> 
-            <!-- Added muted attribute -->
-              <source src="video/character-part/girl-charc.mp4" type="video/mp4" class="video-part-ca-a">
-              Your browser does not support the video tag.
-          </video>
-        </div>
-       <div class="video-bar-part-c">
+    <div class="video-container">
+      <div class="v-c-a">
+        <video id="myVideo" autoplay loop playsinline muted
+          style="#myVideo:hover { .video-controls{ opacity: 1 !important; }} ">
+          <!-- Added muted attribute -->
+          <source src="video/character-part/girl-charc.mp4" type="video/mp4" class="video-part-ca-a">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="video-bar-part-c">
         <div class="video-controls">
           <!-- Add default video controls here -->
-          <button class="play-btn-char" onclick="document.querySelector('video').play()"><i class="fa-solid fa-play" id="fonts-play"></i></button>
-          <button class="pause-btn-char"  onclick="document.querySelector('video').pause()"><i class="fa-solid fa-pause" id="fonts-play"></i></button>
-          <button class="svg-butn-part"  onclick="toggleMute()">
-              <svg class="vol-sec-svg mute" id="fonts-play" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1024 768" enable-background="new 0 0 1024 768" xml:space="preserve">
-                  <path d="M578.135,106.298c-11.136-6.299-24.275-6.076-35.245,0.494c-0.501,0.334-0.994,0.675-1.454,1.058L386.939,238.584H265.662
+          <button class="play-btn-char" onclick="document.querySelector('video').play()"><i class="fa-solid fa-play"
+              id="fonts-play"></i></button>
+          <button class="pause-btn-char" onclick="document.querySelector('video').pause()"><i class="fa-solid fa-pause"
+              id="fonts-play"></i></button>
+          <button class="svg-butn-part" onclick="toggleMute()">
+            <svg class="vol-sec-svg mute" id="fonts-play" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+              viewBox="0 0 1024 768" enable-background="new 0 0 1024 768" xml:space="preserve">
+              <path
+                d="M578.135,106.298c-11.136-6.299-24.275-6.076-35.245,0.494c-0.501,0.334-0.994,0.675-1.454,1.058L386.939,238.584H265.662
                       c-6.299,0-11.414,5.123-11.414,11.421v216.649c0,3.063,1.225,5.957,3.334,8.087c2.186,2.103,5.018,3.327,8.08,3.327l120.99-0.056
                       l154.399,141.871c0.612,0.501,1.226,0.96,1.837,1.336c5.632,3.396,11.859,5.065,18.04,5.065c5.902,0,11.805-1.503,17.205-4.564
                       c11.414-6.403,18.207-18.138,18.207-31.403V137.756C596.342,124.498,589.549,112.756,578.135,106.298L578.135,106.298z
                       M573.514,590.317c0,4.914-2.449,9.243-6.569,11.582c-1.782,1.017-6.236,2.909-11.414,0.278L402.46,461.601v-51.962
                       c0-6.278-5.06-11.415-11.345-11.415c-6.354,0-11.422,5.137-11.422,11.415v45.545l-102.609,0.056v-193.82h102.609v45.601
                       c0,6.285,5.068,11.415,11.422,11.415c6.285,0,11.345-5.129,11.345-11.415v-51.726l152.902-129.343
-                      c5.233-2.735,9.8-0.787,11.582,0.216c4.12,2.338,6.569,6.681,6.569,11.588V590.317L573.514,590.317z"/>
-                  <path class="circle_sm" d="M744.895,358.302c0-68.104-45.714-128.849-111.191-147.78c-6.069-1.726-12.361,1.726-14.087,7.795
+                      c5.233-2.735,9.8-0.787,11.582,0.216c4.12,2.338,6.569,6.681,6.569,11.588V590.317L573.514,590.317z" />
+              <path class="circle_sm" d="M744.895,358.302c0-68.104-45.714-128.849-111.191-147.78c-6.069-1.726-12.361,1.726-14.087,7.795
                       c-1.782,6.014,1.726,12.361,7.795,14.101c55.734,16.133,94.654,67.916,94.654,125.884c0,58.018-38.92,109.813-94.654,125.905
                       c-6.069,1.78-9.577,8.06-7.795,14.128c1.447,5.012,5.957,8.24,10.913,8.24c1.058,0,2.115-0.167,3.174-0.432
-                      C699.182,487.214,744.895,426.397,744.895,358.302L744.895,358.302z"/>
-                  <path class="circle_lg" fill="none" stroke="#000" stroke-width="22" stroke-linecap="round" stroke-miterlimit="10" d="M640.838,142.911
+                      C699.182,487.214,744.895,426.397,744.895,358.302L744.895,358.302z" />
+              <path class="circle_lg" fill="none" stroke="#000" stroke-width="22" stroke-linecap="round"
+                stroke-miterlimit="10" d="M640.838,142.911
                       c0,0,168.676,15.663,168.676,221.688c0,206.024-170.985,225.704-212.049,225.704c-41.064,0-212.451-26.556-212.451-224.926
-                      S559.15,139.698,596.73,139.698c37.582,0-192.841,430.925-192.841,430.925"/>
-              </svg>
+                      S559.15,139.698,596.73,139.698c37.582,0-192.841,430.925-192.841,430.925" />
+            </svg>
           </button>
-          <input class="vid-car-bar" type="range" min="0" max="100" value="0" onchange="document.querySelector('video').volume = this.value / 100">
+          <input class="vid-car-bar" type="range" min="0" max="100" value="0"
+            onchange="document.querySelector('video').volume = this.value / 100">
+        </div>
       </div>
-       </div>
-       
+
     </div>
     <div class="char-btn-sec">
-      <button class="text-uppercase  character-btn-p">watch more<i class="fa-solid fa-angles-right" id="char-btn-i"></i></button>
+      <button class="text-uppercase  character-btn-p">watch more<i class="fa-solid fa-angles-right"
+          id="char-btn-i"></i></button>
     </div>
   </div>
 
@@ -468,10 +501,11 @@
       <a class="font-cont" href="http://www.pinterest.com"><i class="fa-brands fa-pinterest" id="fonts-event"></i></a>
       <a class="font-cont" href="http://www.instagram.com"><i class="fa-brands fa-instagram " id="fonts-event"></i></a>
     </div>
-    
+
   </div>
 
-  <button onclick="goToTop()" id="goToTopBtn" title="Go to top"><i class="fa-solid fa-chevron-up" id="top-btn-par"></i></button>
+  <button onclick="goToTop()" id="goToTopBtn" title="Go to top"><i class="fa-solid fa-chevron-up"
+      id="top-btn-par"></i></button>
   <div id="star-container"></div>
   <!-- -------------------------END------------------------- -->
 
@@ -494,9 +528,10 @@
   <!--  Custom scripts slick slider for this template -->
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  
+  
   <!--  Custom scripts animation for this template-->
 
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
@@ -509,6 +544,40 @@
       once: true,
     });
   </script> -->
+
+
+  <!-- JavaScript -->
+  
+  <script>
+    $(document).ready(function () {
+      // Initialize slick slider when screen size is 800px
+      function initSlickSlider() {
+        $('.slick-slider-one').slick({
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          autoplay: true,
+          autoplaySpeed: 2000,
+        });
+      }
+
+      // Call the function initially
+      if ($(window).width() <= 800) {
+        initSlickSlider();
+      }
+
+      // Call the function on window resize
+      $(window).resize(function () {
+        if ($(window).width() <= 800) {
+          // Destroy slick slider if it's already initialized
+          if ($('.slick-slider-one').hasClass('slick-initialized')) {
+            $('.slick-slider-one').slick('unslick');
+          }
+          // Initialize slick slider
+          initSlickSlider();
+        }
+      });
+    });
+  </script>
 </body>
 
 </html>

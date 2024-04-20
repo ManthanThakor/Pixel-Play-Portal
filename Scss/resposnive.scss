@@ -139,6 +139,15 @@ body {
   }
 }
 
+.arcade-head-part{
+  @media screen and (max-width: 1137px) {
+    @include padd(30px, 40px, 30px, 40px);
+  }
+  @media screen and (max-width:650px) {
+    @include padd(30px, 15px, 30px, 15px);
+  }
+}
+
 @media only screen and  (max-width: 1452px) {
   .ca-arc-hov-img{
     display: none !important;
@@ -152,10 +161,16 @@ body {
   }
 }
 @media only screen and  (max-width: 1064px) {
-  .arcade-card-part-two{
-    display: none !important;
+ 
+  .arcade-t-card{
+    font-size: $font-size-res-zero;
+  }
+  .arcade-b-card{
+    font-size: 16px !important;
   }
 }
+
+
 
 /*-----------------------------------*\
                Event

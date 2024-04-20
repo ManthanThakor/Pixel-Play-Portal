@@ -1,30 +1,63 @@
-(function() {
-    'use strict';
-    window.addEventListener('load', function() {
+   // Function to save user data to JSON
+   function saveUserData(username, email, password) {
+    // Retrieve existing data or initialize empty array
+    let usersData = JSON.parse(localStorage.getItem('usersData')) || [];
+    
+    // Check if email already exists
+    if (usersData.some(user => user.email === email)) {
+      alert("Email already exists! Please use a different email.");
+      return;
+    }
 
-      var forms = document.getElementsByClassName('needs-validation');
-     
-      var validation = Array.prototype.filter.call(forms, function(form) {
-        form.addEventListener('submit', function(event) {
-          if (form.checkValidity() === false) {
-            event.preventDefault();
-            event.stopPropagation();
-          }
-          form.classList.add('was-validated');
-        }, false);
-      });
-    }, false);
-  })();
+    // Add new user data
+    usersData.push({
+      username: username,
+      email: email,
+      password: password
+    });
 
+    // Save updated data to local storage
+    localStorage.setItem('usersData', JSON.stringify(usersData));
+  }
 
-  const signUpButton = document.getElementById('signUp');
-  const signInButton = document.getElementById('signIn');
-  const container = document.getElementById('container');
-
-  signUpButton.addEventListener('click',()=>{
-      container.classList.add("right-panel-active");
+  // Function to handle sign up form submission
+  document.getElementById('signUpForm').addEventListener('submit', function (event) {
+    event.preventDefault();
+    const username = document.getElementById('signup_username').value;
+    const email = document.getElementById('signup_email').value;
+    const password = document.getElementById('signup_password').value;
+    saveUserData(username, email, password);
+    alert("Account created successfully!");
   });
 
-  signInButton.addEventListener('click',()=>{
-      container.classList.remove("right-panel-active");
+  // Function to handle sign in form submission
+  document.getElementById('signInForm').addEventListener('submit', function (event) {
+    event.preventDefault();
+    const email = document.getElementById('signin_email').value;
+    const password = document.getElementById('signin_password').value;
+
+    // Retrieve usersData from local storage
+    const usersData = JSON.parse(localStorage.getItem('usersData')) || [];
+
+    // Check if the provided email and password match any user's data
+    const user = usersData.find(user => user.email === email && user.password === password);
+
+    if (user) {
+      alert("Sign in successful!");
+      // Redirect to index.html or any other page
+      window.location.href = "index.html";
+    } else {
+      alert("Email not found. Please create an account.");
+      // Switch to sign up panel
+      document.getElementById('container').classList.add("right-panel-active");
+    }
+  });
+
+  // Switch between sign up and sign in panels
+  document.getElementById('signUp').addEventListener('click', function () {
+    document.getElementById('container').classList.add("right-panel-active");
+  });
+
+  document.getElementById('signIn').addEventListener('click', function () {
+    document.getElementById('container').classList.remove("right-panel-active");
   });
