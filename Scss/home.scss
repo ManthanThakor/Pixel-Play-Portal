@@ -183,30 +183,50 @@
   position: absolute;
   @include top-right(80, 100);
 }
-.input-search {
-  height: 50px;
-  width: 50px;
-  border-style: none;
-  padding: 10px;
-  font-size: 18px;
-  letter-spacing: 2px;
-  outline: none;
-  border-radius: 25px;
-  transition: all 0.5s ease-in-out;
-  background-color: $black-color;
-  padding-right: 40px;
+
+// search-overlay
+.search__wrap {
+  position: fixed;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: top 0.3s ease-in-out;
+  z-index: 999999999;
+}
+
+.search__layer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.btn-search-sec-over{
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
   color: #fff;
-  // box-shadow: rgba(72, 135, 202, 0.8) 0 0 90px 33px;
-  box-shadow: 0 0 2px rgba(255, 255, 255, 0.397),
-    0 0 4px rgba(255, 255, 255, 0.462), 0 0 8px rgba(255, 255, 255, 0.416),
-    0 0 10px rgba(255, 255, 255, 0.453);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
-.input-search::placeholder {
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 18px;
-  letter-spacing: 2px;
-  font-weight: 100;
+
+/* Keyframe animation for search overlay */
+@keyframes slideInFromTop {
+  from {
+    top: -100%;
+  }
+  to {
+    top: 0;
+  }
 }
+
+
 .btn-search {
   width: 50px;
   height: 50px;
