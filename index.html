@@ -52,9 +52,19 @@
   </style>
 
   <!--------------------------------------- Navbar ------------------------------->
+
   <div class="search__wrap text-center">
-    <div class="search__layer"></div>
-    <button class="btn-search-sec-over" id="sandbox-two" style="margin-left: 100px;">Close</button>
+    <div class="serch-type">
+      <h2 class="title-s">... <span>Search Here</span> ...</h2>
+      <input placeholder="Type here" class="ser-big"/>
+      <div class="aline"></div>
+      <i class="fa-brands fa-searchengin" id="search-section-ic"></i>
+    </div>
+    <button class="item-6" id="sandbox-two">
+      <span class="inner">
+        <span class="label">Close</span>
+        </span>
+    </button>
   </div>
 
   <header class="pixel-head" id="pix-head">
@@ -71,7 +81,7 @@
       <!-- logo -->
 
       <div class="pixel-nav" id="pix-nav">
-        <img src="Img/logo/PixelPlay.png" class="logo-sec" alt="PIXEL PLAY PORTAL" />
+       <a href="index.html"> <img src="Img/logo/PixelPlay.png" class="logo-sec" alt="PIXEL PLAY PORTAL" /></a>
       </div>
 
       <!-- Menu -->
@@ -79,57 +89,57 @@
       <div class="pixel-menu-section" id="pix-menu-section">
         <ul class="pixel-menu">
           <!-- home -->
-          <li class="nav-item">
-            <a href="index.html" class="nav-link text-uppercase">home</a>
+          <li class="nav-item"> 
+            <a href="index.html"  class="nav-link text-uppercase act" onclick="changeActiveClass(event)">home</a>
           </li>
           <!-- arcade -->
           <li class="nav-item">
-            <a href="#arcade-section" class="nav-link text-uppercase">arcade</a>
+            <a href="#arcade-section" class="nav-link text-uppercase "onclick="changeActiveClass(event)">arcade</a>
           </li>
           <!-- event -->
           <li class="nav-item">
-            <a href="#event-section" class="nav-link text-uppercase">event</a>
+            <a href="#event-section" class="nav-link text-uppercase" onclick="changeActiveClass(event)">event</a>
           </li>
           <!-- contact -->
           <li class="nav-item">
-            <a href="#contact" class="nav-link text-uppercase">Contact</a>
+            <a href="#contact" class="nav-link text-uppercase" onclick="changeActiveClass(event)">Contact</a>
           </li>
 
           <!-- search box -->
 
-          <div class=" nav-link search-box" id="search-sec-p">
+          <div class=" nav-link search-box" id="search-sec-p" onclick="changeActiveClass(event)">
             <i class="fa-solid fa-magnifying-glass search-icon" ></i>
           </div>
 
           <!-- settings  -->
 
-          <button class='nav-link text-uppercase setting-part'>settings</button>
+          <button class='nav-link text-uppercase setting-part' onclick="changeActiveClass(event)">settings</button>
 
           <!-- login  -->
 
           <li class="nav-item login-section">
-            <a href="login.html" class="nav-link text-uppercase"> <i
+            <a href="login.html" class="nav-link text-uppercase" onclick="changeActiveClass(event)"> <i
                 class="fa-solid fa-right-to-bracket login-logo"></i>login</a>
           </li>
 
           <!-- more -->
 
           <div class="dropdown more-part-section">
-            <button type="button" class="btn btn-primary dropdown-toggle nav-link text-uppercase more-part-drop"
-              data-bs-toggle="dropdown">
+            <button type="button" class="btn  dropdown-toggle nav-link text-uppercase more-part-drop"
+              data-bs-toggle="dropdown" >
               More
             </button>
             <ul class="dropdown-menu more-section">
-              <li><a class="dropdown-item nav-link text-uppercase" href="profile.html">Profile</a></li>
-              <li><a class="dropdown-item nav-link text-uppercase" href="#characters">Character</a></li>
-              <li><a class="dropdown-item nav-link text-uppercase" href="#">about</a></li>
-              <li><a class="dropdown-item nav-link text-uppercase" href="intro.html">intro</a></li>
-              <li><a class="dropdown-item nav-link text-uppercase" href="#">news</a></li>
-              <li><a class="dropdown-item nav-link text-uppercase" href="#">Video </a></li>
-              <li><a class="dropdown-item nav-link text-uppercase" href="tournament.html">tournament</a></li>
-              <li><a class="dropdown-item nav-link text-uppercase" href="404error.html">music</a></li>
-              <li><a class="dropdown-item nav-link text-uppercase" href="#">trending </a></li>
-              <li><a class="dropdown-item nav-link text-uppercase" href="#">game stream</a></li>
+              <li><a class="dropdown-ite nav-link text-uppercase" href="profile.html" onclick="changeActiveClass(event)">Profile</a></li>
+              <li><a class="dropdown-ite nav-link text-uppercase" href="#characters" onclick="changeActiveClass(event)">Character</a></li>
+              <li><a class="dropdown-ite nav-link text-uppercase" href="#" onclick="changeActiveClass(event)">about</a></li>
+              <li><a class="dropdown-ite nav-link text-uppercase" href="intro.html" onclick="changeActiveClass(event)">intro</a></li>
+              <li><a class="dropdown-ite nav-link text-uppercase" href="#" onclick="changeActiveClass(event)">news</a></li>
+              <li><a class="dropdown-ite nav-link text-uppercase" href="#" onclick="changeActiveClass(event)">Video </a></li>
+              <li><a class="dropdown-ite nav-link text-uppercase" href="tournament.html" onclick="changeActiveClass(event)">tournament</a></li>
+              <li><a class="dropdown-ite nav-link text-uppercase" href="404error.html" onclick="changeActiveClass(event)">music</a></li>
+              <li><a class="dropdown-ite nav-link text-uppercase" href="#" onclick="changeActiveClass(event)">trending </a></li>
+              <li><a class="dropdown-ite nav-link text-uppercase" href="#" onclick="changeActiveClass(event)">game stream</a></li>
             </ul>
           </div>
         </ul>
@@ -138,7 +148,7 @@
      
       
         <div class="search-box-two">
-          <button class="btn-search" id="search-sec-p"><i class="fas fa-search"></i></button>
+          <button class="btn-search" id="search-sec-p-two"><i class="fas fa-search"></i></button>
         </div>
       </div>
 
@@ -193,10 +203,7 @@
             </div>
             <div class="card-body arcade-body-card">
               <h5 class="text-uppercase card-title arcade-t-card">Red Dead Redemption 2</h5>
-              <p class="card-text arcade-b-card">Red Dead Redemption 2 is a 2018 action-adventure game developed and
-                published by Rockstar Games.The game is the third entry in the Red Dead series and a prequel to the
-                2010
-                game Red Dead Redemption.</p>
+              <p class="card-text arcade-b-card">TRed Dead Redemption 2 is a 2018 action-adventure game developed and published by Rockstar Games. A bounty system governs the response of law enforcement and bounty hunters to crimes committed by the player.</p>
               <div class="button-card-part">
                 <button type="button"
                   class="btn text-uppercase btn-primary arcade-btn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;add
@@ -219,8 +226,7 @@
             <div class="card-body arcade-body-card">
               <h5 class="text-uppercase card-title arcade-t-card">Elden Ring</h5>
               <p class="card-text arcade-b-card">THE NEW FANTASY ACTION RPG. Rise, Tarnished, and be guided by grace
-                to
-                brandish the power of the Elden Ring and become an Elden Lord in the Lands Between.</p>
+                to brandish the power of the Elden Ring and become an Elden Lord in the Lands Between.</p>
               <div class="button-card-part">
                 <button type="button"
                   class="btn text-uppercase btn-primary arcade-btn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;add

@@ -61,3 +61,12 @@
   document.getElementById('signIn').addEventListener('click', function () {
     document.getElementById('container').classList.remove("right-panel-active");
   });
+
+
+
+
+
+
+  document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
+    document.getElementById('container').classList.toggle("right-panel-active");
+  });

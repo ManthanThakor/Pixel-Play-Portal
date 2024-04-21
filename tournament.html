@@ -14,9 +14,11 @@
   <link rel="stylesheet" type="text/css" href="Scss/resposnive.css" />
   <!--  FAVICON -->
   <link rel="icon" type="image/x-icon" href="Img/logo/PixelPlay.png" />
-
+  <!--  font awesome -->
   <script src="https://kit.fontawesome.com/cb104e752f.js" crossorigin="anonymous"></script>
-  <!-- animation -->
+  <!-- Css animation -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <!-- Aos animation -->
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <!-- Bootstrap CSS v5.2.1 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -51,11 +53,26 @@
 
   <!--------------------------------------- Navbar ------------------------------->
 
+  <div class="search__wrap text-center">
+    <div class="serch-type">
+      <h2 class="title-s">... <span>Search Here</span> ...</h2>
+      <input placeholder="Type here" class="ser-big"/>
+      <div class="aline"></div>
+      <i class="fa-brands fa-searchengin" id="search-section-ic"></i>
+    </div>
+    <button class="item-6" id="sandbox-two">
+      <span class="inner">
+        <span class="label">Close</span>
+        </span>
+    </button>
+  </div>
+
   <header class="pixel-head" id="pix-head">
     <!-- Background-part -->
-
-    <div class=" back-one-part ">
+    <div class=" back-one-part">
       <div id="background-part-sec"></div>
+      <!-- <div id="background-part-sec-two"></div>
+     <div id="background-part-sec-three"></div> -->
     </div>
 
     <!-- Menu + Logo -->
@@ -64,7 +81,7 @@
       <!-- logo -->
 
       <div class="pixel-nav" id="pix-nav">
-        <img src="Img/logo/PixelPlay.png" class="logo-sec" alt="PIXEL PLAY PORTAL" />
+       <a href="index.html"> <img src="Img/logo/PixelPlay.png" class="logo-sec" alt="PIXEL PLAY PORTAL" /></a>
       </div>
 
       <!-- Menu -->
@@ -72,68 +89,66 @@
       <div class="pixel-menu-section" id="pix-menu-section">
         <ul class="pixel-menu">
           <!-- home -->
-          <li class="nav-item">
-            <a href="index.html" class="nav-link text-uppercase">home</a>
+          <li class="nav-item"> 
+            <a href="index.html"  class="nav-link text-uppercase " onclick="changeActiveClass(event)">home</a>
           </li>
           <!-- arcade -->
           <li class="nav-item">
-            <a href="index.html#arcade-section" class="nav-link text-uppercase">arcade</a>
+            <a href="tournament.html" class="nav-link text-uppercase act"onclick="changeActiveClass(event)">tournament</a>
           </li>
           <!-- event -->
           <li class="nav-item">
-            <a href="index.html#event-section" class="nav-link text-uppercase">event</a>
+            <a href="index.html#event-section" class="nav-link text-uppercase" onclick="changeActiveClass(event)">event</a>
           </li>
           <!-- contact -->
           <li class="nav-item">
-            <a href="contact.html" class="nav-link text-uppercase">Contact</a>
+            <a href="index.html#contact" class="nav-link text-uppercase" onclick="changeActiveClass(event)">Contact</a>
           </li>
 
           <!-- search box -->
 
-          <div class=" nav-link search-box">
-            <i class="fa-solid fa-magnifying-glass search-icon"></i>
-            <div class="search-box-one"></div>
+          <div class=" nav-link search-box" id="search-sec-p" >
+            <i class="fa-solid fa-magnifying-glass search-icon "></i>
           </div>
+
           <!-- settings  -->
 
-          <button class='nav-link text-uppercase setting-part'>settings</button>
+          <button class='nav-link text-uppercase setting-part' onclick="changeActiveClass(event)">settings</button>
 
           <!-- login  -->
 
           <li class="nav-item login-section">
-            <a href="contact.html" class="nav-link text-uppercase"> <i
+            <a href="login.html" class="nav-link text-uppercase" onclick="changeActiveClass(event)"> <i
                 class="fa-solid fa-right-to-bracket login-logo"></i>login</a>
           </li>
 
           <!-- more -->
 
           <div class="dropdown more-part-section">
-            <button type="button" class="btn btn-primary dropdown-toggle nav-link text-uppercase more-part-drop"
-              data-bs-toggle="dropdown">
+            <button type="button" class="btn  dropdown-toggle nav-link text-uppercase more-part-drop"
+              data-bs-toggle="dropdown" >
               More
             </button>
             <ul class="dropdown-menu more-section">
-              <li><a class="dropdown-item nav-link text-uppercase" href="index.html">about</a></li>
-              <li><a class="dropdown-item nav-link text-uppercase" href="#">intro</a></li>
-              <li><a class="dropdown-item nav-link text-uppercase" href="#">news</a></li>
-              <li><a class="dropdown-item nav-link text-uppercase" href="#">Video </a></li>
-              <li><a class="dropdown-item nav-link text-uppercase" href="#">tournament</a></li>
-              <li><a class="dropdown-item nav-link text-uppercase" href="#">music</a></li>
-              <li><a class="dropdown-item nav-link text-uppercase" href="#">trending </a></li>
-              <li><a class="dropdown-item nav-link text-uppercase" href="#event-section">game stream</a></li>
+              <li><a class="dropdown-ite nav-link text-uppercase" href="profile.html" onclick="changeActiveClass(event)">Profile</a></li>
+              <li><a class="dropdown-ite nav-link text-uppercase" href="index.html#characters" onclick="changeActiveClass(event)">Character</a></li>
+              <li><a class="dropdown-ite nav-link text-uppercase" href="#" onclick="changeActiveClass(event)">about</a></li>
+              <li><a class="dropdown-ite nav-link text-uppercase" href="intro.html" onclick="changeActiveClass(event)">intro</a></li>
+              <li><a class="dropdown-ite nav-link text-uppercase" href="#" onclick="changeActiveClass(event)">news</a></li>
+              <li><a class="dropdown-ite nav-link text-uppercase" href="#" onclick="changeActiveClass(event)">Video </a></li>
+              <li><a class="dropdown-ite nav-link text-uppercase" href="index.html#arcade-section" onclick="changeActiveClass(event)">arcade</a></li>
+              <li><a class="dropdown-ite nav-link text-uppercase" href="404error.html" onclick="changeActiveClass(event)">music</a></li>
+              <li><a class="dropdown-ite nav-link text-uppercase" href="#" onclick="changeActiveClass(event)">trending </a></li>
+              <li><a class="dropdown-ite nav-link text-uppercase" href="#" onclick="changeActiveClass(event)">game stream</a></li>
             </ul>
           </div>
         </ul>
 
-        <!-- <div id="animationContainer">
-          <img src="gif-part/basicpart/car-ani.gif" alt="Animation" style="background: transparent; opacity: 0.5; height: 150px; width:300px;">
-        </div> -->
-
         <!-- search box two  -->
-
+     
+      
         <div class="search-box-two">
-          <button class="btn-search"><i class="fas fa-search"></i></button>
-          <input type="text" class="input-search" id="search-part-section-m" placeholder="Type to Search...">
+          <button class="btn-search" id="search-sec-p-two"><i class="fas fa-search"></i></button>
         </div>
       </div>
 
@@ -156,77 +171,85 @@
 
     <!-- title text part -->
 
-    <!-- <div class="main-name-part">
-      <h1 class="text-uppercase main-name">Pixel</h1>
-      <p class="text-uppercase main-name-two"> play portal</p>
-      <div class="glowing-part ">
-        <p class="text-uppercase main-name-three" id="glowing_text"> Gateway to the gaming worlds</p>
-      </div>
-    </div> -->
+ 
   </header>
 
-  <!-- ---Arcade section--- -->
-
-  <!-- ---Tournament-part--- -->
 
 
-<div class="container">
-  <div class="title">COD Mobile Winter Tournament 11</div>
-  <div class="info">
-    <div class="prize-info">
-      <h2>Tournament prize pool</h2>
-      <p>$120</p>
-      <a href="#" class="button">VIEW PRIZES</a>
-    </div>
-    <div class="prize-info">
-      <h2>Boosted prize pool</h2>
-      <p>$0</p>
-      <a href="#" class="button">BOOST</a>
+
+
+  <!-- Contact-part -->
+
+  <div class="arcade-section-part" id="contact">
+    <div class="arcade-title-part">
+      <img src="Img/arcade-part/logo/logo.png" alt="" id="arcade-img">
+      <p class="text-uppercase arcade-title">Contact</p>
+      <img src="Img/arcade-part/logo/logo.png" alt="" id="arcade-img-two">
     </div>
   </div>
-  <div class="countdown">
-    <p>JOIN NOW</p>
-    <p>3 days 3 hours 6 minutes 28 seconds</p>
-    <p>Registration ends on 19 Apr 2024</p>
+
+  <div class="container-fluid footer-section">
+
+    <div class="footer-head">
+      <p class="text-uppercase footer-title">Feel free to contact us if you need any assistance, any help or another
+        question.</p>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6 col-12">
+        <form action="contact.html" class="contFrm" method="POST">
+          <input type="text" name="name" placeholder="Your Name" class="inptFld foot-name" required />
+          <input type="email" name="email" placeholder="Email Address" class="inptFld foot-email" required />
+          <input type="text" name="sub" placeholder="Subject" class="inptFld foot-numb" required />
+          <textarea class="inptFld foot-message" rows="" cols="" placeholder="Your Message..." required></textarea>
+          <div class="foot-button ">
+            <input type="submit" name="submit" value="SUBMIT" class="inptBtn footer-btn common-btn-part " />
+          </div>
+        </form>
+      </div>
+      <div class="col-md-6 col-12">
+        <div class="footer-address-section">
+          <i class="fa-solid fa-location-dot" id="foot-icons-part"></i>
+          <p id="add-dis">
+            D.NO-5-87-3A, GUNTUPALLI LAKSHMI NILAYAM NEAR PMG COMPLEX, Main Rd, Lakshmipuram, Guntur, Andhra Pradesh
+            522007, India
+          </p>
+        </div>
+        <div class="footer-mail-section">
+          <a href="mailto:pixelplay@gmail.com"><i class="fa-solid fa-envelope" id="foot-icons-part"></i></a>
+          <a href="mailto:pixelplay@gmail.com" id="mail-dis">pixelplay@gmail.com</a>
+        </div>
+        <div class="footer-number-section">
+          <a href="tel:+91 123-456-7899"><i class="fa-solid fa-phone" id="foot-icons-part"></i></a>
+          <a href="tel:+91 123-456-7899" id="num-dis">+91 123-456-7899</a>
+        </div>
+      </div>
+    </div>
   </div>
 
-</div>
-
-
-
-  <div class="container">
-    <img src="kafu_logo.png" alt="KAFU GAMES" class="logo">
-    <p>Follow KAFU GAMES for updates on exclusive tournaments and prizes</p>
-    <a href="https://www.twitch.tv/kafugames" class="button">Twitch</a>
-    <a href="https://twitter.com/kafugames" class="button">Twitter</a>
-  </div>
-
-  <div id="countdown"></div>
-  <p>Registration ends on 19 Apr 2024</p>
   <!-- ---Copy right section--- -->
 
-  <!-- <div class="copyright-section">
+  <div class="copyright-section">
     <div class="copy-right-text">
       <p>Copyright © Pixel Portal 2024, All Rights Reserved.</p>
     </div>
 
     <div class="copyright-fonts">
-      <i class="fa-brands fa-facebook-f" id="fonts-event"></i>
-      <i class="fa-brands fa-twitter" id="fonts-event"></i>
-      <i class="fa-brands fa-google-plus-g" id="fonts-event"></i>
-      <i class="fa-brands fa-pinterest" id="fonts-event"></i>
+      <a class="font-cont" href="http://www.facebook.com"><i class="fa-brands fa-facebook-f" id="fonts-event"></i></a>
+      <a class="font-cont" href="http://www.twitter.com"><i class="fa-brands fa-twitter" id="fonts-event"></i></a>
+      <a class="font-cont" href="http://www.pinterest.com"><i class="fa-brands fa-pinterest" id="fonts-event"></i></a>
+      <a class="font-cont" href="http://www.instagram.com"><i class="fa-brands fa-instagram " id="fonts-event"></i></a>
     </div>
-  </div> -->
 
-  <a href="#top" class="btn btn-primary go-top" data-go-top>
-    <ion-icon name="chevron-up-outline"></ion-icon>
-  </a>
+  </div>
 
-
+  <button onclick="goToTop()" id="goToTopBtn" title="Go to top"><i class="fa-solid fa-chevron-up"
+      id="top-btn-par"></i></button>
+  <div id="star-container"></div>
   <!-- -------------------------END------------------------- -->
 
   <script src="js/main.js"></script>
-  <script src="js/tournament.js"></script>
+  <script src="js/character.js"></script>
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <!-- ----------------------- LIBRARIES-PART ------------------------- -->
@@ -245,7 +268,8 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-
+  
+  
   <!--  Custom scripts animation for this template-->
 
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
@@ -260,21 +284,10 @@
   </script> -->
 
 
+  <!-- JavaScript -->
+  
   <script>
-    $(document).ready(function () {
-      $('.dance-studio-body-slick').slick({
-        dots: true,
-        infinite: true,
-        arrows: true,
-        speed: 500,
-        autoplay: true,
-        autoplaySpeed: 2000,
-        fade: true,
-        cssEase: 'linear',
-        prevArrow: '<button type="button" id="slick-prev" class="slick-prev"><img src="imgs/slick-img/Shape 4.png"  id="prevbutton-slick"/></button>',
-        nextArrow: '<button type="button" id="slick-next" class="slick-next"><img src="imgs/slick-img/Shape 4.png"  id="nextbutton-slick"/></button>',
-      });
-    });
+    
   </script>
 </body>
 

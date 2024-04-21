@@ -22,7 +22,17 @@ document.getElementById('sandbox-two').addEventListener('click', function() {
   searchWrap.style.top = '-100%';
 });
 
+// search box two
 
+document.getElementById('search-sec-p-two').addEventListener('click', function() {
+  var searchWrap = document.querySelector('.search__wrap');
+  searchWrap.style.top = '0';
+});
+
+document.getElementById('sandbox-two').addEventListener('click', function() {
+  var searchWrap = document.querySelector('.search__wrap');
+  searchWrap.style.top = '-100%';
+});
 
 
    // ham burger
@@ -68,6 +78,33 @@ function goToTop() {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
+
+
+// Active class 
+
+// function changeActiveClass(event) {
+// Remove active class from all navigation items
+function changeActiveClass(event) {
+  // Remove active class from all navigation items
+  var navItems = document.querySelectorAll('.nav-link');
+  navItems.forEach(function(item) {
+    item.classList.remove('act');
+  });
+
+  // Add active class to the clicked navigation item
+  event.target.classList.add('act');
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 

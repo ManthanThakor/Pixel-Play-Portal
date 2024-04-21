@@ -339,12 +339,13 @@ input:not(:focus):valid ~ .my_place
 	width: 10px;
 }
 ::-webkit-scrollbar-track {
-	background-color: $background-color_1;
+	background-color: rgb(68, 255, 0);
 }
 ::-webkit-scrollbar-thumb {
 	border-radius: 10px;
-	background: #15ff00be;
+	background: #000000be;
 	&:hover {
 		background: #ff0000;
 	}
 }
+
