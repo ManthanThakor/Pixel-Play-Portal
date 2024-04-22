@@ -4,39 +4,12 @@
 .pixel-head {
   height: auto !important;
   background-color: rgba(0, 0, 0, 0.95);
-  border-bottom: 2px solid transparent;
-  animation: burn 3s infinite; /* Adjust duration and iteration count as needed */
 }
 
 .logo-menu-part {
   padding: 20px 80px 20px 80px !important;
 }
 
-.pixel-head::after {
-  content: "";
-  position: absolute;
-  bottom: -2px; /* Adjust as needed */
-  left: 0;
-  width: 100%;
-  height: 10px; /* Adjust as needed */
-  background-color: transparent;
-  animation: burn 3s infinite; /* Adjust duration and iteration count as needed */
-}
-
-@keyframes burn {
-  from {
-    text-shadow: -0.1em 0 0.3em #fefcc9, 0.1em -0.1em 0.3em #feec85, -0.2em -0.2em 0.4em #ffae34, 0.2em -0.3em 0.3em #ec760c, -0.2em -0.4em 0.4em #cd4606, 0.1em -0.5em 0.7em #973716, 0.1em -0.7em 0.7em #451b0e;
-  }
-  45% {
-    text-shadow: 0.1em -0.2em 0.5em #fefcc9, 0.15em 0 0.4em #feec85, -0.1em -0.25em 0.5em #ffae34, 0.15em -0.45em 0.5em #ec760c, -0.1em -0.5em 0.6em #cd4606, 0 -0.8em 0.6em #973716, 0.2em -1em 0.8em #451b0e;
-  }
-  70% {
-    text-shadow: -0.1em 0 0.3em #fefcc9, 0.1em -0.1em 0.3em #feec85, -0.2em -0.2em 0.6em #ffae34, 0.2em -0.3em 0.4em #ec760c, -0.2em -0.4em 0.7em #cd4606, 0.1em -0.5em 0.7em #973716, 0.1em -0.7em 0.9em #451b0e;
-  }
-  to {
-    text-shadow: -0.1em -0.2em 0.6em #fefcc9, -0.15em 0 0.6em #feec85, 0.1em -0.25em 0.6em #ffae34, -0.15em -0.45em 0.5em #ec760c, 0.1em -0.5em 0.6em #cd4606, 0 -0.8em 0.6em #973716, -0.2em -1em 0.8em #451b0e;
-  }
-}
 .container {
   max-width: 600px;
   margin: 50px auto;
