@@ -7,13 +7,12 @@
 
 .pixel-head{
   height: auto !important;
-  background: linear-gradient(rgba(0, 0, 0, 0.863), rgba(0, 0, 0, 0.868)),
-    url(../Img/tournament/40.wp8176341.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.863), rgba(0, 0, 0, 0.868)), url(../Img/tournament/tournament-bg.jpg);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  background-color: rgba(0, 0, 0, 0.95);
-  border-bottom: #ffffff solid 3px;
+  // background-color: rgba(0, 0, 0, 0.95);
+  // border-bottom: #ffffff solid 3px;
 }
 
 .logo-menu-part {
@@ -31,8 +30,7 @@ top: -9px;
 .tourn-title{
   @include padd(20px,80px,20px,80px);
   // background: linear-gradient(rgba(0, 0, 0, 0.863), rgba(0, 0, 0, 0.868)), url(../Img/tournament/140554-pc_game-game-esports-tournament-player-x750.jpg);
-  background: linear-gradient(rgba(0, 0, 0, 0.863), rgba(0, 0, 0, 0.868)),
-url(../Img/tournament/purple-black-backgrounds-that-are-out-this-world_860528-213.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.722), rgba(0, 0, 0, 0.771)), url(../Img/tournament/tournament-bg.jpg);
   @include hh-ww(500px, 100vw);
   background-size: cover;
   background-position: center;

@@ -3,12 +3,10 @@
 \*-----------------------------------*/
 .pixel-head {
   height: auto !important;
-  background: linear-gradient(rgba(0, 0, 0, 0.863), rgba(0, 0, 0, 0.868)), url(../Img/tournament/40.wp8176341.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.863), rgba(0, 0, 0, 0.868)), url(../Img/tournament/tournament-bg.jpg);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  background-color: rgba(0, 0, 0, 0.95);
-  border-bottom: #ffffff solid 3px;
 }
 
 .logo-menu-part {
@@ -25,7 +23,7 @@
 \*-----------------------------------*/
 .tourn-title {
   padding: 20px 80px 20px 80px !important;
-  background: linear-gradient(rgba(0, 0, 0, 0.863), rgba(0, 0, 0, 0.868)), url(../Img/tournament/purple-black-backgrounds-that-are-out-this-world_860528-213.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.722), rgba(0, 0, 0, 0.771)), url(../Img/tournament/tournament-bg.jpg);
   height: 500px !important;
   width: 100vw !important;
   background-size: cover;
