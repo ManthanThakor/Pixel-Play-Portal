@@ -3,10 +3,11 @@
 \*-----------------------------------*/
 .pixel-head {
   height: auto !important;
-  background: linear-gradient(rgba(0, 0, 0, 0.838), rgba(0, 0, 0, 0.504)), url(../Img/arcade-part/arcade-background/arcade-2.jpg);
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  background-color: rgba(0, 0, 0, 0.95);
+}
+
+.logo-menu-part {
+  padding: 20px 80px 20px 80px !important;
 }
 
 .container {
