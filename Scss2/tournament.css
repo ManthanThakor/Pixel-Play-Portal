@@ -3,6 +3,10 @@
 \*-----------------------------------*/
 .pixel-head {
   height: auto !important;
+  background: linear-gradient(rgba(0, 0, 0, 0.863), rgba(0, 0, 0, 0.868)), url(../Img/tournament/40.wp8176341.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   background-color: rgba(0, 0, 0, 0.95);
 }
 
