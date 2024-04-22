@@ -1,5 +1,5 @@
 /*-----------------------------------*\
-              Tournament
+             common
 \*-----------------------------------*/
 .pixel-head {
   height: auto !important;
@@ -8,10 +8,29 @@
   background-position: center;
   background-attachment: fixed;
   background-color: rgba(0, 0, 0, 0.95);
+  border-bottom: #ffffff solid 3px;
 }
 
 .logo-menu-part {
+  padding-top: 30px !important;
+  padding-bottom: 30px !important;
+}
+
+.btn-search {
+  top: -9px;
+}
+
+/*-----------------------------------*\
+              Tournament title 
+\*-----------------------------------*/
+.tourn-title {
   padding: 20px 80px 20px 80px !important;
+  background: linear-gradient(rgba(0, 0, 0, 0.863), rgba(0, 0, 0, 0.868)), url(../Img/tournament/purple-black-backgrounds-that-are-out-this-world_860528-213.jpg);
+  height: 500px !important;
+  width: 100vw !important;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 .container {

@@ -2,7 +2,7 @@
 // TIME CLOCK FOR TOURNAMENT 
 
 // Set the date for the end of registration
-var endDate = new Date("April 20, 2024 00:00:00").getTime();
+var endDate = new Date("May 15, 2024 00:00:00").getTime();
 
 // Update the countdown every second
 var x = setInterval(function() {

@@ -2,7 +2,7 @@
 @use "../Scss/_index.scss" as *;
 
 /*-----------------------------------*\
-              Tournament
+             common
 \*-----------------------------------*/
 
 .pixel-head{
@@ -13,10 +13,33 @@
   background-position: center;
   background-attachment: fixed;
   background-color: rgba(0, 0, 0, 0.95);
+  border-bottom: #ffffff solid 3px;
 }
-.logo-menu-part{
-  padding: 20px 80px 20px 80px !important;
+
+.logo-menu-part {
+  padding-top: 30px !important;
+  padding-bottom: 30px !important;
 }
+.btn-search {
+top: -9px;
+}
+
+/*-----------------------------------*\
+              Tournament title 
+\*-----------------------------------*/
+
+.tourn-title{
+  @include padd(20px,80px,20px,80px);
+  // background: linear-gradient(rgba(0, 0, 0, 0.863), rgba(0, 0, 0, 0.868)), url(../Img/tournament/140554-pc_game-game-esports-tournament-player-x750.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.863), rgba(0, 0, 0, 0.868)),
+url(../Img/tournament/purple-black-backgrounds-that-are-out-this-world_860528-213.jpg);
+  @include hh-ww(500px, 100vw);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  // clip-path: polygon(0% 10%, 100% 0%, 100% 90%, 0% 100%);
+}
+
 
 .container {
     max-width: 600px;
