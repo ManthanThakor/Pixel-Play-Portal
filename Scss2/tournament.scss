@@ -30,14 +30,92 @@ top: -9px;
 .tourn-title{
   @include padd(20px,80px,20px,80px);
   // background: linear-gradient(rgba(0, 0, 0, 0.863), rgba(0, 0, 0, 0.868)), url(../Img/tournament/140554-pc_game-game-esports-tournament-player-x750.jpg);
-  background: linear-gradient(rgba(0, 0, 0, 0.722), rgba(0, 0, 0, 0.771)), url(../Img/tournament/tournament-bg.jpg);
-  @include hh-ww(500px, 100vw);
+  background: linear-gradient(rgba(0, 0, 0, 0.864), rgba(0, 0, 0, 0.826)), url(../Img/tournament/tournament-bg.jpg);
+  // @include hh-ww(500px, 100vw);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  // clip-path: polygon(0% 10%, 100% 0%, 100% 90%, 0% 100%);
+  text-align: center;
 }
 
+
+
+.tour-t-one{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.tourn-title-text{
+  font-size: 60px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  color: #ffffff;
+  font-family: "Starzone" , "serif";
+  text-shadow: 1px -1px 0 rgba(168, 0, 0, 0.5098039216), 5px 5px 10px rgba(255, 41, 41, 0.5725490196);
+}
+
+.tourn-title-text p{
+margin-bottom: 0;
+}
+/*-----------------------------------*\
+        Tournament title img 
+\*-----------------------------------*/
+
+.tour-title-img{
+  @include pad-t-b(60px, 60px);
+}
+
+.tourn-trphy-img{
+  @include hh-ww(300px, 300px);
+}
+
+.tourn-trphy-img:hover{
+  animation: breadcrumbShake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+@keyframes breadcrumbShake {
+  10%, 90% {
+    -webkit-transform: translate3d(-1px, 0, 0);
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%, 80% {
+    -webkit-transform: translate3d(2px, 0, 0);
+    transform: translate3d(2px, 0, 0);
+  }
+  30%, 50%, 70% {
+    -webkit-transform: translate3d(-4px, 0, 0);
+    transform: translate3d(-4px, 0, 0);
+  }
+  40%, 60% {
+    -webkit-transform: translate3d(4px, 0, 0);
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+@media only screen and  (max-width: 760px) {
+.tour-t-two{
+  display: none;
+}
+.tourn-title{
+  @include padd(100px,15px,100px,15px);
+}
+}
+@media only screen and  (max-width: 675px) {
+ .tourn-title-text{
+  font-size: 40px;
+ }
+  }
+  @media only screen and  (max-width: 445px) {
+    .tourn-title-text{
+     font-size: 25px;
+    }
+     }
+
+
+
+
+/*-----------------------------------*\
+          Tournament section
+\*-----------------------------------*/
 
 .container {
     max-width: 600px;
