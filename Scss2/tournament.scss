@@ -133,6 +133,7 @@ margin-bottom: 0;
 
 .tour-body-sec{
   @include pad-t-b(50px,0px);
+
 }
 
 .title-tour-t{
@@ -142,33 +143,110 @@ margin-bottom: 0;
   font-size: 28px;
   text-transform: capitalize;
   font-family: $font;
+  
 }
+
 .pir-tour{
-  background: url(../Img/tournament/blush.jpg);
-  background-size: cover;
-  background-position: center;
   color: white;
   font-weight: 700;
+  font-style: italic;
   word-wrap: break-word;
   font-size: 28px;
   text-transform: capitalize;
   font-family: $font;
 }
-
+.t-t-img{
+  position: absolute;
+  z-index: 0;
+  margin-top: 60px;
+  transform: translate(-50%, -50%);
+}
+.pir-to{
+  color: rgb(35, 255, 1);
+  font-weight: 500;
+  padding-top: 7px;
+  word-wrap: break-word;
+  font-size: 20px;
+  text-transform: capitalize;
+  font-family: $font;
+}
+.prize-info{
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
 .button-sec-tour{
   padding: 10px 20px;
-      background-color: #00FF00; /* Green button color */
-      color: white;
+      background-color: #00ff00c0; 
+      color: rgb(255, 255, 255);
       text-decoration: none;
       border-radius: 5px;
+      font-weight: 600;
+      font-size: 20px;
       transition: background-color 0.3s ease;
+      font-family: $font;
+      border: solid 2px transparent;
 }
+
+.button-sec-tour:hover{
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  border: solid 2px white;
+}
+
+
 #countdown {
    @include flex-row;
-   text-align: center;
+   gap: 10px;
+   justify-content: center;
+
+   color: white;
+  font-weight: 300;
+  word-wrap: break-word;
+  font-size: 18px;
+  text-transform: capitalize;
+  font-family: $font;
 }
 .countdown-part{
   @include flex-col;
 }
+#tour-body-four{
+  @include flex-col;
+  justify-content: space-evenly;
+}
+
+@media only screen and (max-width: 1200px) {
+.cod-tour-sec{
+  @include padd(30px,15px,30px,15px);
+}
+#tour-body-two{
+  padding-top:30px;
+  padding-bottom:30px;
+}
+#tour-body-three{
+  padding-bottom:30px;
+}
+#cod-tour-img{
+  object-fit: cover; 
+  object-position: center; 
+}
+} 
+@media only screen and (max-width: 400px) {
+#cod-tour-img {
+  height: 150px !important;
+}
+.title-tour-t{
+  font-size: 18px;
+}
+.pir-to,#countdown{
+  font-size: 16px;
+}
+.button-sec-tour {
+  padding: 5px 10px;
+}
+}
 
 
+/*-----------------------------------*\
+          Tournament  details
+\*-----------------------------------*/
