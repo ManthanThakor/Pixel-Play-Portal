@@ -243,4 +243,40 @@
 }
 /*-----------------------------------*\
           Tournament  details
-\*-----------------------------------*//*# sourceMappingURL=tournament.css.map */
+\*-----------------------------------*/
+.tour-detials {
+  padding: 0px 80px 60px 80px !important;
+  background-color: #000000;
+}
+
+.nav-link.active,
+.show > .nav-link {
+  background-image: linear-gradient(rgb(0, 0, 0) 13%, rgb(0, 0, 0) 40%, #0c0d11 86%) !important;
+  color: #fefefe !important;
+  padding: 15px !important;
+  font-family: sans-serif, serif !important;
+  font-weight: 600 !important;
+  font-size: 18px !important;
+  border-radius: 0.375rem !important;
+  transform: scale(0.95);
+  transition: 0.5s ease;
+  cursor: pointer !important;
+  filter: drop-shadow(3px 3px 3px rgba(255, 255, 255, 0.5)) !important;
+  border-bottom: rgba(255, 0, 0, 0.847) solid 3px !important;
+  overflow: hidden;
+}
+
+#v-pills-tab {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: center;
+}
+
+.nav-pills .nav-link {
+  transition: background-color 0.3s ease;
+}
+
+.pixel-menu {
+  z-index: 9;
+}/*# sourceMappingURL=tournament.css.map */

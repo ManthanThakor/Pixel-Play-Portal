@@ -250,3 +250,36 @@ margin-bottom: 0;
 /*-----------------------------------*\
           Tournament  details
 \*-----------------------------------*/
+
+.tour-detials{
+  @include padd(0px,80px,60px,80px);
+  background-color: #000000; 
+}
+
+.nav-link.active,
+.show > .nav-link {
+  background-image: linear-gradient( rgb(0, 0, 0) 13%, rgb(0, 0, 0) 40%,  #0c0d11 86% ) !important;
+  color: $fefe !important;
+  @include pad(15px);
+  @include text-w-s(600, 18);
+  border-radius: 0.375rem !important;
+  transform: scale(0.95);
+  transition: 0.5s ease;
+cursor: pointer !important;
+  filter: drop-shadow(3px 3px 3px rgba(255, 255, 255, 0.5)) !important;
+  border-bottom: rgba(255, 0, 0, 0.847) solid 3px !important;
+  overflow: hidden;
+}
+
+#v-pills-tab{
+  @include flex-row;
+  gap: 10px;
+  justify-content: center;
+}
+
+.nav-pills .nav-link {
+  transition: background-color 0.3s ease;
+}
+.pixel-menu{
+  z-index: 9;
+}
