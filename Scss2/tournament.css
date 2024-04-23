@@ -101,87 +101,66 @@
 /*-----------------------------------*\
           Tournament section
 \*-----------------------------------*/
-.container {
-  max-width: 600px;
-  margin: 50px auto;
-  background-color: #363636; /* Lighter background color */
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Box shadow for depth */
+.cod-tour-sec {
+  padding: 60px 80px 60px 80px !important;
+  background-color: #000000;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px -15px 15px -15px #fefefe, 0px 15px 15px -15px #fefefe;
 }
 
-.title {
-  font-size: 24px;
-  margin-bottom: 20px;
+#cod-tour-img {
+  height: 300px !important;
+  width: 100% !important;
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.975);
+  border-radius: 2ch;
 }
 
-.info {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.prize-info {
+.tor-body-s-s {
   text-align: center;
 }
 
-.prize-info h2 {
-  font-size: 20px;
-  margin-bottom: 10px;
+.tour-body-sec {
+  padding-top: 50px !important;
+  padding-bottom: 0px !important;
 }
 
-.button {
+.title-tour-t {
+  color: white;
+  font-weight: 700;
+  word-wrap: break-word;
+  font-size: 28px;
+  text-transform: capitalize;
+  font-family: "Arial", "Helvetica", "sans-serif";
+}
+
+.pir-tour {
+  background: url(../Img/tournament/blush.jpg);
+  background-size: cover;
+  background-position: center;
+  color: white;
+  font-weight: 700;
+  word-wrap: break-word;
+  font-size: 28px;
+  text-transform: capitalize;
+  font-family: "Arial", "Helvetica", "sans-serif";
+}
+
+.button-sec-tour {
   padding: 10px 20px;
   background-color: #00FF00; /* Green button color */
   color: white;
   text-decoration: none;
   border-radius: 5px;
   transition: background-color 0.3s ease;
-}
-
-.button:hover {
-  background-color: #008000; /* Dark green on hover */
-}
-
-.countdown {
-  text-align: center;
-  font-size: 18px;
-}
-
-.container {
-  background-color: #4B0082; /* Purple background color */
-  padding: 20px;
-  text-align: center;
-  color: white;
-}
-
-.logo {
-  width: 100px; /* Adjust size as needed */
-  height: auto;
-  margin-bottom: 20px;
-}
-
-.button {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #00FF00; /* Green button color */
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  margin: 0 10px;
-  transition: background-color 0.3s ease;
-}
-
-.button:hover {
-  background-color: #008000; /* Dark green on hover */
 }
 
 #countdown {
-  font-size: 24px;
-  margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
 }
 
-#countdown span {
-  margin: 0 5px;
+.countdown-part {
+  display: flex;
+  flex-direction: column;
 }/*# sourceMappingURL=tournament.css.map */

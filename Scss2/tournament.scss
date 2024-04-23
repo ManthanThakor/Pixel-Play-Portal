@@ -29,9 +29,7 @@ top: -9px;
 
 .tourn-title{
   @include padd(20px,80px,20px,80px);
-  // background: linear-gradient(rgba(0, 0, 0, 0.863), rgba(0, 0, 0, 0.868)), url(../Img/tournament/140554-pc_game-game-esports-tournament-player-x750.jpg);
   background: linear-gradient(rgba(0, 0, 0, 0.864), rgba(0, 0, 0, 0.826)), url(../Img/tournament/tournament-bg.jpg);
-  // @include hh-ww(500px, 100vw);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -117,100 +115,60 @@ margin-bottom: 0;
           Tournament section
 \*-----------------------------------*/
 
-.container {
-    max-width: 600px;
-    margin: 50px auto;
-    background-color: #363636; /* Lighter background color */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Box shadow for depth */
-  }
-  .title {
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-  .info {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-  .prize-info {
-    text-align: center;
-  }
-  .prize-info h2 {
-    font-size: 20px;
-    margin-bottom: 10px;
-  }
-  .button {
-    padding: 10px 20px;
-    background-color: #00FF00; /* Green button color */
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-  }
-  .button:hover {
-    background-color: #008000; /* Dark green on hover */
-  }
-  .countdown {
-    text-align: center;
-    font-size: 18px;
-  }
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  .container {
-    background-color: #4B0082; /* Purple background color */
-    padding: 20px;
-    text-align: center;
-    color: white;
-  }
-  .logo {
-    width: 100px; /* Adjust size as needed */
-    height: auto;
-    margin-bottom: 20px;
-  }
-  .button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #00FF00; /* Green button color */
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    margin: 0 10px;
-    transition: background-color 0.3s ease;
-  }
-  .button:hover {
-    background-color: #008000; /* Dark green on hover */
-  }
-  
-  
-  
-  
-  
-  
-  
-  #countdown {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-  
-  #countdown span {
-    margin: 0 5px;
-  }
-  
+.cod-tour-sec{
+  @include padd(60px,80px,60px,80px);
+    background-color: #000000; 
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px -15px 15px -15px $fefe, 0px 15px 15px -15px $fefe; 
+}
+
+#cod-tour-img{
+  @include hh-ww(300px, 100%);
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.975);
+  border-radius: 2ch;
+}
+.tor-body-s-s{
+  text-align: center;
+}
+
+.tour-body-sec{
+  @include pad-t-b(50px,0px);
+}
+
+.title-tour-t{
+  color: white;
+  font-weight: 700;
+  word-wrap: break-word;
+  font-size: 28px;
+  text-transform: capitalize;
+  font-family: $font;
+}
+.pir-tour{
+  background: url(../Img/tournament/blush.jpg);
+  background-size: cover;
+  background-position: center;
+  color: white;
+  font-weight: 700;
+  word-wrap: break-word;
+  font-size: 28px;
+  text-transform: capitalize;
+  font-family: $font;
+}
+
+.button-sec-tour{
+  padding: 10px 20px;
+      background-color: #00FF00; /* Green button color */
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+}
+#countdown {
+   @include flex-row;
+   text-align: center;
+}
+.countdown-part{
+  @include flex-col;
+}
+
+
