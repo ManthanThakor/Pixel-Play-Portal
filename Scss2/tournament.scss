@@ -277,9 +277,24 @@ cursor: pointer !important;
   justify-content: center;
 }
 
-.nav-pills .nav-link {
-  transition: background-color 0.3s ease;
-}
+
 .pixel-menu{
   z-index: 9;
+}
+
+/*-----------------------------------*\
+          Tournament OVERLAY  details
+\*-----------------------------------*/
+
+
+.over-view-sec{
+  @include padd(40px,0px,40px,0px);
+}
+.overview-part{
+  width: 150px; 
+  height: 150px;
+  border-radius: 50%; 
+  overflow: hidden; 
+  object-fit: cover; 
+  object-position: center; 
 }

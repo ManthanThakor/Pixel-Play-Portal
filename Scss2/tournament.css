@@ -273,10 +273,24 @@
   justify-content: center;
 }
 
-.nav-pills .nav-link {
-  transition: background-color 0.3s ease;
-}
-
 .pixel-menu {
   z-index: 9;
+}
+
+/*-----------------------------------*\
+          Tournament OVERLAY  details
+\*-----------------------------------*/
+.over-view-sec {
+  padding: 40px 0px 40px 0px !important;
+}
+
+.overview-part {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }/*# sourceMappingURL=tournament.css.map */

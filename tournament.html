@@ -215,7 +215,7 @@
 
           <p class="pir-to">Tournament prize pool</p>
           <p class="pir-tour">$120000</p>
-          <a href="#"><button class="button-sec-tour">VIEW PRIZES</button></a>
+          <a href="#v-pills-prize-tab" id="prize-tour-btn"><button class="button-sec-tour">VIEW PRIZES</button></a>
         </div>
 
       </div>
@@ -224,7 +224,7 @@
         <div class="prize-info">
           <p class="pir-to"> Boosted prize pool</p>
           <p class="pir-tour">$100000</p>
-          <a href="#"><button class="button-sec-tour">BOOST</button></a>
+          <a href="#v-pills-booster-tab" id="booster-tour-btn"><button class="button-sec-tour">BOOST</button></a>
         </div>
       </div>
       <div class="col-xl-3 tor-body-s-s" id="tour-body-four">
@@ -236,139 +236,65 @@
   </div>
 
 
-    <!-- tournament details  -->
+  <!-- tournament details  -->
 
 
 
   <div class="container-fluid tour-detials">
 
-    
     <!-- Navigation Buttons -->
     <div class="nav nav-pills pricing-cards-menu" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-      <button class="nav-link active" id="v-pills-all-tab" data-bs-toggle="pill" data-bs-target="#v-pills-all"
-        type="button" role="tab" aria-controls="v-pills-all" aria-selected="true">ALL</button>
-      <button class="nav-link" id="v-pills-beards-tab" data-bs-toggle="pill" data-bs-target="#v-pills-beards"
-        type="button" role="tab" aria-controls="v-pills-beards" aria-selected="false">BEARDS</button>
-      <button class="nav-link" id="v-pills-hairstyle-tab" data-bs-toggle="pill" data-bs-target="#v-pills-hairstyle"
-        type="button" role="tab" aria-controls="v-pills-hairstyle" aria-selected="false">HAIRSTYLE</button>
-      <button class="nav-link" id="v-pills-haircut-tab" data-bs-toggle="pill" data-bs-target="#v-pills-haircut"
-        type="button" role="tab" aria-controls="v-pills-haircut" aria-selected="false">HAIRCUT</button>
-      <button class="nav-link" id="v-pills-mustaches-tab" data-bs-toggle="pill" data-bs-target="#v-pills-mustaches"
-        type="button" role="tab" aria-controls="v-pills-mustaches" aria-selected="false">MUSTACHES</button>
+      <button class="nav-link active" id="v-pills-overview-tab" data-bs-toggle="pill" data-bs-target="#v-pills-overview"
+        type="button" role="tab" aria-controls="v-pills-overview" aria-selected="true">OVERVIEW</button>
+      <button class="nav-link" id="v-pills-rules-tab" data-bs-toggle="pill" data-bs-target="#v-pills-rules"
+        type="button" role="tab" aria-controls="v-pills-rules" aria-selected="false">RULES</button>
+      <button class="nav-link" id="v-pills-fairplay-tab" data-bs-toggle="pill" data-bs-target="#v-pills-fairplay"
+        type="button" role="tab" aria-controls="v-pills-fairplay" aria-selected="false">FAIR PLAY</button>
+      <button class="nav-link" id="v-pills-prize-tab" data-bs-toggle="pill" data-bs-target="#v-pills-prize"
+        type="button" role="tab" aria-controls="v-pills-prize" aria-selected="false">PRIZES</button>
+      <button class="nav-link" id="v-pills-booster-tab" data-bs-toggle="pill" data-bs-target="#v-pills-booster"
+        type="button" role="tab" aria-controls="v-pills-booster" aria-selected="false">BOOSTER PRIZE</button>
     </div>
 
     <!-- Content Panels -->
     <div class="tab-content" id="v-pills-tabContent">
-      <!-- All -->
-      <div class="tab-pane fade show active" id="v-pills-all" role="tabpanel" aria-labelledby="v-pills-all-tab">
-        <!-- Content for All goes here, repeat for each category -->
+      <!-- overview -->
+      <div class="tab-pane fade show active" id="v-pills-overview" role="tabpanel"
+        aria-labelledby="v-pills-overview-tab">
+        <!-- Content for overview goes here-->
+        <div class="over-view-sec">
+          <div class="row">
+            <div class="col-xl-4">
+              <img src="Img/tournament/cod-t.jpeg" alt="COD-GAME" class="overview-part">
+            </div>
+
+
+          </div>
+
+        </div>
+
+      </div>
+      <!-- rules -->
+      <div class="tab-pane fade" id="v-pills-rules" role="tabpanel" aria-labelledby="v-pills-rules-tab">
+
+      </div>
+      <!-- fairplay -->
+      <div class="tab-pane fade" id="v-pills-fairplay" role="tabpanel" aria-labelledby="v-pills-fairplay-tab">
+
+        aa
+      </div>
+      <!-- prize -->
+      <div class="tab-pane fade" id="v-pills-prize" role="tabpanel" aria-labelledby="v-pills-prize-tab">
+
         aa
 
       </div>
-      <!-- Beards -->
-      <div class="tab-pane fade" id="v-pills-beards" role="tabpanel" aria-labelledby="v-pills-beards-tab">
-        <div class="all-plans-part">
-          <a href="#">
-            <p id="all-plans-part">Shaving Normal </p>
-            <p id="all-plans-part-line">..........................................................</p>
-            <p id="all-plans-part">$15.00</p>
-          </a>
-        </div>
-        <div class="all-plans-part-two">
-          <a href="#">
-            <p id="all-plans-part-two">Beard Trim with Razor</p>
-            <p id="all-plans-part-two-line">.............................................. </p>
-            <p id="all-plans-part-two">$37.00</p>
-          </a>
-        </div>
-      </div>
-      <!-- Hairstyle -->
-      <div class="tab-pane fade" id="v-pills-hairstyle" role="tabpanel" aria-labelledby="v-pills-hairstyle-tab">
-        <!-- Hairstyle content goes here -->
-        <div class="all-plans-part">
-          <a href="#">
-            <p id="all-plans-part">Long Layered Cut</p>
-            <p id="all-plans-part-line">.......................................................</p>
-            <p id="all-plans-part">$28.00 </p>
-          </a>
-        </div>
-        <div class="all-plans-part">
-          <a href="#">
-            <p id="all-plans-part">Regular Haircut</p>
-            <p id="all-plans-part-line">..........................................................</p>
-            <p id="all-plans-part">$25.00</p>
-          </a>
-        </div>
-        <div class="all-plans-part">
-          <a href="#">
-            <p id="all-plans-part">Fade + Hot Towel</p>
-            <p id="all-plans-part-line"> .......................................................</p>
-            <p id="all-plans-part">$19.00</p>
-          </a>
-        </div>
-        <div class="all-plans-part">
-          <a href="#">
-            <p id="all-plans-part">Children's Haircut </p>
-            <p id="all-plans-part-line">.......................................................</p>
-            <p id="all-plans-part">$22.00</p>
-          </a>
-        </div>
-      </div>
-      <!-- Haircut -->
-      <div class="tab-pane fade" id="v-pills-haircut" role="tabpanel" aria-labelledby="v-pills-haircut-tab">
-        <!-- Haircut content goes here -->
-        <div class="all-plans-part">
-          <a href="#">
-            <p id="all-plans-part">Shampoo + Cut</p>
-            <p id="all-plans-part-line">...........................................................</p>
-            <p id="all-plans-part">$25.00</p>
 
-          </a>
-        </div>
-        <div class="all-plans-part-two">
-          <a href="#">
-            <p id="all-plans-part-two">Crew Cut + Shape-up </p>
-            <p id="all-plans-part-two-line">................................................</p>
-            <p id="all-plans-part-two">$35.00</p>
-          </a>
-        </div>
-        <div class="all-plans-part-two">
-          <a href="#">
-            <p id="all-plans-part-two">Senior Citizen Cut </p>
-            <p id="all-plans-part-two-line">.....................................................</p>
-            <p id="all-plans-part-two">$28.00</p>
+      <!-- booster -->
+      <div class="tab-pane fade" id="v-pills-booster" role="tabpanel" aria-labelledby="v-pills-booster-tab">
 
-          </a>
-        </div>
-        <div class="all-plans-part-two">
-          <a href="#">
-            <p id="all-plans-part-two">Crew Cut + Hot Towel</p>
-            <p id="all-plans-part-two-line">............................................... </p>
-            <p id="all-plans-part-two">$25.00</p>
-          </a>
-        </div>
-      </div>
+        aa
 
-      <!-- Mustaches -->
-      <div class="tab-pane fade" id="v-pills-mustaches" role="tabpanel" aria-labelledby="v-pills-mustaches-tab">
-        <div class="all-plans-part-two" style="text-align: center; justify-content: center;">
-          <a href="#">
-            <p id="all-plans-part-two">Color
-            </p>
-            <p id="all-plans-part-two-line">
-              ..........................................................................
-            </p>
-            <p id="all-plans-part-two">$45.00</p>
-          </a>
-        </div>
-        <div class="all-plans-part-two">
-          <a href="#">
-            <p id="all-plans-part-two">Styling</p>
-            <p id="all-plans-part-two-line">.......................................................................
-            </p>
-            <p id="all-plans-part-two"> $18.00</p>
-          </a>
-        </div>
       </div>
     </div>
   </div>
@@ -408,7 +334,8 @@
         <div class="footer-address-section">
           <i class="fa-solid fa-location-dot" id="foot-icons-part"></i>
           <p id="add-dis">
-            D.NO-5-87-3A, GUNTUPALLI LAKSHMI NILAYAM NEAR PMG COMPLEX, Main Rd, Lakshmipuram, Guntur, Andhra Pradesh
+            D.NO-5-87-3A, GUNTUPoverviewI LAKSHMI NILAYAM NEAR PMG COMPLEX, Main Rd, Lakshmipuram, Guntur, Andhra
+            Pradesh
             522007, India
           </p>
         </div>
@@ -433,7 +360,7 @@
 
   <div class="copyright-section">
     <div class="copy-right-text">
-      <p>Copyright © Pixel Portal 2024, All Rights Reserved.</p>
+      <p>Copyright © Pixel Portal 2024, overview Rights Reserved.</p>
     </div>
 
     <div class="copyright-fonts">

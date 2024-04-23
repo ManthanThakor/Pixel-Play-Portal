@@ -29,3 +29,15 @@ var x = setInterval(function() {
     document.getElementById("countdown").innerHTML = "tournament has ended";
   }
 }, 1000);
+
+
+// BOOSTER PRIZE AND PRIZE CLICK EVENT 
+
+document.getElementById("booster-tour-btn").addEventListener("click", function() {
+  document.getElementById("v-pills-booster-tab").click();
+});
+
+document.getElementById("prize-tour-btn").addEventListener("click", function() {
+  document.getElementById("v-pills-prize-tab").click();
+});
+
