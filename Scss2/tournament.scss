@@ -288,7 +288,7 @@ cursor: pointer !important;
 
 
 .over-view-sec{
-  @include padd(40px,0px,40px,0px);
+  @include padd(80px,0px,40px,0px);
 }
 .overview-part{
   width: 150px; 
@@ -297,4 +297,44 @@ cursor: pointer !important;
   overflow: hidden; 
   object-fit: cover; 
   object-position: center; 
+}
+
+.overlay-p-1{
+  @include flex-row;
+  gap: 30px;
+  justify-content: center;
+
+}
+.gmae-part{
+  @include flex-col;
+  justify-content: space-evenly;
+}
+.game-t{
+  font-size: 22px;
+  font-weight: 500;
+  color: $fefe;
+  font-family: $font;
+  margin-bottom: 0%;
+}
+.game-n{
+  font-size: 25px;
+  font-weight: 600;
+  color: rgb(35, 255, 1);
+  font-family: $font;
+  font-style: italic;
+    margin-bottom: 0%;
+}
+
+.game-mode{
+  @include flex-col;
+  justify-content: space-evenly;
+}
+.mode-name{
+  @extend .game-t;
+}
+.mode-type{
+@extend .game-n;
+}
+.overlay-p-2{
+  @extend .overlay-p-1;
 }
