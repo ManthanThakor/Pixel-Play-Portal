@@ -365,19 +365,45 @@ cursor: pointer !important;
   font-family: $font;
   font-style: italic;
     margin-bottom: 0%;
+   
+}
+
+#time-lline{
+  padding-bottom: 40px; 
+  padding-top: 40px;
 }
 
 .register-tour{
-
+text-align: center;
+padding: 10px;
 }
 #register-tour{
-
+  font-size: 35px;
+  font-weight: 600;
+  color: rgb(35, 255, 1);
 }
 
 .end-tour{
-
+  @extend .register-tour;
 }
 
 #end-tour{
-  
+ @extend #register-tour;
+}
+
+.end-t-one{
+  font-size: 30px;
+  font-weight: 600;
+  color: rgb(255, 255, 255);
+  font-family: $font;
+    margin-bottom: 0%;
+@include pad-t-b(15px,15px);
+}
+.end-t-two{
+  font-size: 25px;
+  font-weight: 600;
+  color: rgb(255, 0, 0);
+  font-family: $font;
+  font-style: italic;
+    margin-bottom: 0%;
 }
