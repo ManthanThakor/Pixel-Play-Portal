@@ -234,7 +234,8 @@
   .title-tour-t {
     font-size: 18px;
   }
-  .pir-to, #countdown {
+  .pir-to,
+  #countdown {
     font-size: 16px;
   }
   .button-sec-tour {
@@ -281,7 +282,7 @@
           Tournament OVERLAY  details
 \*-----------------------------------*/
 .over-view-sec {
-  padding: 80px 0px 40px 0px !important;
+  padding: 80px 0px 0px 0px !important;
 }
 
 .overview-part {
@@ -367,7 +368,9 @@
 
 .register-tour, .end-tour {
   text-align: center;
-  padding: 10px;
+  background-color: #222222;
+  border-radius: 2ch;
+  padding: 15px;
 }
 
 #register-tour, #end-tour {
@@ -393,4 +396,48 @@
   font-family: "Arial", "Helvetica", "sans-serif";
   font-style: italic;
   margin-bottom: 0%;
+}
+
+.about-tour-t {
+  font-size: 30px;
+  font-weight: 600;
+  color: rgb(255, 255, 255);
+  font-family: "Arial", "Helvetica", "sans-serif";
+  font-style: italic;
+  margin-bottom: 0%;
+  padding-top: 10px !important;
+  padding-bottom: 40px !important;
+}
+
+.dis-info {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
+.dis-discription {
+  font-size: 20px;
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+  font-family: "Arial", "Helvetica", "sans-serif";
+  margin-bottom: 0%;
+}
+
+.dis-discription-two {
+  font-size: 25px;
+  font-weight: 600;
+  color: rgb(255, 255, 255);
+  font-family: "Arial", "Helvetica", "sans-serif";
+  padding-top: 25px;
+  margin-bottom: 0%;
+}
+
+.dis-discription-three {
+  font-size: 25px;
+  font-weight: 600;
+  color: rgb(35, 255, 1);
+  font-family: "Arial", "Helvetica", "sans-serif";
+  font-style: italic;
+  margin-bottom: 0%;
+  padding-top: 5px;
 }/*# sourceMappingURL=tournament.css.map */

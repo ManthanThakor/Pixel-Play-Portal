@@ -1,13 +1,13 @@
-
 @use "../Scss/_index.scss" as *;
 
 /*-----------------------------------*\
              common
 \*-----------------------------------*/
 
-.pixel-head{
+.pixel-head {
   height: auto !important;
-  background: linear-gradient(rgba(0, 0, 0, 0.863), rgba(0, 0, 0, 0.868)), url(../Img/tournament/tournament-bg.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.863), rgba(0, 0, 0, 0.868)),
+    url(../Img/tournament/tournament-bg.jpg);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -20,133 +20,133 @@
   padding-bottom: 30px !important;
 }
 .btn-search {
-top: -9px;
+  top: -9px;
 }
 
 /*-----------------------------------*\
               Tournament title 
 \*-----------------------------------*/
 
-.tourn-title{
-  @include padd(20px,80px,20px,80px);
-  background: linear-gradient(rgba(0, 0, 0, 0.864), rgba(0, 0, 0, 0.826)), url(../Img/tournament/tournament-bg.jpg);
+.tourn-title {
+  @include padd(20px, 80px, 20px, 80px);
+  background: linear-gradient(rgba(0, 0, 0, 0.864), rgba(0, 0, 0, 0.826)),
+    url(../Img/tournament/tournament-bg.jpg);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   text-align: center;
 }
 
-
-
-.tour-t-one{
+.tour-t-one {
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
-.tourn-title-text{
+.tourn-title-text {
   font-size: 60px;
   font-weight: 800;
   letter-spacing: 3px;
   color: #ffffff;
-  font-family: "Starzone" , "serif";
-  text-shadow: 1px -1px 0 rgba(168, 0, 0, 0.5098039216), 5px 5px 10px rgba(255, 41, 41, 0.5725490196);
+  font-family: "Starzone", "serif";
+  text-shadow: 1px -1px 0 rgba(168, 0, 0, 0.5098039216),
+    5px 5px 10px rgba(255, 41, 41, 0.5725490196);
 }
 
-.tourn-title-text p{
-margin-bottom: 0;
+.tourn-title-text p {
+  margin-bottom: 0;
 }
 /*-----------------------------------*\
         Tournament title img 
 \*-----------------------------------*/
 
-.tour-title-img{
+.tour-title-img {
   @include pad-t-b(60px, 60px);
 }
 
-.tourn-trphy-img{
+.tourn-trphy-img {
   @include hh-ww(300px, 300px);
 }
 
-.tourn-trphy-img:hover{
+.tourn-trphy-img:hover {
   animation: breadcrumbShake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
 }
 @keyframes breadcrumbShake {
-  10%, 90% {
+  10%,
+  90% {
     -webkit-transform: translate3d(-1px, 0, 0);
     transform: translate3d(-1px, 0, 0);
   }
-  20%, 80% {
+  20%,
+  80% {
     -webkit-transform: translate3d(2px, 0, 0);
     transform: translate3d(2px, 0, 0);
   }
-  30%, 50%, 70% {
+  30%,
+  50%,
+  70% {
     -webkit-transform: translate3d(-4px, 0, 0);
     transform: translate3d(-4px, 0, 0);
   }
-  40%, 60% {
+  40%,
+  60% {
     -webkit-transform: translate3d(4px, 0, 0);
     transform: translate3d(4px, 0, 0);
   }
 }
 
-@media only screen and  (max-width: 760px) {
-.tour-t-two{
-  display: none;
-}
-.tourn-title{
-  @include padd(100px,15px,100px,15px);
-}
-}
-@media only screen and  (max-width: 675px) {
- .tourn-title-text{
-  font-size: 40px;
- }
+@media only screen and (max-width: 760px) {
+  .tour-t-two {
+    display: none;
   }
-  @media only screen and  (max-width: 445px) {
-    .tourn-title-text{
-     font-size: 25px;
-    }
-     }
-
-
-
+  .tourn-title {
+    @include padd(100px, 15px, 100px, 15px);
+  }
+}
+@media only screen and (max-width: 675px) {
+  .tourn-title-text {
+    font-size: 40px;
+  }
+}
+@media only screen and (max-width: 445px) {
+  .tourn-title-text {
+    font-size: 25px;
+  }
+}
 
 /*-----------------------------------*\
           Tournament section
 \*-----------------------------------*/
 
-.cod-tour-sec{
-  @include padd(60px,80px,60px,80px);
-    background-color: #000000; 
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-    box-shadow: 0px -15px 15px -15px $fefe, 0px 15px 15px -15px $fefe; 
+.cod-tour-sec {
+  @include padd(60px, 80px, 60px, 80px);
+  background-color: #000000;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px -15px 15px -15px $fefe, 0px 15px 15px -15px $fefe;
 }
 
-#cod-tour-img{
+#cod-tour-img {
   @include hh-ww(300px, 100%);
   box-shadow: 0 0 20px rgba(255, 0, 0, 0.975);
   border-radius: 2ch;
 }
-.tor-body-s-s{
+.tor-body-s-s {
   text-align: center;
 }
 
-.tour-body-sec{
-  @include pad-t-b(50px,0px);
-
+.tour-body-sec {
+  @include pad-t-b(50px, 0px);
 }
 
-.title-tour-t{
+.title-tour-t {
   color: white;
   font-weight: 700;
   word-wrap: break-word;
   font-size: 28px;
   text-transform: capitalize;
   font-family: $font;
-  
 }
 
-.pir-tour{
+.pir-tour {
   color: white;
   font-weight: 700;
   font-style: italic;
@@ -155,13 +155,13 @@ margin-bottom: 0;
   text-transform: capitalize;
   font-family: $font;
 }
-.t-t-img{
+.t-t-img {
   position: absolute;
   z-index: 0;
   margin-top: 60px;
   transform: translate(-50%, -50%);
 }
-.pir-to{
+.pir-to {
   color: rgb(35, 255, 1);
   font-weight: 500;
   padding-top: 7px;
@@ -170,115 +170,117 @@ margin-bottom: 0;
   text-transform: capitalize;
   font-family: $font;
 }
-.prize-info{
+.prize-info {
   overflow: hidden;
   position: relative;
   z-index: 1;
 }
-.button-sec-tour{
+.button-sec-tour {
   padding: 10px 20px;
-      background-color: #00ff00c0; 
-      color: rgb(255, 255, 255);
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: 600;
-      font-size: 20px;
-      transition: background-color 0.3s ease;
-      font-family: $font;
-      border: solid 2px transparent;
+  background-color: #00ff00c0;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 20px;
+  transition: background-color 0.3s ease;
+  font-family: $font;
+  border: solid 2px transparent;
 }
 
-.button-sec-tour:hover{
+.button-sec-tour:hover {
   background-color: rgb(0, 0, 0);
   color: rgb(255, 255, 255);
   border: solid 2px white;
 }
 
-
 #countdown {
-   @include flex-row;
-   gap: 10px;
-   justify-content: center;
+  @include flex-row;
+  gap: 10px;
+  justify-content: center;
 
-   color: white;
+  color: white;
   font-weight: 300;
   word-wrap: break-word;
   font-size: 18px;
   text-transform: capitalize;
   font-family: $font;
 }
-.countdown-part{
+.countdown-part {
   @include flex-col;
 }
-#tour-body-four{
+#tour-body-four {
   @include flex-col;
   justify-content: space-evenly;
 }
 
 @media only screen and (max-width: 1200px) {
-.cod-tour-sec{
-  @include padd(30px,15px,30px,15px);
+  .cod-tour-sec {
+    @include padd(30px, 15px, 30px, 15px);
+  }
+  #tour-body-two {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  #tour-body-three {
+    padding-bottom: 30px;
+  }
+  #cod-tour-img {
+    object-fit: cover;
+    object-position: center;
+  }
 }
-#tour-body-two{
-  padding-top:30px;
-  padding-bottom:30px;
-}
-#tour-body-three{
-  padding-bottom:30px;
-}
-#cod-tour-img{
-  object-fit: cover; 
-  object-position: center; 
-}
-} 
 @media only screen and (max-width: 400px) {
-#cod-tour-img {
-  height: 150px !important;
+  #cod-tour-img {
+    height: 150px !important;
+  }
+  .title-tour-t {
+    font-size: 18px;
+  }
+  .pir-to,
+  #countdown {
+    font-size: 16px;
+  }
+  .button-sec-tour {
+    padding: 5px 10px;
+  }
 }
-.title-tour-t{
-  font-size: 18px;
-}
-.pir-to,#countdown{
-  font-size: 16px;
-}
-.button-sec-tour {
-  padding: 5px 10px;
-}
-}
-
 
 /*-----------------------------------*\
           Tournament  details
 \*-----------------------------------*/
 
-.tour-detials{
-  @include padd(0px,80px,60px,80px);
-  background-color: #000000; 
+.tour-detials {
+  @include padd(0px, 80px, 60px, 80px);
+  background-color: #000000;
 }
 
 .nav-link.active,
 .show > .nav-link {
-  background-image: linear-gradient( rgb(0, 0, 0) 13%, rgb(0, 0, 0) 40%,  #0c0d11 86% ) !important;
+  background-image: linear-gradient(
+    rgb(0, 0, 0) 13%,
+    rgb(0, 0, 0) 40%,
+    #0c0d11 86%
+  ) !important;
   color: $fefe !important;
   @include pad(15px);
   @include text-w-s(600, 18);
   border-radius: 0.375rem !important;
   transform: scale(0.95);
   transition: 0.5s ease;
-cursor: pointer !important;
+  cursor: pointer !important;
   filter: drop-shadow(3px 3px 3px rgba(255, 255, 255, 0.5)) !important;
   border-bottom: rgba(255, 0, 0, 0.847) solid 3px !important;
   overflow: hidden;
 }
 
-#v-pills-tab{
+#v-pills-tab {
   @include flex-row;
   gap: 10px;
   justify-content: center;
 }
 
-
-.pixel-menu{
+.pixel-menu {
   z-index: 9;
 }
 
@@ -286,20 +288,19 @@ cursor: pointer !important;
           Tournament OVERLAY  details
 \*-----------------------------------*/
 
-
-.over-view-sec{
-  @include padd(80px,0px,40px,0px);
+.over-view-sec {
+  @include padd(80px, 0px, 0px, 0px);
 }
-.overview-part{
-  width: 150px; 
+.overview-part {
+  width: 150px;
   height: 150px;
-  border-radius: 50%; 
-  overflow: hidden; 
-  object-fit: cover; 
-  object-position: center; 
+  border-radius: 50%;
+  overflow: hidden;
+  object-fit: cover;
+  object-position: center;
 }
 
-.overlay-p-1{
+.overlay-p-1 {
   @include flex-row;
   gap: 50px;
   justify-content: center;
@@ -308,102 +309,148 @@ cursor: pointer !important;
   padding: 15px;
   height: 180px;
 }
-.gmae-part{
+.gmae-part {
   @include flex-col;
   justify-content: space-evenly;
 }
-.game-t{
+.game-t {
   font-size: 22px;
   font-weight: 500;
   color: $fefe;
   font-family: $font;
   margin-bottom: 0%;
 }
-.game-n{
+.game-n {
   font-size: 25px;
   font-weight: 600;
   color: rgb(35, 255, 1);
   font-family: $font;
   font-style: italic;
-    margin-bottom: 0%;
+  margin-bottom: 0%;
 }
 
-.game-mode{
+.game-mode {
   @include flex-col;
   justify-content: space-evenly;
 }
-.mode-name{
+.mode-name {
   @extend .game-t;
 }
-.mode-type{
-@extend .game-n;
+.mode-type {
+  @extend .game-n;
 }
-.overlay-p-2{
+.overlay-p-2 {
   @extend .overlay-p-1;
 }
 
-.copyright-fonts-part-1{
+.copyright-fonts-part-1 {
   @include flex-row;
   gap: 15px;
-
 }
-.font-cont-one{
+.font-cont-one {
   @include flex-col;
   justify-content: space-evenly;
 }
 
-// time-line 
+// time-line
 
-.time-line{
+.time-line {
   padding-top: 50px;
 }
 
-.time-line p{
+.time-line p {
   font-size: 30px;
   font-weight: 600;
   color: rgb(255, 255, 255);
   font-family: $font;
   font-style: italic;
-    margin-bottom: 0%;
-   
+  margin-bottom: 0%;
 }
 
-#time-lline{
-  padding-bottom: 40px; 
+#time-lline {
+  padding-bottom: 40px;
   padding-top: 40px;
 }
 
-.register-tour{
+.register-tour {
+
 text-align: center;
-padding: 10px;
+
+  background-color: #222222;
+  border-radius: 2ch;
+  padding: 15px;
+
 }
-#register-tour{
+#register-tour {
   font-size: 35px;
   font-weight: 600;
   color: rgb(35, 255, 1);
 }
 
-.end-tour{
+.end-tour {
   @extend .register-tour;
 }
 
-#end-tour{
- @extend #register-tour;
+#end-tour {
+  @extend #register-tour;
 }
 
-.end-t-one{
+.end-t-one {
   font-size: 30px;
   font-weight: 600;
   color: rgb(255, 255, 255);
   font-family: $font;
-    margin-bottom: 0%;
-@include pad-t-b(15px,15px);
+  margin-bottom: 0%;
+  @include pad-t-b(15px, 15px);
 }
-.end-t-two{
+.end-t-two {
   font-size: 25px;
   font-weight: 600;
   color: rgb(255, 0, 0);
   font-family: $font;
   font-style: italic;
-    margin-bottom: 0%;
+  margin-bottom: 0%;
+}
+
+.about-part-of-tournament{
+
+}
+.about-tour-t{
+  font-size: 30px;
+  font-weight: 600;
+  color: rgb(255, 255, 255);
+  font-family: $font;
+  font-style: italic;
+  margin-bottom: 0%;
+  @include pad-t-b(10px,40px);
+}
+.dis-info{
+  @include flex-row;
+  gap: 30px;
+}
+
+
+.dis-discription{
+  font-size: 20px;
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+  font-family: $font;
+  margin-bottom: 0%;
+}
+.dis-discription-two{
+  font-size: 25px;
+  font-weight: 600;
+  color: rgb(255, 255, 255);
+  font-family: $font;
+padding-top: 25px;
+  margin-bottom: 0%;
+}
+.dis-discription-three{
+  font-size: 25px;
+  font-weight: 600;
+  color: rgb(35, 255, 1);
+  font-family: $font;
+  font-style: italic;
+  margin-bottom: 0%;
+  padding-top: 5px;
 }
