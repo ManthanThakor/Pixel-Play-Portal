@@ -96,6 +96,13 @@ function changeActiveClass(event) {
 }
 
 
+// submit the contact part 
+
+
+document.querySelector('.character-btn-p').addEventListener('click', function() {
+  window.location.href = 'character.html';
+});
+
 
 // submit the contact part 
 

@@ -19,6 +19,7 @@
   box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.35);
   border-radius: 100px;
   z-index: 0;
+  object-fit: cover;
 }
 .profile-pic .-label {
   cursor: pointer;
@@ -257,4 +258,9 @@ input::placeholder {
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #ff0000;
+}
+
+.img-wrap img {
+  -o-object-fit: cover;
+     object-fit: cover;
 }/*# sourceMappingURL=profile.css.map */
