@@ -436,6 +436,7 @@ text-align: center;
   color: rgb(255, 255, 255);
   font-family: $font;
   margin-bottom: 0%;
+
 }
 .dis-discription-two{
   font-size: 25px;
@@ -446,11 +447,55 @@ padding-top: 25px;
   margin-bottom: 0%;
 }
 .dis-discription-three{
-  font-size: 25px;
-  font-weight: 600;
   color: rgb(35, 255, 1);
-  font-family: $font;
   font-style: italic;
-  margin-bottom: 0%;
-  padding-top: 5px;
+  
+}
+
+
+@media only screen and (max-width: 1200px) {
+  .tour-detials{
+    @include padd(30px, 15px, 50px, 15px);
+  }
+.overlay-p-2,.end-tour{
+  margin-top: 20px;
+}
+.time-line,.about-tour-t,.dis-discription-two{
+  text-align: center;
+}
+}
+@media only screen and (max-width: 500px) {
+ .time-line p,.about-tour-t{
+  font-size: 22px;
+ }
+ .overlay-p-1{
+  @include flex-col;
+  height: auto;
+gap:15px;
+  text-align: center;
+ }
+ .over-view-sec {
+  padding: 40px 0px 0px 0px !important;
+}
+.copyright-fonts-part-1{
+  justify-content: center;
+}
+.game-t,.dis-discription,.end-t-two{
+  font-size: 18px;
+}
+.game-n,.dis-discription-two,.end-t-one{
+  font-size: 20px;
+}
+
+.dis-info{
+  @include flex-col;
+gap:15px;
+text-align: center;
+justify-content: center;
+align-items: center;
+
+}
+.pricing-cards-menu{
+  @include flex-col;
+}
 }

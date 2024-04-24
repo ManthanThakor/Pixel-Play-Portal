@@ -433,11 +433,54 @@
 }
 
 .dis-discription-three {
-  font-size: 25px;
-  font-weight: 600;
   color: rgb(35, 255, 1);
-  font-family: "Arial", "Helvetica", "sans-serif";
   font-style: italic;
-  margin-bottom: 0%;
-  padding-top: 5px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .tour-detials {
+    padding: 30px 15px 50px 15px !important;
+  }
+  .overlay-p-2, .end-tour {
+    margin-top: 20px;
+  }
+  .time-line, .about-tour-t, .dis-discription-two {
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .time-line p, .about-tour-t {
+    font-size: 22px;
+  }
+  .overlay-p-1, .overlay-p-2 {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    gap: 15px;
+    text-align: center;
+  }
+  .over-view-sec {
+    padding: 40px 0px 0px 0px !important;
+  }
+  .copyright-fonts-part-1 {
+    justify-content: center;
+  }
+  .game-t, .mode-name, .dis-discription, .end-t-two {
+    font-size: 18px;
+  }
+  .game-n, .mode-type, .dis-discription-two, .end-t-one {
+    font-size: 20px;
+  }
+  .dis-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  .pricing-cards-menu {
+    display: flex;
+    flex-direction: column;
+  }
 }/*# sourceMappingURL=tournament.css.map */
