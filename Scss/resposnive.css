@@ -446,4 +446,43 @@ body {
     padding-top: 15px;
     margin-left: 0 !important;
   }
+}
+/*-----------------------------------*\
+               pixel title
+\*-----------------------------------*/
+@media only screen and (max-width: 1085px) {
+  #glowing_text {
+    text-wrap: wrap !important;
+  }
+}
+@media only screen and (max-width: 698px) {
+  .main-name-three {
+    font-size: 25px;
+  }
+  .main-name-two {
+    font-size: 50px;
+  }
+  .main-name {
+    font-size: 50px !important;
+  }
+  .pixel-head {
+    height: 650px !important;
+    width: 100% !important;
+  }
+}
+@media only screen and (max-width: 362px) {
+  .main-name-three {
+    font-size: 16px;
+  }
+  .main-name-two {
+    font-size: 25px;
+  }
+  .main-name {
+    margin-top: 50px !important;
+    font-size: 25px !important;
+  }
+  .pixel-head {
+    height: 500px !important;
+    width: 100% !important;
+  }
 }/*# sourceMappingURL=resposnive.css.map */

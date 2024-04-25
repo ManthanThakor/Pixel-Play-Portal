@@ -68,10 +68,7 @@
   transition: box-shadow 0.3s ease-in-out;
  
 }
-.char-sec-part-one{
-  // overflow: hidden;
 
-}
 .cha-img:hover {
   cursor: pointer !important;
   box-shadow: 0px 0px 20px 5px rgba(255, 0, 0, 0.7); 
@@ -80,9 +77,9 @@
 .char-sec-part {
   display: flex !important;
   flex-direction: row;
-  @include padd(20px, 80px, 40px, 80px);
+  @include padd(20px, 80px, 60px, 80px);
   justify-content: space-evenly;
-  overflow: hidden;
+
   position: relative;
 }
 
@@ -101,7 +98,7 @@
   top: -40px;
 opacity: 0;
   font-weight: 700;
-  word-wrap: break-word;
+  // word-wrap: break-word;
   font-size: 28px;
   text-transform: capitalize;
   color: #ff0000;
@@ -114,6 +111,7 @@ opacity: 0;
   
   background-color: rgba(0, 0, 0, 0.684);
   z-index: -1;
+  width: 400px
 }
 
 
@@ -129,6 +127,30 @@ opacity: 0;
 }
 
 
+.ch-o{
+  margin-left:auto;
+  margin-right:auto;
+}
+#ch-o{
+  margin-left: auto;
+  margin-right:auto;
+}
+.ch-two{
+  margin-left: auto;
+  margin-right:auto;
+}
+#ch-two{
+  margin-left:auto;
+  margin-right: auto;
+}
+.ch-three{
+margin-left: auto;
+margin-right:auto;
+}
+#ch-three{
+  margin-left: auto;
+  margin-right:auto;
+}
 /*-----------------------------------*\
     //         
    Customize DOT number styles and buttons 
@@ -136,7 +158,7 @@ opacity: 0;
 
 .slick-dots {
   background-color: $black-color;
-  padding-bottom: 40px !important;
+  padding-bottom: 60px !important;
 }
 
 .slick-dots li {
@@ -154,7 +176,9 @@ opacity: 0;
   height: 30px !important;
 }
 
-
+.slick-dotted.slick-slider {
+ margin-bottom: 0px !important;
+}
 
 
 .slick-dots {
@@ -189,7 +213,7 @@ opacity: 0;
   border-radius: 5px;
 transition: 0.3s ease-in-out;
   cursor: pointer;
-  top: 95% !important;
+  top: 91% !important;
   z-index: 2;
 }
 .slick-prev:hover,
@@ -197,7 +221,9 @@ transition: 0.3s ease-in-out;
   background-color: darkgray;
 }
 
-
+.slick-dotted.slick-slider {
+    padding-bottom: 30px;
+}
 .slick-dots li.slick-active {
   transform: scale(0.98); 
   border-color: #ff0000 !important; 
@@ -207,4 +233,55 @@ transition: 0.3s ease-in-out;
 .slick-next:hover{
   border: 3px rgb(255, 255, 255) solid !important;
   color: rgb(255, 255, 255) !important;
+}
+
+@media only screen and (max-width: 1492px) {
+  .char-sec-part {
+    display: flex !important;
+    flex-direction: row;
+    padding: 20px 40px 60px 40px !important;
+  }
+
+  .slick-prev {
+    left: 15px !important;
+
+  }
+  .slick-next {
+    right: 25px!important;
+   
+  }
+}
+
+
+
+@media only screen and (max-width: 936px) {
+  .char-sec-part {
+    display: flex !important;
+    flex-direction: row;
+    padding: 20px 15px 60px 15px !important;
+  }
+}
+
+@media only screen and (max-width: 428px) {
+  .cha-img {
+    height: 300px;
+    width: 100%;
+  }
+  .char-t-part{
+    font-size: 18px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .character-part-sec-zero {
+    padding-top: 40px !important;
+    padding-bottom: 20px !important;
+  }
+  .char-titl-name {
+    font-size: 18px;
+    top: -25px;
+    width: 100%;
+    opacity: 1 !important;
+    position: relative;
+    z-index: 1;
+  }
 }

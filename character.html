@@ -207,52 +207,53 @@
     <p class="text-uppercase char-t-part">
       A formidable and widely acclaimed characters</p>
   </div>
-  <div class="container-fluid slook character-part-sec">
+  <div class="container-fluid  character-part-sec">
 
 
-    <div class="char-sec-part">
-      <div class="char-sec-part-one">
-        <img src="Img\character\thumb-1920-902169.jpg" alt="" class="cha-img">
-        <p class="text-uppercase char-titl-name">Master Chief</p>
+    <div class="char-sec-part slook">
+      <div class="char-sec-part-one ">
+        <img src="Img\character\thumb-1920-902169.jpg" alt="" class="cha-img" id="ch-o">
+        <p class="text-uppercase char-titl-name ch-o">Master Chief</p>
       </div>
       <div class="char-sec-part-one">
-        <img src="Img/character/wp13320553.webp" alt="" class="cha-img">
-        <p class="text-uppercase char-titl-name">EVE</p>
+        <img src="Img/character/wp13320553.webp" alt="" class="cha-img" id="ch-two">
+        <p class="text-uppercase char-titl-name ch-two">EVE</p>
       </div>
       <div class="char-sec-part-one">
-        <img src="Img/character/demogorgon.jpg" alt="" class="cha-img">
-        <p class="text-uppercase char-titl-name">Demogorgon</p>
+        <img src="Img/character/demogorgon.jpg" alt="" class="cha-img" id="ch-three">
+        <p class="text-uppercase char-titl-name ch-three">Demogorgon</p>
       </div>
-    </div>
-    <div class="char-sec-part">
+
+
       <div class="char-sec-part-one">
-        <img src="Img/character/Doom _Slayer.jpg" alt="" class="cha-img">
-        <p class="text-uppercase char-titl-name">Master Chief</p>
-      </div>
-      <div class="char-sec-part-one">
-        <img src="Img/character/Gost_face.png" alt="" class="cha-img">
-        <p class="text-uppercase char-titl-name">EVE</p>
+        <img src="Img/character/Doom _Slayer.jpg" alt="" class="cha-img" id="ch-o">
+        <p class="text-uppercase char-titl-name ch-o">Doom Slayer</p>
       </div>
       <div class="char-sec-part-one">
-        <img src="Img/character/demogorgon.jpg" alt="" class="cha-img">
-        <p class="text-uppercase char-titl-name">Demogorgon</p>
-      </div>
-    </div>
-    <div class="char-sec-part">
-      <div class="char-sec-part-one">
-        <img src="Img\character\thumb-1920-902169.jpg" alt="" class="cha-img">
-        <p class="text-uppercase char-titl-name">Master Chief</p>
+        <img src="Img/character/Gost_face.png" alt="" class="cha-img" id="ch-two">
+        <p class="text-uppercase char-titl-name ch-two">Ghostface</p>
       </div>
       <div class="char-sec-part-one">
-        <img src="Img/character/wp13320553.webp" alt="" class="cha-img">
-        <p class="text-uppercase char-titl-name">EVE</p>
+        <img src="Img/character/kratos-in-action-3e.jpg" alt="" class="cha-img" id="ch-three">
+        <p class="text-uppercase char-titl-name ch-three">Kratos</p>
+      </div>
+
+
+      <div class="char-sec-part-one">
+        <img src="Img/character/THE_SKULL_MERCHANT.jpg" alt="" class="cha-img" id="ch-o">
+        <p class="text-uppercase char-titl-name ch-o">SKULL MERCHANT</p>
       </div>
       <div class="char-sec-part-one">
-        <img src="Img/character/demogorgon.jpg" alt="" class="cha-img">
-        <p class="text-uppercase char-titl-name">Demogorgon</p>
+        <img src="Img/character/dante.jpg" alt="" class="cha-img" id="ch-two">
+        <p class="text-uppercase char-titl-name ch-two">dante</p>
+      </div>
+      <div class="char-sec-part-one">
+        <img src="Img/character/samus-aran.jpg" alt="" class="cha-img" id="ch-three">
+        <p class="text-uppercase char-titl-name ch-three">Samus Aran</p>
       </div>
     </div>
   </div>
+
 
   <!-- discord-part -->
 
@@ -397,14 +398,39 @@
     $(document).ready(function () {
       $('.slook').slick({
         arrows: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        autoplay: true,
+        autoplaySpeed: 2000,
         dots: true,
         prevArrow: '<button type="button" class="slick-prev">Previous</button>',
         nextArrow: '<button type="button" class="slick-next">Next</button>',
         customPaging: function (slider, i) {
           return (i + 1);
-        }
+        },
+        responsive: [
+          {
+            breakpoint: 1348,
+            settings: {
+              slidesToShow: 2,
+        slidesToScroll: 2,
+            }
+          },
+          {
+            breakpoint: 876,
+            settings: {
+              slidesToShow: 1,
+        slidesToScroll: 1,
+            }
+          },{
+            breakpoint: 596,
+            settings: {
+              dots:false,
+              slidesToShow: 1,
+        slidesToScroll: 1,
+            }
+          }
+        ]
       });
     });
   </script>
