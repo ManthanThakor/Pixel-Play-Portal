@@ -1,0 +1,17 @@
+.pixel-head {
+    height: auto !important;
+    background: linear-gradient(rgba(0, 0, 0, 0.758), rgba(0, 0, 0, 0.758)), url(../Img/tournament/140554-pc_game-game-esports-tournament-player-x750.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    
+    }
+    .tourn-title {
+      /* @include padd(20px, 80px, 20px, 80px); */
+      background: linear-gradient(rgba(0, 0, 0, 0.758), rgba(0, 0, 0, 0.758)),
+        url(../Img/tournament/140554-pc_game-game-esports-tournament-player-x750.jpg);
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      text-align: center;
+    }
