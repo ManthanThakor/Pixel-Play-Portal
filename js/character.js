@@ -25,3 +25,6 @@ if (video.muted) {
     video.volume = 0; // Set volume to 0
 }
 }
+
+
+
