@@ -57,9 +57,17 @@
   margin-bottom: 0%;
 }
 
+/*-----------------------------------*\
+    //         
+    streams section
+    // \*-----------------------------------*/
 .live-sec,
 .offer {
-  margin: 30px 60px 30px 18.4%;
+  padding: 40px 80px 40px 80px !important;
+  background: linear-gradient(rgba(0, 0, 0, 0.758), rgba(0, 0, 0, 0.758)), url(../Img/trending/wp4533279.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 .til {
@@ -127,7 +135,7 @@
   width: 60px;
   left: 2%;
   color: white;
-  background: url("../res/videos/download.png");
+  background: url("../Img/streaming/download.png");
   background-size: 15px;
   background-repeat: no-repeat;
   background-position: center center;
@@ -143,6 +151,7 @@
   font-size: 15px;
   text-align: end;
   padding-right: 8px;
+  margin-bottom: 0px;
 }
 
 .live-des {
