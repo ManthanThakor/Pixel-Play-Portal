@@ -7,7 +7,7 @@
 .pixel-head {
   height: auto !important;
   background: linear-gradient(rgba(0, 0, 0, 0.758), rgba(0, 0, 0, 0.758)),
-    url(../Img/trending/wp4533279.jpg);
+    url(../Img/trending/wp5231545.jpg);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -15,7 +15,7 @@
 .tourn-title {
   /* @include padd(20px, 80px, 20px, 80px); */
   background: linear-gradient(rgba(0, 0, 0, 0.758), rgba(0, 0, 0, 0.758)),
-    url(../Img/trending/wp4533279.jpg);
+    url(../Img/trending/wp5231545.jpg);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -52,7 +52,8 @@
                 --bs-gutter-x: 0rem !important;
         }
         .trending-title{
-            color: white;
+            padding-top: 40px;
+            color: rgb(140, 255, 0);
             font-weight: 700;
             font-style: italic;
         text-align: center;
@@ -60,6 +61,7 @@
             text-transform: capitalize;
             font-family: $font;
             margin-bottom: 0%;
+            text-shadow: 1px 0px 0 rgba(108, 190, 1, 0.51), 8px 3px 8px rgb(172 81 81 / 33%);
         }
         
 
@@ -82,11 +84,7 @@
         .live-sec,
 .offer {
 @include padd(40px , 80px,40px,80px);
-background: linear-gradient(rgba(0, 0, 0, 0.758), rgba(0, 0, 0, 0.758)),
-url(../Img/trending/wp4533279.jpg);
-background-size: cover;
-background-position: center;
-background-attachment: fixed;
+background-color: black;
 }
 .til {
   display: flex;
