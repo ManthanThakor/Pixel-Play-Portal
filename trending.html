@@ -192,6 +192,14 @@
           <p class="text-uppercase">Trending</p>
         </div>
       </div>
+
+    
+
+
+
+
+
+
       <div class="col-xl-6 tour-t-two">
         <div class="tour-title-img">
           <img src="Img/trending/breadcrumb_img01.png" alt="" class="tourn-trphy-img">
@@ -342,7 +350,7 @@
   <!--  Custom scripts animation for this template-->
 
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-
+<script src="js/trending.js"></script>
   <!-- ============SCRIPT FOR ANIMATION=============== -->
 
   <!-- <script>
@@ -355,7 +363,23 @@
 
   <!-- JavaScript -->
 
-
+<script>
+   $('.slider-for').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+  fade: true,
+  asNavFor: '.slider-nav'
+});
+$('.slider-nav').slick({
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  asNavFor: '.slider-for',
+  dots: true,
+  centerMode: true,
+  focusOnSelect: true
+});
+</script>
 </body>
 
 </html>
