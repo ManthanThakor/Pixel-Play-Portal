@@ -1,0 +1,173 @@
+/*-----------------------------------*\
+    //         
+    character modification
+    // \*-----------------------------------*/
+.pixel-head {
+  height: auto !important;
+  background: linear-gradient(rgba(0, 0, 0, 0.758), rgba(0, 0, 0, 0.758)), url(../Img/trending/wp4533279.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.tourn-title {
+  /* @include padd(20px, 80px, 20px, 80px); */
+  background: linear-gradient(rgba(0, 0, 0, 0.758), rgba(0, 0, 0, 0.758)), url(../Img/trending/wp4533279.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  text-align: center;
+}
+
+.tourn-title-text {
+  color: #ff0000;
+  text-shadow: 12px 11px 0 rgba(0, 0, 0, 0.51), 5px 5px 10px rgba(0, 0, 0, 0.57);
+}
+
+.tourn-trphy-img {
+  height: 450px !important;
+  width: 450px !important;
+}
+
+/*-----------------------------------*\
+    //         
+    game and streams
+    // \*-----------------------------------*/
+.trending-section {
+  box-shadow: 0 -5px 3px -3px rgb(255, 255, 255), 0 5px 3px -3px rgb(255, 255, 255);
+  background-color: black;
+}
+
+.discord-part-joinn {
+  box-shadow: 0 -5px 3px -3px rgb(255, 255, 255), 0 5px 3px -3px rgb(255, 255, 255);
+}
+
+.container-fluid {
+  --bs-gutter-x: 0rem !important;
+}
+
+.trending-title {
+  color: white;
+  font-weight: 700;
+  font-style: italic;
+  text-align: center;
+  font-size: 40px;
+  text-transform: capitalize;
+  font-family: "Arial", "Helvetica", "sans-serif";
+  margin-bottom: 0%;
+}
+
+.live-sec,
+.offer {
+  margin: 30px 60px 30px 18.4%;
+}
+
+.til {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.til a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 4px;
+  background: transparent;
+  padding: 5px 10px;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+}
+
+.til a:hover {
+  box-shadow: 0px 0px 0px 4px rgba(255, 255, 255, 0.2);
+}
+
+.live-title {
+  color: white;
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.live-main {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-row-gap: 10px;
+  grid-column-gap: 5px;
+}
+
+.live-card {
+  width: 100%;
+  background-color: #1e1f20;
+  position: relative;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  flex-basis: 37%;
+  box-shadow: 0 10px 6px -6px rgb(0, 0, 0);
+  box-shadow: 4px 4px 4px 4px rgba(17, 5, 5, 0.5);
+}
+
+.main-img img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 200px;
+}
+
+.live-play {
+  position: absolute;
+  top: 30%;
+  left: 40%;
+}
+
+.live-text {
+  position: absolute;
+  top: 3%;
+  width: 60px;
+  left: 2%;
+  color: white;
+  background: url("../res/videos/download.png");
+  background-size: 15px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-position-x: 5px;
+  box-shadow: 0 0 20px #a94847;
+  padding: 2px 0px;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: opacity 0.6s;
+}
+
+.live-text p {
+  font-size: 15px;
+  text-align: end;
+  padding-right: 8px;
+}
+
+.live-des {
+  margin-top: 0;
+  background-color: #1660a5;
+  display: flex;
+  padding: 8px 10px;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.live-left {
+  font-family: "Roboto";
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.live-des p {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.live-des p i {
+  font-size: 15px;
+  font-weight: bold;
+  padding-right: 5px;
+}/*# sourceMappingURL=gamestreamnews.css.map */

@@ -31,3 +31,31 @@
   width: 450px !important;
 }
 
+/*-----------------------------------*\
+    //         
+    trending 
+    // \*-----------------------------------*/
+
+
+    .trending-section{
+box-shadow: 0 -5px 3px -3px rgb(255, 255, 255), 0 5px 3px -3px rgb(255, 255, 255);
+        background-color: black;
+    
+    }
+    .discord-part-joinn{
+        box-shadow: 0 -5px 3px -3px rgb(255, 255, 255), 0 5px 3px -3px rgb(255, 255, 255);
+    }
+
+.container-fluid {
+        --bs-gutter-x: 0rem !important;
+}
+.trending-title{
+    color: white;
+    font-weight: 700;
+    font-style: italic;
+text-align: center;
+    font-size: 40px;
+    text-transform: capitalize;
+    font-family: $font;
+    margin-bottom: 0%;
+}
