@@ -1,1 +1,30 @@
-/*# sourceMappingURL=trending.css.map */
+/*-----------------------------------*\
+    //         
+    character modification
+    // \*-----------------------------------*/
+.pixel-head {
+  height: auto !important;
+  background: linear-gradient(rgba(0, 0, 0, 0.758), rgba(0, 0, 0, 0.758)), url(../Img/trending/wp4533279.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.tourn-title {
+  /* @include padd(20px, 80px, 20px, 80px); */
+  background: linear-gradient(rgba(0, 0, 0, 0.758), rgba(0, 0, 0, 0.758)), url(../Img/trending/wp4533279.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  text-align: center;
+}
+
+.tourn-title-text {
+  color: #ff0000;
+  text-shadow: 12px 11px 0 rgba(0, 0, 0, 0.51), 5px 5px 10px rgba(0, 0, 0, 0.57);
+}
+
+.tourn-trphy-img {
+  height: 450px !important;
+  width: 450px !important;
+}/*# sourceMappingURL=trending.css.map */
