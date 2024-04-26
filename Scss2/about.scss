@@ -4,6 +4,72 @@
     character modification
     // \*-----------------------------------*/
 
+    :root {
+
+        /**
+         * colors
+         */
+      
+        --raisin-black-1: hsl(234, 14%, 14%);
+        --raisin-black-2: hsl(231, 12%, 12%);
+        --raisin-black-3: hsl(228, 12%, 17%);
+        --eerie-black: hsl(240, 11%, 9%);
+        --light-gray: hsl(0, 0%, 80%);
+        --platinum: hsl(0, 4%, 91%);
+        --xiketic: hsl(275, 24%, 10%);
+        --orange: hsl(31, 100%, 51%);
+        --white: hsl(0, 0%, 100%);
+        --onyx: hsl(240, 5%, 26%);
+      
+        /**
+         * typography
+         */
+      
+        --ff-refault: "Refault", Georgia;
+        --ff-oswald: 'Oswald', sans-serif;
+        --ff-poppins: 'Poppins', sans-serif;
+      
+        --fs-1: 54px;
+        --fs-2: 34px;
+        --fs-3: 30px;
+        --fs-4: 26px;
+        --fs-5: 22px;
+        --fs-6: 20px;
+        --fs-7: 18px;
+        --fs-8: 15px;
+        --fs-9: 14px;
+        --fs-10: 13px;
+        --fs-11: 12px;
+      
+        --fw-400: 400;
+        --fw-500: 500;
+        --fw-700: 700;
+      
+        /**
+         * transition
+         */
+      
+        --transition-1: 0.15s ease-in-out;
+        --transition-2: 0.15s ease-in;
+        --transition-3: 0.25s ease-out;
+      
+        /**
+         * spacing
+         */
+      
+        --section-padding: 60px;
+      
+        /**
+         * clip path
+         */
+      
+        --polygon-1: polygon(90% 0, 100% 34%, 100% 100%, 10% 100%, 0 66%, 0 0);
+        --polygon-2: polygon(0 0, 100% 0%, 82% 100%, 0% 100%);
+        --polygon-3: polygon(0 0, 100% 0%, 100% 100%, 18% 100%);
+        --polygon-4: polygon(96% 0, 100% 36%, 100% 100%, 4% 100%, 0 66%, 0 0);
+      
+      }
+      
 .pixel-head {
   height: auto !important;
   background: linear-gradient(rgba(0, 0, 0, 0.758), rgba(0, 0, 0, 0.758)),
@@ -34,27 +100,97 @@
 
 
 /*-----------------------------------*\
-  #ABOUT
+  # about-us-one
 \*-----------------------------------*/
 
-.section-wrapper {
-    background: url("../images/section-wrapper-bg.jpg") no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
-  
-  .about {
-    background: url("../images/about-img-shadow.png") no-repeat;
-    background-size: 100%;
-    background-position: center;
-    padding: 120px 0 var(--section-padding);
+ .about-us-one{
+   
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.904)),
+    url(../Img/tournament/140554-pc_game-game-esports-tournament-player-x750.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+    
+    @include padd(60px,80px,130px,80px);
+box-shadow: 0px -15px 15px -15px #fefefe, 0px 15px 15px -15px #fefefe;
+ }
+.about-us-one-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+
+ 
+ .a-u-o-1{
+ 
+    text-transform: capitalize;
+    color: #FFFFFF;
+    font-family: "Barlow", Sans-serif;
+    font-size: 55px;
+    font-weight: 700;
+    letter-spacing: 3.5px;
+    margin-bottom: 0;
+    line-height: 1.2em;
+ }
+ #a-u-o-1{
+    color: #45f882;
+   
+ }
+ .about-us-one-left-text-2{
+    color: #a6ff00;
+    font-family: "Barlow", Sans-serif;
+    font-style: italic;
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 0;
+ }
+ .aa-one-com{
+    @include flex-row;
+gap:20px;
+overflow: hidden;
+ }
+ .a-us-one-img{
+    width: 363px;
+    height: 480px;
+    object-fit: cover;
+    object-position: center;
+ }
+ .a-us-one-img-2{
+    width: 500px;
+    height: 380px;
+    object-fit: cover;
+    object-position: center;
+ }
+ .aa-two {
+    padding: 30px;
+    background-color: hsl(234, 14%, 14%);
+    border-radius: 2ch;
+    width: 80%;
+    position: absolute;
+    bottom: -87px;
+    right: 15px;
+ }
+ .aa-aa{
+    position: relative;
+
+ }
+ 
+/*-----------------------------------*\
+  #ABOUT
+\*-----------------------------------*/
+.about {
+    background-color: $black-color;
+@include padd(60px,80px,60px,80px);
+box-shadow: 0px -15px 15px -15px #fefefe, 0px 15px 15px -15px #fefefe;
   }
   
   .about-banner { margin-bottom: 40px; }
   
-  .about-img { width: 100%; }
+
   
-  .character { display: none; }
+
   
   .about-content {
     background: var(--raisin-black-1);
@@ -105,7 +241,120 @@
     font-size: 25px;
     --ionicon-stroke-width: 45px;
   }
+  .about-banner{
+    position: relative;
+    z-index: 1;
+  }
   
+  .about-img{
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    object-position: center;
+    z-index: 1;
+  }
   
+  .character-1{
+@include posi(absolute);
+object-fit: cover;
+object-position: center;
+left: 0px;
+z-index: -1;
+  }
+  .character-2{
+    @include posi(absolute);
+    right: 149px;
+    z-index: -1;
+    object-fit: cover;
+    object-position: center;
+  }
+  .character-3{
+    @include posi(absolute);
+    object-fit: cover;
+    object-position: center;
+    height: 335px;
+    right: 67px;
+    top: -48px;
+    z-index: -1;
+  }
+.about-banner{
+    text-align: center;
+}
+.about-content{
+    border-radius: 2ch;
+}
+  .character { opacity: 0;}
+/*-----------------------------------*\
+  #ABOUT responsive section
+\*-----------------------------------*/
+  @media only screen and (min-width: 1495px) and (max-width: 1596px) {
+    .character { 
+opacity: 1;
+    }
+  }
+
+@media only screen and (max-width: 1200px) {
+
+.about-us-one{
+    padding: 40px 15px 40px 15px !important;
+}
+.about-us-one-left-title{
+    text-align: center;
+}
+.aa-one-com{
+    justify-content: center;
+    padding-top: 30px;
+}
+.aa-two{
+    position: relative;
+    width: 100%;
+text-align: center;
+     bottom: 0px; 
+     right: 0px; 
+    margin-top: 15px;
+}
+.about {
+   
+    padding: 40px 15px 40px 15px !important;
+}
+}
+
+@media only screen and (max-width: 712px) {
+.aa-one-com{
+    flex-direction: column;
+}
+.about-us-one-right-img{
+    text-align: center;
+}
+
+}
+@media only screen and (max-width: 539px) {
+.a-u-o-1{
+    font-size: 22px;
+}
+.a-us-one-img {
+    width: 100%;
+    height: 280px;
+}
+.a-us-one-img-2 {
+    width: 100%;
+    height: 280px;
+}
+.about-us-one-left-text-2 {
+    font-size: 18px;
+}
+.aa-two {
+    padding: 5px;
+}
+.about-banner{
+    display: none;
+}
+.about-title {
+    font-family: var(--ff-oswald);
+    font-size: 22px;
+}
+.about-content {
   
-  
+    padding: 10px;
+}
+}
