@@ -119,7 +119,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-
+document.addEventListener('DOMContentLoaded', function() {
+  var button = document.querySelector('.setting-part');
+  button.addEventListener('click', function() {
+    window.location.href = 'setting.html';
+  });
+});
 
 
 
