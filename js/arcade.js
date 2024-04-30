@@ -16,7 +16,7 @@ const cards = [
   },
   {
     imgSrc: "Img/arcade-part/arcade-card/gta5.jpg",
-    title: "Red Dead Redemption 2",
+    title: "Grand Theft Auto V",
     description:
       "Grand Theft Auto V is a 2013 action-adventure game developed by Rockstar North and published by Rockstar Games. It is the seventh main entry in the Grand Theft Auto series, following 2008's Grand Theft Auto IV, and the fifteenth instalment overall.",  
       price:"$29.99"
@@ -50,7 +50,7 @@ const cards = [
 function createCards() {
   const cardContainer = document.getElementById("cardContainer");
 
-  cards.forEach((card) => {
+  cards.forEach((card, index) => {
     const cardHTML = `
       <div class="col-md-4">
         <div class="card arcade-card-one">
@@ -61,7 +61,7 @@ function createCards() {
             <h5 class="text-uppercase card-title arcade-t-card">${card.title}</h5>
             <p class="card-text arcade-b-card">${card.description}</p>
             <div class="button-card-part">
-              <button type="button" class="btn text-uppercase btn-primary arcade-btn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;add to cart</button>
+              <button type="button" class="btn text-uppercase btn-primary arcade-btn add-to-cart" data-index="${index}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;add to cart</button>
               <p class="button-card-part-price">${card.price}</p>
             </div>
           </div>
@@ -69,6 +69,15 @@ function createCards() {
       </div>
     `;
     cardContainer.insertAdjacentHTML("beforeend", cardHTML);
+  });
+
+  // Add event listeners to the "Add to Cart" buttons
+  const addToCartButtons = document.querySelectorAll(".add-to-cart");
+  addToCartButtons.forEach(button => {
+    button.addEventListener("click", function() {
+      const index = button.dataset.index;
+      openCustomModal(cards[index]);
+    });
   });
 
   // Select all elements with the class ".arcade-b-card" after cards have been created
@@ -109,6 +118,22 @@ function createCards() {
     };
     click_read();
   });
+}
+
+// Function to open the custom modal and display game details
+function openCustomModal(game) {
+  const modal = document.getElementById("customModal");
+  const modalContent = document.getElementById("customModalContent");
+
+  modalContent.innerHTML = `
+    <h2>${game.title}</h2>
+    <img src="${game.imgSrc}" alt="${game.title}" style="max-width: 100%;">
+    <p>${game.description}</p>
+    <button type="button" class="btn text-uppercase btn-primary custom-download-btn">Download</button>
+  `;
+
+  // Show modal
+  modal.style.display = "block";
 }
 
 // Call the function to create cards when the page loads
