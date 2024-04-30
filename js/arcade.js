@@ -4,7 +4,7 @@ const cards = [
     imgSrc: "Img/arcade-part/arcade-card/rdr2.jpg",
     title: "Red Dead Redemption 2",
     description:
-      "TRed Dead Redemption 2 is a 2018 action-adventure game developed and published by Rockstar Games. A bounty system governs the response of law enforcement and bounty hunters to crimes committed by the player.",
+      "Red Dead Redemption 2 is a 2018 action-adventure game developed and published by Rockstar Games. A bounty system governs the response of law enforcement and bounty hunters to crimes committed by the player.",
       price:"$59.99"
   },
   {
@@ -42,15 +42,111 @@ const cards = [
       "Dota 2 is a 2013 multiplayer online battle arena video game by Valve. The game is a sequel to Defense of the Ancients, a community-created mod for Blizzard Entertainment's Warcraft III: Reign of Chaos.",
       price:"FREE"
   },
+  {
+    imgSrc: "Img/arcade-part/arcade-card/nier.jpg",
+    title: "NieR: Automata",
+    description:
+      "NieR: Automata tells the story of androids 2B, 9S and A2 and their battle to reclaim the machine-driven dystopia overrun by powerful machines.",
+      price:"$39.99"
+  },
+  {
+    imgSrc: "Img/arcade-part/arcade-card/minecraft.jpg",
+    title: "Minecraft",
+    description:
+      "Minecraft is a 2011 sandbox game developed by Mojang Studios and originally released in 2009. The game was created by Markus \"Notch\" Persson in the Java programming language.",
+      price:"$26.95"
+  },
+  {
+    imgSrc: "Img/arcade-part/arcade-card/dota2.jpg",
+    title: "Dota 2",
+    description:
+      "Dota 2 is a 2013 multiplayer online battle arena video game by Valve. The game is a sequel to Defense of the Ancients, a community-created mod for Blizzard Entertainment's Warcraft III: Reign of Chaos.",
+      price:"FREE"
+  },
+  {
+    imgSrc: "Img/arcade-part/arcade-card/nier.jpg",
+    title: "NieR: Automata",
+    description:
+      "NieR: Automata tells the story of androids 2B, 9S and A2 and their battle to reclaim the machine-driven dystopia overrun by powerful machines.",
+      price:"$39.99"
+  },
+  {
+    imgSrc: "Img/arcade-part/arcade-card/minecraft.jpg",
+    title: "Minecraft",
+    description:
+      "Minecraft is a 2011 sandbox game developed by Mojang Studios and originally released in 2009. The game was created by Markus \"Notch\" Persson in the Java programming language.",
+      price:"$26.95"
+  },
+  {
+    imgSrc: "Img/arcade-part/arcade-card/dota2.jpg",
+    title: "Dota 2",
+    description:
+      "Dota 2 is a 2013 multiplayer online battle arena video game by Valve. The game is a sequel to Defense of the Ancients, a community-created mod for Blizzard Entertainment's Warcraft III: Reign of Chaos.",
+      price:"FREE"
+  },
+  {
+    imgSrc: "Img/arcade-part/arcade-card/nier.jpg",
+    title: "NieR: Automata",
+    description:
+      "NieR: Automata tells the story of androids 2B, 9S and A2 and their battle to reclaim the machine-driven dystopia overrun by powerful machines.",
+      price:"$39.99"
+  },
+  {
+    imgSrc: "Img/arcade-part/arcade-card/minecraft.jpg",
+    title: "Minecraft",
+    description:
+      "Minecraft is a 2011 sandbox game developed by Mojang Studios and originally released in 2009. The game was created by Markus \"Notch\" Persson in the Java programming language.",
+      price:"$26.95"
+  },
+  {
+    imgSrc: "Img/arcade-part/arcade-card/dota2.jpg",
+    title: "Dota 2",
+    description:
+      "Dota 2 is a 2013 multiplayer online battle arena video game by Valve. The game is a sequel to Defense of the Ancients, a community-created mod for Blizzard Entertainment's Warcraft III: Reign of Chaos.",
+      price:"FREE"
+  },
   
   // Add more card objects as needed
 ];
+
+
+
+// Number of cards to load each time
+const cardsPerPage = 6;
+let currentIndex = 0;
 
 // Function to dynamically create cards
 function createCards() {
   const cardContainer = document.getElementById("cardContainer");
 
-  cards.forEach((card, index) => {
+  // Display initial batch of cards
+  displayNextBatch(cardContainer);
+
+  // Add event listener to the "Load More" button
+  const loadMoreBtn = document.getElementById("loadMoreBtn");
+  loadMoreBtn.addEventListener("click", function() {
+    displayNextBatch(cardContainer);
+  });
+
+  // Add event listener to the search input field
+  const searchInput = document.getElementById("searchInput");
+  searchInput.addEventListener("input", function() {
+    const searchQuery = searchInput.value.toLowerCase();
+    const filteredCards = cards.filter(card => {
+      return card.title.toLowerCase().includes(searchQuery);
+    });
+    displayFilteredCards(filteredCards, cardContainer);
+  });
+}
+
+// Function to display the next batch of cards
+function displayNextBatch(container) {
+  // Calculate the end index for the next batch
+  const endIndex = Math.min(currentIndex + cardsPerPage, cards.length);
+  
+  // Loop through the cards to display
+  for (let i = currentIndex; i < endIndex; i++) {
+    const card = cards[i];
     const cardHTML = `
       <div class="col-md-4">
         <div class="card arcade-card-one">
@@ -61,16 +157,24 @@ function createCards() {
             <h5 class="text-uppercase card-title arcade-t-card">${card.title}</h5>
             <p class="card-text arcade-b-card">${card.description}</p>
             <div class="button-card-part">
-              <button type="button" class="btn text-uppercase btn-primary arcade-btn add-to-cart" data-index="${index}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;add to cart</button>
+              <button type="button" class="btn text-uppercase btn-primary arcade-btn add-to-cart" data-index="${i}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;add to cart</button>
               <p class="button-card-part-price">${card.price}</p>
             </div>
           </div>
         </div>
       </div>
     `;
-    cardContainer.insertAdjacentHTML("beforeend", cardHTML);
-  });
+    container.insertAdjacentHTML("beforeend", cardHTML);
+  }
+  
+  // Update current index
+  currentIndex = endIndex;
 
+  // Hide the "Load More" button if all cards are displayed
+  if (currentIndex >= cards.length) {
+    document.getElementById("loadMoreBtn").style.display = "none";
+  }
+  
   // Add event listeners to the "Add to Cart" buttons
   const addToCartButtons = document.querySelectorAll(".add-to-cart");
   addToCartButtons.forEach(button => {
@@ -120,12 +224,41 @@ function createCards() {
   });
 }
 
+// Function to display filtered cards
+function displayFilteredCards(filteredCards, container) {
+  // Clear existing cards
+  container.innerHTML = "";
+  
+  // Display filtered cards
+  filteredCards.forEach(card => {
+    const cardHTML = `
+      <div class="col-md-4">
+        <div class="card arcade-card-one">
+          <div class="img-part-main-arc">
+            <img src="${card.imgSrc}" class="card-img-top arcade-card-img" alt="${card.title}">
+          </div>
+          <div class="card-body arcade-body-card">
+            <h5 class="text-uppercase card-title arcade-t-card">${card.title}</h5>
+            <p class="card-text arcade-b-card">${card.description}</p>
+            <div class="button-card-part">
+              <button type="button" class="btn text-uppercase btn-primary arcade-btn add-to-cart" data-index="${cards.indexOf(card)}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;add to cart</button>
+              <p class="button-card-part-price">${card.price}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+    container.insertAdjacentHTML("beforeend", cardHTML);
+  });
+}
+
 // Function to open the custom modal and display game details
 function openCustomModal(game) {
   const modal = document.getElementById("customModal");
   const modalContent = document.getElementById("customModalContent");
 
   modalContent.innerHTML = `
+    <span class="custom-close">&times;</span>
     <h2>${game.title}</h2>
     <img src="${game.imgSrc}" alt="${game.title}" style="max-width: 100%;">
     <p>${game.description}</p>
@@ -134,6 +267,19 @@ function openCustomModal(game) {
 
   // Show modal
   modal.style.display = "block";
+
+  // Close modal when clicking on the close button
+  const closeButton = modal.querySelector(".custom-close");
+  closeButton.addEventListener("click", function() {
+    modal.style.display = "none";
+  });
+
+  // Close modal when clicking outside the modal content area
+  window.addEventListener("click", function(event) {
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  });
 }
 
 // Call the function to create cards when the page loads
