@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Twitch Gaming Streams</title>
+<style>
+  /* Add your custom CSS styles here */
+</style>
+</head>
+<body>
+<div id="twitch-streams"></div>
+
+<script>
+const clientId = 'hjn0xc3jdugmwnz7ljidcfvtpo44ay';
+const apiUrl = 'https://api.twitch.tv/helix/streams';
+
+// Function to fetch Twitch gaming streams
+async function fetchTwitchStreams() {
+  try {
+    const response = await fetch(`${apiUrl}?first=10&game_id=33214`, {
+      headers: {
+        'Client-ID': clientId,
+      },
+    });
+    const data = await response.json();
+    return data.data; // Array of Twitch streams
+  } catch (error) {
+    console.error('Error fetching Twitch streams:', error);
+    return [];
+  }
+}
+
+// Function to display Twitch streams on the webpage
+async function displayTwitchStreams() {
+  const streamsContainer = document.getElementById('twitch-streams');
+  const streams = await fetchTwitchStreams();
+
+  streams.forEach(stream => {
+    const streamElement = document.createElement('div');
+    streamElement.innerHTML = `
+      <div>
+        <h3>${stream.user_name}</h3>
+        <p>${stream.title}</p>
+        <img src="${stream.thumbnail_url.replace('{width}x{height}', '320x180')}">
+        <a href="https://www.twitch.tv/${stream.user_name}" target="_blank">Watch Now</a>
+      </div>
+    `;
+    streamsContainer.appendChild(streamElement);
+  });
+}
+
+// Call the displayTwitchStreams function to fetch and display Twitch streams when the page loads
+window.onload = displayTwitchStreams;
+</script>
+</body>
+</html>

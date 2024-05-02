@@ -91,7 +91,21 @@ cards.forEach(card => {
 
 
 
+// Function to handle click on arcade-sec-expl-btn
+function handleArcadeSectionButtonClick() {
+  const arcadeSectionButton = document.getElementById("arcade-sec-expl-btn");
 
+  // Check if the button exists
+  if (arcadeSectionButton) {
+    arcadeSectionButton.addEventListener("click", function () {
+      // Navigate to arcade.html
+      window.location.href = "arcade.html";
+    });
+  }
+}
+
+// Call the function to handle click on arcade-sec-expl-btn
+handleArcadeSectionButtonClick();
 
 
 

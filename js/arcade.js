@@ -5,61 +5,67 @@ const cards = [
     title: "Red Dead Redemption 2",
     description:
       "Red Dead Redemption 2 is a 2018 action-adventure game developed and published by Rockstar Games. A bounty system governs the response of law enforcement and bounty hunters to crimes committed by the player.",
-      price:"$59.99",
       downSrc:"https://se7en.ws/files/7l_rdr2_setup.exe",
-      category: "adventure"
+      category: "adventure",
+      likeCount: 0, // Initial like count
+      liked: false // Initial liked status
   },
   {
     imgSrc: "Img/arcade-part/arcade-card/er.jpg",
     title: "Elden Ring",
     description:
       "THE NEW FANTASY ACTION RPG. Rise, Tarnished, and be guided by grace to brandish the power of the Elden Ring and become an Elden Lord in the Lands Between.",   
-      price:"$75.99",
       downSrc:"http://surl.li/tiufu",
-      category: "action"
+      category: "action", 
+      likeCount: 220, 
+      liked: false 
   },
   {
     imgSrc: "Img/arcade-part/arcade-card/gta5.jpg",
     title: "Grand Theft Auto V",
     description:
       "Grand Theft Auto V is a 2013 action-adventure game developed by Rockstar North and published by Rockstar Games. It is the seventh main entry in the Grand Theft Auto series, following 2008's Grand Theft Auto IV, and the fifteenth instalment overall.",  
-      price:"$29.99",
+  
       downSrc:"https://files.modyolo.com/GTA%205/GTA5_v0.7_Beta.apk",
-      category: "adventure"
+      category: "adventure",
+      likeCount: 2220, 
+      liked: false 
   },
   {
     imgSrc: "Img/arcade-part/arcade-card/nier.jpg",
     title: "NieR: Automata",
     description:
       "NieR: Automata tells the story of androids 2B, 9S and A2 and their battle to reclaim the machine-driven dystopia overrun by powerful machines.",
-      price:"$39.99",
       downSrc:"https://files.modyolo.com/NieR:%20Automata/NierM.b1.apk",
-      category: "roleplaying" 
+      category: "roleplaying" ,
+      likeCount: 50000, 
+      liked: false 
   },
   {
     imgSrc: "Img/arcade-part/arcade-card/minecraft.jpg",
     title: "Minecraft",
     description:
       "Minecraft is a 2011 sandbox game developed by Mojang Studios and originally released in 2009. The game was created by Markus \"Notch\" Persson in the Java programming language.",
-      price:"$26.95",
       downSrc:"http://surl.li/tiuqa",
-      category: "multiplayer" 
+      category: "multiplayer" ,
+      likeCount: 1000, 
+      liked: false 
   },
   {
     imgSrc: "Img/arcade-part/arcade-card/dota2.jpg",
     title: "Dota 2",
     description:
       "Dota 2 is a 2013 multiplayer online battle arena video game by Valve. The game is a sequel to Defense of the Ancients, a community-created mod for Blizzard Entertainment's Warcraft III: Reign of Chaos.",
-      price:"FREE",
       downSrc:"https://store.steampowered.com/app/570/Dota_2/",
-      category: "multiplayer" 
+      category: "multiplayer" ,
+      likeCount: 50, 
+      liked: false 
   },
   {
     imgSrc: "Img/arcade-part/arcade-card/nier.jpg",
     title: "NieR: Automata",
     description:
       "NieR: Automata tells the story of androids 2B, 9S and A2 and their battle to reclaim the machine-driven dystopia overrun by powerful machines.",
-      price:"$39.99",
      
   },
   {
@@ -67,61 +73,52 @@ const cards = [
     title: "Minecraft",
     description:
       "Minecraft is a 2011 sandbox game developed by Mojang Studios and originally released in 2009. The game was created by Markus \"Notch\" Persson in the Java programming language.",
-      price:"$26.95"
   },
   {
     imgSrc: "Img/arcade-part/arcade-card/dota2.jpg",
     title: "Dota 2",
     description:
       "Dota 2 is a 2013 multiplayer online battle arena video game by Valve. The game is a sequel to Defense of the Ancients, a community-created mod for Blizzard Entertainment's Warcraft III: Reign of Chaos.",
-      price:"FREE"
   },
   {
     imgSrc: "Img/arcade-part/arcade-card/nier.jpg",
     title: "NieR: Automata",
     description:
       "NieR: Automata tells the story of androids 2B, 9S and A2 and their battle to reclaim the machine-driven dystopia overrun by powerful machines.",
-      price:"$39.99"
   },
   {
     imgSrc: "Img/arcade-part/arcade-card/minecraft.jpg",
     title: "Minecraft",
     description:
       "Minecraft is a 2011 sandbox game developed by Mojang Studios and originally released in 2009. The game was created by Markus \"Notch\" Persson in the Java programming language.",
-      price:"$26.95"
   },
   {
     imgSrc: "Img/arcade-part/arcade-card/dota2.jpg",
     title: "Dota 2",
     description:
       "Dota 2 is a 2013 multiplayer online battle arena video game by Valve. The game is a sequel to Defense of the Ancients, a community-created mod for Blizzard Entertainment's Warcraft III: Reign of Chaos.",
-      price:"FREE"
   },
   {
     imgSrc: "Img/arcade-part/arcade-card/nier.jpg",
     title: "NieR: Automata",
     description:
       "NieR: Automata tells the story of androids 2B, 9S and A2 and their battle to reclaim the machine-driven dystopia overrun by powerful machines.",
-      price:"$39.99"
   },
   {
     imgSrc: "Img/arcade-part/arcade-card/minecraft.jpg",
     title: "Minecraft",
     description:
       "Minecraft is a 2011 sandbox game developed by Mojang Studios and originally released in 2009. The game was created by Markus \"Notch\" Persson in the Java programming language.",
-      price:"$26.95"
   },
   {
     imgSrc: "Img/arcade-part/arcade-card/dota2.jpg",
     title: "Dota 2",
     description:
       "Dota 2 is a 2013 multiplayer online battle arena video game by Valve. The game is a sequel to Defense of the Ancients, a community-created mod for Blizzard Entertainment's Warcraft III: Reign of Chaos.",
-      price:"FREE"
   },
   
   // Add more card objects as needed
 ];
-
 
 // Number of cards to load each time
 const cardsPerPage = 6;
@@ -188,7 +185,10 @@ function displayNextBatch(container) {
             <p class="card-text arcade-b-card">${card.description}</p>
             <div class="button-card-part">
               <button type="button" class="btn text-uppercase btn-primary arcade-btn add-to-cart" data-index="${i}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;View More</button>
-              <p class="button-card-part-price">${card.price}</p>
+              <p class="button-card-part-price">
+                <i class="fa-regular fa-heart ${card.liked ? 'liked' : ''}" id="icon-likes-${i}" data-index="${i}" onclick="toggleLike(${i})"></i>
+                <span id="like-count-${i}" style="color: ${card.likeCount > 0 ? 'orange' : 'red'}">${card.likeCount > 0 ? card.likeCount : ''}</span>
+              </p>
             </div>
           </div>
         </div>
@@ -252,13 +252,31 @@ function displayNextBatch(container) {
   });
 }
 
+// Function to toggle like for a card
+function toggleLike(index) {
+  const heartIcon = document.getElementById(`icon-likes-${index}`);
+  const likeCountSpan = document.getElementById(`like-count-${index}`);
+  const liked = cards[index].liked;
+  if (!liked) {
+    cards[index].likeCount++;
+    heartIcon.classList.add("liked");
+    likeCountSpan.style.color = "orange";
+  } else {
+    cards[index].likeCount--;
+    heartIcon.classList.remove("liked");
+    likeCountSpan.style.color = "red";
+  }
+  cards[index].liked = !liked;
+  likeCountSpan.textContent = cards[index].likeCount > 0 ? cards[index].likeCount : '';
+}
+
 // Function to display filtered cards
 function displayFilteredCards(filteredCards, container) {
   // Clear existing cards
   container.innerHTML = "";
 
   // Display filtered cards
-  filteredCards.forEach(card => {
+  filteredCards.forEach((card, index) => {
     const cardHTML = `
       <div class="col-md-4">
         <div class="card arcade-card-one">
@@ -270,7 +288,10 @@ function displayFilteredCards(filteredCards, container) {
             <p class="card-text arcade-b-card">${card.description}</p>
             <div class="button-card-part">
               <button type="button" class="btn text-uppercase btn-primary arcade-btn add-to-cart" data-index="${cards.indexOf(card)}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;add to cart</button>
-              <p class="button-card-part-price">${card.price}</p>
+              <p class="button-card-part-price">
+                <i class="fa-regular fa-heart ${card.liked ? 'liked' : ''}" id="icon-likes-${index}" data-index="${index}" onclick="toggleLike(${index})"></i>
+                <span id="like-count-${index}" style="color: ${card.likeCount > 0 ? 'orange' : 'black'}">${card.likeCount > 0 ? card.likeCount : ''}</span>
+              </p>
             </div>
           </div>
         </div>
@@ -358,3 +379,5 @@ function openCustomModal(game) {
 
 // Call the function to create cards when the page loads
 window.onload = createCards;
+
+
