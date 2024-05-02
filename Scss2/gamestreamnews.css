@@ -63,119 +63,71 @@
     //         
     streams section
     // \*-----------------------------------*/
-.live-sec,
-.offer {
-  padding: 40px 80px 40px 80px !important;
-  background-color: black;
-}
-
-.til {
+#streams-container {
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  text-align: center;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 }
 
-.til a {
-  color: white;
-  text-decoration: none;
+.trending-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.937), rgba(0, 0, 0, 0.937)), url(../Img/about-us/about-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 60px 80px 60px 80px !important;
+}
+
+.stream {
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #302f2f;
+  border-radius: 5px;
+  text-align: center;
+  width: 400px;
+  text-align: center;
+  align-items: center;
+  box-shadow: 0px -1px 10px 0px hsla(0, 100%, 50%, 0.614);
+}
+
+.trending-title {
+  padding-top: 0px;
+  padding-bottom: 60px;
+}
+
+.stream img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.stream h3 {
+  font-weight: 700;
+  text-transform: capitalize;
+  color: #ffffff;
+  font-family: "Barlow", Sans-serif;
+  font-style: italic;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.stream:hover {
+  box-shadow: 0px 0px 20px 5px rgba(255, 0, 0, 0.7);
+}
+
+.stream p {
   font-size: 14px;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  border-radius: 4px;
-  background: transparent;
-  padding: 5px 10px;
-  font-weight: 600;
-  transition: all 0.3s ease-in-out;
+  color: #666;
 }
 
-.til a:hover {
-  box-shadow: 0px 0px 0px 4px rgba(255, 255, 255, 0.2);
-}
-
-.live-title {
-  color: white;
-  font-size: 20px;
-  font-weight: 900;
-}
-
-.live-main {
-  margin-top: 20px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-row-gap: 10px;
-  grid-column-gap: 5px;
-}
-
-.live-card {
-  width: 100%;
-  background-color: #1e1f20;
-  position: relative;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-  flex-basis: 37%;
-  box-shadow: 0 10px 6px -6px rgb(0, 0, 0);
-  box-shadow: 4px 4px 4px 4px rgba(17, 5, 5, 0.5);
-}
-
-.main-img img {
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  height: 200px;
-}
-
-.live-play {
-  position: absolute;
-  top: 30%;
-  left: 40%;
-}
-
-.live-text {
-  position: absolute;
-  top: 3%;
-  width: 60px;
-  left: 2%;
-  color: white;
-  background: url("../Img/streaming/download.png");
-  background-size: 15px;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-position-x: 5px;
-  box-shadow: 0 0 20px #a94847;
-  padding: 2px 0px;
-  z-index: 2;
-  background-color: rgba(0, 0, 0, 0.8);
-  transition: opacity 0.6s;
-}
-
-.live-text p {
-  font-size: 15px;
-  text-align: end;
-  padding-right: 8px;
-  margin-bottom: 0px;
-}
-
-.live-des {
-  margin-top: 0;
-  background-color: #1660a5;
-  display: flex;
-  padding: 8px 10px;
-  justify-content: space-between;
-  align-items: center;
-  color: white;
-}
-
-.live-left {
-  font-family: "Roboto";
-  font-size: 15px;
-  font-weight: 500;
-}
-
-.live-des p {
-  font-size: 15px;
-  font-weight: bold;
-}
-
-.live-des p i {
-  font-size: 15px;
-  font-weight: bold;
-  padding-right: 5px;
+.stream a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 3px;
 }/*# sourceMappingURL=gamestreamnews.css.map */

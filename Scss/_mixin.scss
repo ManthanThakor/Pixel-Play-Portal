@@ -127,6 +127,10 @@
   margin-bottom: $mm !important;
 }
 
+@mixin margin-l-r($mmm, $mm) {
+  margin-left: $mmm !important;
+  margin-right: $mm !important;
+}
 
 
   // for text align and justfy  center
