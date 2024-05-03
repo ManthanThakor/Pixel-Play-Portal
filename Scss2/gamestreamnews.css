@@ -165,4 +165,36 @@
   outline-color: rgba(255, 255, 255, 0);
   outline-offset: 15px;
   text-shadow: 1px 1px 2px #427388;
+}
+
+/*-----------------------------*/
+/*--------NEWS SECTION-----------*/
+.news-fullpart {
+  padding-top: 40px !important;
+  padding-bottom: 0px !important;
+}
+
+.news-part-oneimg {
+  width: 100%;
+  height: 100%;
+  -o-object-position: center;
+     object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.news-sec {
+  padding: 40px 80px 40px 80px !important;
+  border-bottom: rgba(255, 255, 255, 0.279) solid 2px;
+  background-color: rgba(0, 0, 0, 0.95);
+}
+
+.news-tit-parttwo {
+  font-weight: 400;
+  text-transform: capitalize;
+  color: #ffffff;
+  font-family: "Barlow", Sans-serif;
+  font-style: italic;
+  margin-bottom: 0px !important;
+  font-size: 16px;
 }/*# sourceMappingURL=gamestreamnews.css.map */
