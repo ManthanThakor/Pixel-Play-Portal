@@ -1,69 +1,69 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Live Streams</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fetch Games Data</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-<div id="liveStreams"></div>
-
-<script>
-// Function to fetch live streams
-function fetchLiveStreams(apiKey) {
-    // API endpoint for live broadcasts
-    var endpoint = 'https://www.googleapis.com/youtube/v3/liveBroadcasts';
-
-    // Parameters for the API request
-    var params = {
-        key: apiKey,
-        part: 'snippet',
-        maxResults: 5 // Number of live streams to retrieve
-    };
-
-    // Constructing the API URL
-    var apiUrl = endpoint + '?' + $.param(params);
-
-    // Making the API request
-    $.getJSON(apiUrl)
-    .done(function(response) {
-        // Process the response
-        if (response.items.length > 0) {
-            // Loop through each live stream item
-            $.each(response.items, function(index, item) {
-                var title = item.snippet.title;
-                var thumbnail = item.snippet.thumbnails.medium.url;
-                var videoId = item.snippet.liveChatId; // This will be used to embed the live chat, adjust accordingly
-
-                // Display live stream information
-                var html = '<div>';
-                html += '<h2>' + title + '</h2>';
-                html += '<img src="' + thumbnail + '" alt="' + title + '">';
-                html += '</div>';
-
-                $('#liveStreams').append(html);
-            });
-        } else {
-            $('#liveStreams').html('<p>No live streams available</p>');
-        }
-    })
-    .fail(function(jqxhr, textStatus, error) {
-        var err = textStatus + ', ' + error;
-        console.error('Request failed: ' + err);
-        $('#liveStreams').html('<p>Error loading live streams</p>');
-    });
+    <style>
+        body {
+  font-family: Arial, sans-serif;
 }
 
-// Call the function with your API key
-$(document).ready(function() {
-    var apiKey = 'YOUR_API_KEY';
-    fetchLiveStreams(apiKey);
-});
-</script>
+h1 {
+  text-align: center;
+}
 
-<!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+#games-list {
+  margin: 20px auto;
+  max-width: 600px;
+}
 
+.game {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.game img {
+  width: 100px;
+  height: auto;
+  float: left;
+  margin-right: 10px;
+}
+
+.game h2 {
+  margin-top: 0;
+}
+
+.game p {
+  margin-bottom: 5px;
+}
+
+
+    </style>
+  <h1>Games Data</h1>
+  <div id="games-list"></div>
+
+  <script>
+  const url = 'https://esportapi1.p.rapidapi.com/api/esport/search/ATK';
+const options = {
+	method: 'GET', // Add the equals sign here
+	headers: {
+		'X-RapidAPI-Key': 'a7d906860dmsha9e0fd650cdd6cap18af61jsn7b13dd16c19f',
+		'X-RapidAPI-Host': 'esportapi1.p.rapidapi.com' // Add the equals sign here
+	}
+};
+
+try {
+	const response = await fetch(url, options);
+	const result = await response.text();
+	console.log(result);s
+} catch (error) {
+	console.error(error);
+}
+  </script>
 </body>
-</html>
+</html> -->

@@ -1,5 +1,4 @@
 const apiKey = 'AIzaSyBcNzyfg4pUjAyGjvhpJM3NYfy08osJduw'; // Replace with your YouTube API key
-// const apiKey = 'YOUR_YOUTUBE_API_KEY'; // Replace with your YouTube API key
 const apiUrl = 'https://www.googleapis.com/youtube/v3/search';
 let nextPageToken = '';
 
@@ -59,7 +58,7 @@ function createStreamElement(stream) {
       <img src="${stream.snippet.thumbnails.medium.url}">
       <h3>${stream.snippet.title}</h3>
       <p>Channel: ${stream.snippet.channelTitle}</p>
-      <a href="https://www.youtube.com/watch?v=${stream.id.videoId}" target="_blank">Watch</a>
+      <a href="https://www.youtube.com/watch?v=${stream.id.videoId}" target="_blank">Watch <i class="fa-brands fa-youtube" id="youtube-part"></i></a>
     </div>
   `;
   return streamElement;
@@ -72,5 +71,15 @@ function createLoadMoreButton() {
   return loadMoreBtn;
 }
 
+
+
+function createLoadMoreButton() {
+    const loadMoreBtn = document.createElement('button');
+    loadMoreBtn.textContent = 'Load More';
+    loadMoreBtn.classList.add('load-more-btn'); // Add this line to give a class to the button
+    return loadMoreBtn;
+  }
+
 // Call displayLiveStreams() function to fetch and display live streams when the page loads
 window.onload = displayLiveStreams;
+// Function to create the "Load More" button
