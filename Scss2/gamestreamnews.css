@@ -177,6 +177,10 @@
   padding: 40px 80px 40px 80px !important;
 }
 
+#news-container {
+  flex-direction: column;
+}
+
 .news-part-one {
   text-align: center;
 }

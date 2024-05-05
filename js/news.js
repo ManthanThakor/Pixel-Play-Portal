@@ -88,5 +88,116 @@ document.querySelector(".reset-part-poll").addEventListener('click', reset);
 
 
 
-  // 
-  
+  // // 
+  //   // Array of news data
+  //   var newsData = [
+  //     {
+  //         imageUrl: "https://images2.alphacoders.com/135/thumb-1920-1358046.png",
+  //         title: "REDFALL",
+  //         subTitle: "Redfall is Still Missing DLC Characters 1 Year After Launch",
+  //         description: "Players are wondering where the DLC they paid for in the $100 Bite Back edition of Redfall is, a year after the game's notably disappointing launch."
+  //     }, {
+  //       imageUrl: "https://images2.alphacoders.com/135/thumb-1920-1358046.png",
+  //       title: "REDFALL",
+  //       subTitle: "Redfall is Still Missing DLC Characters 1 Year After Launch",
+  //       description: "Players are wondering where the DLC they paid for in the $100 Bite Back edition of Redfall is, a year after the game's notably disappointing launch."
+  //   },
+  //     // Add more news objects here if needed
+  // ];
+
+  // // Function to dynamically create news sections
+  // function createNewsSection(data) {
+  //     var newsSection = document.createElement('div');
+  //     newsSection.classList.add('part-one-news-sec');
+
+  //     var innerHTML = `
+  //         <div class="news-part-one">
+  //             <img src="${data.imageUrl}" alt="" class="news-part-oneimg">
+  //         </div>
+  //         <div class="news-part-two">
+  //             <div class="text-uppercase news-game-title">${data.title}</div>
+  //             <div class="text-uppercase news-game-title-two">${data.subTitle}</div>
+  //             <div class="news-game-discri">${data.description}</div>
+  //             <div class="btn-viewnews">
+  //                 <button class="text-uppercase view-more-game">view more</button>
+  //             </div>
+  //         </div>
+  //     `;
+
+  //     newsSection.innerHTML = innerHTML;
+  //     return newsSection;
+  // }
+
+  // // Function to display news sections on the page
+  // function displayNews() {
+  //     var container = document.getElementById('news-container');
+  //     // Clear existing content
+  //     container.innerHTML = '';
+
+  //     // Loop through news data and create news sections
+  //     newsData.forEach(function(news) {
+  //         var newsSection = createNewsSection(news);
+  //         container.appendChild(newsSection);
+  //     });
+  // }
+
+  // // Call the function to display news on page load
+  // displayNews();
+
+
+
+
+
+
+
+
+   // Array of news data
+   var newsData = [
+    {
+        imageUrl: "https://images2.alphacoders.com/135/thumb-1920-1358046.png",
+        title: "REDFALL",
+        subTitle: "Redfall is Still Missing DLC Characters 1 Year After Launch",
+        description: "Players are wondering where the DLC they paid for in the $100 Bite Back edition of Redfall is, a year after the game's notably disappointing launch.",
+        detailsUrl: "news-details.html" // URL of the details page
+    },
+    // Add more news objects here if needed
+];
+
+// Function to dynamically create news sections
+function createNewsSection(data) {
+    var newsSection = document.createElement('div');
+    newsSection.classList.add('part-one-news-sec');
+
+    var innerHTML = `
+        <div class="news-part-one">
+            <img src="${data.imageUrl}" alt="" class="news-part-oneimg">
+        </div>
+        <div class="news-part-two">
+            <div class="text-uppercase news-game-title">${data.title}</div>
+            <div class="text-uppercase news-game-title-two">${data.subTitle}</div>
+            <div class="news-game-discri">${data.description}</div>
+            <div class="btn-viewnews">
+                <a href="${data.detailsUrl}" class="text-uppercase view-more-game" target="_blank">View More</a>
+            </div>
+        </div>
+    `;
+
+    newsSection.innerHTML = innerHTML;
+    return newsSection;
+}
+
+// Function to display news sections on the page
+function displayNews() {
+    var container = document.getElementById('news-container');
+    // Clear existing content
+    container.innerHTML = '';
+
+    // Loop through news data and create news sections
+    newsData.forEach(function(news) {
+        var newsSection = createNewsSection(news);
+        container.appendChild(newsSection);
+    });
+}
+
+// Call the function to display news on page load
+displayNews();

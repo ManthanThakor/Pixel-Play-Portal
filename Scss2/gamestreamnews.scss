@@ -194,7 +194,9 @@
 .news-fullpart {
   @include padd(40px, 80px, 40px, 80px);
 }
-
+#news-container{
+  flex-direction: column;
+}
 .news-part-one {
   text-align: center;
 }
