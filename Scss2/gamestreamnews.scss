@@ -689,7 +689,23 @@ cursor: pointer;
   border-radius: 1ch;
 }
 
+.poll-title-part-one{
+  @include flex-row;
+  gap: 5px;
+}
 
+.fa-xbox{
+  color: $gr;
+padding-top: 4px;
+  font-size: 16px;
+
+}
+.poll-ti{
+  color: $gr;
+  font-weight: 700;
+  font-size: 16px;
+  font-family: "Barlow", Sans-serif;
+}
 
 /*-----------------------------------*\
     //         
@@ -706,5 +722,86 @@ cursor: pointer;
       object-position: center;
     }
     .newsdetails-highlight-t{
-      
+      @include  flex-row;
+      @include pad-t-b(20px,20px);
+      gap:5px;
     }
+    #high-t{
+      font-weight: 700;
+      color: $gr;
+      font-size: 30px;
+      padding: 5px;
+      padding-top: 7px;
+    }
+    .high-t{
+      font-weight: 700;
+      color: $gr;
+      font-size: 30px;
+   
+      font-family: "Barlow", Sans-serif;
+       margin-bottom: 0px !important;
+    }
+    #news-details-title{
+      font-weight: 800;
+      color:$gr;
+      font-size: 16px;
+      font-family: "CustomFont1";
+       margin-bottom: 0px !important;
+       font-style: italic;
+    }
+    #news-details-subtitle{
+      font-weight: 800;
+      color: $fefe;
+      font-size: 30px;
+      font-family: "Barlow", Sans-serif;
+       margin-bottom: 0px !important;
+       @include pad-t-b(10px,10px);
+       letter-spacing: 2px;
+    }
+    .newhighlight-di{
+      font-weight: 700;
+      color: $fefe;
+      font-size: 18px;
+      font-family: "Barlow", Sans-serif;
+       margin-bottom: 0px !important;
+     
+       text-transform: capitalize;
+    }
+    #news-details-highlight-dis-one,#news-details-highlight-dis-two{
+padding-bottom: 15px;
+    }
+    .news-details-highlight-dis-one{
+      // @include  flex-row;
+      // @include pad-t-b(20px,20px);
+      // gap:5px;
+      border-left: #00ffa271 2px solid;
+    }
+    .n-d{
+      @include flex-row;
+    }
+    .fa-square{
+      color: $gr;
+      font-size: 12px;
+      font-family: "Barlow", Sans-serif;
+     
+    @include padd(6px,10px,0,30px);
+    }
+    .highlight-section-details{
+
+    }
+    .highlight-poll{
+      @include flex-row;
+      gap: 30px;
+    }
+#news-details-description{
+  font-weight: 500;
+  color: $fefe;
+      font-size: 18px;
+      font-family: "Barlow", Sans-serif;
+       margin-bottom: 0px !important;
+       font-style: italic;
+       @include pad-t-b(0px,20px);
+}
+.pollpart-ops{
+  padding-top: 20px;
+}
