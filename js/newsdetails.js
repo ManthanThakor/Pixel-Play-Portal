@@ -35,3 +35,20 @@ function populateNewsDetails() {
 
 // Call the function to populate news details on page load
 populateNewsDetails();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
