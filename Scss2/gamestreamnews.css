@@ -591,4 +591,21 @@
   background: rgba(22, 22, 22, 0.8901960784);
   cursor: pointer;
   border-radius: 1ch;
+}
+
+/*-----------------------------------*\
+    //         
+  news details
+    // \*-----------------------------------*/
+.news-deatils-part {
+  padding: 60px 80px 60px 80px !important;
+}
+
+#news-details-img {
+  height: 500px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }/*# sourceMappingURL=gamestreamnews.css.map */

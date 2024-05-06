@@ -689,3 +689,22 @@ cursor: pointer;
   border-radius: 1ch;
 }
 
+
+
+/*-----------------------------------*\
+    //         
+  news details
+    // \*-----------------------------------*/
+
+    .news-deatils-part{
+      @include padd(60px,80px,60px,80px);
+    }
+    #news-details-img{
+      height: 500px;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+    .newsdetails-highlight-t{
+      
+    }

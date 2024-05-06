@@ -153,7 +153,8 @@ document.querySelector(".reset-part-poll").addEventListener('click', reset);
       imageUrl: "https://images2.alphacoders.com/135/thumb-1920-1358046.png",
       title: "REDFALL",
       subTitle: "Redfall is Still Missing DLC Characters 1 Year After Launch",
-      description: "Players are wondering where the DLC they paid for in the $100 Bite Back edition of Redfall is, a year after the game's notably disappointing launch."
+      description: "Players are wondering where the DLC they paid for in the $100 Bite Back edition of Redfall is, a year after the game's notably disappointing launch.",
+      Highlight: "Fans are buzzing about how the icon for Helldivers 2's Orbital Precision Strike Stratagem is misaligned, sparking discussions within the community about attention to detail. Arrowhead Game Studios has addressed performance issues in Helldivers 2 with update 1.000.301 to enhance players' experience.Players are active and invested in Helldivers 2, exploring new strategies and mysteries like the discovery of massive tunnels on Terminid planets."
   },
   {
       imageUrl: "https://images2.alphacoders.com/135/thumb-1920-1358046.png",
