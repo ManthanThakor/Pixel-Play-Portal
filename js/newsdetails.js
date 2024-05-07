@@ -27,9 +27,11 @@ function populateNewsDetails() {
         document.getElementById('news-details-highlight-dis-three').textContent = decodedData.Highlightthree;
 
         // Populate additional highlights
-        document.getElementById('news-details-h-highlight').textContent = decodedData.h;
-        document.getElementById('news-details-highlighttwo-highlight').textContent = decodedData.Highlighttwo;
-        document.getElementById('news-details-highlightthree-highlight').textContent = decodedData.Highlightthree;
+        // document.getElementById('news-details-h-highlight').textContent = decodedData.h;
+        // document.getElementById('news-details-highlighttwo-highlight').textContent = decodedData.Highlighttwo;
+        // document.getElementById('news-details-highlightthree-highlight').textContent = decodedData.Highlightthree;
+        document.getElementById('news-details-more-p').textContent = decodedData.paraone;
+        document.getElementById('news-details-more-p-two').textContent = decodedData.paratwo;
     }
 }
 

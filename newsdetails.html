@@ -105,6 +105,26 @@
             box-shadow: 0 -5px 3px -3px rgb(255, 255, 255),
                 0 5px 3px -3px rgb(255, 255, 255);
         }
+
+
+        .new-det {
+            color: #15ff00;
+            font-size: 20px;
+            font-weight: 600;
+            font-family: "Barlow", Sans-serif;
+        }
+
+        .new-det a {
+            color: #7bff00;
+            font-size: 20px;
+            font-weight: 600;
+            font-family: "Barlow", Sans-serif;
+            text-decoration: none;
+        }
+
+        .new-det a:hover {
+            color: #ff0000;
+        }
     </style>
 
     <!--------------------------------------- Navbar ------------------------------->
@@ -244,12 +264,15 @@
 
     <!-- NEWS title text part -->
 
-
     <div class="container-fluid tourn-title">
         <div class="row">
             <div class="col-xl-6 tour-t-one">
                 <div class="tourn-title-text">
-                    <p class="text-uppercase">Gaming News</p>
+                    <p class="text-uppercase">news details</p>
+                </div>
+                <div class="new-det">
+                    <a href="index.html"><i class="fa-solid fa-house"></i></a>&nbsp;&nbsp;>&nbsp;&nbsp;<a
+                        href="news.html">NEWS</a>&nbsp;&nbsp;>&nbsp;&nbsp;<a href="newsdetails.html">NEWSDETAILS</a>
                 </div>
             </div>
             <div class="col-xl-6 tour-t-two">
@@ -283,123 +306,130 @@
                         <div class="news-details-img">
                             <img src="" alt="" id="news-details-img">
                         </div>
-                        <div class="highlight-poll">
+                        <div class="row highlight-poll">
+                            <diV class="col-xl-8">
 
 
-                            <div class="highlight-section-details">
-                                <div class="newsdetails-highlight-t">
-                                    <i class="fa-solid fa-spider" id="high-t"></i>
-                                    <p class="high-t">HIGHLIGHTS</p>
+
+                                <div class="highlight-section-details">
+                                    <div class="newsdetails-highlight-t">
+                                        <i class="fa-solid fa-spider" id="high-t"></i>
+                                        <p class="high-t">HIGHLIGHTS</p>
+                                    </div>
+                                    <div class="news-details-highlight-dis-one">
+                                        <div class="n-d">
+                                            <i class="fa-solid fa-square"></i>
+                                            <p class="newhighlight-di" id="news-details-highlight-dis-one"></p>
+                                        </div>
+                                        <div class="n-d">
+                                            <i class="fa-solid fa-square"></i>
+                                            <p class="newhighlight-di" id="news-details-highlight-dis-two"></p>
+                                        </div>
+                                        <div class="n-d">
+                                            <i class="fa-solid fa-square"></i>
+                                            <p class="newhighlight-di" id="news-details-highlight-dis-three"></p>
+                                        </div>
+                                    </div>
+
                                 </div>
-                                <div class="news-details-highlight-dis-one">
-                                    <div class="n-d">
-                                        <i class="fa-solid fa-square"></i>
-                                        <p class="newhighlight-di" id="news-details-highlight-dis-one"></p>
-                                    </div>
-                                    <div class="n-d">
-                                        <i class="fa-solid fa-square"></i>
-                                        <p class="newhighlight-di" id="news-details-highlight-dis-two"></p>
-                                    </div>
-                                    <div class="n-d">
-                                        <i class="fa-solid fa-square"></i>
-                                        <p class="newhighlight-di" id="news-details-highlight-dis-three"></p>
-                                    </div>
+                                <div class="newdetails-para-sec">
+                                    <p class="newsmore-part" id="news-details-more-p"></p>
+                                    <p class="newsmore-part" id="news-details-more-p-two"></p>
                                 </div>
-                                
-                            </div>
-
-                            <div class="pollpart-ops">
-                                <div class="poll-title-part-one">
-                                    <i class="fa-brands fa-xbox"></i>
-                                    <p class="text-uppercase poll-ti">poll</p>
-                                </div>
-                                <main id="app">
-
-                                    <div class="post">
-                                        <p class="text poll-quation">
-                                            What is your favorite gaming franchise?
-                                        </p>
-
-                                        <section class="poll">
-                                            <ul class="poll-choices">
-                                                <li class="poll-choice choice-1">
-                                                    <label for="choice-1">
-                                                        <div class="poll-result">
-                                                            <div class="star">
-                                                                <div></div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="poll-label">
-                                                            <div class="radio"><input type=radio id="choice-1"
-                                                                    name="poll" /></div>
-                                                            <div class="answer">Call of Duty</div>
-                                                        </div>
-                                                        <p class="poll-percent">
-                                                            0%
-                                                        </p>
-                                                    </label>
-                                                </li>
-                                                <li class="poll-choice choice-2">
-                                                    <label for="choice-2">
-                                                        <div class="poll-result">
-                                                            <div class="star">
-                                                                <div></div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="poll-label">
-                                                            <div class="radio"><input type=radio id="choice-2"
-                                                                    name="poll" /></div>
-                                                            <div class="answer">The Legend of Zelda</div>
-                                                        </div>
-                                                        <p class="poll-percent">
-                                                            0%
-                                                        </p>
-                                                    </label>
-                                                </li>
-                                                <li class="poll-choice choice-3">
-                                                    <label for="choice-3">
-                                                        <div class="poll-result">
-                                                            <div class="star">
-                                                                <div></div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="poll-label">
-                                                            <div class="radio"><input type=radio id="choice-3"
-                                                                    name="poll" /></div>
-                                                            <div class="answer">Grand Theft Auto</div>
-                                                        </div>
-                                                        <p class="poll-percent">
-                                                            0%
-                                                        </p>
-                                                    </label>
-                                                </li>
-                                                <li class="poll-choice choice-4">
-                                                    <label for="choice-4">
-                                                        <div class="poll-result">
-                                                            <div class="star">
-                                                                <div></div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="poll-label">
-                                                            <div class="radio"><input type=radio id="choice-4"
-                                                                    name="poll" /></div>
-                                                            <div class="answer">Mario Bros</div>
-                                                        </div>
-                                                        <p class="poll-percent">
-                                                            0%
-                                                        </p>
-                                                    </label>
-                                                </li>
-                                            </ul>
-                                        </section>
+                            </diV>
+                            <diV class="col-xl-4">
+                                <div class="pollpart-ops">
+                                    <div class="poll-title-part-one">
+                                        <i class="fa-brands fa-xbox"></i>
+                                        <p class="text-uppercase poll-ti">poll</p>
                                     </div>
+                                    <main id="app">
 
-                                    <button class="reset-part-poll">Reset</button>
+                                        <div class="post">
+                                            <p class="text poll-quation">
+                                                What is your favorite gaming franchise?
+                                            </p>
 
-                                </main>
-                            </div>
+                                            <section class="poll">
+                                                <ul class="poll-choices">
+                                                    <li class="poll-choice choice-1">
+                                                        <label for="choice-1">
+                                                            <div class="poll-result">
+                                                                <div class="star">
+                                                                    <div></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="poll-label">
+                                                                <div class="radio"><input type=radio id="choice-1"
+                                                                        name="poll" /></div>
+                                                                <div class="answer">Call of Duty</div>
+                                                            </div>
+                                                            <p class="poll-percent">
+                                                                0%
+                                                            </p>
+                                                        </label>
+                                                    </li>
+                                                    <li class="poll-choice choice-2">
+                                                        <label for="choice-2">
+                                                            <div class="poll-result">
+                                                                <div class="star">
+                                                                    <div></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="poll-label">
+                                                                <div class="radio"><input type=radio id="choice-2"
+                                                                        name="poll" /></div>
+                                                                <div class="answer">The Legend of Zelda</div>
+                                                            </div>
+                                                            <p class="poll-percent">
+                                                                0%
+                                                            </p>
+                                                        </label>
+                                                    </li>
+                                                    <li class="poll-choice choice-3">
+                                                        <label for="choice-3">
+                                                            <div class="poll-result">
+                                                                <div class="star">
+                                                                    <div></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="poll-label">
+                                                                <div class="radio"><input type=radio id="choice-3"
+                                                                        name="poll" /></div>
+                                                                <div class="answer">Grand Theft Auto</div>
+                                                            </div>
+                                                            <p class="poll-percent">
+                                                                0%
+                                                            </p>
+                                                        </label>
+                                                    </li>
+                                                    <li class="poll-choice choice-4">
+                                                        <label for="choice-4">
+                                                            <div class="poll-result">
+                                                                <div class="star">
+                                                                    <div></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="poll-label">
+                                                                <div class="radio"><input type=radio id="choice-4"
+                                                                        name="poll" /></div>
+                                                                <div class="answer">Mario Bros</div>
+                                                            </div>
+                                                            <p class="poll-percent">
+                                                                0%
+                                                            </p>
+                                                        </label>
+                                                    </li>
+                                                </ul>
+                                            </section>
+                                        </div>
 
+                                        <button class="reset-part-poll">Reset</button>
 
+                                    </main>
+                                </div>
+
+                            </diV>
 
                         </div>
 
@@ -569,95 +599,95 @@
     });
   </script> -->
 
-<script>
-    
-// js for poll 
+        <script>
 
-const choices = document.querySelectorAll('input[name=poll]');
+            // js for poll 
 
-const increaseNumber = (node,value) => {
-  node.innerText = "0%";
-  node.innerText = value + "%";
-  animateNumber(0,value, 1200,easeQuad,function(v) {
-    node.innerText = Math.ceil(v) + "%";
-  })
-}
+            const choices = document.querySelectorAll('input[name=poll]');
 
-const reset = () => {
-  choices.forEach((c,i) => {
-    const pollChoice = c.closest(".poll-choice");
-    const result = pollChoice.querySelector(".poll-result");
-    c.closest(".poll").classList.remove("answered");
-    pollChoice.classList.remove("winner");
-    result.style.setProperty("--percent", 0 + "%");
-    pollChoice.querySelector(".poll-percent").innerText = "0%"; 
-  })
-}
+            const increaseNumber = (node, value) => {
+                node.innerText = "0%";
+                node.innerText = value + "%";
+                animateNumber(0, value, 1200, easeQuad, function (v) {
+                    node.innerText = Math.ceil(v) + "%";
+                })
+            }
 
-const handleChange = event => {
-  const choice = event.target;
-  const choiceIndex = [...choices].indexOf(choice);
-  let total = 100;
-  let remaining = total;
-  let values = [];
-  choices.forEach((c,i) => {
-    let r = Math.ceil(Math.random() * remaining);
-    remaining -= r;
-    values[i] = r;
-  });
-  values[values.length-1] = values[values.length-1] + remaining;
-  choices.forEach((c,i) => {
-    const pollChoice = c.closest(".poll-choice");
-    const result = pollChoice.querySelector(".poll-result");
-    pollChoice.classList.remove("winner");
-    if ( values[i] === Math.max(...values) ) {
-      pollChoice.classList.add("winner");
-    }
-    result.style.setProperty("--percent", values[i] + "%");
-    increaseNumber(pollChoice.querySelector(".poll-percent"), values[i]);
-      
-  });
-  choice.closest(".poll").classList.add("answered");
-}
+            const reset = () => {
+                choices.forEach((c, i) => {
+                    const pollChoice = c.closest(".poll-choice");
+                    const result = pollChoice.querySelector(".poll-result");
+                    c.closest(".poll").classList.remove("answered");
+                    pollChoice.classList.remove("winner");
+                    result.style.setProperty("--percent", 0 + "%");
+                    pollChoice.querySelector(".poll-percent").innerText = "0%";
+                })
+            }
 
-choices.forEach(choice => {
-  choice.addEventListener('change', handleChange );
-});
+            const handleChange = event => {
+                const choice = event.target;
+                const choiceIndex = [...choices].indexOf(choice);
+                let total = 100;
+                let remaining = total;
+                let values = [];
+                choices.forEach((c, i) => {
+                    let r = Math.ceil(Math.random() * remaining);
+                    remaining -= r;
+                    values[i] = r;
+                });
+                values[values.length - 1] = values[values.length - 1] + remaining;
+                choices.forEach((c, i) => {
+                    const pollChoice = c.closest(".poll-choice");
+                    const result = pollChoice.querySelector(".poll-result");
+                    pollChoice.classList.remove("winner");
+                    if (values[i] === Math.max(...values)) {
+                        pollChoice.classList.add("winner");
+                    }
+                    result.style.setProperty("--percent", values[i] + "%");
+                    increaseNumber(pollChoice.querySelector(".poll-percent"), values[i]);
 
-// ----
+                });
+                choice.closest(".poll").classList.add("answered");
+            }
 
-document.querySelector(".reset-part-poll").addEventListener('click', reset);
+            choices.forEach(choice => {
+                choice.addEventListener('change', handleChange);
+            });
+
+            // ----
+
+            document.querySelector(".reset-part-poll").addEventListener('click', reset);
 
 
-  function easeQuad(t) {
-    return t*t/(2*(t*t-t)+1)
-  }
-  
-  function animateNumber(
-    start,
-    end,
-    duration,
-    easingFunction,
-    callback 
-  ) {
-    const startTime = Date.now();
-    const endTime = startTime + duration;
-    const change = end - start;
-    const tick = () => {
-      const now = Date.now();
-      if (now >= endTime) {
-        callback(end);
-      } else {
-        const elapsed = now - startTime;
-        const value = easingFunction(elapsed / duration) * change + start;
-        callback(value);
-        requestAnimationFrame(tick);
-      }
-    };
-    tick();
-  }
+            function easeQuad(t) {
+                return t * t / (2 * (t * t - t) + 1)
+            }
 
-</script>
+            function animateNumber(
+                start,
+                end,
+                duration,
+                easingFunction,
+                callback
+            ) {
+                const startTime = Date.now();
+                const endTime = startTime + duration;
+                const change = end - start;
+                const tick = () => {
+                    const now = Date.now();
+                    if (now >= endTime) {
+                        callback(end);
+                    } else {
+                        const elapsed = now - startTime;
+                        const value = easingFunction(elapsed / duration) * change + start;
+                        callback(value);
+                        requestAnimationFrame(tick);
+                    }
+                };
+                tick();
+            }
+
+        </script>
 </body>
 
 </html>

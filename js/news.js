@@ -90,116 +90,229 @@ document.querySelector(".reset-part-poll").addEventListener('click', reset);
 
 
 
-
-
-
-
-  var newsData = [
-    {
-        imageUrl: "https://images2.alphacoders.com/135/thumb-1920-1358046.png",
-        title: "REDFALL",
-        subTitle: "Redfall is Still Missing DLC Characters 1 Year After Launch",
-        description: "A Helldivers 2 fan uncovers a subtle error in the icon of a popular Stratagem, igniting community discussion and highlighting player dedication.",
-        h: "Fans are buzzing about how the icon for Helldivers 2's Orbital Precision Strike Stratagem is misaligned, sparking discussions within the community about attention to detail.",
-        Highlighttwo: "Arrowhead Game Studios has addressed performance issues in Helldivers 2 with update 1.000.301 to enhance players' experience.",
-        Highlightthree: "Players are active and invested in Helldivers 2, exploring new strategies and mysteries like the discovery of massive tunnels on Terminid planets."
-    },
-    {
-        imageUrl: "https://images2.alphacoders.com/135/thumb-1920-1358046.png",
-        title: "REDFALL2",
-        subTitle: "Redfall22 is Still Missing DLC Characters 1 Year After Launch",
-        description: "Players are wondering where the DLC they paid for in the $100 Bite Back edition of Redfall is, a year after the game's notably disappointing launch22.",
-        h: "Fail.",
-        Highlighttwo: "Arroance players' experience.",
-        Highlightthree: "Playe planets."
-    },
-    {
-      imageUrl: "",
-      title: "",
-      subTitle: "",
-      description: "",
-      h: "",
-      Highlighttwo: "",
-      Highlightthree: ""
-  },{
+// for news section
+var newsData = [
+  {
+      imageUrl: "newsdetails/helldivers-2-orbital-precision-strike-imprecise.jpg",
+      title: "HELLDIVERS 2",
+      subTitle: "Redfall is Still Missing DLC Characters 1 Year After Launch",
+      description: "A Helldivers 2 fan uncovers a subtle error in the icon of a popular Stratagem, igniting community discussion and highlighting player dedication.",
+      h: "Fans are buzzing about how the icon for Helldivers 2's Orbital Precision Strike Stratagem is misaligned, sparking discussions within the community about attention to detail.",
+      Highlighttwo: "Arrowhead Game Studios has addressed performance issues in Helldivers 2 with update 1.000.301 to enhance players' experience.",
+      Highlightthree: "Players are active and invested in Helldivers 2, exploring new strategies and mysteries like the discovery of massive tunnels on Terminid planets.",
+   paraone:"Helldivers 2 fans are buzzing about a new revelation: a keen-eyed player has spotted a subtle issue with the icon for one of the game's popular Stratagems, causing a stir within the community. Helldivers 2, developed by Arrowhead Game Studios, is a cooperative third-person shooter set in a dystopian future where players battle against alien forces on various planets. The game features a wide array of Stratagems, powerful abilities that players can deploy to aid them in combat, including the Orbital Precision Strike, which has gotten a lot of attention for its effectiveness in eliminating foes.",
+   paratwo:"Helldivers 2 fans are buzzing about a new revelation: a keen-eyed player has spotted a subtle issue with the icon for one of the game's popular Stratagems, causing a stir within the community. Helldivers 2, developed by Arrowhead Game Studios, is a cooperative third-person shooter set in a dystopian future where players battle against alien forces on various planets. The game features a wide array of Stratagems, powerful abilities that players can deploy to aid them in combat, including the Orbital Precision Strike, which has gotten a lot of attention for its effectiveness in eliminating foes."
+  },
+  {
     imageUrl: "",
     title: "",
     subTitle: "",
     description: "",
     h: "",
     Highlighttwo: "",
-    Highlightthree: ""
-},{
+    Highlightthree: "",
+ paraone:"",
+ paratwo:""
+},
+{
   imageUrl: "",
   title: "",
   subTitle: "",
   description: "",
   h: "",
   Highlighttwo: "",
-  Highlightthree: ""
-},{
+  Highlightthree: "",
+paraone:"",
+paratwo:""
+},
+{
   imageUrl: "",
   title: "",
   subTitle: "",
   description: "",
   h: "",
   Highlighttwo: "",
-  Highlightthree: ""
-},{
+  Highlightthree: "",
+paraone:"",
+paratwo:""
+},
+{
   imageUrl: "",
   title: "",
   subTitle: "",
   description: "",
   h: "",
   Highlighttwo: "",
-  Highlightthree: ""
+  Highlightthree: "",
+paraone:"",
+paratwo:""
+},
+{
+  imageUrl: "",
+  title: "",
+  subTitle: "",
+  description: "",
+  h: "",
+  Highlighttwo: "",
+  Highlightthree: "",
+paraone:"",
+paratwo:""
+},
+{
+  imageUrl: "",
+  title: "",
+  subTitle: "",
+  description: "",
+  h: "",
+  Highlighttwo: "",
+  Highlightthree: "",
+paraone:"",
+paratwo:""
+},
+{
+  imageUrl: "",
+  title: "",
+  subTitle: "",
+  description: "",
+  h: "",
+  Highlighttwo: "",
+  Highlightthree: "",
+paraone:"",
+paratwo:""
+},
+{
+  imageUrl: "",
+  title: "",
+  subTitle: "",
+  description: "",
+  h: "",
+  Highlighttwo: "",
+  Highlightthree: "",
+paraone:"",
+paratwo:""
+},
+{
+  imageUrl: "",
+  title: "",
+  subTitle: "",
+  description: "",
+  h: "",
+  Highlighttwo: "",
+  Highlightthree: "",
+paraone:"",
+paratwo:""
+},
+{
+  imageUrl: "",
+  title: "",
+  subTitle: "",
+  description: "",
+  h: "",
+  Highlighttwo: "",
+  Highlightthree: "",
+paraone:"",
+paratwo:""
+},
+{
+  imageUrl: "",
+  title: "",
+  subTitle: "",
+  description: "",
+  h: "",
+  Highlighttwo: "",
+  Highlightthree: "",
+paraone:"",
+paratwo:""
+},
+{
+  imageUrl: "",
+  title: "",
+  subTitle: "",
+  description: "",
+  h: "",
+  Highlighttwo: "",
+  Highlightthree: "",
+paraone:"",
+paratwo:""
+},
+{
+  imageUrl: "",
+  title: "",
+  subTitle: "",
+  description: "",
+  h: "",
+  Highlighttwo: "",
+  Highlightthree: "",
+paraone:"",
+paratwo:""
+},
+
+  // Add more news objects here if needed
+];
+
+// Function to dynamically create news sections
+function createNewsSection(data) {
+  var newsSection = document.createElement('div');
+  newsSection.classList.add('part-one-news-sec');
+
+  var innerHTML = `
+      <div class="news-part-one">
+          <img src="${data.imageUrl}" alt="" class="news-part-oneimg">
+      </div>
+      <div class="news-part-two">
+          <div class="text-uppercase news-game-title">${data.title}</div>
+          <div class="text-uppercase news-game-title-two">${data.subTitle}</div>
+          <div class="news-game-discri">${data.description}</div>
+          <div class="btn-viewnews">
+              <button class="text-uppercase view-more-game">view more</button>
+          </div>
+      </div>
+  `;
+
+  newsSection.innerHTML = innerHTML;
+
+  // Add event listener to the button to navigate to newsdetails.html with encoded data
+  var viewMoreButton = newsSection.querySelector('.view-more-game');
+  viewMoreButton.addEventListener('click', function() {
+      var encodedData = btoa(JSON.stringify(data));
+      window.location.href = 'newsdetails.html?data=' + encodeURIComponent(encodedData);
+  });
+
+  return newsSection;
 }
-    // Add more news objects here if needed
-  ];
-  
-  // Function to dynamically create news sections
-  function createNewsSection(data) {
-      var newsSection = document.createElement('div');
-      newsSection.classList.add('part-one-news-sec');
-  
-      var innerHTML = `
-          <div class="news-part-one">
-              <img src="${data.imageUrl}" alt="" class="news-part-oneimg">
-          </div>
-          <div class="news-part-two">
-              <div class="text-uppercase news-game-title">${data.title}</div>
-              <div class="text-uppercase news-game-title-two">${data.subTitle}</div>
-              <div class="news-game-discri">${data.description}</div>
-              <div class="btn-viewnews">
-                  <button class="text-uppercase view-more-game">view more</button>
-              </div>
-          </div>
-      `;
-  
-      newsSection.innerHTML = innerHTML;
-  
-      // Add event listener to the button to navigate to newsdetails.html with encoded data
-      var viewMoreButton = newsSection.querySelector('.view-more-game');
-      viewMoreButton.addEventListener('click', function() {
-          var encodedData = btoa(JSON.stringify(data));
-          window.location.href = 'newsdetails.html?data=' + encodeURIComponent(encodedData);
-      });
-  
-      return newsSection;
-  }
-  
-  // Function to display news sections on the page
-  function displayNews() {
-      var container = document.getElementById('news-container');
-      // Clear existing content
-      container.innerHTML = '';
-  
-      // Loop through news data and create news sections
-      newsData.forEach(function(news) {
+
+// Function to display news sections on the page
+function displayNews() {
+  var container = document.getElementById('news-container');
+
+  // Function to append news items to the container
+  function appendNews(newsItems) {
+      newsItems.forEach(function(news) {
           var newsSection = createNewsSection(news);
-          container.appendChild(newsSection);
+          container.insertBefore(newsSection, container.firstChild);
       });
   }
-  
-  // Call the function to display news on page load
-  displayNews();
+
+  // Load the first batch of news items
+  appendNews(newsData.slice(0, 10));
+
+  // Create and append "Load More" button
+  var loadMoreButton = document.createElement('button');
+  loadMoreButton.textContent = 'Load More';
+  loadMoreButton.classList.add('text-uppercase', 'load-more-button');
+  container.appendChild(loadMoreButton);
+
+  // Add event listener to the "Load More" button
+  loadMoreButton.addEventListener('click', function() {
+      var nextBatch = newsData.slice(container.children.length - 1, container.children.length + 10);
+      appendNews(nextBatch);
+
+      // Remove the "Load More" button if all news items have been displayed
+      if (container.children.length >= newsData.length) {
+          loadMoreButton.remove();
+      }
+  });
+}
+
+// Call the function to display news on page load
+displayNews();
