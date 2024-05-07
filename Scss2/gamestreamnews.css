@@ -695,6 +695,11 @@
   background-color: #ff0000 !important;
 }
 
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  background-color: #000000;
+  border-radius: 5px;
+}
+
 /*-----------------------------------*\
     //         
   news details

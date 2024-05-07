@@ -781,6 +781,10 @@
   width: 90px !important;
   background-color: $red !important;
 }
+.carousel-control-prev-icon,.carousel-control-next-icon{
+  background-color: #000000;
+  border-radius: 5px;
+}
 
 /*-----------------------------------*\
     //         
