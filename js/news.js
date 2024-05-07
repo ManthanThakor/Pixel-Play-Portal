@@ -91,7 +91,7 @@ document.querySelector(".reset-part-poll").addEventListener('click', reset);
 
 
 
-  
+
 
 
   var newsData = [
@@ -112,7 +112,48 @@ document.querySelector(".reset-part-poll").addEventListener('click', reset);
         h: "Fail.",
         Highlighttwo: "Arroance players' experience.",
         Highlightthree: "Playe planets."
-    }
+    },
+    {
+      imageUrl: "",
+      title: "",
+      subTitle: "",
+      description: "",
+      h: "",
+      Highlighttwo: "",
+      Highlightthree: ""
+  },{
+    imageUrl: "",
+    title: "",
+    subTitle: "",
+    description: "",
+    h: "",
+    Highlighttwo: "",
+    Highlightthree: ""
+},{
+  imageUrl: "",
+  title: "",
+  subTitle: "",
+  description: "",
+  h: "",
+  Highlighttwo: "",
+  Highlightthree: ""
+},{
+  imageUrl: "",
+  title: "",
+  subTitle: "",
+  description: "",
+  h: "",
+  Highlighttwo: "",
+  Highlightthree: ""
+},{
+  imageUrl: "",
+  title: "",
+  subTitle: "",
+  description: "",
+  h: "",
+  Highlighttwo: "",
+  Highlightthree: ""
+}
     // Add more news objects here if needed
   ];
   
