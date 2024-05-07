@@ -893,7 +893,7 @@ var newsData = [
         paraone: "Seattle-based Pokemon GO support studio Very Very Spaceship was hit with layoffs, shortly after developing the controversial avatars for the game's Rediscover GO update. Although the Pokemon GO update aimed to improve features and visuals in the game, many players in the community were upset with the direction that was taken with the revamped avatars.",
         paratwo: "The lasting appeal of the Pokemon franchise means Pokemon GO is quite active in its eighth year of operations, with new events and Pokemon to discover on a regular basis. Pokemon GO developer Niantic is hard at work releasing new updates for Pokemon GO this year, which includes the Rediscover GO series of updates. The Rediscover GO campaign implemented new visual updates, improved avatar features, in-game map improvements, and much more to bring a fresh experience to returning players. However, fans were not happy with the appearance of the revamped Pokemon GO avatars following the update's release in April.",
       }, {
-        imageUrl: "",
+        imageUrl: "Img\newsdetailstwo\lego-star-wars-cal-kestis-minifigure-confirmed.avif",
         title: "LEGO Star Wars",
         subTitle: "LEGO Star Wars Cal Kestis Minifigure Confirmed",
         description: "LEGO has confirmed the Cal Kestis minifigure in a new Star Destroyer",
@@ -903,7 +903,7 @@ var newsData = [
         paraone: "The previously hinted-at LEGO Star Wars minifigure of Star Wars Jedi: Survivor protagonist Cal Kestis has finally been confirmed as part of an upcoming Imperial Star Destroyer set. While the popular LEGO Star Wars line has primarily focused on the Star Wars movies and shows, there have been sets and minifigures based on the numerous video games over the years. In addition to collectible versions of famous Star Wars gaming characters like Starkiller and Darth Malek, the lovable BD-1 from Star Wars Jedi: Fallen Order had a model based on it back in 2022.",
         paratwo: "Rumor had it that Cal Kestis would be joining his faithful droid counterpart as a LEGO minifigure, and it was believed that he would be packaged with a Death Star set released to commemorate the LEGO Star Wars line’s 25th anniversary. This would later be supported by Cal’s appearance in a recent LEGO Star Wars promotional video, in which he and BD-1 dived in to help Saw Gerrera and the crew of the Ghost from Star Wars Rebels battle Imperial Stormtroopers before joining the other plastic heroes of the Galaxy Far, Far Away for a group photo.",
       }, {
-        imageUrl: "",
+        imageUrl: "./Img/newsdetailstwo/elden-ring-screenshot.avif",
         title: "ELDEN RING",
         subTitle: "Elden Ring Player Spots Neat Real-World Reference on a Shield",
         description: "An Elden Ring player discovers that a symbol featured in one of the critically acclaimed RPG's shields has a real-life counterpart.",
@@ -913,7 +913,7 @@ var newsData = [
         paraone: "An Elden Ring player discovered that a symbol featured on one of the critically acclaimed RPG's shields possibly has a real-life counterpart. FromSoftware revealed in the past that while its latest work did not take inspiration from one game in particular, the studio was influenced by titles based on various mythologies.",
         paratwo: "Much like other Soulsborne games, 2022's Elden Ring offers a wide assortment of weapons and equipment that players can use as they journey through the vast, dangerous realm of The Lands Between. Among these is the Beast Crest Heater Shield, a Strength-scaling piece of gear that can be found in the game's starting region of Limgrave. One Elden Ring player has realized that the icon inscribed on the shield resembles the heraldry of one of their country's former kingdoms.",
       }, {
-        imageUrl: "",
+        imageUrl: "./Img/newsdetailstwo/destiny-2-stasis-characters.avif",
         title: "DESTINY 2",
         subTitle: "Call of Duty Skin Has Destiny 2 Fans Calling For a Stasis Armor Set",
         description: "Destiny 2 fans call for a Stasis-themed armor set after a perfect-looking one shows up in a completely different game: Call of Duty.",
@@ -923,7 +923,7 @@ var newsData = [
         paraone: "A joking post about a recently released Call of Duty skin has Destiny 2 fans calling on Bungie to release some custom cosmetics in a similar vein. The new skin found in Call of Duty just so happens to look perfectly suited to be an armor set based on the Destiny 2 Stasis subclass.",
         paratwo: "Most modern live-service games, including major titles like Fortnite, Call of Duty, and Destiny 2, make much of their revenue from selling cosmetic items like skins and accessories. This is in part because charging money for things with more concrete impacts on a player's gameplay experience would quickly give rise to accusations that a game is pay-to-win, with players able to essentially buy advantages that give them a leg up on their opponents. Cosmetic items and skins also open up the possibility of entertaining and appealing crossovers with other brands. Call of Duty has been part of the crossover trend for years, announcing and releasing crossover cosmetic packs based on Warhammer, Dune, and Godzilla x Kong: The New Empire.",
       }, {
-        imageUrl: "",
+        imageUrl: "./Img/newsdetailstwo/red-dead-redemption-2-poster-rockstar.avif",
         title: "RED DEAD REDEMPTION 2",
         subTitle: "Red Dead Redemption 2 Fan Turns The Game's Soundtrack Into a Cassette",
         description: "A Red Dead Redemption 2 fan has transformed the game's soundtrack into a nostalgic cassette tape, celebrating the game's immersive experience.",
@@ -933,7 +933,7 @@ var newsData = [
         paraone: "A Red Dead Redemption 2 player celebrated the game's soundtrack by transforming it into a cassette tape. Red Dead Redemption 2, an open-world action-adventure game developed by Rockstar Games, takes players on a journey through the rugged landscapes of the American Wild West. Released in 2018, the game received critical acclaim for its compelling narrative, immersive gameplay, and beautifully crafted world.",
         paratwo: "The Red Dead Redemption 2 community is known for its creativity and passion for the game. From complex fan art to detailed cosplay, fans frequently find unique ways to express their love for the virtual world created by Rockstar Games. Red Dead Redemption 2's immersive world and attention to detail set a new standard for environmental storytelling in open-world games. The game's vast and dynamic landscape serves as both a backdrop for the narrative and a character in its own right, with every corner of the map teeming with life and activity.",
       }, {
-        imageUrl: "",
+        imageUrl: "./Img/newsdetailstwo/minecraft-brilliant-loading-screen-idea-1.avif",
         title: "MINECRAFT",
         subTitle: "Minecraft Fan Comes Up With Brilliant Loading Screen Idea",
         description: "A Minecraft fan has a clever idea that Mojang could use to add a bit of entertainment value to a loading screen in their hit sandbox game.",
@@ -943,7 +943,7 @@ var newsData = [
         paraone: "A Minecraft player comes up with an ingenious idea to add some flair to the newly-updated loading screens in the game's PC launcher and make them more bearable to wait through. Though the ideas they have may not always be acknowledged by Mojang, Minecraft fans continue to share interesting concepts on how to make the beloved sandbox game even better.",
         paratwo: "Over the 13 years since its initial 1.0 release, Minecraft has received consistent update after update, many of which have added major features and overhauled core aspects of the game for the better. Just recently, in fact, Mojang released a content drop for Minecraft titled the Armored Paws update, which brought a number of long-requested additions to the blocky survival game. The Armored Paws \"drop,\" as Mojang called it, added the 2023 Mob Vote winner, armadillos, to the game, in addition to wolf armor and new regional wolf variants. One small feature that wasn't mentioned in the patch notes for the update, however, was the inclusion of a new, armadillo-themed loading screen for the Java Edition Minecraft launcher on PC. Having seen this new addition, a creative Minecraft player came up with an idea to take this simple loading screen to the next level.",
       }, {
-        imageUrl: "",
+        imageUrl: "./Img/newsdetailstwo/call-of-duty-warzone-feature.avif",
         title: "CALL OF DUTY: WARZONE",
         subTitle: "Entertaining Call of Duty: Warzone Clip Proves That Kind Acts Can Pay Off",
         description: "An entertaining Call of Duty: Warzone clip highlights one way that kind acts in the competitive battle royale can still pay off at times.",
