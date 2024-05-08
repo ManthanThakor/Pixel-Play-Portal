@@ -211,7 +211,7 @@
 }
 
 .news-part-oneimg {
-    width: 350px;
+  width: 350px;
   height: 250px;
   object-position: center;
   object-fit: cover;
@@ -222,18 +222,19 @@
   border-bottom: rgba(255, 255, 255, 0.279) solid 2px;
   background-color: map-get($theme-colors, best);
 }
-.load-more-button{
+.load-more-button {
   padding: 10px;
   margin-top: 15px;
+  margin-bottom: 15px;
   font-weight: 600;
   font-size: 18px;
   color: #ffffff;
   background-color: #000000;
   text-transform: capitalize;
   font-family: "Barlow", Sans-serif;
-border-radius: 1ch;
-border: transparent 1px solid;
-  &:hover{
+  border-radius: 1ch;
+  border: transparent 1px solid;
+  &:hover {
     color: #ffffff;
     transition: 0.5s;
     border: #ffffff 1px solid;
@@ -285,7 +286,6 @@ border: transparent 1px solid;
   padding-top: 10px;
 }
 
-
 .view-more-game {
   padding: 6px;
   font-style: italic;
@@ -300,13 +300,12 @@ border: transparent 1px solid;
 .news-part-two {
   padding-left: 10px;
 }
-.view-more-game:hover{
+.view-more-game:hover {
   background-color: #0000003d;
   color: #00ffa28d !important;
-
 }
 
-.part-one-news-sec{
+.part-one-news-sec {
   border-top: solid 1px rgba(223, 223, 223, 0.345);
   padding-top: 20px;
   border-bottom: solid 1px rgba(223, 223, 223, 0.345);
@@ -322,48 +321,52 @@ border: transparent 1px solid;
   /* vars */
   --post-bg: rgb(14, 14, 17);
   --t: 0.4s;
-  --ease: linear(0,
-      0.005,
-      0.02 2.2%,
-      0.045,
-      0.081 4.9%,
-      0.16 7.3%,
-      0.465 16.2%,
-      0.561,
-      0.642,
-      0.713 25.8%,
-      0.773,
-      0.825 32.7%,
-      0.868 36.5%,
-      0.905 40.9%,
-      0.935 45.7%,
-      0.958 51.1%,
-      0.975 57.4%,
-      0.986 64.4%,
-      0.993 73.1%,
-      0.997 84.1%,
-      0.999);
-  --ease-bar: linear(0,
-      0.005,
-      0.02,
-      0.045,
-      0.081 5%,
-      0.16 7.6%,
-      0.463 16.6%,
-      0.558,
-      0.639,
-      0.709,
-      0.769,
-      0.82 33.3%,
-      0.863 37.1%,
-      0.902 41.6%,
-      0.932 46.5%,
-      0.956 51.9%,
-      0.973 58.2%,
-      0.985 65.3%,
-      0.992 73.8%,
-      0.997 84.7%,
-      0.999);
+  --ease: linear(
+    0,
+    0.005,
+    0.02 2.2%,
+    0.045,
+    0.081 4.9%,
+    0.16 7.3%,
+    0.465 16.2%,
+    0.561,
+    0.642,
+    0.713 25.8%,
+    0.773,
+    0.825 32.7%,
+    0.868 36.5%,
+    0.905 40.9%,
+    0.935 45.7%,
+    0.958 51.1%,
+    0.975 57.4%,
+    0.986 64.4%,
+    0.993 73.1%,
+    0.997 84.1%,
+    0.999
+  );
+  --ease-bar: linear(
+    0,
+    0.005,
+    0.02,
+    0.045,
+    0.081 5%,
+    0.16 7.6%,
+    0.463 16.6%,
+    0.558,
+    0.639,
+    0.709,
+    0.769,
+    0.82 33.3%,
+    0.863 37.1%,
+    0.902 41.6%,
+    0.932 46.5%,
+    0.956 51.9%,
+    0.973 58.2%,
+    0.985 65.3%,
+    0.992 73.8%,
+    0.997 84.7%,
+    0.999
+  );
   --trans: all var(--t) var(--ease);
   --star-color: 210deg;
   --star-time: 7s;
@@ -468,9 +471,11 @@ border: transparent 1px solid;
   inset: 0;
   border-radius: calc(0.5rem);
   mix-blend-mode: hard-light;
-  background-image: linear-gradient(90deg,
-      hsl(240deg 10% 90% / 50%),
-      hsl(240deg 10% 90% / 90%) 80%);
+  background-image: linear-gradient(
+    90deg,
+    hsl(240deg 10% 90% / 50%),
+    hsl(240deg 10% 90% / 90%) 80%
+  );
   background-size: inherit;
   background-repeat: no-repeat;
   background-position: inherit;
@@ -497,7 +502,8 @@ border: transparent 1px solid;
   transition: left calc(var(--t) * 3) var(--ease-bar),
     opacity calc(var(--t) * 3) var(--ease-bar);
   mix-blend-mode: plus-lighter;
-  filter: drop-shadow(0 0 3px hsl(var(--star-color) 100% 60% / 70%)) drop-shadow(0 0 8px hsl(var(--star-color) 100% 60% / 70%));
+  filter: drop-shadow(0 0 3px hsl(var(--star-color) 100% 60% / 70%))
+    drop-shadow(0 0 8px hsl(var(--star-color) 100% 60% / 70%));
   z-index: 2;
   opacity: 0;
 }
@@ -511,12 +517,16 @@ border: transparent 1px solid;
   height: 120%;
   aspect-ratio: 1/10;
   border-radius: 100%;
-  background: radial-gradient(1px 50% at center,
+  background: radial-gradient(
+      1px 50% at center,
       hsl(var(--star-color) 100% 100% / 100%),
-      hsl(var(--star-color) 100% 20% / 0%)),
-    radial-gradient(3px 50% at center,
+      hsl(var(--star-color) 100% 20% / 0%)
+    ),
+    radial-gradient(
+      3px 50% at center,
       hsl(var(--star-color) 100% 70% / 90%),
-      hsl(var(--star-color) 100% 20% / 0%));
+      hsl(var(--star-color) 100% 20% / 0%)
+    );
   translate: -50% -50%;
 }
 
@@ -527,25 +537,37 @@ border: transparent 1px solid;
   translate: -50% -50%;
   height: 120%;
   aspect-ratio: 1/2;
-  background: radial-gradient(1px 50% at center,
+  background: radial-gradient(
+      1px 50% at center,
       hsl(var(--star-color) 100% 100% / 100%),
-      hsl(var(--star-color) 100% 20% / 0%)),
-    radial-gradient(3px 50% at center,
+      hsl(var(--star-color) 100% 20% / 0%)
+    ),
+    radial-gradient(
+      3px 50% at center,
       hsl(var(--star-color) 100% 90% / 90%),
-      hsl(var(--star-color) 100% 20% / 0%)),
-    radial-gradient(5px 30% at center,
+      hsl(var(--star-color) 100% 20% / 0%)
+    ),
+    radial-gradient(
+      5px 30% at center,
       hsl(var(--star-color) 100% 80% / 60%),
-      hsl(var(--star-color) 100% 20% / 0%)),
-    radial-gradient(40% 3px at center,
+      hsl(var(--star-color) 100% 20% / 0%)
+    ),
+    radial-gradient(
+      40% 3px at center,
       hsl(var(--star-color) 100% 80% / 60%),
-      hsl(var(--star-color) 100% 20% / 0%)),
-    radial-gradient(45% 2px at center,
+      hsl(var(--star-color) 100% 20% / 0%)
+    ),
+    radial-gradient(
+      45% 2px at center,
       hsl(var(--star-color) 100% 90% / 90%),
-      hsl(var(--star-color) 100% 20% / 0%)),
-    radial-gradient(50% 1px at center,
+      hsl(var(--star-color) 100% 20% / 0%)
+    ),
+    radial-gradient(
+      50% 1px at center,
       white,
       hsl(var(--star-color) 100% 100% / 100%),
-      hsl(var(--star-color) 100% 20% / 0%));
+      hsl(var(--star-color) 100% 20% / 0%)
+    );
   mix-blend-mode: color-dodge;
   opacity: 1;
   z-index: 3;
@@ -561,16 +583,22 @@ border: transparent 1px solid;
   rotate: 45deg;
   height: 50%;
   aspect-ratio: 1/1;
-  background: radial-gradient(2px 35% at center,
+  background: radial-gradient(
+      2px 35% at center,
       hsl(var(--star-color) 100% 60% / 70%),
-      hsl(var(--star-color) 100% 20% / 0%)),
-    radial-gradient(2px 40% at center,
+      hsl(var(--star-color) 100% 20% / 0%)
+    ),
+    radial-gradient(
+      2px 40% at center,
       hsl(var(--star-color) 100% 80% / 90%),
-      hsl(var(--star-color) 100% 20% / 0%)),
-    radial-gradient(1px 45% at center,
+      hsl(var(--star-color) 100% 20% / 0%)
+    ),
+    radial-gradient(
+      1px 45% at center,
       white,
       hsl(var(--star-color) 100% 100% / 100%),
-      hsl(var(--star-color) 100% 20% / 0%));
+      hsl(var(--star-color) 100% 20% / 0%)
+    );
   opacity: 1;
   mix-blend-mode: plus-lighter;
 }
@@ -581,10 +609,12 @@ border: transparent 1px solid;
 
 .poll.answered {
   .poll-choice.winner .poll-result:before {
-    background-image: linear-gradient(254deg,
-        #d4f2fe 5%,
-        #ffe7b7 45%,
-        #f9ced5 95%);
+    background-image: linear-gradient(
+      254deg,
+      #d4f2fe 5%,
+      #ffe7b7 45%,
+      #f9ced5 95%
+    );
   }
 
   .poll-choice .poll-result {
@@ -627,13 +657,15 @@ border: transparent 1px solid;
 
   .poll-choice.winner .poll-percent,
   .poll-choice.winner .poll-label {
-    filter: drop-shadow(1px 1px 0px rgba(0, 0, 0, 0.5)) drop-shadow(-1px 1px 0px rgba(0, 0, 0, 0.5)) drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.25)) drop-shadow(0px 1px 5px rgba(0, 0, 0, 0.25));
+    filter: drop-shadow(1px 1px 0px rgba(0, 0, 0, 0.5))
+      drop-shadow(-1px 1px 0px rgba(0, 0, 0, 0.5))
+      drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.25))
+      drop-shadow(0px 1px 5px rgba(0, 0, 0, 0.25));
     z-index: 4;
   }
 }
 
 @keyframes starGlow {
-
   0%,
   90%,
   100% {
@@ -716,7 +748,6 @@ border: transparent 1px solid;
   color: $gr;
   padding-top: 4px;
   font-size: 16px;
-
 }
 
 .poll-ti {
@@ -725,7 +756,6 @@ border: transparent 1px solid;
   font-size: 16px;
   font-family: "Barlow", Sans-serif;
 }
-
 
 /*-----------------------------------*\
     //         
@@ -753,7 +783,6 @@ border: transparent 1px solid;
   color: $fefe;
   font-size: 40px;
   font-family: "Starzone", "serif";
-
 }
 
 .carousel-caption {
@@ -796,7 +825,8 @@ border: transparent 1px solid;
   width: 90px !important;
   background-color: $red !important;
 }
-.carousel-control-prev-icon,.carousel-control-next-icon{
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
   background-color: #000000;
   border-radius: 5px;
 }
@@ -893,7 +923,8 @@ border: transparent 1px solid;
   @include padd(6px, 10px, 0, 30px);
 }
 
-.highlight-section-details {}
+.highlight-section-details {
+}
 
 .highlight-poll {
   // @include flex-row;
@@ -914,7 +945,7 @@ border: transparent 1px solid;
   padding-top: 20px;
 }
 
-.newsmore-part{
+.newsmore-part {
   font-weight: 300;
   color: rgba(255, 255, 255, 0.614);
   font-size: 18px;
@@ -924,28 +955,279 @@ border: transparent 1px solid;
   padding-top: 20px;
 }
 
+/*-----------------------------------*\
+    //         
+   news section 1 part only scroll :)
+    // \*-----------------------------------*/
+.sec-one-part {
+  overflow-y: auto !important;
+  height: calc(100vh - 50px) !important;
+  border-bottom: 2px $fefe solid;
+}
 
-
-
-
+.news-sec-two {
+  position: sticky !important;
+  top: 0 !important;
+}
+.poll-container {
+  padding: 50px;
+}
 /*-----------------------------------*\
     //         
    RESPONSIVE NEWS PART
     // \*-----------------------------------*/
-    @media only screen and (max-width: 500px) {
-    }
+@media only screen and (max-width: 1300px) {
+  .news-sec {
+    @include padd(40px, 15px, 40px, 15px);
+  }
+  .news-fullpart {
+    @include padd(40px, 15px, 40px, 15px);
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .news-sec-two {
+    margin-top: 20px !important;
+    display: flex;
 
+    flex-direction: column;
+    align-items: center;
+  }
+  .row {
+    --bs-gutter-x: 0 !important;
+  }
+  .poll-container {
+    padding: 0px !important;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .cr-img-sec {
+    height: 400px !important;
+  }
+}
+@media only screen and (max-width: 855px) {
+  .part-one-news-sec {
+    flex-direction: column;
+  }
+  .news-part-two {
+    padding-left: 0px;
+  }
+  .news-game-title {
+    padding-top: 15px;
+  }
+  .news-part-oneimg {
+    width: 100%;
+  }
+}
 
+@media only screen and (max-width: 500px) {
+  .trending-title {
+    font-size: 30px;
+  }
+  .news-tit-parttwo {
+    font-size: 14px;
+  }
+  .coming-t {
+    font-size: 20px;
+  }
+  .news-sec {
+    @include padd(30px, 15px, 40px, 15px);
+  }
+  .news-fullpart {
+    @include padd(30px, 15px, 30px, 15px);
+  }
+  .carousel-control-next-icon,
+  .carousel-control-prev-icon {
+    width: 1.5rem !important;
+    height: 1.5rem !important;
+  }
+  .carousel-indicators [data-bs-target] {
+    width: 100% !important;
+  }
+  .cr-img-sec {
+    height: 200px !important;
+  }
+  .news-part-oneimg {
+    height: 200px;
+  }
+  .news-game-title-two {
+    font-size: 16px;
+    text-align: justify;
+  }
+  .news-game-discri {
+    font-size: 14px;
+  }
+  .view-more-game {
+    font-size: 14px;
+  }
+  .load-more-button {
+    padding: 5px;
+    font-weight: 400;
+    font-size: 14px;
+  }
+  #app {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 350px) {
+  .title-coming-game {
+    gap: 5px;
+  }
+  .coming-t {
+    font-size: 16px;
+  }
+  #fire-p {
+    font-size: 20px;
+  }
+  .trending-title {
+    font-size: 24px;
+  }
+  .news-tit-parttwo {
+    font-size: 12px;
+  }
+  .news-game-title-two {
+    font-size: 12px;
+  }
+  .news-game-discri {
+    font-size: 12px;
+  }
+  .view-more-game {
+    font-size: 12px;
+  }
+  .load-more-button {
+    padding: 4px;
+  }
+  .post {
+    padding: 15px 15px;
+  }
+  .poll-quation {
+    font-size: 13px;
+  }
+  .poll-choice .answer {
+    font-size: 14px;
+  }
+  .reset-part-poll {
+    margin: 10px 0 10px 15px !important;
+    font-size: 14px;
+  }
+}
 
-    /*-----------------------------------*\
+@media only screen and (max-width: 270px) {
+  .trending-title {
+    font-size: 20px;
+  }
+  .coming-t {
+    font-size: 12px;
+  }
+  #fire-p {
+    font-size: 15px;
+  }
+}
+
+/*-----------------------------------*\
     //         
   RESPONSIVE news details PART
     // \*-----------------------------------*/
 
+@media only screen and (max-width: 1300px) {
+  .news-deatils-part {
+    @include padd(40px, 15px, 40px, 15px);
+  }
+}
 
+@media only screen and (max-width: 1200px) {
+  .pollpart-ops {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
 
+    align-items: center;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .news-deatils-part {
+    @include padd(30px, 15px, 30px, 15px);
+  }
+  #news-details-subtitle {
+    font-size: 16px;
+  }
+  #news-details-description {
+    font-size: 16px;
+  }
+  #news-details-img {
+    height: 200px;
+  }
+  .high-t {
+    font-size: 24px;
+  }
+  #high-t {
+    font-size: 22px;
+  }
+  .newhighlight-di {
+    font-size: 14px;
+  }
+  .newsmore-part {
+    font-size: 14px;
+  }
+  .fa-square {
+    padding: 6px 10px 0 20px !important;
+  }
+}
 
-    /*-----------------------------------*\
+@media only screen and (max-width: 500px) {
+  #news-details-subtitle {
+    font-size: 14px;
+    text-align: center;
+  }
+  #news-details-description {
+    font-size: 14px;
+    text-align: justify;
+  }
+  #news-details-title {
+    text-align: center;
+  }
+  .newhighlight-di {
+    text-align: justify;
+    font-size: 12px;
+  }
+  .newsmore-part {
+    font-size: 12px;
+  }
+  .fa-square {
+    padding: 6px 10px 0 10px !important;
+  }
+}
+/*-----------------------------------*\
     //         
   RESPONSIVE GAME STREAM PART
     // \*-----------------------------------*/
+
+@media only screen and (max-width: 1300px) {
+  .trending-section {
+    @include padd(40px, 15px, 40px, 15px);
+  }
+}
+@media only screen and (max-width: 500px) {
+  .stream h3 {
+    font-size: 14px;
+  }
+  .stream p {
+    font-size: 14px;
+  }
+  .load-more-btn,
+  .stream a {
+    font-size: 16px !important;
+    padding: 5px !important;
+  }
+}
+@media only screen and (max-width: 270px) {
+  .stream h3 {
+    font-size: 12px;
+  }
+  .stream p {
+    font-size: 12px;
+  }
+  .load-more-btn,
+  .stream a {
+    font-size: 14px !important;
+  }
+}
