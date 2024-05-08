@@ -58,7 +58,7 @@
               wallpaper  title 
 \*-----------------------------------*/
 .wallpaper-section {
-  background-color: black;
+  background-color: #000000;
   box-shadow: 0px -15px 15px -15px #fefefe, 0px 15px 15px -15px #fefefe;
 }
 
@@ -193,4 +193,16 @@
   100% {
     transform: rotateX(360deg) rotateY(360deg);
   }
+}
+/*-----------------------------------*\
+              wallpaper  body
+\*-----------------------------------*/
+.wallpaper-section-body {
+  box-shadow: inset 1px 16px 15px -15px #fefefe, 0px 15px 15px -15px #fefefe;
+  padding: 30px 80px 30px 80px !important;
+  background: linear-gradient(rgba(0, 0, 0, 0.91), rgba(0, 0, 0, 0.914)), url(../Img/wallpaper/desktop-wallpaper-sombra-overwatch-gaming-background-c04411.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  text-align: center;
 }/*# sourceMappingURL=wallpaper.css.map */
