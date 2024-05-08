@@ -1,0 +1,201 @@
+@use "../Scss/_index.scss" as *;
+
+/*-----------------------------------*\
+             common
+\*-----------------------------------*/
+
+.pixel-head {
+  height: auto !important;
+  background: linear-gradient(rgba(0, 0, 0, 0.863), rgba(0, 0, 0, 0.868)),
+    url(../Img/wallpaper/wp8101843.webp);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.logo-menu-part {
+  padding-top: 30px !important;
+  padding-bottom: 30px !important;
+}
+.btn-search {
+  top: -9px;
+}
+
+/*-----------------------------------*\
+              wallpaper main title 
+\*-----------------------------------*/
+
+.tourn-title {
+  @include padd(20px, 80px, 20px, 80px);
+  background: linear-gradient(rgba(0, 0, 0, 0.864), rgba(0, 0, 0, 0.826)),
+    url(../Img/wallpaper/wp8101843.webp);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  text-align: center;
+}
+
+.tourn-title-text {
+  color: #ff0000;
+  text-shadow: 12px 11px 0 rgb(0 0 0 / 51%), 5px 5px 10px rgb(0 0 0 / 57%);
+}
+
+.square {
+  position: absolute;
+  width: 20px;
+  height: 100px;
+  background-color: blue;
+  animation: moveSquare 2s linear infinite;
+}
+
+@keyframes moveSquare {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(100px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/*-----------------------------------*\
+              wallpaper  title 
+\*-----------------------------------*/
+
+.wallpaper-section {
+  background-color: black;
+  box-shadow: 0px -15px 15px -15px #fefefe, 0px 15px 15px -15px #fefefe;
+}
+
+.wall-part-t {
+  display: flex;
+  @include pad-t-b(50px, 50px);
+  justify-content: center;
+  gap: 40px;
+}
+
+/*-----------------------------------*\
+           animated text title
+\*-----------------------------------*/
+.a {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.601);
+  color: #ffffffaf;
+  text-shadow: 0 0 50px #ffffffaf;
+  font-size: 50px;
+  font-weight: 800;
+  font-family: "Barlow", Sans-serif;
+  animation: blink 6s ease-in-out infinite;
+  &:first-of-type {
+    margin-left: auto;
+    animation-duration: 5s;
+    animation-delay: 2s;
+  }
+  &:nth-of-type(2) {
+    animation-duration: 3s;
+    animation-delay: 5s;
+  }
+  &:nth-of-type(4) {
+    animation-duration: 3.89s;
+    animation-delay: 2s;
+  }
+  &:last-of-type {
+    margin-right: auto;
+    animation-duration: 4s;
+    animation-delay: 1.2s;
+  }
+}
+@keyframes blink {
+  0% {
+    color: #ffffffaf;
+    opacity: 1;
+    filter: blur(0px);
+  }
+  25% {
+    color: #ff0000;
+    filter: blur(0.2px);
+  }
+  50% {
+    color: #ffffff0f;
+    opacity: 0.6;
+    filter: blur(0.3px);
+  }
+  75% {
+    color: #ffffff0f;
+    filter: blur(0.1px);
+  }
+  100% {
+    color: #ffffffaf;
+    opacity: 1;
+    filter: blur(0px);
+  }
+}
+
+.container,
+.container-fluid,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl,
+.container-xxl {
+  --bs-gutter-x: 0rem !important;
+}
+/*-----------------------------------*\
+           cube part 
+\*-----------------------------------*/
+.cube {
+  position: relative;
+  width: var(--cube-size);
+  height: var(--cube-size);
+  transform-style: preserve-3d;
+  animation: spin var(--speed) linear infinite;
+}
+
+.face {
+  position: absolute;
+  width: var(--cube-size);
+  height: var(--cube-size);
+  background: var(--color);
+  opacity: 0.8;
+}
+
+.front {
+  transform: translateZ(calc(var(--cube-size) / 2));
+  box-shadow: 0 0 20px 10px rgba(255, 0, 0, 0.5);
+}
+
+.back {
+  transform: translateZ(calc(var(--cube-size) / -2)) rotateY(180deg);
+  box-shadow: 0 0 20px 10px rgba(0, 255, 13, 0.5);
+}
+
+.right {
+  transform: rotateY(-90deg) translateZ(calc(var(--cube-size) / 2));
+  box-shadow: 0 0 20px 10px rgba(0, 98, 255, 0.5);
+}
+
+.left {
+  transform: rotateY(90deg) translateZ(calc(var(--cube-size) / 2));
+  box-shadow: 0 0 20px 10px rgba(183, 0, 255, 0.767);
+}
+
+.top {
+  transform: rotateX(90deg) translateZ(calc(var(--cube-size) / 2));
+  box-shadow: 0 0 20px 10px rgba(0, 193, 167, 0.5);
+}
+
+.bottom {
+  transform: rotateX(-90deg) translateZ(calc(var(--cube-size) / 2));
+  box-shadow: 0 0 20px 10px rgba(251, 255, 0, 0.5);
+}
+
+@keyframes spin {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  100% {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+}
