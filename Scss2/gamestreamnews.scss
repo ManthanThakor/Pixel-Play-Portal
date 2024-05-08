@@ -923,14 +923,6 @@
   @include padd(6px, 10px, 0, 30px);
 }
 
-.highlight-section-details {
-}
-
-.highlight-poll {
-  // @include flex-row;
-  // gap: 30px;
-}
-
 #news-details-description {
   font-weight: 500;
   color: $fefe;
