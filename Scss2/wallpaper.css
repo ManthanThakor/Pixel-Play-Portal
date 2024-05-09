@@ -210,7 +210,7 @@
 /* --Search-part and select part--*/
 .search-dropdown {
   display: flex;
-  gap: 35px;
+  gap: 20px;
   padding-top: 30px !important;
   padding-bottom: 30px !important;
 }
@@ -221,7 +221,6 @@
   width: 100%;
   max-width: 60px;
   height: 45px;
-  background-color: #fff;
   border-radius: 6px;
   transition: all 0.5s ease-in-out;
 }
@@ -230,13 +229,40 @@
   max-width: 280px;
 }
 
+.input-box input::-moz-placeholder {
+  font-weight: 700;
+  text-transform: capitalize;
+  color: rgba(255, 255, 255, 0.7176470588);
+  font-family: "Barlow", Sans-serif;
+  font-style: italic;
+  font-size: 16px;
+}
+
+.input-box input::placeholder {
+  font-weight: 700;
+  text-transform: capitalize;
+  color: rgba(255, 255, 255, 0.7176470588);
+  font-family: "Barlow", Sans-serif;
+  font-style: italic;
+  font-size: 16px;
+}
+
+#close-btn {
+  font-size: 30px;
+  cursor: pointer;
+  color: #fefefe;
+}
+
 .input-box input {
   position: relative;
   width: 100%;
   height: 100%;
-  font-size: 16px;
-  font-weight: 400;
-  color: #333;
+  font-size: 18px;
+  letter-spacing: 0.1px;
+  font-family: ROBOT;
+  font-weight: 700;
+  background-color: rgb(96, 0, 0);
+  color: #fefefe;
   padding: 0 15px;
   border: none;
   border-radius: 6px;
@@ -257,7 +283,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #fff;
+  background-color: #ff0000;
   border-radius: 6px;
   cursor: pointer;
 }
@@ -298,10 +324,16 @@
 }
 
 .select-selected {
-  background-color: #f1f1f1;
+  background-color: #ff0000;
+  border-radius: 6px;
   padding: 10px 15px;
   border: none;
   cursor: pointer;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: rgba(0, 0, 0, 0.7176470588);
+  font-family: "Barlow", Sans-serif;
+  font-size: 18px;
 }
 
 .select-items {
@@ -337,6 +369,64 @@
   display: block;
 }
 
+/* --info btn part--*/
+.info-sec-button {
+  position: relative;
+}
+
+#info-part-btn-one, #info-part-btn-two {
+  padding-top: 10px;
+  color: #fefefe;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.search-details-btn, .search-details-btn-two {
+  display: none;
+  position: absolute;
+  bottom: -30px;
+  text-transform: capitalize;
+  color: #000000;
+  font-family: "Barlow", Sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  background-color: #fefefe;
+  width: 450px;
+  border-radius: 2ch;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+/* --info btn two part --*/
+.info-sec-button-two {
+  margin-left: auto;
+  position: relative;
+}
+
+#info-part-btn-two:hover + .search-details-btn, #info-part-btn-two:hover + .search-details-btn-two {
+  display: block;
+  width: 450px;
+  background-color: #fefefe;
+  border-radius: 2ch;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.search-details-btn-two {
+  right: -6rem;
+  bottom: 50px;
+}
+
 /*-----------------------------------*\
               wallpaper img part
 \*-----------------------------------*/
@@ -354,6 +444,4 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-}
-
-/* Add any custom styles for the slider here *//*# sourceMappingURL=wallpaper.css.map */
+}/*# sourceMappingURL=wallpaper.css.map */

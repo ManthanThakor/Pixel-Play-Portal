@@ -183,3 +183,32 @@ document
     const searchQuery = event.target.value.trim();
     addImages("", searchQuery);
   });
+
+
+
+
+
+
+
+
+
+
+
+  var searchDetailsBtn = document.querySelector(".search-details-btn");
+  var infoPartBtn = document.getElementById("info-part-btn-one");
+
+  infoPartBtn.addEventListener("click", function(event) {
+    if (searchDetailsBtn.style.display === "block") {
+      searchDetailsBtn.style.display = "none";
+    } else {
+      searchDetailsBtn.style.display = "block";
+    }
+    event.stopPropagation();
+  });
+
+  document.addEventListener("click", function(event) {
+    var targetElement = event.target;
+    if (!searchDetailsBtn.contains(targetElement) && targetElement !== infoPartBtn) {
+      searchDetailsBtn.style.display = "none";
+    }
+  });
