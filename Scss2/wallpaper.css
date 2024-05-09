@@ -210,7 +210,9 @@
 /* --Search-part and select part--*/
 .search-dropdown {
   display: flex;
-  gap: 30px;
+  gap: 35px;
+  padding-top: 30px !important;
+  padding-bottom: 30px !important;
 }
 
 /* --Search-part--*/
@@ -343,6 +345,15 @@
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
-  height: 300px;
-  width: 100%;
-}/*# sourceMappingURL=wallpaper.css.map */
+  height: auto;
+  width: 450px;
+  padding: 5px;
+}
+
+#dynamicContent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+/* Add any custom styles for the slider here *//*# sourceMappingURL=wallpaper.css.map */

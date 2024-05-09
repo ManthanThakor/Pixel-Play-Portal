@@ -220,7 +220,8 @@
 /* --Search-part and select part--*/
 .search-dropdown {
     display: flex;
-    gap:30px;
+    gap:35px;
+    @include pad-t-b(30px,30px);
   }
   
 /* --Search-part--*/
@@ -346,6 +347,16 @@
 .wall-img{
    object-fit: cover;
    object-position: center;
-   height: 300px; 
-   width: 100%;
+   height: auto; 
+   width: 450px;
+   padding: 5px;
 }
+#dynamicContent{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+
+
+/* Add any custom styles for the slider here */

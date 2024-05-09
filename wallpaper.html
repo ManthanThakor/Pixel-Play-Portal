@@ -256,28 +256,27 @@
                 </div>
             </div>
             <div class="custom-select">
-                <div class="select-selected">Select an option</div>
+                <div class="select-selected" data-category="">Select an option</div>
                 <div class="select-items">
                     <input type="text" placeholder="Search...">
-                    <div class="select-option">popular game</div>
-                    <div class="select-option">valorant</div>
-                    <div class="select-option">gta</div>
-                    <div class="select-option">car</div>
-                    <div class="select-option">character</div>
-
+                    <div class="select-option">all</div>
+                    <div class="select-option" data-category="popular">popular game</div>
+                    <div class="select-option" data-category="valorant">valorant</div>
+                    <div class="select-option" data-category="gta">gta</div>
+                    <div class="select-option" data-category="car">car</div>
+                    <div class="select-option" data-category="character">character</div>
                 </div>
             </div>
 
+
         </div>
-        <div class="row wall-bodypart" id="dynamicContent">
-           
-            
+        <div id="dynamicContent">
+
         </div>
+        <button id="prevBtn">Previous</button>
+        <button id="nextBtn">Next</button>
+
     </div>
-
-
-
-
 
 
     <!-- discord-part -->
@@ -425,6 +424,8 @@
       once: true,
     });
   </script> -->
+
+
 
 </body>
 
