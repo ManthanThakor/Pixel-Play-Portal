@@ -378,6 +378,9 @@
   padding-top: 10px;
   color: #fefefe;
   font-size: 25px;
+}
+#info-part-btn-one:hover, #info-part-btn-two:hover {
+  color: #ff0000;
   cursor: pointer;
 }
 
@@ -412,8 +415,13 @@
   position: relative;
 }
 
-#info-part-btn-two:hover + .search-details-btn, #info-part-btn-two:hover + .search-details-btn-two {
-  display: block;
+#info-part-btn-two:hover {
+  color: #ff0000;
+  cursor: pointer;
+}
+
+.search-details-btn, .search-details-btn-two {
+  display: none;
   width: 450px;
   background-color: #fefefe;
   border-radius: 2ch;

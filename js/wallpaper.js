@@ -194,6 +194,19 @@ document
 
 
 
+
+
+
+
+
+
+  
+
+
+  // information btn click event 
+
+
+
   var searchDetailsBtn = document.querySelector(".search-details-btn");
   var infoPartBtn = document.getElementById("info-part-btn-one");
 
@@ -210,5 +223,25 @@ document
     var targetElement = event.target;
     if (!searchDetailsBtn.contains(targetElement) && targetElement !== infoPartBtn) {
       searchDetailsBtn.style.display = "none";
+    }
+  });
+
+  
+  var searchDetailsBtnn = document.querySelector(".search-details-btn-two");
+  var infoPartBtnn = document.getElementById("info-part-btn-two");
+
+  infoPartBtnn.addEventListener("click", function(event) {
+    if (searchDetailsBtnn.style.display === "block") {
+      searchDetailsBtnn.style.display = "none";
+    } else {
+      searchDetailsBtnn.style.display = "block";
+    }
+    event.stopPropagation();
+  });
+
+  document.addEventListener("click", function(event) {
+    var targetElement = event.target;
+    if (!searchDetailsBtnn.contains(targetElement) && targetElement !== infoPartBtnn) {
+      searchDetailsBtnn.style.display = "none";
     }
   });

@@ -371,7 +371,10 @@
   padding-top: 10px;
   color: $fefe;
   font-size: 25px;
-  cursor: pointer;
+  &:hover{
+    color: #ff0000;
+    cursor: pointer;
+  }
 }
 
 @keyframes fadeIn {
@@ -399,6 +402,7 @@
   transition: opacity 0.5s ease;
   animation: fadeIn 0.5s ease forwards;
 }
+
 /* --info btn two part --*/
 
 .info-sec-button-two {
@@ -408,10 +412,15 @@
 
 #info-part-btn-two{
   @extend #info-part-btn-one;
+  &:hover{
+    color: #ff0000; 
+    cursor: pointer;
+  }
 }
 
-#info-part-btn-two:hover + .search-details-btn {
-  display: block;
+
+ .search-details-btn {
+  display: none;
   width: 450px;
   background-color: $fefe;
   border-radius: 2ch;
