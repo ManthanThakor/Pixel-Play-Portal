@@ -35,36 +35,17 @@ document.addEventListener("DOMContentLoaded", function () {
 // Image data
 const imageData = [
   {
-    imageUrl: "Img/wallpaper/best-gaming-background-aea1fp9pow4r1l4r.jpg",
+    imageUrl: "./Img/wallpaper/best-gaming-background-aea1fp9pow4r1l4r.jpg",
     alt: "valorant game",
-    category: "popular",
-  },
-  {
-    imageUrl: "Img/wallpaper/best-gaming-background-aea1fp9pow4r1l4r.jpg",
-    alt: "Image 2",
     category: "valorant",
   },
   {
-    imageUrl: "Img/wallpaper/best-gaming-background-aea1fp9pow4r1l4r.jpg",
-    alt: "Image 3",
-    category: "gta",
-  },
-  {
-    imageUrl: "Img/wallpaper/best-gaming-background-aea1fp9pow4r1l4r.jpg",
-    alt: "Image 4",
+    imageUrl: ".",
+    alt: "valorant game",
     category: "popular",
   },
-  {
-    imageUrl: "Img/wallpaper/best-gaming-background-aea1fp9pow4r1l4r.jpg",
-    alt: "Image 5",
-    category: "car",
-  },
-  {
-    imageUrl: "Img/wallpaper/best-gaming-background-aea1fp9pow4r1l4r.jpg",
-    alt: "Image 6",
-    category: "character",
-  },
 ];
+
 
 // Function to add images dynamically
 function addImages(categoryFilter = "", searchQuery = "") {
@@ -176,17 +157,68 @@ document.querySelector(".search").addEventListener("click", () => {
 document.querySelector(".close-icon").addEventListener("click", () => {
   document.querySelector(".input-box").classList.remove("open");
 });
-// Event listener for search input
-document
-  .querySelector(".input-box input")
-  .addEventListener("input", (event) => {
-    const searchQuery = event.target.value.trim();
-    addImages("", searchQuery);
-  });
 
+// Function to open modal with image details
+function openModal(imageUrl, imageSize) {
+  // Get modal element
+  const modal = document.getElementById("myModal");
+  
+  // Get image element
+  const modalImg = document.getElementById("img01");
+  
+  // Get image size element
+  const modalCaption = document.getElementById("caption");
+  
+  // Set image source
+  modalImg.src = imageUrl;
+  
+  // Set image size
+  modalCaption.textContent = `Image Size: ${imageSize}`;
+  
+  // Show modal
+  modal.style.display = "block";
+}
 
+// Function to close modal
+function closeModal() {
+  // Get modal element
+  const modal = document.getElementById("myModal");
+  
+  // Hide modal
+  modal.style.display = "none";
+}
 
+// Event listener for images
+document.getElementById("dynamicContent").addEventListener("click", (event) => {
+  // Check if clicked element is an image
+  if (event.target && event.target.nodeName === "IMG") {
+    const imageUrl = event.target.src;
+    const imageSize = `${event.target.naturalWidth} x ${event.target.naturalHeight}`;
+    
+    // Open modal with image details
+    openModal(imageUrl, imageSize);
+  }
+});
 
+// Event listener for close button in modal
+document.getElementById("closeModal").addEventListener("click", () => {
+  // Close modal
+  closeModal();
+});
+
+// Event listener for download button in modal
+document.getElementById("downloadBtn").addEventListener("click", () => {
+  // Get image element
+  const modalImg = document.getElementById("img01");
+  
+  // Create anchor element for download
+  const downloadLink = document.createElement("a");
+  downloadLink.href = modalImg.src;
+  downloadLink.download = "image";
+  
+  // Trigger download
+  downloadLink.click();
+});
 
 
 
@@ -245,3 +277,69 @@ document
       searchDetailsBtnn.style.display = "none";
     }
   });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  // Number of tubes and strips per tube
+const numTubes = 5;
+const stripsPerTube = 100;
+
+// Get the container element
+const container = document.getElementById("containerrr");
+
+// Loop through each tube
+for (let i = 0; i < numTubes; i++) {
+  // Create a new tube element
+  const tube = document.createElement("div");
+  tube.className = "tube";
+
+  // Loop through each strip for the current tube
+  for (let j = 0; j < stripsPerTube; j++) {
+    // Create a new strip element
+    const strip = document.createElement("div");
+    strip.className = "strip";
+    
+    // Append the strip to the tube
+    tube.appendChild(strip);
+  }
+
+  // Append the tube to the container
+  container.appendChild(tube);
+}
