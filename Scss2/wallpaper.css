@@ -339,7 +339,7 @@
 .select-items {
   display: none;
   position: absolute;
-  background-color: #f1f1f1;
+  background-color: #000000;
   width: 100%;
   max-height: 200px;
   overflow-y: auto;
@@ -362,11 +362,35 @@
   width: calc(100% - 30px);
   margin: 10px 15px;
   padding: 5px;
-  border: 1px solid #ccc;
+  border-radius: 0.5ch;
+  border: 3px solid #ff0000;
+}
+
+.select-items input::-moz-placeholder {
+  text-transform: capitalize;
+  color: rgba(0, 0, 0, 0.8392156863);
+  font-weight: 600;
+  font-family: "Barlow", Sans-serif;
+}
+
+.select-items input::placeholder {
+  text-transform: capitalize;
+  color: rgba(0, 0, 0, 0.8392156863);
+  font-weight: 600;
+  font-family: "Barlow", Sans-serif;
 }
 
 .show {
   display: block;
+}
+
+.select-option {
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.8392156863);
+  font-family: "Barlow", Sans-serif;
+}
+.select-option:hover {
+  color: #000000;
 }
 
 /* --info btn part--*/
@@ -444,7 +468,17 @@
   -o-object-position: center;
      object-position: center;
   height: auto;
-  width: 450px;
+  width: 435px;
+  padding: 5px;
+  box-shadow: 0px -1px 5px 0px hsla(0, 100%, 50%, 0.614);
+}
+.wall-img:hover {
+  transform: scale(0.99);
+  cursor: url("../Img/wallpaper/cursor/kawaiigirlnormalselect-ezgif.com-ani-to-gif-converter.gif"), auto;
+  box-shadow: 0px 0px 20px 5px rgba(255, 0, 0, 0.7);
+}
+
+.wall-img-main {
   padding: 5px;
 }
 
@@ -758,6 +792,17 @@
     transform: perspective(400px) rotateY(360deg);
   }
 }
+/* --next and prev--*/
+#nextBtn {
+  margin-top: 15px;
+  padding: 5px;
+}
+
+#prevBtn {
+  margin-top: 15px;
+  padding: 5px;
+}
+
 /* --modal part for download--*/
 .modal {
   display: none;
@@ -803,9 +848,4 @@
   margin: 20px 0;
   color: #f1f1f1;
   font-size: 20px;
-}
-
-.wall-img:hover {
-  transform: scale(0.99);
-  cursor: url("../Img/wallpaper/cursor/kawaiigirlnormalselect-ezgif.com-ani-to-gif-converter.gif"), auto;
 }/*# sourceMappingURL=wallpaper.css.map */

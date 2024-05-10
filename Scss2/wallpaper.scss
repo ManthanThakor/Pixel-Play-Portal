@@ -332,10 +332,11 @@
 .select-items {
   display: none;
   position: absolute;
-  background-color: #f1f1f1;
+  background-color: #000000;
   width: 100%;
   max-height: 200px;
   overflow-y: auto;
+  
   border: 1px solid #ccc;
   border-top: none;
   z-index: 1;
@@ -355,12 +356,31 @@
   width: calc(100% - 30px);
   margin: 10px 15px;
   padding: 5px;
-  border: 1px solid #ccc;
+  border-radius: 0.5ch;
+
+
+  border: 3px solid #ff0000;
 }
 
+.select-items input::placeholder{
+    text-transform: capitalize;
+  color: #000000d6;
+  font-weight: 600;
+  font-family: "Barlow", Sans-serif;
+}
 .show {
   display: block;
 }
+.select-option{
+  font-weight: 700;
+  color: #ffffffd6;
+  font-family: "Barlow", Sans-serif;
+
+  &:hover{
+    color: #000000;
+  }
+}
+
 
 /* --info btn part--*/
 .info-sec-button {
@@ -440,13 +460,24 @@
   object-fit: cover;
   object-position: center;
   height: auto;
-  width: 450px;
+ 
+  width: 435px;
+  padding: 5px;
+  box-shadow:0px -1px 5px 0px hsla(0, 100%, 50%, 0.614);
+  &:hover{
+    transform: scale(0.99);
+    cursor: url('../Img/wallpaper/cursor/kawaiigirlnormalselect-ezgif.com-ani-to-gif-converter.gif'), auto;
+    box-shadow: 0px 0px 20px 5px rgba(255, 0, 0, 0.7);
+  }
+}
+.wall-img-main{
   padding: 5px;
 }
 #dynamicContent {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+
 }
 
 /* --middle cool animation like book page--*/
@@ -511,6 +542,18 @@ $count: 64;
   }
 }
 
+
+
+/* --next and prev--*/
+
+#nextBtn{
+  margin-top: 15px;
+padding: 5px;
+}
+#prevBtn{
+  margin-top: 15px;
+  padding: 5px;
+}
 /* --modal part for download--*/
 
 .modal {
@@ -559,7 +602,4 @@ $count: 64;
   font-size: 20px;
 }
 
-.wall-img:hover {
-  transform: scale(0.99);
-  cursor: url('../Img/wallpaper/cursor/kawaiigirlnormalselect-ezgif.com-ani-to-gif-converter.gif'), auto;
-}
+

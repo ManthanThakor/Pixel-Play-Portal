@@ -40,9 +40,299 @@ const imageData = [
     category: "valorant",
   },
   {
-    imageUrl: ".",
-    alt: "valorant game",
+    imageUrl: "./Img/wallpaper/wallpaper-one/2021-bugatti-bolide-4k_1626180135.jpg",
+    alt: "Vehicles Bugatti Bolide 4k Ultra HD Wallpaper",
+    category: "car",
+  },
+  {
+    imageUrl: "./Img/wallpaper/wallpaper-one/gta-6(2).jpg",
+    alt: "gta-six-6 wallpaper 4k hd",
+    category: "gta",
+  },
+  {
+    imageUrl: "./Img/wallpaper/wallpaper-one/gta-5-car-2464.jpg",
+    alt: "GTA Wallpaper, Gta V, Games, 4k, Hd, Transportation, City, Mode Of",
+    category: "car",
+  },{
+    imageUrl: "./Img/wallpaper/wallpaper-one/character-gta-5-trevor-on-dog-gta-v-ps3.jpg",
+    alt: "GTA 5 Trevor on Dog, gta v ps3 HD wallpaper | Pxfuel",
+    category: "character",
+  },{
+    imageUrl: "./Img/wallpaper/wallpaper-one/gta-v-cars-211.jpg",
+    alt: "GTA Background, GTA V Cars HD wallpaper | Pxfuel",
+    category: "car",
+  },{
+    imageUrl: "./Img/wallpaper/wallpaper-one/jinx-striking-uh-3840x2160.jpg",
+    alt: " 94jinx-league-of-legends-wallpapers,league-of-legends-wallpapers,games-wallpapers,hd-wallpapers,artstation-wallpapers,artist-wallpapers,artwork-wallpapers,digital-art-wallpapers,4k-wallpapers,video-games-wallpapers",
+    category: "character",
+  },{
+    imageUrl: "./",
+    alt: " 3995jinx-league-of-legends-wallpapers,league-of-legends-wallpapers,games-wallpapers,hd-wallpapers,4k-wallpapers,5k-wallpapers,artstation-wallpapers",
+    category: "character",
+  },{
+    imageUrl: "./",
+    alt: " 6866jinx-league-of-legends-wallpapers,league-of-legends-wallpapers,arcane-wallpapers,anime-wallpapers,games-wallpapers,hd-wallpapers,4k-wallpapers,5k-wallpapers,8k-wallpapers",
+    category: "character",
+  },{
+    imageUrl: "./",
+    alt: "  1260jinx-league-of-legends-wallpapers,arcane-wallpapers,league-of-legends-wallpapers,tv-shows-wallpapers,artist-wallpapers,artwork-wallpapers,digital-art-wallpapers,hd-wallpapers,4k-wallpapers",
+    category: "character",
+  },{
+    imageUrl: "./",
+    alt: " 2290jinx-league-of-legends-wallpapers,league-of-legends-wallpapers,games-wallpapers,hd-wallpapers,deviantart-wallpapers",
+    category: "character",
+  },{
+    imageUrl: "./",
+    alt: " 4522arcane-wallpapers,netflix-wallpapers,jinx-league-of-legends-wallpapers,tv-shows-wallpapers,league-of-legends-wallpapers,hd-wallpapers,4k-wallpapers,artstation-wallpapers",
+    category: "character",
+  },{
+    imageUrl: "./",
+    alt: " 4650arcane-wallpapers,netflix-wallpapers,jinx-league-of-legends-wallpapers,tv-shows-wallpapers,league-of-legends-wallpapers,hd-wallpapers,4k-wallpapers,5k-wallpapers,artstation-wallpapers",
+    category: "character",
+  },{
+    imageUrl: "./",
+    alt: "",
+    category: "",
+  },{
+    imageUrl: "./",
+    alt: "",
+    category: "",
+  },{
+    imageUrl: "./",
+    alt: "",
+    category: "",
+  },{
+    imageUrl: "./",
+    alt: " 2537arcane-wallpapers,netflix-wallpapers,jinx-league-of-legends-wallpapers,tv-shows-wallpapers,league-of-legends-wallpapers,hd-wallpapers,4k-wallpapers,5k-wallpapers,artstation-wallpapers",
+    category: "character",
+  },{
+    imageUrl: "./",
+    alt: " 4129call-of-duty-mobile-wallpapers,games-wallpapers,2021-games-wallpapers,hd-wallpapers,call-of-duty-wallpapers,4k-wallpapers",
+    category: "character",
+  },{
+    imageUrl: "./",
+    alt: " 1407call-of-duty-mobile-wallpapers,games-wallpapers,2024-games-wallpapers,mobile-wallpapers,call-of-duty-wallpapers,video-games-wallpapers,godzilla-x-kong-the-new-empire-wallpapers,movies-wallpapers,2024-movies-wallpapers,kong-wallpapers,hd-wallpapers,4k-wallpapers,5k-wallpapers",
+    category: "character",
+  },{
+    imageUrl: "./",
+    alt: " 1404call-of-duty-mobile-wallpapers,games-wallpapers,2024-games-wallpapers,call-of-duty-wallpapers,video-games-wallpapers,hd-wallpapers,4k-wallpapers",
+    category: "character",
+  },{
+    imageUrl: "./",
+    alt: "",
+    category: "character",
+  },{
+    imageUrl: "./",
+    alt: "",
+    category: "",
+  },{
+    imageUrl: "./",
+    alt: "",
+    category: "",
+  },{
+    imageUrl: "./",
+    alt: "",
+    category: "",
+  },{
+    imageUrl: "./",
+    alt: "",
+    category: "",
+  },{
+    imageUrl: "./",
+    alt: "",
+    category: "",
+  },{
+    imageUrl: "./",
+    alt: "",
+    category: "",
+  },{
+    imageUrl: "./",
+    alt: "",
+    category: "",
+  },{
+    imageUrl: "./",
+    alt: "",
+    category: "",
+  },{
+    imageUrl: "./",
+    alt: "",
+    category: "",
+  },{
+    imageUrl: "./",
+    alt: "",
+    category: "",
+  },{
+    imageUrl: "./",
+    alt: "",
+    category: "",
+  },{
+    imageUrl: "./",
+    alt: "",
+    category: "",
+  },{
+    imageUrl: "./",
+    alt: "",
+    category: "",
+  },{
+    imageUrl: "./",
+    alt: "",
+    category: "",
+  },{
+    imageUrl: "./",
+    alt: "",
+    category: "",
+  },{
+    imageUrl: "./",
+    alt: "",
+    category: "",
+  },{
+    imageUrl: "./",
+    alt: "",
+    category: "",
+  },{
+    imageUrl: "./",
+    alt: "",
+    category: "",
+  },{
+    imageUrl: "./",
+    alt: "",
+    category: "",
+  },{
+    imageUrl: "./Img/wallpaper/wallpaper-one/char-1.jpg",
+    alt: "character valo",
+    category: "character",
+  },{
+    imageUrl: "./Img/wallpaper/wallpaper-one/ai-created-gta-6-gaming-super-car-4k-desktop-wallpaper-v0-tywlv0wlgaoc1.webp",
+    alt: "gta 6 gta-vi car",
+    category: "car",
+  },{
+    imageUrl: "./",
+    alt: "",
+    category: "",
+  },{
+    imageUrl: "./Img/wallpaper/wallpaper-one/valo-charac.jpg",
+    alt: "valorant character",
+    category: "character",
+  },{
+    imageUrl: "./",
+    alt: "",
+    category: "",
+  },{
+    imageUrl: "./Img/wallpaper/wallpaper-one/4k-gta-5-tracey-fame-or-shame-mtk6gigh1jrxlh5v.jpg",
+    alt: "gta-5 gta-6 gta-v gta-vi 4k wallpaper hd",
+    category: "gta",
+  },{
+    imageUrl: "./Img/wallpaper/wallpaper-one/gta-5-naturalvision-evolved-night.jpg",
+    alt: "gta-5 gta-6 gta-v gta-vi 4k wallpaper hd",
+    category: "gta",
+  },{
+    imageUrl: "./Img/wallpaper/wallpaper-one/gta-5-car-01.jpg",
+    alt: "gta-5 gta-6 gta-v gta-vi 4k wallpaper hd",
+    category: "car",
+  },{
+    imageUrl: "./Img/wallpaper/wallpaper-one/cyberpunk-2077-wallpaper-full-hd-4k-wallpaper-download-in-2021.jpg",
+    alt: "cyberpunk",
     category: "popular",
+  },{
+    imageUrl: "./Img/wallpaper/wallpaper-one/gta-5-paper.jpg",
+    alt: "gta-5 gta-6 gta-v gta-vi 4k wallpaper hd",
+    category: "gta",
+  },{
+    imageUrl: "./Img/wallpaper/wallpaper-one/gta-5(car).jpg",
+    alt: "gta-5(car).",
+    category: "car",
+  },{
+    imageUrl: "./",
+    alt: "gta-5 gta-6 gta-v gta-vi 4k wallpaper hd",
+    category: "gta",
+  },{
+    imageUrl: "./Img/wallpaper/wallpaper-one/Gta-6-Concept-Car-Wallpapers.jpg",
+    alt: "gta-5 gta-6 gta-v gta-vi 4k wallpaper hd",
+    category: "gta",
+  },{
+    imageUrl: "./Img/wallpaper/wallpaper-one/GTA-6-HD-Wallpaper-Poster.jpg",
+    alt: "gta-5 gta-6 gta-v gta-vi 4k wallpaper hd",
+    category: "popular",
+  },{
+    imageUrl: "./Img/wallpaper/wallpaper-one/gta-6-police.jpeg",
+    alt: "gta-5 gta-6 gta-v gta-vi 4k wallpaper hd",
+    category: "gta",
+  },{
+    imageUrl: "./",
+    alt: "gta-5 gta-6 gta-v gta-vi 4k wallpaper hd",
+    category: "gta",
+  },{
+    imageUrl: "./Img/wallpaper/wallpaper-one/gta-6.png",
+    alt: "gta-5 gta-6 gta-v gta-vi 4k wallpaper hd",
+    category: "gta",
+  },{
+    imageUrl: "./Img/wallpaper/wallpaper-one/gta-6(2).jpg",
+    alt: "gta-5 gta-6 gta-v gta-vi 4k wallpaper hd",
+    category: "gta",
+  },{
+    imageUrl: "./Img/wallpaper/wallpaper-one/gta-6(10.jpg",
+    alt: "gta-5 gta-6 gta-v gta-vi 4k wallpaper hd",
+    category: "gta",
+  },{
+    imageUrl: "./Img/wallpaper/wallpaper-one/gta-car-90.jpg",
+    alt: "gta-car-90",
+    category: "car",
+  },{
+    imageUrl: "./Img/wallpaper/wallpaper-one/gta-6(111).jpeg",
+    alt: "gta-5 gta-6 gta-v gta-vi 4k wallpaper hd",
+    category: "gta",
+  },{
+    imageUrl: "./Img/wallpaper/wallpaper-one/gta-vi-jp.jpg",
+    alt: "gta-5 gta-6 gta-v gta-vi 4k wallpaper hd",
+    category: "gta",
+  },{
+    imageUrl: "./",
+    alt: "",
+    category: "",
+  },{
+    imageUrl: "./Img/wallpaper/wallpaper-one/gta(1).png",
+    alt: "gta-5 gta-6 gta-v gta-vi 4k wallpaper hd",
+    category: "gta",
+  },{
+    imageUrl: "./",
+    alt: "",
+    category: "",
+  },{
+    imageUrl: "./Img/wallpaper/wallpaper-one/lucia-in-gta-vi-bo.jpg",
+    alt: "gta-5 gta-6 gta-v gta-vi 4k wallpaper hd",
+    category: "gta",
+  },{
+    imageUrl: "./",
+    alt: "",
+    category: "",
+  },{
+    imageUrl: "./Img/wallpaper/wallpaper-one/lucia-in-gta-vi-bo.jpg",
+    alt: "gta-5 gta-6 gta-v gta-vi 4k wallpaper hd",
+    category: "gta",
+  },{
+    imageUrl: "./",
+    alt: "",
+    category: "",
+  },{
+    imageUrl: "./",
+    alt: "",
+    category: "",
+  },{
+    imageUrl: "./",
+    alt: "",
+    category: "",
+  },{
+    imageUrl: "./",
+    alt: "",
+    category: "",
+  },{
+    imageUrl: "./",
+    alt: "",
+    category: "",
+  },{
+    imageUrl: "./",
+    alt: "",
+    category: "",
   },
 ];
 
