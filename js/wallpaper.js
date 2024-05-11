@@ -66,27 +66,27 @@ const imageData = [
     alt: " 94jinx-league-of-legends-wallpapers,league-of-legends-wallpapers,games-wallpapers,hd-wallpapers,artstation-wallpapers,artist-wallpapers,artwork-wallpapers,digital-art-wallpapers,4k-wallpapers,video-games-wallpapers",
     category: "character",
   },{
-    imageUrl: "./",
+    imageUrl: "./Img/wallpaper/wallpaper-one/j-1.jpg",
     alt: " 3995jinx-league-of-legends-wallpapers,league-of-legends-wallpapers,games-wallpapers,hd-wallpapers,4k-wallpapers,5k-wallpapers,artstation-wallpapers",
     category: "character",
   },{
-    imageUrl: "./",
+    imageUrl: "./Img/wallpaper/wallpaper-one/j-3.jpg",
     alt: " 6866jinx-league-of-legends-wallpapers,league-of-legends-wallpapers,arcane-wallpapers,anime-wallpapers,games-wallpapers,hd-wallpapers,4k-wallpapers,5k-wallpapers,8k-wallpapers",
     category: "character",
   },{
-    imageUrl: "./",
+    imageUrl: "./Img/wallpaper/wallpaper-one/j-4.jpg",
     alt: "  1260jinx-league-of-legends-wallpapers,arcane-wallpapers,league-of-legends-wallpapers,tv-shows-wallpapers,artist-wallpapers,artwork-wallpapers,digital-art-wallpapers,hd-wallpapers,4k-wallpapers",
     category: "character",
   },{
-    imageUrl: "./",
+    imageUrl: "./Img/wallpaper/wallpaper-one/j-5.jpg",
     alt: " 2290jinx-league-of-legends-wallpapers,league-of-legends-wallpapers,games-wallpapers,hd-wallpapers,deviantart-wallpapers",
     category: "character",
   },{
-    imageUrl: "./",
+    imageUrl: "./Img/wallpaper/wallpaper-one/j-6.jpg",
     alt: " 4522arcane-wallpapers,netflix-wallpapers,jinx-league-of-legends-wallpapers,tv-shows-wallpapers,league-of-legends-wallpapers,hd-wallpapers,4k-wallpapers,artstation-wallpapers",
     category: "character",
   },{
-    imageUrl: "./",
+    imageUrl: "./Img/wallpaper/wallpaper-one/j-7.jpg",
     alt: " 4650arcane-wallpapers,netflix-wallpapers,jinx-league-of-legends-wallpapers,tv-shows-wallpapers,league-of-legends-wallpapers,hd-wallpapers,4k-wallpapers,5k-wallpapers,artstation-wallpapers",
     category: "character",
   },{
@@ -102,37 +102,37 @@ const imageData = [
     alt: "",
     category: "",
   },{
-    imageUrl: "./",
+    imageUrl: "./Img/wallpaper/wallpaper-one/j-8.jpg",
     alt: " 2537arcane-wallpapers,netflix-wallpapers,jinx-league-of-legends-wallpapers,tv-shows-wallpapers,league-of-legends-wallpapers,hd-wallpapers,4k-wallpapers,5k-wallpapers,artstation-wallpapers",
     category: "character",
   },{
-    imageUrl: "./",
+    imageUrl: "./Img/wallpaper/wallpaper-one/j-9.jpg",
     alt: " 4129call-of-duty-mobile-wallpapers,games-wallpapers,2021-games-wallpapers,hd-wallpapers,call-of-duty-wallpapers,4k-wallpapers",
     category: "character",
   },{
-    imageUrl: "./",
+    imageUrl: "./Img/wallpaper/wallpaper-one/j-10.jpg",
     alt: " 1407call-of-duty-mobile-wallpapers,games-wallpapers,2024-games-wallpapers,mobile-wallpapers,call-of-duty-wallpapers,video-games-wallpapers,godzilla-x-kong-the-new-empire-wallpapers,movies-wallpapers,2024-movies-wallpapers,kong-wallpapers,hd-wallpapers,4k-wallpapers,5k-wallpapers",
     category: "character",
   },{
-    imageUrl: "./",
+    imageUrl: "./Img/wallpaper/wallpaper-one/2024-call-of-duty-mobile-4k-4c.jpg",
     alt: " 1404call-of-duty-mobile-wallpapers,games-wallpapers,2024-games-wallpapers,call-of-duty-wallpapers,video-games-wallpapers,hd-wallpapers,4k-wallpapers",
+    category: "cod",
+  },{
+    imageUrl: "./Img/wallpaper/wallpaper-one/call-of-duty-ft-godzilla-x-kong-the-new-empire-ft-tt.jpg",
+    alt: " 974call-of-duty-mobile-wallpapers,games-wallpapers,2024-games-wallpapers,hd-wallpapers,call-of-duty-wallpapers,4k-wallpapers,video-games-wallpapers,5k-wallpapers",
+    category: "cod",
+  },{
+    imageUrl: "./Img/wallpaper/wallpaper-one/2024-call-of-duty-mobile-4k-4c.jpg",
+    alt: "call-of-duty-mobile character",
     category: "character",
   },{
-    imageUrl: "./",
-    alt: "",
-    category: "character",
+    imageUrl: "./Img/wallpaper/wallpaper-one/call-of-duty-mobile-season-12-hc.jpg",
+    alt: " 974call-of-duty-mobile-wallpapers,games-wallpapers,2024-games-wallpapers,hd-wallpapers,call-of-duty-wallpapers,4k-wallpapers,video-games-wallpapers,5k-wallpapers",
+    category: "cod",
   },{
     imageUrl: "./",
-    alt: "",
-    category: "",
-  },{
-    imageUrl: "./",
-    alt: "",
-    category: "",
-  },{
-    imageUrl: "./",
-    alt: "",
-    category: "",
+    alt: " 1092call-of-duty-mobile-wallpapers,games-wallpapers,2023-games-wallpapers,hd-wallpapers,call-of-duty-wallpapers,4k-wallpapers,5k-wallpapers",
+    category: "cod",
   },{
     imageUrl: "./",
     alt: "",
@@ -359,7 +359,7 @@ function addImages(categoryFilter = "", searchQuery = "") {
     : filteredImages;
 
   // Number of images to display per page
-  const imagesPerPage = 10;
+  const imagesPerPage = 12;
 
   // Calculate the starting index based on the current page
   const startIndex = currentPage * imagesPerPage;
