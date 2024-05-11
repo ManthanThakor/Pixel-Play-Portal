@@ -480,6 +480,9 @@
 
 }
 
+
+
+
 /* --middle cool animation like book page--*/
 
 #containerrr {
@@ -546,14 +549,22 @@ $count: 64;
 
 /* --next and prev--*/
 
-#nextBtn{
+#nextBtn,#prevBtn,#downloadBtn{
   margin-top: 15px;
 padding: 5px;
+border-radius: 5px;
+text-transform: capitalize;
+color: $black-color;
+font-family: "Barlow", Sans-serif;
+font-weight: 600;
+font-size: 16px;
+background-color: red;
+&:hover{
+  background-color: rgb(255, 255, 255);
+  cursor: pointer;
 }
-#prevBtn{
-  margin-top: 15px;
-  padding: 5px;
 }
+
 /* --modal part for download--*/
 
 .modal {

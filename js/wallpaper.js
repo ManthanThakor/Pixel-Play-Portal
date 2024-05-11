@@ -90,17 +90,17 @@ const imageData = [
     alt: " 4650arcane-wallpapers,netflix-wallpapers,jinx-league-of-legends-wallpapers,tv-shows-wallpapers,league-of-legends-wallpapers,hd-wallpapers,4k-wallpapers,5k-wallpapers,artstation-wallpapers",
     category: "character",
   },{
-    imageUrl: "./",
-    alt: "",
-    category: "",
+    imageUrl: "./Img/wallpaper/wallpaper-two/2023-raiden-shogun-genshin-impact-5k-t8-1920x1080.jpg",
+    alt: "235raiden-shogun-wallpapers,genshin-impact-wallpapers,games-wallpapers,hd-wallpapers,4k-wallpapers,2024-games-wallpapers,cosplay-wallpapers,video-games-wallpapers",
+    category: "popular",
   },{
-    imageUrl: "./",
-    alt: "",
-    category: "",
+    imageUrl: "./Img/wallpaper/wallpaper-two/2024-genshin-impact-playstation-5-na-1920x1080.jpg",
+    alt: "235raiden-shogun-wallpapers,genshin-impact-wallpapers,games-wallpapers,hd-wallpapers,4k-wallpapers,2024-games-wallpapers,cosplay-wallpapers,video-games-wallpapers",
+    category: "popular",
   },{
-    imageUrl: "./",
-    alt: "",
-    category: "",
+    imageUrl: "./Img/wallpaper/wallpaper-two/2024-mortal-kombat-1-5k-x1-1920x1080.jpg",
+    alt: "235raiden-shogun-wallpapers,genshin-impact-wallpapers,games-wallpapers,hd-wallpapers,4k-wallpapers,2024-games-wallpapers,cosplay-wallpapers,video-games-wallpapers",
+    category: "popular",
   },{
     imageUrl: "./Img/wallpaper/wallpaper-one/j-8.jpg",
     alt: " 2537arcane-wallpapers,netflix-wallpapers,jinx-league-of-legends-wallpapers,tv-shows-wallpapers,league-of-legends-wallpapers,hd-wallpapers,4k-wallpapers,5k-wallpapers,artstation-wallpapers",
@@ -130,73 +130,73 @@ const imageData = [
     alt: " 974call-of-duty-mobile-wallpapers,games-wallpapers,2024-games-wallpapers,hd-wallpapers,call-of-duty-wallpapers,4k-wallpapers,video-games-wallpapers,5k-wallpapers",
     category: "cod",
   },{
-    imageUrl: "./",
+    imageUrl: "./Img/wallpaper/wallpaper-two/2024-mortal-kombat-1-5k-x1-1920x1080.jpg",
     alt: " 1092call-of-duty-mobile-wallpapers,games-wallpapers,2023-games-wallpapers,hd-wallpapers,call-of-duty-wallpapers,4k-wallpapers,5k-wallpapers",
     category: "cod",
   },{
-    imageUrl: "./",
-    alt: "",
-    category: "",
+    imageUrl: "./Img/wallpaper/wallpaper-two/assassins-creed-3-10k-lk-1920x1080.jpg",
+    alt: " 235raiden-shogun-wallpapers,genshin-impact-wallpapers,games-wallpapers,hd-wallpapers,4k-wallpapers,2024-games-wallpapers,cosplay-wallpapers,video-games-wallpapers",
+    category: "popular",
   },{
-    imageUrl: "./",
-    alt: "",
-    category: "",
+    imageUrl: "./Img/wallpaper/wallpaper-two/call-of-duty-black-ops-cold-war-and-warzone-2024-ot-1920x1080.jpg",
+    alt: " 235raiden-shogun-wallpapers,genshin-impact-wallpapers,games-wallpapers,hd-wallpapers,4k-wallpapers,2024-games-wallpapers,cosplay-wallpapers,video-games-wallpapers",
+    category: "popular",
   },{
-    imageUrl: "./",
-    alt: "",
-    category: "",
+    imageUrl: "./Img/wallpaper/wallpaper-two/call-of-duty-mobile-greatest-empire-y3(02).jpg",
+    alt: " 235raiden-shogun-wallpapers,genshin-impact-wallpapers,games-wallpapers,hd-wallpapers,4k-wallpapers,2024-games-wallpapers,cosplay-wallpapers,video-games-wallpapers",
+    category: "popular",
   },{
-    imageUrl: "./",
-    alt: "",
-    category: "",
+    imageUrl: "./Img/wallpaper/wallpaper-two/call-of-duty-mobile-season-11-2023-77(1).jpg",
+    alt: " 235raiden-shogun-wallpapers,genshin-impact-wallpapers,games-wallpapers,hd-wallpapers,4k-wallpapers,2024-games-wallpapers,cosplay-wallpapers,video-games-wallpapers",
+    category: "popular",
   },{
-    imageUrl: "./",
-    alt: "",
-    category: "",
+    imageUrl: "./Img/wallpaper/wallpaper-two/call-of-duty-modern-warfare-season-3-tracer-pack-stoney-sloth-wp-1920x1080.jpg",
+    alt: " 235raiden-shogun-wallpapers,genshin-impact-wallpapers,games-wallpapers,hd-wallpapers,4k-wallpapers,2024-games-wallpapers,cosplay-wallpapers,video-games-wallpapers",
+    category: "popular",
   },{
-    imageUrl: "./",
-    alt: "",
-    category: "",
+    imageUrl: "./Img/wallpaper/wallpaper-two/cyberpunk-2077-4k-new-illustration-8a-1920x1080.jpg",
+    alt: " 235raiden-shogun-wallpapers,genshin-impact-wallpapers,games-wallpapers,hd-wallpapers,4k-wallpapers,2024-games-wallpapers,cosplay-wallpapers,video-games-wallpapers",
+    category: "popular",
   },{
-    imageUrl: "./",
-    alt: "",
-    category: "",
+    imageUrl: "./Img/wallpaper/wallpaper-two/cyberpunk-2077-2022-4k-qu-1920x1080.jpg",
+    alt: " 235raiden-shogun-wallpapers,genshin-impact-wallpapers,games-wallpapers,hd-wallpapers,4k-wallpapers,2024-games-wallpapers,cosplay-wallpapers,video-games-wallpapers",
+    category: "popular",
   },{
-    imageUrl: "./",
-    alt: "",
-    category: "",
+    imageUrl: "./Img/wallpaper/wallpaper-two/cyberpunk-2077-2022-4k-qu-1920x1080.jpg",
+    alt: " 235raiden-shogun-wallpapers,genshin-impact-wallpapers,games-wallpapers,hd-wallpapers,4k-wallpapers,2024-games-wallpapers,cosplay-wallpapers,video-games-wallpapers",
+    category: "popular",
   },{
-    imageUrl: "./",
-    alt: "",
-    category: "",
+    imageUrl: "./Img/wallpaper/wallpaper-two/cyberpunk-2077-cybernetic-rebellion-yx-1920x1080.jpg",
+    alt: " 235raiden-shogun-wallpapers,genshin-impact-wallpapers,games-wallpapers,hd-wallpapers,4k-wallpapers,2024-games-wallpapers,cosplay-wallpapers,video-games-wallpapers",
+    category: "popular",
   },{
-    imageUrl: "./",
-    alt: "",
-    category: "",
+    imageUrl: "./Img/wallpaper/wallpaper-two/cyberpunk-2077-2022-4k-qu-1920x1080.jpg",
+    alt: " 235raiden-shogun-wallpapers,genshin-impact-wallpapers,games-wallpapers,hd-wallpapers,4k-wallpapers,2024-games-wallpapers,cosplay-wallpapers,video-games-wallpapers",
+    category: "popular",
   },{
-    imageUrl: "./",
-    alt: "",
-    category: "",
+    imageUrl: "./Img/wallpaper/wallpaper-two/eve-character-from-stellar-blade-y0-1920x1080.jpg",
+    alt: " 235raiden-shogun-wallpapers,genshin-impact-wallpapers,games-wallpapers,hd-wallpapers,4k-wallpapers,2024-games-wallpapers,cosplay-wallpapers,video-games-wallpapers",
+    category: "popular",
   },{
-    imageUrl: "./",
-    alt: "",
-    category: "",
+    imageUrl: "./Img/wallpaper/wallpaper-two/flash-party-fr-1920x1080.jpg",
+    alt: " 235raiden-shogun-wallpapers,genshin-impact-wallpapers,games-wallpapers,hd-wallpapers,4k-wallpapers,2024-games-wallpapers,cosplay-wallpapers,video-games-wallpapers",
+    category: "popular",
   },{
-    imageUrl: "./",
-    alt: "",
-    category: "",
+    imageUrl: "./Img/wallpaper/wallpaper-two/genshin-impact-2024-game-m8-1920x1080.jpg",
+    alt: " 235raiden-shogun-wallpapers,genshin-impact-wallpapers,games-wallpapers,hd-wallpapers,4k-wallpapers,2024-games-wallpapers,cosplay-wallpapers,video-games-wallpapers",
+    category: "popular",
   },{
-    imageUrl: "./",
-    alt: "",
-    category: "",
+    imageUrl: "./Img/wallpaper/wallpaper-two/genshin-impact-2024-sk-1920x1080.jpg",
+    alt: " 235raiden-shogun-wallpapers,genshin-impact-wallpapers,games-wallpapers,hd-wallpapers,4k-wallpapers,2024-games-wallpapers,cosplay-wallpapers,video-games-wallpapers",
+    category: "popular",
   },{
-    imageUrl: "./",
-    alt: "",
-    category: "",
+    imageUrl: "./Img/wallpaper/wallpaper-two/genshin-impact-2024-sk-1920x1080.jpg",
+    alt: " 235raiden-shogun-wallpapers,genshin-impact-wallpapers,games-wallpapers,hd-wallpapers,4k-wallpapers,2024-games-wallpapers,cosplay-wallpapers,video-games-wallpapers",
+    category: "popular",
   },{
-    imageUrl: "./",
-    alt: "",
-    category: "",
+    imageUrl: "./Img/wallpaper/wallpaper-two/godzilla-x-kong-the-new-empire-x-call-of-duty-modern-warfare-tracer-pack-6c-1920x1080.jpg",
+    alt: " 235raiden-shogun-wallpapers,genshin-impact-wallpapers,games-wallpapers,hd-wallpapers,4k-wallpapers,2024-games-wallpapers,cosplay-wallpapers,video-games-wallpapers",
+    category: "popular",
   },{
     imageUrl: "./Img/wallpaper/wallpaper-one/char-1.jpg",
     alt: "character valo",
@@ -206,17 +206,17 @@ const imageData = [
     alt: "gta 6 gta-vi car",
     category: "car",
   },{
-    imageUrl: "./",
-    alt: "",
-    category: "",
+    imageUrl: "./Img/wallpaper/wallpaper-two/genshin-impact-2024-sk-1920x1080.jpg",
+    alt: " 235raiden-shogun-wallpapers,genshin-impact-wallpapers,games-wallpapers,hd-wallpapers,4k-wallpapers,2024-games-wallpapers,cosplay-wallpapers,video-games-wallpapers",
+    category: "tending",
   },{
     imageUrl: "./Img/wallpaper/wallpaper-one/valo-charac.jpg",
     alt: "valorant character",
     category: "character",
   },{
-    imageUrl: "./",
-    alt: "",
-    category: "",
+    imageUrl: "./Img/wallpaper/wallpaper-two/godzilla-x-kong-the-new-empire-x-call-of-duty-modern-warfare-tracer-pack-6c-1920x1080.jpg",
+    alt: " 235raiden-shogun-wallpapers,genshin-impact-wallpapers,games-wallpapers,hd-wallpapers,4k-wallpapers,2024-games-wallpapers,cosplay-wallpapers,video-games-wallpapers",
+    category: "popular",
   },{
     imageUrl: "./Img/wallpaper/wallpaper-one/4k-gta-5-tracey-fame-or-shame-mtk6gigh1jrxlh5v.jpg",
     alt: "gta-5 gta-6 gta-v gta-vi 4k wallpaper hd",
@@ -242,7 +242,7 @@ const imageData = [
     alt: "gta-5(car).",
     category: "car",
   },{
-    imageUrl: "./",
+    imageUrl: "./Img/wallpaper/wallpaper-two/jinx-chaos-and-curses-bg-1920x1080.jpg",
     alt: "gta-5 gta-6 gta-v gta-vi 4k wallpaper hd",
     category: "gta",
   },{
@@ -258,7 +258,7 @@ const imageData = [
     alt: "gta-5 gta-6 gta-v gta-vi 4k wallpaper hd",
     category: "gta",
   },{
-    imageUrl: "./",
+    imageUrl: "./Img/wallpaper/wallpaper-two/last-island-of-survival-unknown-15-days-2024-gt-1920x1080.jpg",
     alt: "gta-5 gta-6 gta-v gta-vi 4k wallpaper hd",
     category: "gta",
   },{
@@ -286,56 +286,180 @@ const imageData = [
     alt: "gta-5 gta-6 gta-v gta-vi 4k wallpaper hd",
     category: "gta",
   },{
-    imageUrl: "./",
-    alt: "",
+    imageUrl: "./Img/wallpaper/wallpaper-two/last-island-of-survival-unknown-15-days-2024-gt-1920x1080.jpg",
+    alt: "235raiden-shogun-wallpapers,genshin-impact-wallpapers,games-wallpapers,hd-wallpapers,4k-wallpapers,2024-games-wallpapers,cosplay-wallpapers,video-games-wallpapers",
     category: "",
   },{
     imageUrl: "./Img/wallpaper/wallpaper-one/gta(1).png",
     alt: "gta-5 gta-6 gta-v gta-vi 4k wallpaper hd",
     category: "gta",
   },{
-    imageUrl: "./",
-    alt: "",
-    category: "",
+    imageUrl: "./Img/wallpaper/wallpaper-two/naraka-bladepoint-5k-51-1920x1080.jpg",
+    alt: "235raiden-shogun-wallpapers,genshin-impact-wallpapers,games-wallpapers,hd-wallpapers,4k-wallpapers,2024-games-wallpapers,cosplay-wallpapers,video-games-wallpapers",
+    category: "popular",
   },{
     imageUrl: "./Img/wallpaper/wallpaper-one/lucia-in-gta-vi-bo.jpg",
     alt: "gta-5 gta-6 gta-v gta-vi 4k wallpaper hd",
     category: "gta",
   },{
-    imageUrl: "./",
-    alt: "",
-    category: "",
+    imageUrl: "./Img/wallpaper/wallpaper-two/naraka-bladepoint-5k-51-1920x1080.jpg",
+    alt: "235raiden-shogun-wallpapers,genshin-impact-wallpapers,games-wallpapers,hd-wallpapers,4k-wallpapers,2024-games-wallpapers,cosplay-wallpapers,video-games-wallpapers",
+    category: "popular",
   },{
     imageUrl: "./Img/wallpaper/wallpaper-one/lucia-in-gta-vi-bo.jpg",
     alt: "gta-5 gta-6 gta-v gta-vi 4k wallpaper hd",
     category: "gta",
   },{
-    imageUrl: "./",
-    alt: "",
+    imageUrl: "./Img/wallpaper/wallpaper-one/jinx-striking-uh-3840x2160.jpg",
+    alt: "235raiden-shogun-wallpapers,genshin-impact-wallpapers,games-wallpapers,hd-wallpapers,4k-wallpapers,2024-games-wallpapers,cosplay-wallpapers,video-games-wallpapers",
+    category: "popular",
+  },{
+    imageUrl: "./Img/wallpaper/3353558-cyberpunk-2077-cd-projekt-red-ps4-xone-pc.jpg",
+    alt: "235raiden-shogun-wallpapers,genshin-impact-wallpapers,games-wallpapers,hd-wallpapers,4k-wallpapers,2024-games-wallpapers,cosplay-wallpapers,video-games-wallpapers",
+    category: "popular",
+  },{
+    imageUrl: "./Img/wallpaper/best-gaming-background-aea1fp9pow4r1l4r.jpg",
+    alt: "235raiden-shogun-wallpapers,genshin-impact-wallpapers,games-wallpapers,hd-wallpapers,4k-wallpapers,2024-games-wallpapers,cosplay-wallpapers,video-games-wallpapers",
+    category: "popular",
+  },{
+    imageUrl: "./Img/wallpaper/wallpaper-two/raiden-shogun-torn-to-oblivion-2024-6v-1920x1080.jpg",
+    alt: "235raiden-shogun-wallpapers,genshin-impact-wallpapers,games-wallpapers,hd-wallpapers,4k-wallpapers,2024-games-wallpapers,cosplay-wallpapers,video-games-wallpapers",
+    category: "popular",
+  },{
+    imageUrl: "./Img/wallpaper/wallpaper-two/naraka-bladepoint-5k-51-1920x1080.jpg",
+    alt: "235raiden-shogun-wallpapers,genshin-impact-wallpapers,games-wallpapers,hd-wallpapers,4k-wallpapers,2024-games-wallpapers,cosplay-wallpapers,video-games-wallpapers",
+    category: "popular",
+  },{
+    imageUrl: "./Img/wallpaper/wallpaper-two/stellar-blade-game-j0-1920x1080.jpg",
+    alt: "235raiden-shogun-wallpapers,genshin-impact-wallpapers,games-wallpapers,hd-wallpapers,4k-wallpapers,2024-games-wallpapers,cosplay-wallpapers,video-games-wallpapers",
+    category: "popular",
+  },,{
+    imageUrl: "./Img/wallpaper/wallpaper-one/gta-6.png",
+    alt: "gta-5 gta-6 gta-v gta-vi 4k wallpaper hd",
+    category: "gta",
+  },{
+    imageUrl: "./Img/wallpaper/wallpaper-one/gta-6(2).jpg",
+    alt: "gta-5 gta-6 gta-v gta-vi 4k wallpaper hd",
+    category: "gta",
+  },{
+    imageUrl: "./Img/wallpaper/wallpaper-one/gta-6(10.jpg",
+    alt: "gta-5 gta-6 gta-v gta-vi 4k wallpaper hd",
+    category: "gta",
+  },{
+    imageUrl: "./Img/wallpaper/wallpaper-one/gta-car-90.jpg",
+    alt: "gta-car-90",
+    category: "car",
+  },{
+    imageUrl: "./Img/wallpaper/wallpaper-one/gta-6(111).jpeg",
+    alt: "gta-5 gta-6 gta-v gta-vi 4k wallpaper hd",
+    category: "gta",
+  },{
+    imageUrl: "./Img/wallpaper/wallpaper-one/gta-vi-jp.jpg",
+    alt: "gta-5 gta-6 gta-v gta-vi 4k wallpaper hd",
+    category: "gta",
+  },{
+    imageUrl: "./Img/wallpaper/wallpaper-two/last-island-of-survival-unknown-15-days-2024-gt-1920x1080.jpg",
+    alt: "235raiden-shogun-wallpapers,genshin-impact-wallpapers,games-wallpapers,hd-wallpapers,4k-wallpapers,2024-games-wallpapers,cosplay-wallpapers,video-games-wallpapers",
     category: "",
   },{
-    imageUrl: "./",
-    alt: "",
-    category: "",
+    imageUrl: "./Img/wallpaper/wallpaper-one/gta(1).png",
+    alt: "gta-5 gta-6 gta-v gta-vi 4k wallpaper hd",
+    category: "gta",
   },{
-    imageUrl: "./",
-    alt: "",
-    category: "",
-  },{
-    imageUrl: "./",
-    alt: "",
-    category: "",
-  },{
-    imageUrl: "./",
-    alt: "",
-    category: "",
-  },{
-    imageUrl: "./",
-    alt: "",
-    category: "",
-  },
+    imageUrl: "./Img/wallpaper/wallpaper-two/naraka-bladepoint-5k-51-1920x1080.jpg",
+    alt: "235raiden-shogun-wallpapers,genshin-impact-wallpapers,games-wallpapers,hd-wallpapers,4k-wallpapers,2024-games-wallpapers,cosplay-wallpapers,video-games-wallpapers",
+    category: "popular",
+  }
 ];
 
+
+// // Function to add images dynamically
+// function addImages(categoryFilter = "", searchQuery = "") {
+//   const dynamicContent = document.getElementById("dynamicContent");
+//   const prevButton = document.getElementById("prevBtn");
+//   const nextButton = document.getElementById("nextBtn");
+
+//   // Clear existing content
+//   dynamicContent.innerHTML = "";
+
+//   // Filter images based on category if provided
+//   const filteredImages = categoryFilter
+//     ? imageData.filter((img) => img.category === categoryFilter)
+//     : imageData;
+
+//   // Filter images based on search query if provided
+//   const searchedImages = searchQuery
+//     ? filteredImages.filter((img) =>
+//         img.alt.toLowerCase().includes(searchQuery.toLowerCase())
+//       )
+//     : filteredImages;
+
+//   // Number of images to display per page
+//   const imagesPerPage = 12;
+
+//   // Calculate the starting index based on the current page
+//   const startIndex = currentPage * imagesPerPage;
+
+//   // Slice the array to get the images for the current page
+//   const pageImages = searchedImages.slice(
+//     startIndex,
+//     startIndex + imagesPerPage
+//   );
+
+//   pageImages.forEach((data) => {
+//     // Create image element
+//     const img = document.createElement("img");
+//     img.src = data.imageUrl;
+//     img.alt = data.alt;
+//     img.className = "wall-img";
+//     img.loading = "lazy";
+
+//     // Create div to hold the image
+//     const div = document.createElement("div");
+//     div.className = "wall-img-main";
+//     div.setAttribute("data-category", data.category);
+//     div.appendChild(img);
+
+//     // Append the div to dynamicContent
+//     dynamicContent.appendChild(div);
+//   });
+
+//   // Update visibility of previous and next buttons
+//   if (startIndex === 0) {
+//     prevButton.style.display = "none"; // Hide previous button on first page
+//   } else {
+//     prevButton.style.display = "inline-block";
+//   }
+
+//   if (startIndex + imagesPerPage >= searchedImages.length) {
+//     nextButton.style.display = "none"; // Hide next button on last page
+//   } else {
+//     nextButton.style.display = "inline-block";
+//   }
+// }
+
+// // Initial page index
+// let currentPage = 0;
+
+// // Call addImages function to populate dynamicContent with images
+// addImages();
+
+// // Event listener for previous button
+// document.getElementById("prevBtn").addEventListener("click", () => {
+//   if (currentPage > 0) {
+//     currentPage--;
+//     addImages();
+//   }
+// });
+
+// // Event listener for next button
+// document.getElementById("nextBtn").addEventListener("click", () => {
+//   const imagesPerPage = 10;
+//   if ((currentPage + 1) * imagesPerPage < imageData.length) {
+//     currentPage++;
+//     addImages();
+//   }
+// });
 
 // Function to add images dynamically
 function addImages(categoryFilter = "", searchQuery = "") {
@@ -395,10 +519,11 @@ function addImages(categoryFilter = "", searchQuery = "") {
     prevButton.style.display = "inline-block";
   }
 
-  if (startIndex + imagesPerPage >= searchedImages.length) {
-    nextButton.style.display = "none"; // Hide next button on last page
-  } else {
+  if ((categoryFilter === "" || categoryFilter === "all") && searchedImages.length > imagesPerPage) {
+    // Show next button when not filtering by category or when 'all' is selected and there are more images than one page
     nextButton.style.display = "inline-block";
+  } else {
+    nextButton.style.display = "none"; // Hide next button on last page or when filtering by category
   }
 }
 
@@ -418,12 +543,36 @@ document.getElementById("prevBtn").addEventListener("click", () => {
 
 // Event listener for next button
 document.getElementById("nextBtn").addEventListener("click", () => {
-  const imagesPerPage = 10;
-  if ((currentPage + 1) * imagesPerPage < imageData.length) {
+  const imagesPerPage = 12;
+  const totalPages = Math.ceil(imageData.length / imagesPerPage);
+  if (currentPage < totalPages - 1) {
     currentPage++;
     addImages();
   }
 });
+
+// Event listener for select options
+document.querySelectorAll('.select-option').forEach(option => {
+  option.addEventListener('click', function() {
+    const category = this.getAttribute('data-category');
+    document.querySelector('.select-selected').textContent = category ? category : 'all';
+    currentPage = 0; // Reset current page to 0 when selecting a category
+    addImages(category);
+  });
+});
+
+// Event listener for search input
+document.querySelector('.custom-select input').addEventListener('input', function() {
+  const searchQuery = this.value.trim();
+  currentPage = 0; // Reset current page to 0 when performing a search
+  addImages("", searchQuery);
+});
+
+
+
+
+
+
 
 // Event listener for search input
 document

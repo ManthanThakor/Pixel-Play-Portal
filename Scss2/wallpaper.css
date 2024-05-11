@@ -793,14 +793,20 @@
   }
 }
 /* --next and prev--*/
-#nextBtn {
+#nextBtn, #prevBtn, #downloadBtn {
   margin-top: 15px;
   padding: 5px;
+  border-radius: 5px;
+  text-transform: capitalize;
+  color: #000000;
+  font-family: "Barlow", Sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  background-color: red;
 }
-
-#prevBtn {
-  margin-top: 15px;
-  padding: 5px;
+#nextBtn:hover, #prevBtn:hover, #downloadBtn:hover {
+  background-color: rgb(255, 255, 255);
+  cursor: pointer;
 }
 
 /* --modal part for download--*/
