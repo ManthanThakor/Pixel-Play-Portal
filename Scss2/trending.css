@@ -38,12 +38,32 @@
   background-color: black;
 }
 
+.trending-section-ops {
+  box-shadow: 0 -5px 3px -3px rgb(255, 255, 255), 0 5px 3px -3px rgb(255, 255, 255);
+  background-color: black;
+  position: relative !important;
+  height: 1000px;
+}
+
 .discord-part-joinn {
   box-shadow: 0 -5px 3px -3px rgb(255, 255, 255), 0 5px 3px -3px rgb(255, 255, 255);
 }
 
 .container-fluid {
   --bs-gutter-x: 0rem !important;
+}
+
+.trending-title-ops {
+  color: white;
+  font-weight: 700;
+  font-style: italic;
+  text-align: center;
+  font-size: 40px;
+  text-transform: capitalize;
+  font-family: "Arial", "Helvetica", "sans-serif";
+  margin-bottom: 0%;
+  padding-top: 40px !important;
+  padding-bottom: 40px !important;
 }
 
 .trending-title {
@@ -61,17 +81,17 @@
 
 .tr-main {
   position: absolute;
-  top: 46%;
+  top: 56%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 1000px;
-  height: 600px;
+  width: 90%;
+  height: 800px;
   background: #f5f5f5;
-  box-shadow: 0 30px 50px #dbdbdb;
+  box-shadow: 0 10px 20px #dbdbdb;
   overflow: hidden;
 }
 
-.container .slide .item {
+.tr-main .slide .item {
   width: 200px;
   height: 300px;
   position: absolute;
@@ -91,27 +111,27 @@
 }
 
 .t-p-1 {
-  background: linear-gradient(rgba(0, 0, 0, 0.57), rgba(0, 0, 0, 0.585)), url(../Img/trending/tre/Minecraft-Wallapper-For-Desktop.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.358), rgba(0, 0, 0, 0.33)), url(../Img/trending/tre/Minecraft-Wallapper-For-Desktop.jpg);
 }
 
 .t-p-2 {
-  background: linear-gradient(rgba(0, 0, 0, 0.17), rgba(0, 0, 0, 0.295)), url(../Img/trending/tre/fortnite-marvel-chromebook-wallpaper.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.358), rgba(0, 0, 0, 0.33)), url(../Img/trending/tre/fortnite-marvel-chromebook-wallpaper.jpg);
 }
 
 .t-p-3 {
-  background: linear-gradient(rgba(0, 0, 0, 0.17), rgba(0, 0, 0, 0.295)), url(../Img/trending/tre/8f9bf7b5118f20449f2eac93c4ba74c0.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.358), rgba(0, 0, 0, 0.33)), url(../Img/trending/tre/8f9bf7b5118f20449f2eac93c4ba74c0.jpg);
 }
 
 .t-p-4 {
-  background: linear-gradient(rgba(0, 0, 0, 0.17), rgba(0, 0, 0, 0.295)), url(../Img/trending/tre/9a73ade3b2bacc3f91274acd0a85728c.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.358), rgba(0, 0, 0, 0.33)), url(../Img/trending/tre/9a73ade3b2bacc3f91274acd0a85728c.jpg);
 }
 
 .t-p-5 {
-  background: linear-gradient(rgba(0, 0, 0, 0.17), rgba(0, 0, 0, 0.295)), url(../Img/trending/tre/b615b337b708ebdada18e741b11cf9fa.jpeg);
+  background: linear-gradient(rgba(0, 0, 0, 0.358), rgba(0, 0, 0, 0.33)), url(../Img/trending/tre/b615b337b708ebdada18e741b11cf9fa.jpeg);
 }
 
 .t-p-6 {
-  background: linear-gradient(rgba(0, 0, 0, 0.17), rgba(0, 0, 0, 0.295)), url(../Img/trending/tre/wallpapersden.com_apex-legends-4k-gaming-poster_3840x2160.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.358), rgba(0, 0, 0, 0.33)), url(../Img/trending/tre/wallpapersden.com_apex-legends-4k-gaming-poster_3840x2160.jpg);
 }
 
 :root {
@@ -337,4 +357,109 @@
 .button button:hover {
   background: #ababab;
   color: #fff;
+}
+
+/*-----------------------------------*\
+       responsive part 
+\*-----------------------------------*/
+@media only screen and (max-width: 843px) {
+  .tr-main {
+    top: 58%;
+    width: 95%;
+    height: 430px;
+  }
+  .trending-section-ops {
+    height: 627px;
+  }
+  .item .content {
+    left: 15px;
+  }
+}
+@media only screen and (max-width: 633px) {
+  .slide .item:nth-child(3) {
+    left: 70%;
+  }
+  .slide .item:nth-child(4) {
+    left: calc(70% + 220px);
+  }
+  .slide .item:nth-child(5) {
+    left: calc(70% + 440px);
+  }
+  /* here n = 0, 1, 2, 3,... */
+  .slide .item:nth-child(n+6) {
+    left: calc(70% + 660px);
+    opacity: 0;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .content .name {
+    font-size: 25px;
+  }
+  .trending-title-ops {
+    font-size: 25px;
+  }
+  .trending-section-ops {
+    height: 565px;
+  }
+  .content .des {
+    font-size: 12px;
+  }
+  .t-d-btn {
+    padding: 0.2em 0.2em !important;
+  }
+}
+@media only screen and (max-width: 476px) {
+  .slide .item:nth-child(3) {
+    left: 90%;
+  }
+  .slide .item:nth-child(4) {
+    left: calc(90% + 220px);
+  }
+  .slide .item:nth-child(5) {
+    left: calc(90% + 440px);
+  }
+  /* here n = 0, 1, 2, 3,... */
+  .slide .item:nth-child(n+6) {
+    left: calc(90% + 660px);
+    opacity: 0;
+  }
+  .content .name {
+    font-size: 20px;
+  }
+  .trending-title-ops {
+    font-size: 20px;
+  }
+}
+@media only screen and (max-width: 370px) {
+  .trending-title-ops {
+    padding-top: 30px !important;
+    padding-bottom: 30px !important;
+  }
+  .tr-main {
+    top: 56%;
+    height: 340px;
+  }
+  .trending-section-ops {
+    height: 461px;
+  }
+  .button button {
+    width: 25px;
+    height: 25px;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .slide .item:nth-child(3) {
+    left: 97%;
+  }
+  .slide .item:nth-child(4) {
+    left: calc(97% + 220px);
+  }
+  .slide .item:nth-child(5) {
+    left: calc(97% + 440px);
+  }
+  /* here n = 0, 1, 2, 3,... */
+  .slide .item:nth-child(n+6) {
+    left: calc(97% + 660px);
+    opacity: 0;
+  }
 }/*# sourceMappingURL=trending.css.map */
