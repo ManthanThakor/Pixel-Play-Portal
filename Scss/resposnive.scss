@@ -215,11 +215,49 @@ body {
     @include padd(0px, 40px, 40px, 40px);
   }
 }
+
+
+
+@media only screen and (max-width: 800px) {
+  .slick-prev:before, .slick-next:before {
+    top: 300px;
+    font-size: 40px !important;
+    position: relative;
+    
+  }
+
+  .card-img, .card-img-bottom, .card-img-top {
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.slick-prev:before {
+  content: '←';
+  left: 417%;
+  
+  color: aqua !important;
+}
+.slick-next:before {
+  content: '→';
+  right: 517%;
+  
+  color: aqua !important;
+}
+}
 @media only screen and (min-width: 840px) and (max-width: 992px) {
   .event-part-two-sec{
    margin-top: 20px !important;
   }
 }
+
+@media only screen and (max-width: 589px) {
+  .arcade-b-card {
+    font-size: 12px !important;
+}
+}
+
+
 @media only screen and (max-width: 525px) {
   .event-join-t{
     @include text-w-s-two(600, 22);
@@ -255,8 +293,51 @@ body {
     }
   }
 
- 
+  @media only screen and (max-width: 468px) {
+    
+  }
+  @media only screen and (max-width: 382px) {
+    .arcade-b-card {
+      font-size: 12px !important;
+  }
+  .card-img, .card-img-bottom, .card-img-top {
+    height: 200px;
+  }
 
+  .slick-prev:before, .slick-next:before {
+    top: 230px;
+    font-size: 30px !important;
+
+  }
+.arc-btn-mor {
+    padding: 0px 0 0px 0 !important;
+}
+.slick-prev:before {
+  content: '←';
+  left: 25px;
+}
+.slick-next:before {
+  content: '→';
+  right: 35px;
+  
+}
+.arcade-t-card {
+  font-size: 16px !important;
+}
+.arcade-btn:before {
+  font-size: 16px !important;
+ 
+  margin-top: -2px !important;
+}
+.arcade-btn {
+ 
+  font-size: 14px !important;
+}
+.button-card-part-price {
+ 
+  font-size: 14px !important;
+}
+  }
 @media only screen and (max-width: 360px) {
   .event-join-t,.common-btn-part{
     font-size: 18px !important;
@@ -266,12 +347,7 @@ body {
   }
 }
 
-@media only screen and (max-width: 320px) {
-  .arcade-title{
-    font-size: 22px !important;
-    padding-top: 6px;
-  } 
-}
+
 
 /*-----------------------------------*\
                characters

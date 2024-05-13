@@ -263,4 +263,18 @@ input::placeholder {
 .img-wrap img {
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.username {
+  width: 100%;
+  height: 30px;
+  background-color: white;
+  border-radius: 2ch;
+}
+
+.field {
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  width: 100% !important;
 }/*# sourceMappingURL=profile.css.map */

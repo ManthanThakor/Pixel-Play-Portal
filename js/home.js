@@ -61,8 +61,8 @@ cards.forEach(card => {
     let originalContent = card.innerHTML;
     
     let readless = () => {
-        if (card.textContent.length > 139) {
-            card.innerHTML = card.textContent.slice(0, 139) + '...' +
+        if (card.textContent.length > 120) {
+            card.innerHTML = card.textContent.slice(0, 120) + '...' +
                 '<span class="remaining-text" style="display: none;">' + '</span>' +
                 '<span class="read-more"> Read more</span>';
         }

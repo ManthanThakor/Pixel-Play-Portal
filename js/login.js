@@ -1,76 +1,113 @@
-   // Function to save user data to JSON
-   function saveUserData(username, email, password) {
-    // Retrieve existing data or initialize empty array
-    let usersData = JSON.parse(localStorage.getItem('usersData')) || [];
-    
-    // Check if email already exists
-    if (usersData.some(user => user.email === email)) {
-      alert("Email already exists! Please use a different email.");
+// Function to validate email format
+function validateEmail(email) {
+  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return regex.test(email);
+}
+
+// Function to handle registration
+function register() {
+  const usernameInput = document.querySelector('#registerFormContent .input-box:nth-of-type(1) input');
+  const emailInput = document.querySelector('#registerFormContent .input-box:nth-of-type(2) input');
+  const passwordInput = document.querySelector('#registerFormContent .input-box:nth-of-type(3) input');
+  const agreeCheckbox = document.querySelector('#registerFormContent .checkbox1 input[type="checkbox"]');
+
+  const username = usernameInput.value.trim();
+  const email = emailInput.value.trim();
+  const password = passwordInput.value.trim();
+
+  // Check if username is empty
+  if (username === '') {
+      alert('Please enter a username.');
+      usernameInput.focus();
       return;
-    }
-
-    // Add new user data
-    usersData.push({
-      username: username,
-      email: email,
-      password: password
-    });
-
-    // Save updated data to local storage
-    localStorage.setItem('usersData', JSON.stringify(usersData));
   }
 
-  // Function to handle sign up form submission
-  document.getElementById('signUpForm').addEventListener('submit', function (event) {
-    event.preventDefault();
-    const username = document.getElementById('signup_username').value;
-    const email = document.getElementById('signup_email').value;
-    const password = document.getElementById('signup_password').value;
-    saveUserData(username, email, password);
-    alert("Account created successfully!");
-  });
+  // Check if email is empty or in invalid format
+  if (email === '') {
+      alert('Please enter an email address.');
+      emailInput.focus();
+      return;
+  } else if (!validateEmail(email)) {
+      alert('Please enter a valid email address.');
+      emailInput.focus();
+      return;
+  }
 
-  // Function to handle sign in form submission
-  document.getElementById('signInForm').addEventListener('submit', function (event) {
-    event.preventDefault();
-    const email = document.getElementById('signin_email').value;
-    const password = document.getElementById('signin_password').value;
+  // Check if password is empty or too short
+  if (password === '') {
+      alert('Please enter a password.');
+      passwordInput.focus();
+      return;
+  } else if (password.length < 6) {
+      alert('Password must be at least 6 characters long.');
+      passwordInput.focus();
+      return;
+  }
 
-    // Retrieve usersData from local storage
-    const usersData = JSON.parse(localStorage.getItem('usersData')) || [];
+  // Check if the terms & conditions checkbox is checked
+  if (!agreeCheckbox.checked) {
+      alert('Please agree to terms & conditions.');
+      return;
+  }
 
-    // Check if the provided email and password match any user's data
-    const user = usersData.find(user => user.email === email && user.password === password);
+  // Retrieve users from localStorage
+  const users = JSON.parse(localStorage.getItem('users')) || [];
 
-    if (user) {
-      alert("Sign in successful!");
-      // Redirect to index.html or any other page
-      window.location.href = "index.html";
-    } else {
-      alert("Email not found. Please create an account.");
-      // Switch to sign up panel
-      document.getElementById('container').classList.add("right-panel-active");
-    }
-  });
+  // Check if the provided username already exists
+  if (users.some(user => user.username === username)) {
+      alert('Username already exists. Please choose another one.');
+      return;
+  }
 
-  // Switch between sign up and sign in panels
-  document.getElementById('signUp').addEventListener('click', function () {
-    document.getElementById('container').classList.add("right-panel-active");
-  });
+  // Add new user to the users array
+  users.push({ username: username, email: email, password: password });
+  localStorage.setItem('users', JSON.stringify(users));
 
-  document.getElementById('signIn').addEventListener('click', function () {
-    document.getElementById('container').classList.remove("right-panel-active");
-  });
+  alert('Registration successful!');
+  // Redirect or perform any other actions after successful registration
+}
 
-
-
-
-
-
-  document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
-    document.getElementById('container').classList.toggle("right-panel-active");
-  });
+document.querySelector("loggedInUser")
 
 
 
-  
+// Function to handle login
+function login() {
+  const usernameInput = document.querySelector('#loginFormContent .input-box.username input');
+  const passwordInput = document.querySelector('#loginFormContent .input-box.password input');
+
+  const username = usernameInput.value.trim();
+  const password = passwordInput.value.trim();
+
+  // Check if username is empty
+  if (username === '') {
+      alert('Please enter a username.');
+      usernameInput.focus();
+      return;
+  }
+
+  // Check if password is empty
+  if (password === '') {
+      alert('Please enter a password.');
+      passwordInput.focus();
+      return;
+  }
+
+  // Retrieve users from localStorage
+  const users = JSON.parse(localStorage.getItem('users')) || [];
+
+  // Check if the provided username and password match any user
+  const user = users.find(user => user.username === username && user.password === password);
+
+  if (user) {
+      // Store the logged-in user's information in localStorage
+      localStorage.setItem('loggedInUser', JSON.stringify(user));
+      alert('Login successful!');
+      // Redirect or perform any other actions after successful login
+      // For example, you can redirect to index.html here
+      window.location.href = 'index.html';
+  } else {
+      alert('Invalid username or password.');
+  }
+}
+

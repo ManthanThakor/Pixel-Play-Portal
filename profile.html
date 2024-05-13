@@ -45,7 +45,7 @@
       </div>
       <div class="field">
         <label for="name">Name:</label>
-        <input id="name" type="text" placeholder="Alexa" required />
+      <div class="username" ></div>
       </div>
       <div class="field">
         <label for="status">Status:</label>
@@ -78,7 +78,7 @@
                 <img src="${imageSrc}"/>
               </div>
             </label>
-            <div class="name">${name}</div>
+            <div class="name"> <div class="username" ></div></div>
             <div class="status">${status}</div>
             <button type="submit" class="sav-btn edit">Edit Profile</button>
           </form>
@@ -93,6 +93,7 @@
       });
     });
   </script>
+  <script src="js/profile.js"></script>
 </body>
 
 </html>

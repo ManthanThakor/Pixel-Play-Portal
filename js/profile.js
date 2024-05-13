@@ -1,40 +1,56 @@
 
-// for profile upload
 
-var loadFile = function (event) {
-    var image = document.getElementById("output");
-    image.src = URL.createObjectURL(event.target.files[0]);
-  };
+
+
+
+
+
+
+
+
+
+
   
-// for name and status 
+  const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
+  if (loggedInUser) {
+      // Hide the login button if a user is logged in
+      // document.querySelector('#loginButton').style.display = 'none';
 
-document.getElementById('edit-form').addEventListener('submit', function(event) {
-    event.preventDefault();
-    
-    const imageSrc = document.getElementById('preview-image').src;
-    const name = document.getElementById('name').value;
-    const status = document.getElementById('status').value;
+      const initial = loggedInUser.username.toUpperCase();
+      console.log(initial);
+      document.querySelector(".username").textContent= initial;
+      const loggedInUserDiv = document.createElement('div');
+      loggedInUserDiv.className = 'initial-circle';
+      loggedInUserDiv.textContent = initial;
+      document.querySelector('.logo-menu-part').appendChild(loggedInUserDiv);
 
-    const profileCard = `
-      <div class="card">
-        <form id="edit-form">
-          <h1>Profile Card</h1>
-          <label class="custom-file-upload fas">
-            <div class="img-wrap">
-              <img src="${imageSrc}"/>
-            </div>
-          </label>
-          <div class="name">${name}</div>
-          <div class="status">${status}</div>
-          <button type="submit" class="edit">Edit Profile</button>
-        </form>
-      </div>
-    `;
-    
-    document.getElementById('root').innerHTML = profileCard;
-    
-    document.getElementById('edit-form').addEventListener('submit', function(event) {
-      event.preventDefault();
-      renderEditForm();
-    });
-  });
+      // Add event listeners for hover and click events
+      loggedInUserDiv.addEventListener('mouseenter', function() {
+          // Replace the initial with the logout icon when hovered over
+          loggedInUserDiv.innerHTML = '<i class="fas fa-sign-out-alt" style = "position: absolute; right:85px" id="logout-part" aria-hidden="true"></i>';
+      });
+
+      loggedInUserDiv.addEventListener('mouseleave', function() {
+          // Replace the logout icon with the initial when mouse leaves
+          loggedInUserDiv.textContent = initial;
+      });
+
+      loggedInUserDiv.addEventListener('click', function() {
+          // Remove the logged-in user information from localStorage
+          localStorage.removeItem('loggedInUser');
+          alert('Logged out successfully!');
+          // Redirect to the home page
+          window.location.href = 'index.html';
+      });
+  } else {
+      // // Show the login button if no user is logged in
+      // const loginButton = document.createElement('button');
+      // loginButton.className = 'login btn';
+      // loginButton.textContent = 'Login';
+      // document.getElementById('loginButton').appendChild(loginButton);
+      // // Optionally, you can add an event listener to perform an action when the login button is clicked
+      // loginButton.addEventListener('click', function() {
+      //     // Redirect to the login page
+      //     window.location.href = 'login.html';
+      // });
+  }

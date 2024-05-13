@@ -2,139 +2,153 @@
 <html lang="en">
 
 <head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <!-- TITLE -->
-  <title>Login Page</title>
-  <!-- CSS FILE -->
-  <link rel="stylesheet" type="text/css" href="Scss2/login.css" />
- <!-- Bootstrap CSS v5.2.1 -->
- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
- integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
-  <!--  FAVICON -->
-  <link rel="icon" type="image/x-icon" href="Img/logo/PixelPlay.png" />
-<!--  font awesome -->
-  <script src="https://kit.fontawesome.com/cb104e752f.js" crossorigin="anonymous"></script>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="Scss2/login.css">
 </head>
 
 <body>
-  <style>
-    @font-face {
-      font-family: "Starzone";
-      src: url("Font/starzone-scifi-game-font/Web-TT/Starzone.ttf") format("truetype"),
-        url("Font/starzone-scifi-game-font/OpenType-TT/Starzone.ttf") format("truetype"),
-        url("Font/starzone-scifi-game-font/OpenType-PS/Starzone.otf") format("opentype"),
-        url("Font/starzone-scifi-game-font/Web-PS/Starzone.otf") format("opentype");
-    }
+    <div class="login-section"> 
+        <video autoplay muted loop id="myVideo">
+            <source src="background-video\5180-183786417.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+          </video>
+  
+    <a href="index.html">
+<div class="close-sec-login">
+    <img src="img/close.svg" alt="back button" />
+</div>
+</a>
+        <input type="radio" id="loginForm" name="formToggle" checked>
 
-    @font-face {
-      font-family: "CustomFont1";
-      src: url("Font/oxstar-font/OpenType-TT/Oxstars-Regular.ttf");
-    }
+        <input type="radio" id="registerForm" name="formToggle">
 
-    @font-face {
-      font-family: "CustomFont2";
-      src: url("Font/oxstar-font/Web-TT/Oxstars-Regular.ttf");
-    }
+        <input type="radio" id="forgotForm" name="formToggle">
 
-    @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
 
-  </style>
-     <div class="container" id="container">
-     
-        <div class="form-container sign-up-container">
-    
-          <form id="signUpForm">
-            <h3>Create Account</h3>
-            <div class="form-group">
-              <label>
-                <input type="text" id="signup_username" class="my_form-control" required>
-                <small class="my_place">Username</small>
-                <div class="invalid-feedback">Please fill out this field.</div>
-              </label>
-            </div>
-    
-            <div class="form-group">
-              <label>
-                <input type="email" id="signup_email" class="my_form-control" required>
-                <small class="my_place">Your email</small>
-                <div class="invalid-feedback">Please provide a valid email.</div>
-              </label>
-            </div>
-    
-            <div class="form-group">
-              <label>
-                <input type="password" id="signup_password" class="my_form-control" required>
-                <small class="my_place">Your password</small>
-                <div class="invalid-feedback">Please fill out this field.</div>
-              </label>
-            </div>
-    
-            <div class="form-group text-center">
-              <button type="submit" class="btn btn-primary mt-2 mx-auto">CREATE ACCOUNT</button>
-            </div>
-          </form>
+
+        <div class="wrapper" id="loginFormContent">
+
+            <form action="">
+
+                <h1>Login</h1>
+
+                <div class="input-box email username">
+
+                    <input type="text" placeholder="Username" required>
+
+
+
+                </div>
+
+                <div class="input-box password">
+
+                    <input type="password" placeholder="Password" required>
+
+
+
+                </div>
+
+                <div class="checkbox1">
+
+                    <label><input type="checkbox">Remember Me</label>
+
+                    <label for="forgotForm">Forgot Password</label>
+
+                </div>
+
+                <button type="button" class="btn login-btn" onclick="login()">Login</button>
+
+
+                <div class="link">
+
+                    <p>Don't have an account? <label for="registerForm">Register</label></p>
+
+                </div>
+
+            </form>
+
         </div>
-    
-        <div class="form-container sign-in-container">
-          <form id="signInForm">
-            <h3>Sign In</h3>
-            <div class="form-group">
-              <label>
-                <input type="email" id="signin_email" class="my_form-control" required>
-                <small class="my_place">Your email</small>
-                <div class="invalid-feedback">Please provide a valid email.</div>
-              </label>
-            </div>
-    
-            <div class="form-group">
-              <label>
-                <input type="password" id="signin_password" class="my_form-control" required>
-                <small class="my_place">Your password</small>
-                <div class="invalid-feedback">Please fill out this field.</div>
-              </label>
-            </div>
-    
-            <div class="form-group text-center">
-              <button type="submit" class="btn btn-primary mt-2 mx-auto">SIGN IN</button>
-            </div>
-    
-            <div class="form-group mt-2 text-center">
-              <span class="forgot">Forgot password?</span>
-            </div>
-          </form>
-        </div>
-    
-        <div class="overlay-container">
-          <div class="overlay">
-            <div class="overlay-panel overlay-left">
-              <h1>Welcome Back!</h1>
-              <p></p>
-              <button class="ghost" id="signIn">SIGN IN</button>
-    
-            </div>
-            <div class="overlay-panel overlay-right">
-              <h1>Hello World!</h1>
-              <p>If you don't have Account<br> then create Account</p>
-              <button class="ghost" id="signUp">CREATE ACCOUNT</button>
-            </div>
-          </div>
-        </div>
-    
-      </div>
-    
-      <script src="js/login.js"></script>
-  <!--  Custom scripts Bootstrap JavaScript Libraries for this template -->
 
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-    crossorigin="anonymous"></script>
+        <div class="wrapper" id="registerFormContent">
+
+            <form action="">
+
+                <h1>Register</h1>
+
+                <div class="input-box">
+
+                    <input type="text" placeholder="Username" required>
+
+
+
+                </div>
+
+                <div class="input-box">
+
+                    <input type="email" placeholder="Email" required>
+
+
+
+                </div>
+
+                <div class="input-box">
+
+                    <input type="password" placeholder="Password" required>
+
+
+
+                </div>
+
+                <div class="checkbox1">
+
+                    <label><input type="checkbox" required>I agree to terms & conditions</label>
+
+                </div>
+
+                <button type="button" class="btn" onclick="register()">Register</button>
+
+
+                <div class="link">
+
+                    <p>Already have an account? <label for="loginForm">Login</label></p>
+
+                </div>
+
+            </form>
+
+        </div>
+
+        <div class="wrapper" id="forgotFormContent">
+
+            <form action="">
+
+                <h1>Reset your password</h1>
+
+                <div class="input-box">
+
+                    <input type="email" placeholder="Email" required>
+
+                </div>
+
+                <div class="input-box">
+
+                    <button type="submit" class="btn">Send Request</button>
+
+                    <div class="link">
+
+                        <p>Don't have an account? <label for="registerForm">Register</label></p>
+
+                    </div>
+
+            </form>
+
+        </div>
+    </div>
+
+
+    <script src="js/login.js"></script>
 </body>
 
 </html>

@@ -198,3 +198,8 @@ document.addEventListener('DOMContentLoaded', function() {
 // });
 
 
+const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
+if (loggedInUser) {
+    // Hide the login button if a user is logged in
+    document.querySelector('#loginButton').style.display = 'none';
+}
