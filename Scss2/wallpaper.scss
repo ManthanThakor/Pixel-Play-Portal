@@ -613,4 +613,87 @@ background-color: red;
   font-size: 20px;
 }
 
+/*-----------------------------------*\
+       responsive part 
+\*-----------------------------------*/
 
+@media only screen and (max-width: 1080px) {
+  .wallpaper-section-body {
+    padding: 60px 40px 60px 40px !important;
+  }
+  #containerrr {
+ 
+    display: none;
+}
+}
+@media only screen and (max-width: 970px) {
+.wall-img{
+  width: 100% !important;
+  height: 300px;
+}
+.wall-img-main {
+  padding: 10px;
+  width: 100%;
+}
+}
+@media only screen and (max-width: 500px) {
+  .cube {
+ 
+    display: none;
+  }
+  .wall-part-t {
+   
+    padding-top: 30px !important;
+    padding-bottom: 30px !important;
+  }
+  .wallpaper-section-body {
+    padding: 30px 15px 30px 15px !important;
+  }
+  .a {
+
+    font-size: 30px;
+  }
+  #info-part-btn-one{
+    display: none;
+  }
+  #info-part-btn-two{
+    display: none;
+  }
+  .search-dropdown {
+ flex-direction: column;
+    padding-bottom: 30px !important;
+    gap:15px;
+}
+.input-box .search {
+
+  width: 60px;
+}
+.input-box {
+  
+  height: 35px
+}
+.select-selected {
+
+  padding: 4px 3px;
+}
+.custom-select {
+  width: 100%;
+}
+.input-box.open {
+  max-width: 95%;
+}
+}
+
+@media only screen and (max-width: 360px) {
+  .wall-img-main {
+      padding: 5px;
+  }
+  .a {
+
+    font-size: 20px;
+  }
+  .search-dropdown {
+  
+       gap:5px;
+   }
+}
