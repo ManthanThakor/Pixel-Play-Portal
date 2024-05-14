@@ -142,24 +142,29 @@ async function getSongs(currfolder) {
 getSongs('song/ncs')
 
 const playMusic = (track, pause = false) => {
-
     songURL = `/Quaver/${currfolder}/` + track;
-
     currSong.src = songURL;
-
-
 
     if (!pause) {
         currSong.play();
-        play.src = "img/pause.svg"
-
+        document.querySelectorAll(".playbar #play").forEach(playButton => {
+            playButton.src = "img/pause.svg";
+        });
+    } else {
+        document.querySelectorAll(".playbar #play").forEach(playButton => {
+            playButton.src = "img/play.svg";
+        });
     }
-    document.querySelector(".songinfo").innerText = decodeURIComponent(track);
-    document.querySelector(".songtime").innerHTML = "00:00/00:00"
 
-
-
+    // Update song info in all playbars
+    document.querySelectorAll(".playbar .songinfo").forEach(songinfo => {
+        songinfo.innerText = decodeURIComponent(track);
+    });
+    document.querySelectorAll(".playbar .songtime").forEach(songtime => {
+        songtime.innerHTML = "00:00/00:00";
+    });
 };
+
 
 
 
@@ -172,114 +177,113 @@ async function main() {
     playMusic(songs[0], true)
 
 
-    play.addEventListener("click", () => {
+ // Play functionality
+document.querySelectorAll(".playbar #play").forEach(button => {
+    button.addEventListener("click", () => {
         if (currSong.paused) {
-            currSong.play()
-            play.src = "img/pause.svg"
-            console.log(currfolder)
-
+            currSong.play();
+            document.querySelectorAll(".playbar #play").forEach(playButton => {
+                playButton.src = "img/pause.svg";
+            });
         } else {
-            play.src = "img/play.svg"
-            currSong.pause()
-
+            document.querySelectorAll(".playbar #play").forEach(playButton => {
+                playButton.src = "img/play.svg";
+            });
+            currSong.pause();
         }
-    })
+    });
+});
 
+// Timeupdate functionality
+currSong.addEventListener("timeupdate", () => {
+    document.querySelectorAll(".playbar .songtime").forEach(songtime => {
+        songtime.innerHTML = `${secondsToMinutesSeconds(currSong.currentTime)}/${secondsToMinutesSeconds(currSong.duration)}`;
+    });
+    document.querySelectorAll(".playbar .circle").forEach(circle => {
+        circle.style.left = `${(currSong.currentTime * 100) / currSong.duration}%`;
+    });
+    console.log(currSong);
+});
 
-    currSong.addEventListener("timeupdate", () => {
-
-        document.querySelector(".songtime").innerHTML = `${secondsToMinutesSeconds(currSong.currentTime)}/${secondsToMinutesSeconds(currSong.duration)}`
-        document.querySelector(".circle").style.left = currSong.currentTime * 100 / currSong.duration + "%"
-
-
-    })
-
-
-    let circle = document.querySelector(".circle");
-    let seekbar = document.querySelector(".seekbar");
-    let isDragging = false;
-
+// Dragging functionality
+document.querySelectorAll(".playbar .circle").forEach(circle => {
     circle.addEventListener("mousedown", startDragging);
+});
+document.querySelectorAll(".playbar .seekbar").forEach(seekbar => {
     seekbar.addEventListener("click", moveCircle);
+});
+document.addEventListener("mousemove", dragCircle);
+document.addEventListener("mouseup", stopDragging);
 
-    function startDragging(e) {
-        isDragging = true;
-    }
+function startDragging(e) {
+    isDragging = true;
+}
 
-    function moveCircle(e) {
-        if (!isDragging) {
-            let offsetX = e.clientX - seekbar.getBoundingClientRect().left;
-            let percent = (offsetX * 100 / seekbar.getBoundingClientRect().width);
-            if (percent >= 0 && percent <= 100) {
-                circle.style.left = percent + "%";
-                currSong.currentTime = currSong.duration * percent / 100;
-            }
+function moveCircle(e) {
+    if (!isDragging) {
+        let offsetX = e.clientX - this.getBoundingClientRect().left;
+        let percent = (offsetX * 100) / this.getBoundingClientRect().width;
+        if (percent >= 0 && percent <= 100) {
+            this.querySelector(".circle").style.left = `${percent}%`;
+            currSong.currentTime = (currSong.duration * percent) / 100;
         }
     }
+}
 
-    document.addEventListener("mousemove", dragCircle);
-    document.addEventListener("mouseup", stopDragging);
-
-    function dragCircle(e) {
-        if (isDragging) {
-            let offsetX = e.clientX - seekbar.getBoundingClientRect().left;
-            let percent = (offsetX * 100 / seekbar.getBoundingClientRect().width);
-            if (percent >= 0 && percent <= 100) {
-                circle.style.left = percent + "%";
-                currSong.currentTime = currSong.duration * percent / 100;
-            }
+function dragCircle(e) {
+    if (isDragging) {
+        let offsetX = e.clientX - document.querySelector(".playbar .seekbar").getBoundingClientRect().left;
+        let percent = (offsetX * 100) / document.querySelector(".playbar .seekbar").getBoundingClientRect().width;
+        if (percent >= 0 && percent <= 100) {
+            document.querySelectorAll(".playbar .circle").forEach(circle => {
+                circle.style.left = `${percent}%`;
+            });
+            currSong.currentTime = (currSong.duration * percent) / 100;
         }
     }
+}
 
-    function stopDragging(e) {
-        isDragging = false;
-    }
+function stopDragging(e) {
+    isDragging = false;
+}
 
-
-
-    previous.addEventListener("click", () => {
-        // Extract the file name and encode it
+// Previous and Next functionality
+document.querySelectorAll(".playbar #previous").forEach(button => {
+    button.addEventListener("click", () => {
         let fileName = encodeURIComponent(decodeURIComponent(currSong.src.split("/").pop()));
-        console.log(currfolder)
-        console.log(fileName)
-        console.log(songs)
-        // Find the index
         let index = songs.indexOf(fileName);
-
-        // Check if index is valid and play the previous song
         if (index !== -1 && index - 1 >= 0) {
             let previousSong = songs[index - 1];
-            console.log(currfolder)
             playMusic(previousSong);
         }
+    });
+});
 
-
-    })
-
-    next.addEventListener("click", () => {
-
-
-        // Extract the file name and encode it
+document.querySelectorAll(".playbar #next").forEach(button => {
+    button.addEventListener("click", () => {
         let fileName = encodeURIComponent(decodeURIComponent(currSong.src.split("/").pop()));
-
-        // Find the index
         let index = songs.indexOf(fileName);
-
-        // Check if index is valid and play the next song
         if (index !== -1 && index + 1 < songs.length) {
             let nextSong = songs[index + 1];
-            console.log(currfolder)
             playMusic(nextSong);
-            console.log(nextSong);
         }
+    });
+});
 
-    })
+// Volume control
+document.querySelectorAll(".playbar .range input").forEach(input => {
+    input.addEventListener("change", (e) => {
+        currSong.volume = parseInt(e.target.value) / 100;
+    });
+});
 
 
-    document.querySelector(".range").getElementsByTagName("input")[0].addEventListener("change", (e) => {
-        currSong.volume = parseInt(e.target.value) / 100
-    })
 
+
+
+
+
+    
 
 
     document.querySelector(".hamburger").addEventListener("click", () => {
@@ -296,26 +300,7 @@ async function main() {
     displayAlbums()
 
 
-    document.getElementById("login-sec").addEventListener("click", () => {
-
-        window.location.href = "login.html";
-    })
-
-    document.getElementById("login-sec-two").addEventListener("click", () => {
-
-        window.location.href = "login.html";
-    })
-
-
 
 }
 
 main()
-
-
-document.querySelector(".btn-search").addEventListener("click", (btn) => {
-    document.querySelector(".search-area").style = "right: 0%";
-});
-document.querySelector(".search-close-btn").addEventListener("click", (btn) => {
-    document.querySelector(".search-area").style = "right: -200%";
-});

@@ -37,14 +37,7 @@
     .playbar{
         width: 88vw;
     }
-    body{
-    
-        display: flex;
-        background-color: black;
-        color: white;
-        padding: 0px;
-        overflow-x: hidden;
-    }
+  
     .right{
         width: 100vw;
         /* margin-left: 0px; */
