@@ -1,0 +1,254 @@
+
+@media (max-width: 1200px) {
+    .left{
+        width: auto;
+        position: absolute;
+        z-index: 1;
+        left: -250%;
+        height: 100vh;
+        transition: all 1.3s;
+    }
+    .right{
+        width: 100vw;   
+
+    }
+    .playbar{
+        width: 95vw;
+
+    }
+    .hamburger{
+        display: block
+    }
+
+    .abovebar{
+        display: flex;
+        flex-direction: column;
+    }
+    .timevol{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+    }
+    .signup{
+        display: none;
+    }
+
+    .playbar{
+        width: 88vw;
+    }
+    body{
+    
+        display: flex;
+        background-color: black;
+        color: white;
+        padding: 0px;
+        overflow-x: hidden;
+    }
+    .right{
+        width: 100vw;
+        /* margin-left: 0px; */
+        position: relative;
+        height: 100vh;
+        overflow-x: hidden;
+    }
+    
+
+
+}
+
+
+@media (max-width: 1160px) {
+    .songinfo {
+        width: 100%;
+        text-align: center;
+    }
+}
+ 
+
+@media screen and (min-width: 481px) 
+{
+    .pic{
+        aspect-ratio: 34/35;
+        overflow-y: hidden;
+    }
+}
+
+@media (max-width: 1100px) {
+    .card-container{
+       margin-bottom: 10px;
+      
+    }
+} 
+
+@media (max-width: 481px) {
+    .card{
+     width: 70%;
+    height: 100%;
+     margin: 0;
+     padding: 10px;
+    }
+} 
+@media (max-width: 368px) {
+    .card{
+     /* width: 100%; */
+    /* height: 300px; */
+     margin: 0;
+     padding: 10px;
+    }
+
+} 
+@media (max-width: 340px) {
+    .card{
+     /* width: 100%; */
+     /* height: 280px; */
+     margin: 0;
+     padding: 10px;
+    }
+} 
+@media (max-width: 305px) {
+    .card{
+     /* width: 100%; */
+     /* height: 260px; */
+     margin: 0;
+     padding: 10px;
+    }
+
+
+} 
+
+
+@media (max-height: 900px){
+    .card-container{
+        max-height: 45vh;
+}
+}
+@media (max-height: 896px){
+    .card-container{
+        max-height: 55vh;
+}
+}
+@media (max-height: 680px){
+    .card-container{
+    max-height: 45vh;
+}
+}
+
+.playbar{
+    bottom: 10px;
+}
+
+.search-close-btn{
+    position: absolute;
+    top: 15px;
+    height: 45px;
+    right: 10px;
+    cursor: pointer;
+    filter: invert(1);
+    
+}
+
+.search-close-btn:hover{
+    transform: rotate(360deg);
+    transition: all 1s;
+    filter: invert(0.8);
+
+}
+.search-box-part-one{
+    background-image: linear-gradient(rgb(0, 0, 0) 13%, rgba(0, 0, 0, 0.897) 40%, rgb(0, 0, 0) 86%) !important;
+
+}
+.ser-btn{
+    margin-top: 15px !important;
+    background-color: #333333;
+    border-radius: 12px;
+    height: 70px;
+    position: relative;
+    top: 10px;
+}
+
+.search-area{
+    display: none !important;
+    right: -200%;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.705); /* Adjust opacity as needed */
+    z-index: 9999; /* Make sure it's above other elements */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+}
+@media (max-width: 673px){
+  #home-part-menu{
+    display: none;
+    
+  }
+.input-search{
+    display: none;
+}
+.btn-search{
+    height: 50px;
+    width: 50px;
+    border-style: none;
+    padding: 15px;
+    border-radius: 300%;
+    background-color: #000000;
+    top: -26px;
+    right: -40px;
+}
+
+
+.search-area{
+    display: block !important;
+
+}
+.search-box-part-one{
+   
+ height: 65px !important;
+    width: 100%; 
+   
+    border-radius: 0px !important;
+    align-items: center;
+    position: relative;
+}
+.search-box-part-one::placeholder{
+    color: #8a8a8ae5 !important;
+    font-family: sans-serif, serif !important;
+    font-size: 25px !important;
+    font-style: italic;
+    font-weight: bold;
+    padding: 10px !important;
+}
+.search-box-part-one{
+font-size: xx-large;
+color: aliceblue;
+}
+.search-box-part-one:focus {
+    outline: none;
+    padding-left: 10px !important;
+}
+}
+
+@media (max-width: 673px){
+
+.login-btn{
+    display: block !important;
+}
+.login {
+    display: none !important;;
+}
+}
+
+.login{
+    padding: 15px 20px;
+    border-radius: 100px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.login:hover{
+cursor: pointer;
+color: #ffffff;
+background-color: #000000;
+}
