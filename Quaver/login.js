@@ -104,8 +104,8 @@ function login() {
         localStorage.setItem('loggedInUser', JSON.stringify(user));
         alert('Login successful!');
         // Redirect or perform any other actions after successful login
-        // For example, you can redirect to index.html here
-        window.location.href = 'index.html';
+        // For example, you can redirect to music.html here
+        window.location.href = 'music.html';
     } else {
         alert('Invalid username or password.');
     }

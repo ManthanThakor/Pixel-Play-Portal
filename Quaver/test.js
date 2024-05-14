@@ -25,7 +25,7 @@
 
 
 async function getSongs(){
-    let a = await fetch("http://127.0.0.1:5500/song/")
+    let a = await fetch("http://127.0.0.1:5502/song/")
     let response = await a.text()
     // console.log(response)
     let div = document.createElement("div")
@@ -35,7 +35,7 @@ let songs = []
     for (let index = 0; index < as.length; index++) {
         const element = as[index];
         if (element.href.endsWith(".flac") || element.href.endsWith(".mp3")) {
-            songPath = "http://127.0.0.1:5500/song/" + element.href.split("/song/")[1];
+            songPath = "http://127.0.0.1:5502/song/" + element.href.split("/song/")[1];
             songs.push(songPath);
         }
         
