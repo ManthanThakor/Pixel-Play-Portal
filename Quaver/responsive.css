@@ -125,7 +125,7 @@
 }
 @media (max-height: 896px){
     .card-container{
-        max-height: 73vh;
+        max-height: 63vh;
 }
 }
 @media (max-height: 680px){
