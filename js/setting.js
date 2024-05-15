@@ -1,44 +1,126 @@
-$(document).ready(function() {
-    // Switch tabs
-    $('.account-settings-links a').on('click', function(e) {
-        e.preventDefault();
-        $(this).tab('show');
-    });
 
-    // File upload
-    $('.btn-outline-primary').click(function() {
-        $(this).siblings('input[type=file]').click();
-    });
+const container = document.querySelector(".container");
+const closeBox = document.querySelector(".close-box");
+const btnSave = document.querySelector(".btn-save");
+const savedBox = document.querySelector(".saved-box");
+const select = document.querySelector("select");
+const option1 = document.querySelector(".option1");
+const option2 = document.querySelector(".option2");
+const option3 = document.querySelector(".option3");
 
-    // Update file name on file selection
-    $('.btn-outline-primary input[type=file]').change(function() {
-        var file = this.files[0];
-        var reader = new FileReader();
-        reader.onload = function(e) {
-            var img = $('<img>').attr('src', e.target.result).addClass('d-block ui-w-80');
-            $('.uploaded-image').empty().append(img);
-        };
-        reader.readAsDataURL(file);
-    });
+const settingsP = document.querySelector(".settingsP");
+const closeP = document.querySelector(".closeP");
+const languageP = document.querySelector(".languageP");
+const languagePP = document.querySelector(".languagePP");
+const autoplayP = document.querySelector(".autoplayP");
+const autoplayPP = document.querySelector(".autoplayPP");
+const showP = document.querySelector(".showP");
+const showPP = document.querySelector(".showPP");
+const btnCancel = document.querySelector(".btn-cancel");
+const savedP = document.querySelector(".savedP");
 
-    // Save changes button
-    $('.btn-primary').click(function() {
-        // Perform actions to save changes here
-        alert('Changes saved successfully!');
-        // Redirect to index.html after saving changes
-        window.location.href = 'index.html';
-    });
 
-    // Cancel button
-    $('.btn-default').click(function() {
-        // Perform actions to cancel changes here
-        alert('Changes cancelled!');
-        // Redirect to index.html when cancelling changes
-        window.location.href = 'index.html';
-    });
+closeBox.addEventListener("click", () =>{
+    container.classList.remove("open");
+    container.classList.add("close");
+    setTimeout(() =>{
+        container.classList.remove("close");
+        container.classList.add("open");
+    }, 1500)
+})
 
-    // Home button
-    $('.btn-home').click(function() {
-        window.location.href = 'index.html';
-    });
+select.addEventListener("change", function () {
+    const selectedValue = select.value;
+  
+    if (selectedValue === "IT") {
+      settingsP.innerHTML = "Impostazioni";
+      closeP.innerHTML = "Chiudi";
+      languageP.innerHTML = "Lingua";
+      languagePP.innerHTML = "Facci sapere con quale lingua ti senti più a tuo agio. Puoi cambiarla di nuovo in qualsiasi momento.";
+      autoplayP.innerHTML = "Video a riproduzione automatica";
+      autoplayPP.innerHTML = "Scegli se desideri riprodurre automaticamente nel tuo browser.";
+      showP.innerHTML = "Mostra le foto del profilo";  
+      showPP.innerHTML = "Scegli se mostrare o meno le foto del profilo degli altri membri.";  
+      btnSave.innerHTML = "Salva";
+      btnCancel.innerHTML = "Cancella";
+      savedP.innerHTML = "Salvato!"
+    } else if (selectedValue === "ES") {
+        settingsP.innerHTML = "Configuración";
+        closeP.innerHTML = "Cerrar";
+        languageP.innerHTML = "Idioma";
+        languagePP.innerHTML = "Indícanos en qué idioma te sientes más cómodo. Puedes cambiarlo en cualquier momento.";
+        autoplayP.innerHTML = "Reproducción automática de videos.";
+        autoplayPP.innerHTML = "Elige si deseas reproducir automáticamente los videos en tu navegador.";
+        showP.innerHTML = "Mostrar fotos de perfil.";  
+        showPP.innerHTML = "Elige si deseas mostrar o no las fotos de perfil de otros miembros.";  
+        btnSave.innerHTML = "Guardar";
+        btnCancel.innerHTML = "Cancelar"; 
+        savedP.innerHTML = "Guardado!"
+    } else if (selectedValue === "EN") {
+        settingsP.innerHTML = "Settings";
+        closeP.innerHTML = "Close";
+        languageP.innerHTML = "Language";
+        languagePP.innerHTML = "Let us know which language you're most comfortable using. You can change it back at any time.";
+        autoplayP.innerHTML = "Autoplay videos.";
+        autoplayPP.innerHTML = "Choose if you want to autoplay on your browser.";
+        showP.innerHTML = "Show profile photos.";  
+        showPP.innerHTML = "Choose whether to show or hide profile photos of other members.";  
+        btnSave.innerHTML = "Save";
+        btnCancel.innerHTML = "Cancel";
+        savedP.innerHTML = "Saved!"
+    }
+  });  
+  
+  
+  
+  
+  
+
+
+btnSave.addEventListener("click", () =>{
+    savedBox.style.display = "block";
+    setTimeout(()=>{
+        savedBox.style.display = "none";
+    }, 2000)
+})
+
+
+
+const themeToggleBtn = document.getElementById('theme-toggle-btn');
+const body = document.body; // Define the 'body' variable
+const containerr = document.querySelector('.container');
+const languagePPp = document.querySelector('.languagePP');
+const autoplayPPp = document.querySelector('.autoplayPP');
+const showPPp = document.querySelector('.showPP');
+
+themeToggleBtn.addEventListener('click', () => {
+    body.classList.toggle('dark-theme');
+
+    if (body.classList.contains('dark-theme')) {
+        // Dark theme
+        containerr.style.backgroundColor = '#000';
+
+        languagePPp.style.color = '#fff';
+        autoplayPPp.style.color = '#fff';
+        showPPp.style.color = '#fff';
+    } else {
+        // Light theme
+        containerr.style.backgroundColor = '#fff';
+        languagePPp.style.color = '#000';
+        autoplayPPp.style.color = '#000';
+        showPPp.style.color = '#000';
+    }
+});
+
+// By default, set the dark theme
+body.classList.add('dark-theme');
+containerr.style.backgroundColor = '#000';
+languagePPp.style.color = '#fff';
+autoplayPPp.style.color = '#fff';
+showPPp.style.color = '#fff';
+
+const closeBoxx = document.querySelector('#close-setting-sec');
+
+closeBoxx.addEventListener('click', () => {
+    window.location.href = 'index.html';
 });
