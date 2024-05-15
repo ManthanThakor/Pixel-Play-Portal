@@ -82,3 +82,189 @@
   text-decoration: none;
   cursor: pointer;
 }
+
+
+/*-----------------------------------*\
+    //         
+   search-part and chatagory
+    // \*-----------------------------------*/
+
+    .arc-ser-chat{
+padding-left: 80px;
+    }
+#searchInput{
+  font-family: "Barlow", Sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  background-color: red;
+  padding: 5px;
+  padding-left: 10px;
+
+  border: #000000 1px solid;
+border-radius: 2ch;
+}
+
+#searchInput::placeholder{
+  font-family: "Barlow", Sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: #000000;
+  text-transform: capitalize;
+  font-style: italic;
+}
+#categorySelect{
+  font-family: "Barlow", Sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 8px;
+  background-color: red;
+  border-radius: 2ch;
+  font-style: italic;
+
+&:hover{
+  cursor: pointer;
+}
+}.cate-part-arc{
+  font-family: "Barlow", Sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: #000000;
+  font-style: italic;
+  &:hover{
+    cursor: pointer;
+  }
+
+}
+#categorySelect option{
+  padding: 10px;
+}
+
+.card:hover {
+  transform: none !important;
+  box-shadow: 10px 10px 10px -7px rgba(255, 0, 0, 0.75);
+  transition: all 0.5s;
+  cursor: pointer;
+
+  .ca-arc-hov-img {
+    transform: none !important;
+  }
+  .card-img-top {
+    opacity: 0.5;
+  }
+  .arcade-t-card{
+    color: #ff0000 !important;
+  }
+}
+
+.loading-sec-ops{
+  padding-left: 80px;
+padding-bottom: 40px;
+}
+#cardContainer {
+  padding: 60px 80px 10px 80px !important;
+}
+#loadMoreBtn{
+  font-family: "Barlow", Sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  color: #000000;
+  background-color: #1eff00;
+  border: none;
+  &:hover{
+    color: #000000cd;
+    background-color: #1eff00cc;
+  }
+}
+.arcade-btn{
+  &:hover{
+    background-color: #ff0000a5 !important;
+  }
+}
+.fa-heart{
+  &:hover{
+    background-color: #ff0000a5 !important;
+  }
+}
+.arcade-card-img{
+  height: 250px;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+}
+
+
+/*-----------------------------------*\
+    //         
+  responsive
+    // \*-----------------------------------*/
+
+@media only screen and (max-width: 1200px) {
+.arcade-card-img{
+    height: 400px;
+    
+  }
+}
+
+@media only screen and (max-width: 800px) {
+
+#cardContainer {
+  padding: 20px 40px 10px !important;
+}
+.trending-title {
+  color: rgb(17, 255, 0);
+ 
+  font-size: 35px;
+ 
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
+}
+.arc-ser-chat{
+  padding: 0;
+  justify-content: center;
+  text-align: center;
+}
+.loading-sec-ops{
+  padding-left: 0;
+  justify-content: center;
+  text-align: center;
+}
+}
+
+
+@media only screen and (max-width: 800px) {
+  .arcade-card-img{
+    height: 300px;
+    
+  }
+
+}
+
+@media only screen and (max-width: 500px) {
+  .arcade-card-img{
+    height: 200px;
+    
+  }
+  #cardContainer {
+    padding: 20px 15px 10px !important;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .trending-title {
+ 
+    font-size: 22px;
+  }
+  .arc-ser-chat{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .arcade-card-img {
+    height: 150px;
+}
+}
