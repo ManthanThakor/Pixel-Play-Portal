@@ -154,7 +154,7 @@ top: 18px;
   height: 100%;
   object-fit: cover;
   user-select: none;
-  user-drag: none;
+  // user-drag: none;
 }
 
 .xg-img-prompt{
@@ -621,7 +621,5 @@ box-shadow: 0 -5px 3px -3px rgb(255, 255, 255), 0 5px 3px -3px rgb(255, 255, 255
 .xgp-prompt{
   font-family: "Barlow", Sans-serif;
 text-align: justify;
-// color: red;
-// font-weight: 600;
-// font-size: 20px !important;
+
 }
