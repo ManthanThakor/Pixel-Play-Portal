@@ -460,7 +460,19 @@ document.querySelectorAll(".playbar .range input").forEach(input => {
     displayAlbums()
     displayAlbums()
 
-
+currSong.addEventListener("ended", () => {
+    let fileName = encodeURIComponent(decodeURIComponent(currSong.src.split("/").pop()));
+    let index = songs.indexOf(fileName);
+    if (index !== -1 && index + 1 < songs.length) {
+        let nextSong = songs[index + 1];
+        playMusic(nextSong);
+    } else {
+        // If there's no next song, change the play button icon to "play"
+        document.querySelectorAll(".playbar #play").forEach(playButton => {
+            playButton.src = "img/play.svg";
+        });
+    }
+});
 
 }
 
