@@ -8,6 +8,8 @@
   <title>Profile</title>
   <link rel="icon" type="image/x-icon" href="Img/logo/PixelPlay.png" />
   <link rel="stylesheet" type="text/css" href="Scss2/profile.css" />
+  <!-- <link rel="stylesheet" type="text/css" href="Scss/home.css" /> -->
+
   <script src="https://kit.fontawesome.com/cb104e752f.js" crossorigin="anonymous"></script>
   <style>
     body {
@@ -23,7 +25,23 @@
   background-position: center;
   background-attachment: fixed;
     }
+    @font-face {
+      font-family: "Starzone";
+      src: url("Font/starzone-scifi-game-font/Web-TT/Starzone.ttf") format("truetype"),
+        url("Font/starzone-scifi-game-font/OpenType-TT/Starzone.ttf") format("truetype"),
+        url("Font/starzone-scifi-game-font/OpenType-PS/Starzone.otf") format("opentype"),
+        url("Font/starzone-scifi-game-font/Web-PS/Starzone.otf") format("opentype");
+    }
 
+    @font-face {
+      font-family: "CustomFont1";
+      src: url("Font/oxstar-font/OpenType-TT/Oxstars-Regular.ttf");
+    }
+
+    @font-face {
+      font-family: "CustomFont2";
+      src: url("Font/oxstar-font/Web-TT/Oxstars-Regular.ttf");
+    }
   </style>
 </head>
 
@@ -57,7 +75,7 @@
     <div class="card">
       <a href="index.html" class="cont-btn"><button class="part-btn"><i class="fa-solid fa-house"></i></button></a>
       <form id="edit-form">
-        <h1>Profile Card</h1>
+        <h1 class="p-c">Profile Card</h1>
         <div class="profile-pic">
           <label class="-label" for="file" style="position: absolute;">
             <span class="glyphicon glyphicon-camera"></span>
@@ -74,7 +92,7 @@
         </div>
         <div class="field">
           <label for="status">Status:</label>
-          <input id="status" type="text" placeholder="It's a nice day!" required />
+          <input id="status" type="text" placeholder="your status" required />
         </div>
         <button class="sav-btn" type="submit" class="edit">Save</button>
         <button class="logout-btn" type="button">Logout</button>

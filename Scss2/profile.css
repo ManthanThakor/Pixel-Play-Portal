@@ -155,7 +155,9 @@ input::placeholder {
 
 .sav-btn {
   position: relative;
-  color: #054231;
+  font-family: "Barlow", Sans-serif;
+  font-weight: 600;
+  color: #000;
   letter-spacing: 1px;
   margin: 20px;
   font-size: 18px;
@@ -266,10 +268,16 @@ input::placeholder {
 }
 
 .username {
+  padding: 8px;
+  padding-left: 10px;
+  color: #000000;
   width: 100%;
-  height: 30px;
-  background-color: white;
+  background-color: #00ffb7;
   border-radius: 2ch;
+  text-transform: capitalize;
+  font-family: "CustomFont1";
+  font-weight: 800;
+  font-size: 16px;
 }
 
 .field {
@@ -277,4 +285,61 @@ input::placeholder {
   display: flex;
   flex-direction: column;
   width: 100% !important;
+}
+
+#status {
+  background-color: #00ffb7;
+  color: #000000;
+  width: 100%;
+  padding: 5px;
+  padding-left: 10px;
+  border-radius: 2ch;
+  font-family: "Barlow", Sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+#status::-moz-placeholder {
+  color: rgba(0, 0, 0, 0.8470588235);
+  background-color: #00ffb7;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  font-size: 14px;
+  font-weight: 600;
+  font-style: italic;
+  font-family: "Barlow", Sans-serif;
+}
+
+#status::placeholder {
+  color: rgba(0, 0, 0, 0.8470588235);
+  background-color: #00ffb7;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  font-size: 14px;
+  font-weight: 600;
+  font-style: italic;
+  font-family: "Barlow", Sans-serif;
+}
+
+.logout-btn {
+  background: #64d488;
+  font-size: 18px;
+  padding: 10px;
+  font-family: "Barlow", Sans-serif;
+  font-weight: 600;
+  color: #000;
+  border-radius: 2ch;
+  width: 180px;
+  transition: 0.5s;
+  border: none;
+}
+.logout-btn:hover {
+  left: 0;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0px 0px 20px 0px #63d3a6;
+}
+
+.p-c {
+  margin-top: 50px;
 }/*# sourceMappingURL=profile.css.map */

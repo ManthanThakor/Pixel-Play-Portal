@@ -308,11 +308,131 @@
 
 
 
+
+// window.onload = function() {
+//     var file = document.getElementById("thefile");
+//     var audio = document.getElementById("audio");
+
+//     file.onchange = function() {
+//         var files = this.files;
+//         audio.src = URL.createObjectURL(files[0]);
+//         audio.load();
+//         audio.play();
+//         var context = new AudioContext();
+//         var src = context.createMediaElementSource(audio);
+//         var analyser = context.createAnalyser();
+
+//         var canvas = document.createElement("canvas");
+//         canvas.id = "canvas";
+//         document.querySelector('.music-viz').appendChild(canvas);
+
+//         canvas.width = document.querySelector('.music-viz').clientWidth;
+//         canvas.height = document.querySelector('.music-viz').clientHeight;
+//         var ctx = canvas.getContext("2d");
+
+//         src.connect(analyser);
+//         analyser.connect(context.destination);
+
+//         analyser.fftSize = 256;
+
+//         var bufferLength = analyser.frequencyBinCount;
+//         console.log(bufferLength);
+
+//         var dataArray = new Uint8Array(bufferLength);
+
+//         var centerX = canvas.width / 2;
+//         var centerY = canvas.height / 2;
+//         var maxRadius = Math.min(centerX, centerY) * 0.9;
+
+//         var borderCount = 13;
+//         var dotSizes = [6, 5, 4, 3, 2, 1]; // Dot sizes for each border
+//         var dotDensity = [4, 8, 12, 16, 20, 24]; // Number of dots for each border
+
+//         function renderFrame() {
+//             requestAnimationFrame(renderFrame);
+
+//             analyser.getByteFrequencyData(dataArray);
+
+//             ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+//             var sliceWidth = (Math.PI * 2) / bufferLength;
+//             var angle = 0;
+
+//             for (var i = 0; i < bufferLength; i++) {
+//                 var barHeight = dataArray[i] * 2;
+
+//                 var x = centerX + Math.cos(angle) * (maxRadius - barHeight * 0.5);
+//                 var y = centerY + Math.sin(angle) * (maxRadius - barHeight * 0.5);
+
+//                 ctx.fillStyle = "rgba(0, 0, 255, 0.5)";
+//                 ctx.beginPath();
+//                 ctx.arc(x, y, 3, 0, Math.PI * 2);
+//                 ctx.fill();
+
+//                 angle += sliceWidth;
+//             }
+
+//             // Scatter dots
+//             for (var b = 0; b < borderCount; b++) {
+//                 var borderRadius = maxRadius * (borderCount - b) / borderCount;
+//                 var dotRadius = dotSizes[b];
+
+//                 for (var i = 0; i < dotDensity[b]; i++) {
+//                     var dotAngle = (Math.PI * 2) * (i / dotDensity[b]);
+//                     var dotX = centerX + Math.cos(dotAngle) * borderRadius * (dataArray[i % bufferLength] / 255);
+//                     var dotY = centerY + Math.sin(dotAngle) * borderRadius * (dataArray[i % bufferLength] / 255);
+//                     var dotColor = "rgba(0, 0, 255, " + (1 - dotRadius / 6) + ")"; // Adjust dot color based on size
+
+//                     ctx.fillStyle = dotColor;
+//                     ctx.beginPath();
+//                     ctx.arc(dotX, dotY, dotRadius, 0, Math.PI * 2);
+//                     ctx.fill();
+//                 }
+//             }
+
+//             // Scattered white dots dancing in three spiral waveform patterns originating from the same origin
+//             for (var i = 0; i < bufferLength; i += 10) {
+//                 var spiralAngle1 = i * 0.1;
+//                 var spiralAngle2 = i * 0.1 + Math.PI / 3;
+//                 var spiralAngle3 = i * 0.1 + (2 * Math.PI) / 3;
+
+//                 var spiralRadius = maxRadius * (dataArray[i % bufferLength] / 255);
+
+//                 var whiteDotX1 = centerX + Math.cos(spiralAngle1) * spiralRadius;
+//                 var whiteDotY1 = centerY + Math.sin(spiralAngle1) * spiralRadius;
+
+//                 var whiteDotX2 = centerX + Math.cos(spiralAngle2) * spiralRadius;
+//                 var whiteDotY2 = centerY + Math.sin(spiralAngle2) * spiralRadius;
+
+//                 var whiteDotX3 = centerX + Math.cos(spiralAngle3) * spiralRadius;
+//                 var whiteDotY3 = centerY + Math.sin(spiralAngle3) * spiralRadius;
+
+//                 ctx.fillStyle = "rgba(255, 255, 255, 0.5)";
+//                 ctx.beginPath();
+//                 ctx.arc(whiteDotX1, whiteDotY1, 2, 0, Math.PI * 2);
+//                 ctx.arc(whiteDotX2, whiteDotY2, 2, 0, Math.PI * 2);
+//                 ctx.arc(whiteDotX3, whiteDotY3, 2, 0, Math.PI * 2);
+//                 ctx.fill();
+//             }
+//         }
+
+//         audio.play();
+//         renderFrame();
+//     };
+// };
+
+
+
+
+
+
+
+
+
 let currSong = new Audio();
 let songs;
 let currfolder;
 
-// Function to convert seconds to minutes and seconds format
 function secondsToMinutesSeconds(seconds) {
     if (isNaN(seconds) || seconds < 0) {
         return "00:00";
@@ -327,47 +447,44 @@ function secondsToMinutesSeconds(seconds) {
     return `${formattedMinutes}:${formattedSeconds}`;
 }
 
-// Function to toggle the beat animation
-function toggleBeatAnimation(play) {
-    const tourTitleImg = document.querySelector(".tour-title-img");
-    if (play) {
-        tourTitleImg.classList.add("beat-animation");
-    } else {
-        tourTitleImg.classList.remove("beat-animation");
-    }
+async function displayAlbums() {
+    let a = await fetch(`http://127.0.0.1:5502/Quaver/song`);
+    let response = await a.text();
+    let div = document.createElement("div");
+    div.innerHTML = response;
+    let anchors = div.getElementsByTagName("a");
+    let cardContainer = document.querySelector(".card-container");
+    cardContainer.innerHTML = "";  // Clear existing cards
+
+    Array.from(anchors).forEach(async e => {
+        if (e.href.includes("/Quaver/song/")) {
+            let folder = e.href.split("/").slice(-1)[0];
+            let a = await fetch(`http://127.0.0.1:5502/Quaver/song/${folder}/info.json`);
+            let response = await a.json();
+            cardContainer.innerHTML += `<div data-folder="${folder}" class="card">
+                <div class="pic">
+                    <img src="../Quaver/song/${folder}/cover.jpg" alt="img">
+                    <div class="play">
+                        <svg width="16" height="16" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 20V4L19 12L5 20Z" stroke="#141B34" fill="#000" stroke-width="1.5" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                </div>
+                <h2>${response.title}</h2>
+                <p>${response.description}</p>
+            </div>`;
+        }
+    });
+
+    Array.from(document.getElementsByClassName("card")).forEach(e => {
+        e.addEventListener("click", async item => {
+            currfolder = `song/${item.currentTarget.dataset.folder}`;
+            await getSongs(currfolder);
+            playMusic(songs[0]);
+        });
+    });
 }
 
-// Function to play music
-const playMusic = (track, pause = false) => {
-    const songURL = `/Quaver/${currfolder}/` + track;
-    currSong.src = songURL;
-
-    if (!pause) {
-        currSong.play();
-        toggleBeatAnimation(true); // Start beat animation
-        // Change play button icon to pause
-        document.querySelectorAll(".playbar #play").forEach(playButton => {
-            playButton.src = "img/pause.svg";
-        });
-    } else {
-        currSong.pause();
-        toggleBeatAnimation(false); // Stop beat animation
-        // Change pause button icon to play
-        document.querySelectorAll(".playbar #play").forEach(playButton => {
-            playButton.src = "img/play.svg";
-        });
-    }
-
-    // Update song info in all playbars
-    document.querySelectorAll(".playbar .songinfo").forEach(songinfo => {
-        songinfo.innerText = decodeURIComponent(track);
-    });
-    document.querySelectorAll(".playbar .songtime").forEach(songtime => {
-        songtime.innerHTML = "00:00/00:00";
-    });
-};
-
-// Function to get songs from the server
 async function getSongs(currfolder) {
     let a = await fetch(`http://127.0.0.1:5502/Quaver/${currfolder}`);
     let response = await a.text();
@@ -382,31 +499,30 @@ async function getSongs(currfolder) {
         }
     }
 
-    let songUl = document.querySelector(".songlist").getElementsByTagName("ol")[0];
+    let songUl = document.querySelector(".songlist ol");
     songUl.innerHTML = "";
     for (const song of songs) {
-        songUl.innerHTML = songUl.innerHTML + `
-            <li>
-                <div class="songblock">
-                    <img src="img/logo.svg" alt="">
-                    <div class="info">
-                        <div>${decodeURIComponent(song)}</div>
-                        <div>Artist Name</div>
-                    </div>
+        songUl.innerHTML += `
+        <li>
+            <div class="songblock">
+                <img src="img/logo.svg" alt="">
+                <div class="info">
+                    <div>${decodeURIComponent(song)}</div>
+                    <div>Artist Name</div>
                 </div>
-                <img id="playnow" src="img/play.svg" alt="">
-            </li>`;
+            </div>
+            <img id="playnow" src="img/play.svg" alt="">
+        </li>`;
     }
 
-    // Add event listener to play button of each song
-    Array.from(document.querySelector(".songlist").getElementsByTagName("li")).forEach(e => {
+    Array.from(document.querySelectorAll(".songlist li")).forEach(e => {
         e.addEventListener('click', element => {
-            const filePath = e.querySelector(".info").getElementsByTagName("div")[0];
-            const songURL = `/Quaver/${currfolder}/` + filePath.innerText;
+            const filePath = e.querySelector(".info div").innerText;
+            var songURL = `/Quaver/${currfolder}/` + filePath;
             fetch(songURL)
                 .then(response => {
                     if (response.ok) {
-                        playMusic(filePath.innerText);
+                        playMusic(filePath);
                     } else {
                         playMusic(filePath.innerHTML);
                     }
@@ -415,61 +531,102 @@ async function getSongs(currfolder) {
     });
 }
 
-// Function to display albums
-async function displayAlbums() {
-    let a = await fetch(`http://127.0.0.1:5502/Quaver/song`);
-    let response = await a.text();
-    let div = document.createElement("div");
-    div.innerHTML = response;
-    let anchors = div.getElementsByTagName("a");
-    let cardContainer = document.querySelector(".card-container");
+getSongs('song/ncs');
 
-    Array.from(anchors).forEach(async e => {
-        if (e.href.includes("/Quaver/song/")) {
-            let folder = e.href.split("/").slice(-1)[0];
-            let a = await fetch(`http://127.0.0.1:5502/Quaver/song/${folder}/info.json`);
-            let response = await a.json();
+const playMusic = (track, pause = false) => {
+    songURL = `/Quaver/${currfolder}/` + track;
+    currSong.src = songURL;
 
-            cardContainer.innerHTML = cardContainer.innerHTML + `<div data-folder="${folder}" class="card">
-                <div class="pic">
-                    <img src="../Quaver/song/${folder}/cover.jpg" alt="img">
-                    <div class="play">
-                        <svg width="16" height="16" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M5 20V4L19 12L5 20Z" stroke="#141B34" fill="#000" stroke-width="1.5" stroke-linejoin="round" />
-                        </svg>
-                    </div>
-                </div>
-                <h2>${response.title}</h2>
-                <p>${response.description}</p>
-            </div>`;
-        }
-
-        Array.from(document.getElementsByClassName("card")).forEach(e => {
-            e.addEventListener("click", async item => {
-                currfolder = `song/${item.currentTarget.dataset.folder}`;
-                await getSongs(currfolder);
-                playMusic(songs[0]);
-            });
+    if (!pause) {
+        currSong.play();
+        document.querySelectorAll(".playbar #play").forEach(playButton => {
+            playButton.src = "img/pause.svg";
         });
-    });
-}
+    } else {
+        document.querySelectorAll(".playbar #play").forEach(playButton => {
+            playButton.src = "img/play.svg";
+        });
+    }
 
-// Main function
+    // Update song info in all playbars
+    document.querySelectorAll(".playbar .songinfo").forEach(songinfo => {
+        songinfo.innerText = decodeURIComponent(track);
+    });
+    document.querySelectorAll(".playbar .songtime").forEach(songtime => {
+        songtime.innerHTML = "00:00/00:00";
+    });
+
+    startVisualizer();
+};
+
 async function main() {
     currfolder = `song/All%20Songs`;
     await getSongs(currfolder);
     playMusic(songs[0], true);
 
-    // Add event listeners for play, previous, and next buttons
     document.querySelectorAll(".playbar #play").forEach(button => {
         button.addEventListener("click", () => {
             if (currSong.paused) {
-                playMusic(songs[0]);
+                currSong.play();
+                document.querySelectorAll(".playbar #play").forEach(playButton => {
+                    playButton.src = "img/pause.svg";
+                });
             } else {
-                playMusic(songs[0], true);
+                document.querySelectorAll(".playbar #play").forEach(playButton => {
+                    playButton.src = "img/play.svg";
+                });
+                currSong.pause();
             }
         });
     });
+
+    currSong.addEventListener("timeupdate", () => {
+        document.querySelectorAll(".playbar .songtime").forEach(songtime => {
+            songtime.innerHTML = `${secondsToMinutesSeconds(currSong.currentTime)}/${secondsToMinutesSeconds(currSong.duration)}`;
+        });
+        document.querySelectorAll(".playbar .circle").forEach(circle => {
+            circle.style.left = `${(currSong.currentTime * 100) / currSong.duration}%`;
+        });
+    });
+
+    document.querySelectorAll(".playbar .circle").forEach(circle => {
+        circle.addEventListener("mousedown", startDragging);
+    });
+    document.querySelectorAll(".playbar .seekbar").forEach(seekbar => {
+        seekbar.addEventListener("click", moveCircle);
+    });
+    document.addEventListener("mousemove", dragCircle);
+    document.addEventListener("mouseup", stopDragging);
+
+    function startDragging(e) {
+        isDragging = true;
+    }
+
+    function moveCircle(e) {
+        if (!isDragging) {
+            let offsetX = e.clientX - this.getBoundingClientRect().left;
+            let percent = (offsetX * 100) / this.getBoundingClientRect().width;
+            if (percent >= 0 && percent <= 100) {
+                this.querySelector(".circle").style.left = `${percent}%`;
+                currSong.currentTime = (currSong.duration * percent) / 100;
+            }
+        }
+    }
+
+    function dragCircle(e) {
+        if (isDragging) {
+            let offsetX = e.clientX - document.querySelector(".playbar .seekbar").getBoundingClientRect().left;
+            let percent = (offsetX * 100) / document.querySelector(".playbar .seekbar").getBoundingClientRect().width;
+            if (percent >= 0 && percent <= 100) {
+                document.querySelector(".playbar .circle").style.left = `${percent}%`;
+                currSong.currentTime = (currSong.duration * percent) / 100;
+            }
+        }
+    }
+
+    function stopDragging(e) {
+        isDragging = false;
+    }
 
     document.querySelectorAll(".playbar #previous").forEach(button => {
         button.addEventListener("click", () => {
@@ -493,28 +650,116 @@ async function main() {
         });
     });
 
-    // Add event listener for volume control
     document.querySelectorAll(".playbar .range input").forEach(input => {
-        input.addEventListener("change", (e) => {
+        input.addEventListener("change", e => {
             currSong.volume = parseInt(e.target.value) / 100;
         });
     });
 
-    // Add event listener to toggle left and right panels
     document.querySelector(".hamburger").addEventListener("click", () => {
-        document.querySelector(".left").style.left = "0%";
-        document.querySelector(".right").style.filter = "blur(3px)";
+        document.querySelector(".left").style.display = 'block';
     });
-
-    document.querySelector(".cross").addEventListener("click", () => {
-        document.querySelector(".left").style.left = "-250%";
-        document.querySelector(".right").style.filter = "blur(0px)";
-    });
-
-    // Display albums
-    displayAlbums();
 }
 
-// Initialize the application
 main();
+let audioCtx;
+let analyser;
+let canvasCtx;
 
+function startVisualizer() {
+    const canvas = document.createElement('canvas');
+    canvasCtx = canvas.getContext('2d');
+    document.querySelector('.music-viz').innerHTML = '';  // Clear previous canvas if any
+    document.querySelector('.music-viz').appendChild(canvas);
+    canvas.width = document.querySelector('.music-viz').clientWidth;
+    canvas.height = document.querySelector('.music-viz').clientHeight;
+
+    audioCtx = audioCtx || new (window.AudioContext || window.webkitAudioContext)();
+    analyser = analyser || audioCtx.createAnalyser();
+    const source = audioCtx.createMediaElementSource(currSong);
+    source.connect(analyser);
+    analyser.connect(audioCtx.destination);
+
+    analyser.fftSize = 256;
+    const bufferLength = analyser.frequencyBinCount;
+    const dataArray = new Uint8Array(bufferLength);
+
+    var centerX = canvas.width / 2;
+    var centerY = canvas.height / 2;
+    var maxRadius = Math.min(centerX, centerY) * 0.9;
+
+    var borderCount = 13;
+    var dotSizes = [6, 5, 4, 3, 2, 1]; // Dot sizes for each border
+    var dotDensity = [4, 8, 12, 16, 20, 24]; // Number of dots for each border
+
+    function renderFrame() {
+        requestAnimationFrame(renderFrame);
+
+        analyser.getByteFrequencyData(dataArray);
+
+        canvasCtx.fillStyle = "rgba(0, 0, 0, 0.2)";
+        canvasCtx.fillRect(0, 0, canvas.width, canvas.height);
+
+        var sliceWidth = (Math.PI * 2) / bufferLength;
+        var angle = 0;
+
+        for (var i = 0; i < bufferLength; i++) {
+            var barHeight = dataArray[i] * 2;
+
+            var x = centerX + Math.cos(angle) * (maxRadius - barHeight * 0.5);
+            var y = centerY + Math.sin(angle) * (maxRadius - barHeight * 0.5);
+
+            canvasCtx.fillStyle = "rgba(0, 0, 255, 0.5)";
+            canvasCtx.beginPath();
+            canvasCtx.arc(x, y, 3, 0, Math.PI * 2);
+            canvasCtx.fill();
+
+            angle += sliceWidth;
+        }
+
+        // Scatter dots
+        for (var b = 0; b < borderCount; b++) {
+            var borderRadius = maxRadius * (borderCount - b) / borderCount;
+            var dotRadius = dotSizes[b];
+
+            for (var i = 0; i < dotDensity[b]; i++) {
+                var dotAngle = (Math.PI * 2) * (i / dotDensity[b]);
+                var dotX = centerX + Math.cos(dotAngle) * borderRadius * (dataArray[i % bufferLength] / 255);
+                var dotY = centerY + Math.sin(dotAngle) * borderRadius * (dataArray[i % bufferLength] / 255);
+                var dotColor = "rgba(0, 0, 255, " + (1 - dotRadius / 6) + ")"; // Adjust dot color based on size
+
+                canvasCtx.fillStyle = dotColor;
+                canvasCtx.beginPath();
+                canvasCtx.arc(dotX, dotY, dotRadius, 0, Math.PI * 2);
+                canvasCtx.fill();
+            }
+        }
+
+        // Scattered white dots dancing in three spiral waveform patterns originating from the same origin
+        for (var i = 0; i < bufferLength; i += 10) {
+            var spiralAngle1 = i * 0.1;
+            var spiralAngle2 = i * 0.1 + Math.PI / 3;
+            var spiralAngle3 = i * 0.1 + (2 * Math.PI) / 3;
+
+            var spiralRadius = maxRadius * (dataArray[i % bufferLength] / 255);
+
+            var whiteDotX1 = centerX + Math.cos(spiralAngle1) * spiralRadius;
+            var whiteDotY1 = centerY + Math.sin(spiralAngle1) * spiralRadius;
+
+            var whiteDotX2 = centerX + Math.cos(spiralAngle2) * spiralRadius;
+            var whiteDotY2 = centerY + Math.sin(spiralAngle2) * spiralRadius;
+
+            var whiteDotX3 = centerX + Math.cos(spiralAngle3) * spiralRadius;
+            var whiteDotY3 = centerY + Math.sin(spiralAngle3) * spiralRadius;
+
+            canvasCtx.fillStyle = "rgba(255, 255, 255, 0.5)";
+            canvasCtx.beginPath();
+            canvasCtx.arc(whiteDotX1, whiteDotY1, 2, 0, Math.PI * 2);
+            canvasCtx.arc(whiteDotX2, whiteDotY2, 2, 0, Math.PI * 2);
+            canvasCtx.arc(whiteDotX3, whiteDotY3, 2, 0, Math.PI * 2);
+            canvasCtx.fill();
+        }
+    }
+
+    renderFrame();
+}
