@@ -2,10 +2,9 @@
 	margin: 0;
   
 	padding: 0;
-  background-color: #333;
 	box-sizing: border-box;
   
-	font-family: "Poppins", sans-serif;
+	font-family: "Barlow", Sans-serif;
   }
   
   body {
@@ -205,10 +204,17 @@
   
   }
   .close-sec-login > img{
-	height: 60px;
-	width: 60px;
+	height: 40px;
+	width: 40px;
+	background-color: #fff;
   }
   .close-sec-login:hover{
-  
-	filter: invert(0.5);
+	background-color: #ff0000;
+
+	  }
+
+	  #myVideo{
+		height: 1000px;
+		object-fit: cover;
+		object-position: center;
 	  }

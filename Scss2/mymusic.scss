@@ -1,0 +1,61 @@
+
+  
+#content {
+    display: flex;
+    height: 100%;
+    background: black;
+    box-shadow: 0 -5px 3px -3px rgb(255, 255, 255), 0 5px 3px -3px rgb(255, 255, 255);
+    padding: 40px;
+
+}
+  
+#playbar {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    gap: 35px;
+}
+  
+#visualizer-container {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+}
+  
+#visualizer,
+#playbar {
+    width: 100%;
+    height: 600px;
+}
+  
+#thefile {
+    margin-bottom: 20px;
+}
+  
+#info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    padding: 20px;
+}
+#music-select-part{
+    height: 600px;
+background: rgba(0, 0, 0, 0.4);
+
+}
+#thefile{
+    padding: 5px;
+    color: #ff0000;
+    font-style: italic;
+    font-family: "Barlow", Sans-serif;
+    font-weight: 600;
+    &:hover{
+        cursor: pointer;
+    }
+}

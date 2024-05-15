@@ -49,21 +49,23 @@
   top: 0;
   width: 100%;
   height: 100%;
-  overflow: auto;
+  overflow: hidden;
   background-color: rgba(0, 0, 0, 0.5);
 }
 
 .custom-modal-content {
-  background-color: #fefefe;
-  margin: 10% auto;
+  background-color: #000000;
   padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
   border: 1px solid #888;
   width: 80%;
   max-width: 600px;
 }
 
 .custom-close {
-  color: #aaa;
+  color: #ffffff;
   float: right;
   font-size: 28px;
   font-weight: bold;
@@ -71,9 +73,44 @@
 
 .custom-close:hover,
 .custom-close:focus {
-  color: black;
+  color: #ed0202;
   text-decoration: none;
   cursor: pointer;
+}
+
+.custom-modal-content h2 {
+  color: red;
+  font-family: "Barlow", Sans-serif;
+  font-weight: 600;
+}
+
+.custom-modal-content p {
+  color: #fefefe;
+  font-family: "Barlow", Sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.custom-download-btn {
+  font-family: "Barlow", Sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  background-color: #ffffff !important;
+  padding: 10px;
+  text-decoration: none !important;
+}
+.custom-download-btn:hover {
+  background-color: rgba(255, 255, 255, 0.7803921569) !important;
+}
+
+.custom-download-btn a {
+  color: black;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: "Barlow", Sans-serif;
+  text-decoration: none !important;
 }
 
 /*-----------------------------------*\

@@ -68,24 +68,7 @@
         }
 
 
-        .pixel-head {
-            height: auto !important;
-            background: linear-gradient(rgba(0, 0, 0, 0.819), rgba(0, 0, 0, 0.797)),
-                url(../Img/news/newsbg.jpg) !important;
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-        }
 
-        .tourn-title {
-            /* @include padd(20px, 80px, 20px, 80px); */
-            background: linear-gradient(rgba(0, 0, 0, 0.758), rgba(0, 0, 0, 0.758)),
-                url(../video/music-sec/8Mx3kd02NuLIY.wep);
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            text-align: center;
-        }
 
         .tourn-title-text {
             color: #77ff00;
@@ -127,6 +110,24 @@
         .new-det a:hover {
             color: #ff0000;
         }
+
+        @font-face {
+            font-family: "Starzone";
+            src: url("../Font/starzone-scifi-game-font/Web-TT/Starzone.ttf") format("truetype"),
+                url("Font/starzone-scifi-game-font/OpenType-TT/Starzone.ttf") format("truetype"),
+                url("Font/starzone-scifi-game-font/OpenType-PS/Starzone.otf") format("opentype"),
+                url("Font/starzone-scifi-game-font/Web-PS/Starzone.otf") format("opentype");
+        }
+
+        @font-face {
+            font-family: "CustomFont1";
+            src: url("../Font/oxstar-font/OpenType-TT/Oxstars-Regular.ttf");
+        }
+
+        @font-face {
+            font-family: "CustomFont2";
+            src: url("../Font/oxstar-font/Web-TT/Oxstars-Regular.ttf");
+        }
     </style>
 
     <!--------------------------------------- Navbar ------------------------------->
@@ -154,7 +155,8 @@
             <!-- logo -->
 
             <div class="pixel-nav" id="pix-nav">
-                <a href="index.html"> <img src="../Img/logo/PixelPlay.png" class="logo-sec" alt="PIXEL PLAY PORTAL" /></a>
+                <a href="index.html"> <img src="../Img/logo/PixelPlay.png" class="logo-sec"
+                        alt="PIXEL PLAY PORTAL" /></a>
             </div>
 
             <!-- Menu -->
@@ -270,10 +272,10 @@
         <div class="row">
             <div class="col-xl-6 tour-t-one">
                 <div class="tourn-title-text">
-                    <p class="text-uppercase">news details</p>
+                    <p class="text-uppercase">Music</p>
                 </div>
-                <div class="quabar"id="bar-sec-one">
-                    <div class="playbar" >
+                <div class="quabar play-bar-two" id="bar-sec-one">
+                    <div class="playbar play-bar-two">
                         <div class="seekbar">
                             <div class="circle">
 
@@ -282,7 +284,7 @@
                         <div class="abovebar">
 
 
-                            <div class="songinfo">
+                            <div class="songinfo infosong-sec">
 
                             </div>
                             <div class="songbuttons">
@@ -331,16 +333,22 @@
         <div class="left">
             <div class="cross"><img src="img/close.svg" alt=""></div>
             <div class="navigation boxes">
-                <ul>
-                    <li> <img src="img/logo.svg" style="height: 75px;" alt="music"><a href="music.html"
-                            style="text-decoration: none; font-size: 60px; color: white;">Quaver</a></li>
+                <ul class="uu">
+                    <li class="mm">
+                        <img src="img/logo.svg" alt="music" id="main-log-q">
+                        <a href="music.html" id="main-log-q-m">Pixel</a>
+                    </li>
 
 
                 </ul>
             </div>
 
             <div class="bottomleft boxes">
-                <h1><img src="img/musiclibrary.svg" alt="library"> library</h1>
+                <h1 class="music-li">
+                    <img src="img/musiclibrary.svg" alt="library" class="lib-t">
+
+                    <p class="p-lib">library</p>
+                </h1>
 
                 <div class="songlist">
                     <ol>
@@ -461,6 +469,19 @@
     </div>
 
     <!-- ************************************************************************************************************************************************************************************************************************************************************** -->
+    <div class="music-select-part-o">
+
+        <h1>
+            MY music
+        </h1>
+        <p>In the Music section, you can enjoy listening to your own personal collection of music. Sit back, relax, and immerse yourself in the experience</p>
+        <button class="ex-my">Explore more</button>
+
+    </div>
+
+
+
+
     <!-- discord-part -->
 
     <div class="discord-part-joinn">

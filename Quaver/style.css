@@ -74,7 +74,8 @@ margin: 0 10px 15px 10px;
     width: 75vw;
     margin: 10px 10px 0 0px;
     /* position: relative; */
-    height: 100vh;
+    height: 94vh;
+
     overflow-x: hidden;
 }
 
@@ -112,11 +113,22 @@ z-index: 99;
 right: 5px;
 }
 
+.card h2{
+    font-size: 22px !important;
+    font-weight: bold !important;
+    color: #ffffff !important;
+    font-family: "Barlow", Sans-serif !important;
 
+}
+.card p{
+    font-family: "Barlow", Sans-serif !important;
+    font-size: 16px !important;
+    color: #ffffff !important;
+}
 
 .card:hover{
     
-        background-color: #464646;
+        background-color: #464646 !important;
         cursor: pointer;
         
 
@@ -127,12 +139,11 @@ right: 5px;
     }
 }
 .card{
-    width: 180px;
-    height: 280px;
-   
+    padding-bottom: 0px !important;
+
 padding: 8px;
 border-radius: 12px;
-background-color: #252525;
+background-color: #252525 !important;
 }
 
 .card-container{
@@ -298,7 +309,7 @@ border-radius: 5px;
     font-size: 25px;
 }
 .bottomleft {
-    height: 80vh;
+    height: 82vh;
 }
 .login-btn:hover{
 cursor: pointer;
@@ -307,14 +318,6 @@ background-color: #000000;
 
 }
 
-.music-main-sec{
-    display: flex;
-    background-image: url('../video/music-sec/OK5LK5zLFfdm.web'); 
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    
-}
 
 
 
@@ -502,3 +505,165 @@ background-color: #000000;
  color: #fff;
     padding: 20px;
   }
+
+  .pixel-head {
+    height: auto !important;
+    background: linear-gradient(rgba(0, 0, 0, 0.819), rgba(0, 0, 0, 0.797)),
+        url(../Img/contact/elvira-heroes-evolved-4k-09.jpg) !important;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.tourn-title {
+    /* @include padd(20px, 80px, 20px, 80px); */
+    background: linear-gradient(rgba(0, 0, 0, 0.758), rgba(0, 0, 0, 0.758)),
+        url(../Img/contact/elvira-heroes-evolved-4k-09.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    text-align: center;
+}
+.music-main-sec{
+    display: flex;
+    background: linear-gradient(rgba(0, 0, 0, 0.758), rgba(0, 0, 0, 0.758)), url(../Img/contact/cont-back-3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 40px 40px 40px 40px;
+    box-shadow: 0px -15px 15px -15px #fefefe, 0px 15px 15px -15px #fefefe;
+}
+
+
+.play-bar-two{
+    background: linear-gradient(rgb(255 0 0 / 0%), rgb(255 255 255 / 85%)), url(../Img/contact/elvira-heroes-evolved-4k-09.jpg) !important;
+background-size: cover !important;
+background-position: center !important;
+background-attachment: fixed !important;
+text-align: center;
+
+}
+.tourn-title-text {
+    color: #ff0000b7 !important;
+    text-shadow: 12px 11px 0 rgb(0 0 0 / 51%), 5px 5px 10px rgb(0 0 0 / 57%);
+    font-family: "Starzone" !important;
+    }
+
+    .infosong-sec{
+        font-family: initial;
+        font-style: italic;
+    }   
+    #next:hover,#play:hover,#previous:hover{
+        filter: invert(1);
+    }
+    .volume img:hover{
+        filter: invert(1);
+    }
+
+    .cross{
+        display: none;
+    }
+
+
+    .boxes{
+        box-shadow: rgba(255, 255, 255, 0.647) 0px 0px 0px 2px, rgba(57, 57, 57, 0.822) 0px 4px 4px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    }
+    ol, ul {
+        padding-left: 0rem !important;
+    }
+#main-log-q{
+    height: 40px;  
+    margin-top: -13px; 
+    padding: 5px;
+}
+    #main-log-q-m{
+        text-decoration: none; 
+        font-size: 40px; 
+        font-weight: 600;
+  font-family: "robots";
+  color: #ffffff;
+  letter-spacing: 2px;
+    }
+    .uu , .mmm{
+        margin-bottom: 0 !important;
+    }
+    .info{
+        font-family: "robots" !important;
+        color: #ffffff !important;
+        font-style: italic;
+    }
+    .music-li{
+       display: flex;
+    }
+   .lib-t{
+    margin-top: 15px;
+   margin: 10px;
+   }
+    .p-lib{
+        color: #ffffff !important;
+        margin-bottom: 0 !important;
+    }
+    .nav li{
+        display: flex !important;
+    }
+    #home-part-menu{
+        color: #ffffff !important;
+        font-size: 30px; 
+        font-weight: 600;
+  font-family: "robots";
+    }
+    .heading-main-sec{
+        color: #ffffff !important;
+        font-size: 30px; 
+        font-weight: 600;
+  font-family: "robots"; 
+  padding-left: 10px;
+    }
+    .card{
+        width: 300px;
+    }
+
+    .card:hover {
+        transform: none;
+     
+        transition: all 0.5s;
+        cursor: pointer;
+    
+       
+      }
+      .music-select-part-o{
+        background: linear-gradient(rgba(0, 0, 0, 0.873), rgba(0, 0, 0, 0.922)),
+        url(../Img/wallpaper/wallpaper-two/2023-raiden-shogun-genshin-impact-5k-t8-1920x1080.jpg);
+        background-size: cover !important;
+background-position: center !important;
+background-attachment: fixed !important;
+text-align: center;
+padding: 40px;
+box-shadow: 0 -5px 3px -3px rgb(255, 255, 255), 0 5px 3px -3px rgb(255, 255, 255);
+      }
+      .music-select-part-o h1{
+        color: #ff0000 !important;
+        font-size: 25px; 
+        font-weight: 600;
+  font-family: "robots"; 
+      }
+      .music-select-part-o p{
+        color: #ffffff !important;
+        font-style: italic;
+        font-size: 18px; 
+        font-weight: 400;
+
+  font-family: "robots"; 
+      }
+      .ex-my{
+        color: #ffffff !important;
+        background-color: #000000;
+        font-size: 20px; 
+        font-weight:400;
+        padding: 10px;
+  font-family: "robots"; 
+      }
+      .ex-my:hover{
+        color: #ffffffad !important;
+        background-color: #000000c2;
+      }
