@@ -456,8 +456,6 @@ document.querySelectorAll(".playbar .range input").forEach(input => {
         document.querySelector(".left").style.left = "-250%"
         document.querySelector(".right").style.filter = "blur(0px)"
     })
-<<<<<<< HEAD
-=======
 
     displayAlbums()
     displayAlbums()
@@ -479,7 +477,6 @@ currSong.addEventListener("ended", () => {
 }
 
 main()
->>>>>>> ae0f8a648e5272c6ade9bb3d1d423c88e2154b5f
 
     displayAlbums()
     displayAlbums()
@@ -498,7 +495,7 @@ currSong.addEventListener("ended", () => {
     }
 });
 
-}
+
 
 main()
 
@@ -620,16 +617,4 @@ document.querySelectorAll('.ex-my').forEach(button => {
 //         audio.play();
 //         renderFrame();
 //     };
-<<<<<<< HEAD
 // };
-=======
-// };
-
-
-
-
-
-
-
-
->>>>>>> ae0f8a648e5272c6ade9bb3d1d423c88e2154b5f
