@@ -456,6 +456,30 @@ document.querySelectorAll(".playbar .range input").forEach(input => {
         document.querySelector(".left").style.left = "-250%"
         document.querySelector(".right").style.filter = "blur(0px)"
     })
+<<<<<<< HEAD
+=======
+
+    displayAlbums()
+    displayAlbums()
+
+currSong.addEventListener("ended", () => {
+    let fileName = encodeURIComponent(decodeURIComponent(currSong.src.split("/").pop()));
+    let index = songs.indexOf(fileName);
+    if (index !== -1 && index + 1 < songs.length) {
+        let nextSong = songs[index + 1];
+        playMusic(nextSong);
+    } else {
+        // If there's no next song, change the play button icon to "play"
+        document.querySelectorAll(".playbar #play").forEach(playButton => {
+            playButton.src = "img/play.svg";
+        });
+    }
+});
+
+}
+
+main()
+>>>>>>> ae0f8a648e5272c6ade9bb3d1d423c88e2154b5f
 
     displayAlbums()
     displayAlbums()
@@ -596,4 +620,16 @@ document.querySelectorAll('.ex-my').forEach(button => {
 //         audio.play();
 //         renderFrame();
 //     };
+<<<<<<< HEAD
 // };
+=======
+// };
+
+
+
+
+
+
+
+
+>>>>>>> ae0f8a648e5272c6ade9bb3d1d423c88e2154b5f
