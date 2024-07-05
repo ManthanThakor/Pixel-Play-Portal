@@ -13,7 +13,7 @@ Welcome to **Pixel Play Portal**, your ultimate destination for all things gamin
 
 ## Demo
 
-![Pixel Play Portal Demo 1](link-to-demo-image-1)
+![Pixel Play Portal Demo 1](Screenshot 2024-07-05 124838.png)
 ![Pixel Play Portal Demo 2](image.png)
 
 
