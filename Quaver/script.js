@@ -69,14 +69,18 @@ function secondsToMinutesSeconds(seconds) {
   return `${formattedMinutes}:${formattedSeconds}`;
 }
 
-// Function to get base path for assets
 function getBasePath() {
+  // For GitHub Pages deployment specifically at manthanthakor.github.io
+  if (window.location.hostname === "manthanthakor.github.io") {
+    return "/Pixel-Play-Portal/Quaver";  // Hard-coded path for GitHub Pages
+  }
+  
+  // For local development or other environments
   const path = window.location.pathname;
   const dirs = path.split("/");
   dirs.pop(); // Remove the filename
   return dirs.join("/");
 }
-
 // Function to display all available albums
 function displayAlbums() {
   const cardContainer = document.querySelector(".card-container");
