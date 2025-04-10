@@ -1,620 +1,555 @@
-let currSong = new Audio()
-let songs;
-let currfolder;
-
-function secondsToMinutesSeconds(seconds) {
-    if (isNaN(seconds) || seconds < 0) {
-        return "00:00";
-    }
-
-    const minutes = Math.floor(seconds / 60);
-    const remainingSeconds = Math.floor(seconds % 60);
-
-    const formattedMinutes = String(minutes).padStart(2, '0');
-    const formattedSeconds = String(remainingSeconds).padStart(2, '0');
-
-    return `${formattedMinutes}:${formattedSeconds}`;
-}
-
-async function displayAlbums() {
-    console.log(currfolder)
-    let a = await fetch(`http://127.0.0.1:5500/Quaver/song`)
-    let response = await a.text()
-    // console.log(response)
-    let div = document.createElement("div")
-    div.innerHTML = response
-    let anchors = div.getElementsByTagName("a")
-    let cardContainer = document.querySelector(".card-container")
-    // cardContainer.innerHTML = ""
-    Array.from(anchors).forEach(async e => {
-        if (e.href.includes("/Quaver/song/")) {
-
-            let folder = e.href.split("/").slice(-1)[0]
-            let a = await fetch(`http://127.0.0.1:5500/Quaver/song/${folder}/info.json`)
-            let response = await a.json()
-
-            cardContainer.innerHTML = cardContainer.innerHTML + `<div data-folder="${folder}" class="card">
-            
-            <div class="pic">
-                <img src="../Quaver/song/${folder}/cover.jpg" alt="img">
-                <div class="play">
-                    <svg width="16" height="16" viewBox="0 0 20 24" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path d="M5 20V4L19 12L5 20Z" stroke="#141B34" fill="#000" stroke-width="1.5"
-                            stroke-linejoin="round" />
-                    </svg>
-                </div>
-            </div>
-            <h2>${response.title}</h2>
-            <p>${response.description}</p>
-        </div>`
-
-
-        }
-
-        Array.from(document.getElementsByClassName("card")).forEach(e => {
-
-            e.addEventListener("click", async item => {
-                console.log("clicked")
-                currfolder = `song/${item.currentTarget.dataset.folder}`
-                console.log(item.currentTarget.dataset.folder)
-                await getSongs(currfolder)
-                console.log(songs)
-                playMusic(songs[0])
-
-            })
-
-        })
-
-    })
-}
-
-
-async function getSongs(currfolder) {
-    let a = await fetch(`http://127.0.0.1:5500/Quaver/${currfolder}`)
-    let response = await a.text()
-    let div = document.createElement("div")
-    div.innerHTML = response
-    let as = div.getElementsByTagName("a")
-    songs = []
-    for (let index = 0; index < as.length; index++) {
-        const element = as[index];
-        if (element.href.endsWith(".flac") || element.href.endsWith(".mp3")) {
-            songs.push(element.href.split(`${currfolder}/`)[1])
-
-
-        }
-
-    }
-
-    let songUl = document.querySelector(".songlist").getElementsByTagName("ol")[0]
-    songUl.innerHTML = ""
-    for (const song of songs) {
-        songUl.innerHTML = songUl.innerHTML + `
-        
-        
-        <li>
-                            <div class="songblock">
-                                <img src="img/logo.svg" alt="">
-    
-                                <div class="info">
-                                    <div>${decodeURIComponent(song)}</div>
-                                    <div>Artist Name</div>
-                                </div>
-                            </div>
-                            <img id="playnow" src="img/play.svg" alt="">
-                       
-        
-        
-        
-         </li>`;
-
-    }
-
-
-
-    Array.from(document.querySelector(".songlist").getElementsByTagName("li")).forEach(e => {
-        e.addEventListener('click', element => {
-            console.log(e.querySelector(".info").getElementsByTagName("div")[0].innerText)
-
-
-            const filePath = e.querySelector(".info").getElementsByTagName("div")[0]
-
-            var songURL = `/Quaver/${currfolder}/` + filePath.innerText;
-            fetch(songURL)
-                .then(response => {
-                    if (response.ok) {
-                        playMusic(filePath.innerText);
-
-                    } else {
-
-                        playMusic(filePath.innerHTML);
-
-                    }
-                })
-
-
-        })
-    });
-
-}
-
-
-
-// Function to create the audio visualizer
-function createAudioVisualizer(audioElement, container) {
-    var context = new AudioContext();
-    var src = context.createMediaElementSource(audioElement);
-    var analyser = context.createAnalyser();
-
-    var canvas = document.createElement("canvas");
-    canvas.id = "canvas";
-    container.appendChild(canvas);
-
-    canvas.width = container.clientWidth;
-    canvas.height = container.clientHeight;
-    var ctx = canvas.getContext("2d");
-
-    src.connect(analyser);
-    analyser.connect(context.destination);
-
-    analyser.fftSize = 256;
-
-    var bufferLength = analyser.frequencyBinCount;
-
-    var centerX = canvas.width / 2;
-    var centerY = canvas.height / 2;
-    var maxRadius = Math.min(centerX, centerY) * 0.9;
-
-    var borderCount = 13;
-    var dotSizes = [6, 5, 4, 3, 2, 1]; // Dot sizes for each border
-    var dotDensity = [4, 8, 12, 16, 20, 24]; // Number of dots for each border
-
-    // function renderFrame() {
-    //     requestAnimationFrame(renderFrame);
-
-    //     var dataArray = new Uint8Array(bufferLength);
-    //     analyser.getByteFrequencyData(dataArray);
-
-    //     ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-    //     var sliceWidth = (Math.PI * 2) / bufferLength;
-    //     var angle = 0;
-
-    //     for (var i = 0; i < bufferLength; i++) {
-    //         var barHeight = dataArray[i] * 2;
-
-    //         var x = centerX + Math.cos(angle) * (maxRadius - barHeight * 0.5);
-    //         var y = centerY + Math.sin(angle) * (maxRadius - barHeight * 0.5);
-
-    //         ctx.fillStyle = "rgba(0, 0, 255, 0.5)";
-    //         ctx.beginPath();
-    //         ctx.arc(x, y, 3, 0, Math.PI * 2);
-    //         ctx.fill();
-
-    //         angle += sliceWidth;
-    //     }
-
-    //     // Scatter dots
-    //     for (var b = 0; b < borderCount; b++) {
-    //         var borderRadius = maxRadius * (borderCount - b) / borderCount;
-    //         var dotRadius = dotSizes[b];
-
-    //         for (var i = 0; i < dotDensity[b]; i++) {
-    //             var dotAngle = (Math.PI * 2) * (i / dotDensity[b]);
-    //             var dotX = centerX + Math.cos(dotAngle) * borderRadius * (dataArray[i % bufferLength] / 255);
-    //             var dotY = centerY + Math.sin(dotAngle) * borderRadius * (dataArray[i % bufferLength] / 255);
-    //             var dotColor = "rgba(0, 0, 255, " + (1 - dotRadius / 6) + ")"; // Adjust dot color based on size
-
-    //             ctx.fillStyle = dotColor;
-    //             ctx.beginPath();
-    //             ctx.arc(dotX, dotY, dotRadius, 0, Math.PI * 2);
-    //             ctx.fill();
-    //         }
-    //     }
-
-    //     // Scattered white dots dancing in three spiral waveform patterns originating from the same origin
-    //     for (var i = 0; i < bufferLength; i += 10) {
-    //         var spiralAngle1 = i * 0.1;
-    //         var spiralAngle2 = i * 0.1 + Math.PI / 3;
-    //         var spiralAngle3 = i * 0.1 + (2 * Math.PI) / 3;
-
-    //         var spiralRadius = maxRadius * (dataArray[i % bufferLength] / 255);
-
-    //         var whiteDotX1 = centerX + Math.cos(spiralAngle1) * spiralRadius;
-    //         var whiteDotY1 = centerY + Math.sin(spiralAngle1) * spiralRadius;
-
-    //         var whiteDotX2 = centerX + Math.cos(spiralAngle2) * spiralRadius;
-    //         var whiteDotY2 = centerY + Math.sin(spiralAngle2) * spiralRadius;
-
-    //         var whiteDotX3 = centerX + Math.cos(spiralAngle3) * spiralRadius;
-    //         var whiteDotY3 = centerY + Math.sin(spiralAngle3) * spiralRadius;
-
-    //         ctx.fillStyle = "rgba(255, 255, 255, 0.5)";
-    //         ctx.beginPath();
-    //         ctx.arc(whiteDotX1, whiteDotY1, 2, 0, Math.PI * 2);
-    //         ctx.arc(whiteDotX2, whiteDotY2, 2, 0, Math.PI * 2);
-    //         ctx.arc(whiteDotX3, whiteDotY3, 2, 0, Math.PI * 2);
-    //         ctx.fill();
-    //     }
-    // }
-
-    // renderFrame();
-
-
-    function renderFrame() {
-        requestAnimationFrame(renderFrame);
-    
-        var dataArray = new Uint8Array(bufferLength);
-        analyser.getByteFrequencyData(dataArray);
-    
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-    
-        var sliceWidth = (Math.PI * 2) / bufferLength;
-        var angle = 0;
-    
-        // Scatter white dots only
-        for (var b = 0; b < borderCount; b++) {
-            var borderRadius = maxRadius * (borderCount - b) / borderCount;
-            var dotRadius = dotSizes[b];
-    
-            for (var i = 0; i < dotDensity[b]; i++) {
-                var dotAngle = (Math.PI * 2) * (i / dotDensity[b]);
-                var dotX = centerX + Math.cos(dotAngle) * borderRadius * (dataArray[i % bufferLength] / 255);
-                var dotY = centerY + Math.sin(dotAngle) * borderRadius * (dataArray[i % bufferLength] / 255);
-                var dotColor = "rgba(255, 255, 255, " + (1 - dotRadius / 6) + ")"; // Adjust dot color based on size
-    
-                ctx.fillStyle = dotColor;
-                ctx.beginPath();
-                ctx.arc(dotX, dotY, dotRadius, 0, Math.PI * 2);
-                ctx.fill();
-            }
-        }
-    
-        // Scattered white dots dancing in three spiral waveform patterns originating from the same origin
-        for (var i = 0; i < bufferLength; i += 10) {
-            var spiralAngle1 = i * 0.1;
-            var spiralAngle2 = i * 0.1 + Math.PI / 3;
-            var spiralAngle3 = i * 0.1 + (2 * Math.PI) / 3;
-    
-            var spiralRadius = maxRadius * (dataArray[i % bufferLength] / 255);
-    
-            var whiteDotX1 = centerX + Math.cos(spiralAngle1) * spiralRadius;
-            var whiteDotY1 = centerY + Math.sin(spiralAngle1) * spiralRadius;
-    
-            var whiteDotX2 = centerX + Math.cos(spiralAngle2) * spiralRadius;
-            var whiteDotY2 = centerY + Math.sin(spiralAngle2) * spiralRadius;
-    
-            var whiteDotX3 = centerX + Math.cos(spiralAngle3) * spiralRadius;
-            var whiteDotY3 = centerY + Math.sin(spiralAngle3) * spiralRadius;
-    
-            ctx.fillStyle = "rgba(255, 255, 255, 0.5)";
-            ctx.beginPath();
-            ctx.arc(whiteDotX1, whiteDotY1, 2, 0, Math.PI * 2);
-            ctx.arc(whiteDotX2, whiteDotY2, 2, 0, Math.PI * 2);
-            ctx.arc(whiteDotX3, whiteDotY3, 2, 0, Math.PI * 2);
-            ctx.fill();
-        }
-    }
-    renderFrame();
-}
-
-getSongs('song/ncs')
-
-
-const playMusic = (track, pause = false) => {
-    songURL = `/Quaver/${currfolder}/` + track;
-    currSong.src = songURL;
-
-    if (!pause) {
-        currSong.play();
-        document.querySelectorAll(".playbar #play").forEach(playButton => {
-            playButton.src = "img/pause.svg";
-        });
-    } else {
-        document.querySelectorAll(".playbar #play").forEach(playButton => {
-            playButton.src = "img/play.svg";
-        });
-    }
-
-    // Update song info in all playbars
-    document.querySelectorAll(".playbar .songinfo").forEach(songinfo => {
-        songinfo.innerText = decodeURIComponent(track);
-    });
-    document.querySelectorAll(".playbar .songtime").forEach(songtime => {
-        songtime.innerHTML = "00:00/00:00";
-    });
-
-    // Create visualizer
-    createAudioVisualizer(currSong, document.querySelector('.music-viz'));
+/**
+ * Pixel Play Portal - Music Player
+ * A complete music player that works across all domains
+ */
+
+// Core player variables
+let currSong = new Audio();
+let songs = [];
+let currFolder = "";
+let isDragging = false;
+let songIndex = 0;
+
+// Audio Context variables
+let audioContext = null;
+let analyser = null;
+let visualizerSource = null;
+
+// Fixed sample data - eliminating the need for server-side folder reading
+const musicLibrary = {
+  "All Songs": {
+    title: "All Songs",
+    description: "Complete collection of all available music",
+    cover: "img/happybeats.jpg",
+    songs: [
+      "NIVIRO - Flares [NCS Release].mp3",
+      "Call Of Silence (Attack On Titan) - Lo-Fi Luke  Sushi (128).mp3",
+      "Enemy (1).mp3",
+      "Julius Dreisig & Zeus X Crona - Invisible [NCS Release].mp3",
+      "KSHMR - Around The World (Feat. NOUMENN) [Official Audio].mp3",
+      "Martin Garrix feat. JRM - These Are The Times (Official Video).mp3",
+      "NIVIRO - Flares [NCS Release].mp3",
+      "QUB3, Quickdrop & B0UNC3 - Stay Or Be Alone [NCS Release].mp3",
+      "RANDALL - Wahran (Official Audio).mp3",
+      "Wasted (Nightcore) - Murkish  Huken (128).mp3",
+    ],
+  },
+  ncs: {
+    title: "NCS Songs",
+    description: "No one Owns the Music, It's free just like you",
+    cover: "./song/ncs/cover.jpg",
+    songs: [
+      "Julius Dreisig & Zeus X Crona - Invisible [NCS Release].mp3",
+      "KSHMR - Around The World (Feat. NOUMENN) [Official Audio].mp3",
+    ],
+  },
+  cs: {
+    title: "Copyright Songs",
+    description: "Just Enjoy it, Don't care much about it",
+    cover: "./song/cs/cover.jpg",
+    songs: [
+      "NIVIRO - Flares [NCS Release].mp3",
+      "Wasted (Nightcore) - Murkish Huken (128).mp3",
+    ],
+  },
 };
 
-async function main() {
+// Helper function to convert seconds to MM:SS format
+function secondsToMinutesSeconds(seconds) {
+  if (isNaN(seconds) || seconds < 0) {
+    return "00:00";
+  }
 
-    currfolder = `song/All%20Songs`
-    console.log(currfolder)
-    await getSongs(currfolder)
-    console.log(songs)
-    playMusic(songs[0], true)
+  const minutes = Math.floor(seconds / 60);
+  const remainingSeconds = Math.floor(seconds % 60);
 
+  const formattedMinutes = String(minutes).padStart(2, "0");
+  const formattedSeconds = String(remainingSeconds).padStart(2, "0");
 
- // Play functionality
-document.querySelectorAll(".playbar #play").forEach(button => {
-    button.addEventListener("click", () => {
-        if (currSong.paused) {
-            currSong.play();
-            document.querySelectorAll(".playbar #play").forEach(playButton => {
-                playButton.src = "img/pause.svg";
-            });
-        } else {
-            document.querySelectorAll(".playbar #play").forEach(playButton => {
-                playButton.src = "img/play.svg";
-            });
-            currSong.pause();
-        }
-    });
-});
-
-// Timeupdate functionality
-currSong.addEventListener("timeupdate", () => {
-    document.querySelectorAll(".playbar .songtime").forEach(songtime => {
-        songtime.innerHTML = `${secondsToMinutesSeconds(currSong.currentTime)}/${secondsToMinutesSeconds(currSong.duration)}`;
-    });
-    document.querySelectorAll(".playbar .circle").forEach(circle => {
-        circle.style.left = `${(currSong.currentTime * 100) / currSong.duration}%`;
-    });
-    console.log(currSong);
-});
-
-// Dragging functionality
-document.querySelectorAll(".playbar .circle").forEach(circle => {
-    circle.addEventListener("mousedown", startDragging);
-});
-document.querySelectorAll(".playbar .seekbar").forEach(seekbar => {
-    seekbar.addEventListener("click", moveCircle);
-});
-document.addEventListener("mousemove", dragCircle);
-document.addEventListener("mouseup", stopDragging);
-
-function startDragging(e) {
-    isDragging = true;
+  return `${formattedMinutes}:${formattedSeconds}`;
 }
 
-function moveCircle(e) {
-    if (!isDragging) {
-        let offsetX = e.clientX - this.getBoundingClientRect().left;
-        let percent = (offsetX * 100) / this.getBoundingClientRect().width;
-        if (percent >= 0 && percent <= 100) {
-            this.querySelector(".circle").style.left = `${percent}%`;
-            currSong.currentTime = (currSong.duration * percent) / 100;
-        }
+// Function to get base path for assets
+function getBasePath() {
+  const path = window.location.pathname;
+  const dirs = path.split("/");
+  dirs.pop(); // Remove the filename
+  return dirs.join("/");
+}
+
+// Function to display all available albums
+function displayAlbums() {
+  const cardContainer = document.querySelector(".card-container");
+  if (!cardContainer) return;
+
+  cardContainer.innerHTML = ""; // Clear existing content
+
+  // Loop through our predefined library and create album cards
+  Object.keys(musicLibrary).forEach((folder) => {
+    const album = musicLibrary[folder];
+
+    const card = document.createElement("div");
+    card.className = "card";
+    card.dataset.folder = folder;
+
+    card.innerHTML = `
+      <div class="play">
+        <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="white" stroke-width="1.5"/>
+          <path d="M15.4137 13.059L10.6935 15.8458C9.93371 16.2944 9 15.7105 9 14.7868V9.21316C9 8.28947 9.93371 7.70561 10.6935 8.15421L15.4137 10.941C16.1954 11.4026 16.1954 12.5974 15.4137 13.059Z" stroke="white" stroke-width="1.5"/>
+        </svg>
+      </div>
+      <img src="${album.cover || 'img/default-cover.jpg'}" alt="${album.title}">
+      <h2>${album.title}</h2>
+      <p>${album.description}</p>
+    `;
+
+    cardContainer.appendChild(card);
+
+    // Add click event to each card
+    card.addEventListener("click", () => {
+      currFolder = folder;
+      loadSongs(folder);
+    });
+  });
+}
+
+// Function to load songs from a specific folder
+function loadSongs(folder) {
+  if (!musicLibrary[folder]) {
+    console.error(`Folder '${folder}' not found in library`);
+    return;
+  }
+
+  songs = [...musicLibrary[folder].songs]; // Create a copy of the songs array
+
+  // Update the UI with song list
+  const songUl = document
+    .querySelector(".songlist")
+    .getElementsByTagName("ol")[0];
+  if (!songUl) return;
+
+  songUl.innerHTML = "";
+
+  songs.forEach((song, index) => {
+    const li = document.createElement("li");
+    li.innerHTML = `
+      <div class="info">
+        <div class="infoimg">
+          <img src="img/music.svg" alt="">
+        </div>
+        <div class="nameArtist">
+          <div>${song}</div>
+          <div>Artist Name</div>
+        </div>
+      </div>
+      <div class="playnow">
+        <span>Play Now</span>
+      </div>
+    `;
+
+    songUl.appendChild(li);
+
+    // Add click event to play this song
+    li.addEventListener("click", () => {
+      songIndex = index;
+      playMusic(songs[songIndex], false);
+    });
+  });
+
+  // Play the first song of the folder
+  if (songs.length > 0) {
+    songIndex = 0;
+    playMusic(songs[0], false);
+  }
+}
+
+// Initialize audio context for visualizer
+function initAudioContext() {
+  if (!audioContext) {
+    try {
+      const AudioContext = window.AudioContext || window.webkitAudioContext;
+      audioContext = new AudioContext();
+      analyser = audioContext.createAnalyser();
+      analyser.fftSize = 256;
+    } catch (error) {
+      console.error("Error creating audio context:", error);
     }
+  }
 }
 
-function dragCircle(e) {
-    if (isDragging) {
-        let offsetX = e.clientX - document.querySelector(".playbar .seekbar").getBoundingClientRect().left;
-        let percent = (offsetX * 100) / document.querySelector(".playbar .seekbar").getBoundingClientRect().width;
-        if (percent >= 0 && percent <= 100) {
-            document.querySelectorAll(".playbar .circle").forEach(circle => {
-                circle.style.left = `${percent}%`;
-            });
-            currSong.currentTime = (currSong.duration * percent) / 100;
-        }
+// Function to update audio visualizer connection with current song
+function updateAudioVisualizerConnection() {
+  try {
+    if (!audioContext || !analyser) {
+      initAudioContext();
     }
-}
 
-function stopDragging(e) {
-    isDragging = false;
-}
-
-// Previous and Next functionality
-document.querySelectorAll(".playbar #previous").forEach(button => {
-    button.addEventListener("click", () => {
-        let fileName = encodeURIComponent(decodeURIComponent(currSong.src.split("/").pop()));
-        let index = songs.indexOf(fileName);
-        if (index !== -1 && index - 1 >= 0) {
-            let previousSong = songs[index - 1];
-            playMusic(previousSong);
-        }
-    });
-});
-
-document.querySelectorAll(".playbar #next").forEach(button => {
-    button.addEventListener("click", () => {
-        let fileName = encodeURIComponent(decodeURIComponent(currSong.src.split("/").pop()));
-        let index = songs.indexOf(fileName);
-        if (index !== -1 && index + 1 < songs.length) {
-            let nextSong = songs[index + 1];
-            playMusic(nextSong);
-        }
-    });
-});
-
-// Volume control
-document.querySelectorAll(".playbar .range input").forEach(input => {
-    input.addEventListener("change", (e) => {
-        currSong.volume = parseInt(e.target.value) / 100;
-    });
-});
-
-
-
-
-
-
-
+    // Disconnect previous source if it exists
+    if (visualizerSource) {
+      try {
+        visualizerSource.disconnect();
+      } catch (e) {
+        // Ignore disconnection errors
+      }
+    }
     
-
-
-    document.querySelector(".hamburger").addEventListener("click", () => {
-        document.querySelector(".left").style.left = "0%"
-        document.querySelector(".right").style.filter = "blur(3px)"
-    })
-
-    document.querySelector(".cross").addEventListener("click", () => {
-        document.querySelector(".left").style.left = "-250%"
-        document.querySelector(".right").style.filter = "blur(0px)"
-    })
-
-    displayAlbums()
-    displayAlbums()
-
-currSong.addEventListener("ended", () => {
-    let fileName = encodeURIComponent(decodeURIComponent(currSong.src.split("/").pop()));
-    let index = songs.indexOf(fileName);
-    if (index !== -1 && index + 1 < songs.length) {
-        let nextSong = songs[index + 1];
-        playMusic(nextSong);
-    } else {
-        // If there's no next song, change the play button icon to "play"
-        document.querySelectorAll(".playbar #play").forEach(playButton => {
-            playButton.src = "img/play.svg";
-        });
-    }
-});
-
+    // Create and connect new source
+    visualizerSource = audioContext.createMediaElementSource(currSong);
+    visualizerSource.connect(analyser);
+    analyser.connect(audioContext.destination);
+    
+    // Now create/update the visualizer display
+    createAudioVisualizer(document.querySelector(".music-viz"));
+  } catch (e) {
+    console.error("Error updating audio visualizer connection:", e);
+  }
 }
 
-main()
+// Function to create audio visualizer (now separated from the connection logic)
+function createAudioVisualizer(container) {
+  if (!container || !analyser) return;
 
-    displayAlbums()
-    displayAlbums()
+  // Clear previous content
+  container.innerHTML = "";
 
-currSong.addEventListener("ended", () => {
-    let fileName = encodeURIComponent(decodeURIComponent(currSong.src.split("/").pop()));
-    let index = songs.indexOf(fileName);
-    if (index !== -1 && index + 1 < songs.length) {
-        let nextSong = songs[index + 1];
-        playMusic(nextSong);
-    } else {
-        // If there's no next song, change the play button icon to "play"
-        document.querySelectorAll(".playbar #play").forEach(playButton => {
-            playButton.src = "img/play.svg";
-        });
+  try {
+    // Calculate buffer length from analyzer
+    const bufferLength = analyser.frequencyBinCount;
+
+    // Create canvas
+    const canvas = document.createElement("canvas");
+    canvas.width = container.clientWidth || 300;
+    canvas.height = container.clientHeight || 200;
+    container.appendChild(canvas);
+
+    const ctx = canvas.getContext("2d");
+
+    // Calculate visualization parameters
+    const centerX = canvas.width / 2;
+    const centerY = canvas.height / 2;
+    const maxRadius = Math.min(centerX, centerY) * 0.9;
+
+    // Animation constants
+    const borderCount = 8;
+    const dotSizes = [6, 5, 4, 3, 2, 1];
+    const dotDensity = [4, 8, 12, 16, 20, 24];
+
+    function renderFrame() {
+      requestAnimationFrame(renderFrame);
+
+      // Get frequency data
+      const dataArray = new Uint8Array(bufferLength);
+      analyser.getByteFrequencyData(dataArray);
+
+      // Clear canvas
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      // Draw visualization
+
+      // Scatter white dots in concentric circles
+      for (let b = 0; b < borderCount; b++) {
+        const borderRadius = (maxRadius * (borderCount - b)) / borderCount;
+        const dotRadius = dotSizes[Math.min(b, dotSizes.length - 1)];
+
+        for (
+          let i = 0;
+          i < dotDensity[Math.min(b, dotDensity.length - 1)];
+          i++
+        ) {
+          const dotAngle =
+            Math.PI * 2 * (i / dotDensity[Math.min(b, dotDensity.length - 1)]);
+          const dotX =
+            centerX +
+            Math.cos(dotAngle) *
+              borderRadius *
+              (0.5 + dataArray[i % bufferLength] / 512);
+          const dotY =
+            centerY +
+            Math.sin(dotAngle) *
+              borderRadius *
+              (0.5 + dataArray[i % bufferLength] / 512);
+          const dotColor = "rgba(255, 255, 255, " + (1 - dotRadius / 6) + ")";
+
+          ctx.fillStyle = dotColor;
+          ctx.beginPath();
+          ctx.arc(dotX, dotY, dotRadius, 0, Math.PI * 2);
+          ctx.fill();
+        }
+      }
+
+      // Draw spiral patterns
+      for (let i = 0; i < bufferLength; i += 10) {
+        const spiralAngle1 = i * 0.1;
+        const spiralAngle2 = i * 0.1 + Math.PI / 3;
+        const spiralAngle3 = i * 0.1 + (2 * Math.PI) / 3;
+
+        const spiralRadius = maxRadius * (dataArray[i % bufferLength] / 255);
+
+        const whiteDotX1 = centerX + Math.cos(spiralAngle1) * spiralRadius;
+        const whiteDotY1 = centerY + Math.sin(spiralAngle1) * spiralRadius;
+
+        const whiteDotX2 = centerX + Math.cos(spiralAngle2) * spiralRadius;
+        const whiteDotY2 = centerY + Math.sin(spiralAngle2) * spiralRadius;
+
+        const whiteDotX3 = centerX + Math.cos(spiralAngle3) * spiralRadius;
+        const whiteDotY3 = centerY + Math.sin(spiralAngle3) * spiralRadius;
+
+        ctx.fillStyle = "rgba(255, 255, 255, 0.5)";
+        ctx.beginPath();
+        ctx.arc(whiteDotX1, whiteDotY1, 2, 0, Math.PI * 2);
+        ctx.arc(whiteDotX2, whiteDotY2, 2, 0, Math.PI * 2);
+        ctx.arc(whiteDotX3, whiteDotY3, 2, 0, Math.PI * 2);
+        ctx.fill();
+      }
     }
-});
 
+    // Start animation
+    renderFrame();
+  } catch (error) {
+    console.error("Error creating audio visualizer:", error);
+    // Create fallback visualization
+    const fallbackDiv = document.createElement("div");
+    fallbackDiv.textContent = "Music Visualization";
+    fallbackDiv.style.cssText =
+      "width:100%; height:100%; display:flex; align-items:center; justify-content:center; color:white; font-size:20px;";
+    container.appendChild(fallbackDiv);
+  }
+}
 
+// Play music function - handles all playback logic
+function playMusic(songName, pause = false) {
+  if (!songName) return;
 
-main()
-
-
-document.querySelectorAll('.ex-my').forEach(button => {
-    button.addEventListener('click', () => {
-        window.location.href = '../musicselect.html';
+  try {
+    // Show loading status
+    document.querySelectorAll(".songinfo").forEach((info) => {
+      info.innerText = "Loading...";
     });
-});
 
+    // Save current time and pause status before loading new song
+    const wasPlaying = !currSong.paused;
+    
+    // Set up audio source using the provided URL or a base64 fallback
+    const songURL = `${getBasePath()}/song/${currFolder}/${songName}`;
 
-// window.onload = function() {
-//     var file = document.getElementById("thefile");
-//     var audio = document.getElementById("audio");
+    // Create a new Audio element to avoid issues with changing sources
+    currSong.src = songURL;
+    currSong.load();
 
-//     file.onchange = function() {
-//         var files = this.files;
-//         audio.src = URL.createObjectURL(files[0]);
-//         audio.load();
-//         audio.play();
-//         var context = new AudioContext();
-//         var src = context.createMediaElementSource(audio);
-//         var analyser = context.createAnalyser();
+    // Set up event handlers
+    currSong.oncanplay = () => {
+      // Initialize or update audio context
+      if (audioContext) {
+        // Resume audio context if it was suspended (needed for Chrome's autoplay policy)
+        if (audioContext.state === 'suspended') {
+          audioContext.resume();
+        }
+      }
+      
+      // Connect the new song to the visualizer
+      try {
+        updateAudioVisualizerConnection();
+      } catch (error) {
+        console.error("Error connecting to visualizer:", error);
+      }
+      
+      if (!pause && (wasPlaying || songIndex === 0)) {
+        currSong.play().catch((error) => {
+          console.error("Error playing audio:", error);
+          document.querySelectorAll(".playbar #play").forEach((button) => {
+            button.src = "img/play.svg";
+          });
+        });
+      }
 
-//         var canvas = document.createElement("canvas");
-//         canvas.id = "canvas";
-//         document.querySelector('.music-viz').appendChild(canvas);
+      // Update UI
+      document.querySelectorAll(".playbar #play").forEach((button) => {
+        button.src = pause || !wasPlaying ? "img/play.svg" : "img/pause.svg";
+      });
 
-//         canvas.width = document.querySelector('.music-viz').clientWidth;
-//         canvas.height = document.querySelector('.music-viz').clientHeight;
-//         var ctx = canvas.getContext("2d");
+      document.querySelectorAll(".songinfo").forEach((info) => {
+        info.innerText = songName;
+      });
 
-//         src.connect(analyser);
-//         analyser.connect(context.destination);
+      document.querySelectorAll(".songtime").forEach((time) => {
+        time.innerText = `00:00/${secondsToMinutesSeconds(currSong.duration)}`;
+      });
+    };
 
-//         analyser.fftSize = 256;
+    // Handle errors - use a fallback approach
+    currSong.onerror = () => {
+      console.error("Error loading audio, trying fallback");
+      // In a real application, you might have fallback audio sources
+      document.querySelectorAll(".songinfo").forEach((info) => {
+        info.innerText = `${songName} (playback error)`;
+      });
+    };
+  } catch (error) {
+    console.error("Error in playMusic:", error);
+  }
+}
 
-//         var bufferLength = analyser.frequencyBinCount;
-//         console.log(bufferLength);
+// Function to play next song
+function playNextSong() {
+  if (songs.length === 0) return;
 
-//         var dataArray = new Uint8Array(bufferLength);
+  songIndex = (songIndex + 1) % songs.length;
+  playMusic(songs[songIndex], false);
+}
 
-//         var centerX = canvas.width / 2;
-//         var centerY = canvas.height / 2;
-//         var maxRadius = Math.min(centerX, centerY) * 0.9;
+// Function to play previous song
+function playPreviousSong() {
+  if (songs.length === 0) return;
 
-//         var borderCount = 13;
-//         var dotSizes = [6, 5, 4, 3, 2, 1]; // Dot sizes for each border
-//         var dotDensity = [4, 8, 12, 16, 20, 24]; // Number of dots for each border
+  songIndex = (songIndex - 1 + songs.length) % songs.length;
+  playMusic(songs[songIndex], false);
+}
 
-//         function renderFrame() {
-//             requestAnimationFrame(renderFrame);
+// Function to set up all event listeners
+function setupEventListeners() {
+  // Play/Pause buttons
+  document.querySelectorAll(".playbar #play").forEach((button) => {
+    button.addEventListener("click", () => {
+      if (currSong.paused) {
+        // Resume the audio context if it was suspended
+        if (audioContext && audioContext.state === 'suspended') {
+          audioContext.resume();
+        }
+        
+        currSong.play();
+        document.querySelectorAll(".playbar #play").forEach((btn) => {
+          btn.src = "img/pause.svg";
+        });
+      } else {
+        currSong.pause();
+        document.querySelectorAll(".playbar #play").forEach((btn) => {
+          btn.src = "img/play.svg";
+        });
+      }
+    });
+  });
 
-//             analyser.getByteFrequencyData(dataArray);
+  // Next buttons
+  document.querySelectorAll(".playbar #next").forEach((button) => {
+    button.addEventListener("click", playNextSong);
+  });
 
-//             ctx.clearRect(0, 0, canvas.width, canvas.height);
+  // Previous buttons
+  document.querySelectorAll(".playbar #previous").forEach((button) => {
+    button.addEventListener("click", playPreviousSong);
+  });
 
-//             var sliceWidth = (Math.PI * 2) / bufferLength;
-//             var angle = 0;
+  // Timeupdate event
+  currSong.addEventListener("timeupdate", () => {
+    // Update time display
+    document.querySelectorAll(".playbar .songtime").forEach((time) => {
+      time.innerText = `${secondsToMinutesSeconds(
+        currSong.currentTime
+      )}/${secondsToMinutesSeconds(currSong.duration)}`;
+    });
 
-//             for (var i = 0; i < bufferLength; i++) {
-//                 var barHeight = dataArray[i] * 2;
+    // Update progress bar
+    const percent = currSong.duration
+      ? (currSong.currentTime * 100) / currSong.duration
+      : 0;
+    document.querySelectorAll(".playbar .circle").forEach((circle) => {
+      circle.style.left = `${percent}%`;
+    });
+  });
 
-//                 var x = centerX + Math.cos(angle) * (maxRadius - barHeight * 0.5);
-//                 var y = centerY + Math.sin(angle) * (maxRadius - barHeight * 0.5);
+  // Song ended event
+  currSong.addEventListener("ended", playNextSong);
 
-//                 ctx.fillStyle = "rgba(0, 0, 255, 0.5)";
-//                 ctx.beginPath();
-//                 ctx.arc(x, y, 3, 0, Math.PI * 2);
-//                 ctx.fill();
+  // Seekbar handling
+  document.querySelectorAll(".playbar .seekbar").forEach((seekbar) => {
+    // Click on seekbar
+    seekbar.addEventListener("click", function (e) {
+      const percent = (e.offsetX / this.offsetWidth) * 100;
+      document.querySelectorAll(".playbar .circle").forEach((circle) => {
+        circle.style.left = `${percent}%`;
+      });
+      currSong.currentTime = (percent / 100) * currSong.duration;
+    });
 
-//                 angle += sliceWidth;
-//             }
+    // Drag start on circle
+    const circle = seekbar.querySelector(".circle");
+    if (circle) {
+      circle.addEventListener("mousedown", () => {
+        isDragging = true;
+      });
+    }
+  });
 
-//             // Scatter dots
-//             for (var b = 0; b < borderCount; b++) {
-//                 var borderRadius = maxRadius * (borderCount - b) / borderCount;
-//                 var dotRadius = dotSizes[b];
+  // Drag and drop handling
+  document.addEventListener("mousemove", (e) => {
+    if (!isDragging) return;
 
-//                 for (var i = 0; i < dotDensity[b]; i++) {
-//                     var dotAngle = (Math.PI * 2) * (i / dotDensity[b]);
-//                     var dotX = centerX + Math.cos(dotAngle) * borderRadius * (dataArray[i % bufferLength] / 255);
-//                     var dotY = centerY + Math.sin(dotAngle) * borderRadius * (dataArray[i % bufferLength] / 255);
-//                     var dotColor = "rgba(0, 0, 255, " + (1 - dotRadius / 6) + ")"; // Adjust dot color based on size
+    const seekbar = document.querySelector(".playbar .seekbar");
+    if (!seekbar) return;
 
-//                     ctx.fillStyle = dotColor;
-//                     ctx.beginPath();
-//                     ctx.arc(dotX, dotY, dotRadius, 0, Math.PI * 2);
-//                     ctx.fill();
-//                 }
-//             }
+    const rect = seekbar.getBoundingClientRect();
+    let percent = ((e.clientX - rect.left) / rect.width) * 100;
 
-//             // Scattered white dots dancing in three spiral waveform patterns originating from the same origin
-//             for (var i = 0; i < bufferLength; i += 10) {
-//                 var spiralAngle1 = i * 0.1;
-//                 var spiralAngle2 = i * 0.1 + Math.PI / 3;
-//                 var spiralAngle3 = i * 0.1 + (2 * Math.PI) / 3;
+    // Constrain percent between 0 and 100
+    percent = Math.max(0, Math.min(100, percent));
 
-//                 var spiralRadius = maxRadius * (dataArray[i % bufferLength] / 255);
+    document.querySelectorAll(".playbar .circle").forEach((circle) => {
+      circle.style.left = `${percent}%`;
+    });
 
-//                 var whiteDotX1 = centerX + Math.cos(spiralAngle1) * spiralRadius;
-//                 var whiteDotY1 = centerY + Math.sin(spiralAngle1) * spiralRadius;
+    if (currSong.duration) {
+      currSong.currentTime = (percent / 100) * currSong.duration;
+    }
+  });
 
-//                 var whiteDotX2 = centerX + Math.cos(spiralAngle2) * spiralRadius;
-//                 var whiteDotY2 = centerY + Math.sin(spiralAngle2) * spiralRadius;
+  document.addEventListener("mouseup", () => {
+    isDragging = false;
+  });
 
-//                 var whiteDotX3 = centerX + Math.cos(spiralAngle3) * spiralRadius;
-//                 var whiteDotY3 = centerY + Math.sin(spiralAngle3) * spiralRadius;
+  // Volume control
+  document.querySelectorAll(".playbar .range input").forEach((input) => {
+    input.addEventListener("input", (e) => {
+      currSong.volume = e.target.value / 100;
+    });
 
-//                 ctx.fillStyle = "rgba(255, 255, 255, 0.5)";
-//                 ctx.beginPath();
-//                 ctx.arc(whiteDotX1, whiteDotY1, 2, 0, Math.PI * 2);
-//                 ctx.arc(whiteDotX2, whiteDotY2, 2, 0, Math.PI * 2);
-//                 ctx.arc(whiteDotX3, whiteDotY3, 2, 0, Math.PI * 2);
-//                 ctx.fill();
-//             }
-//         }
+    // Set initial volume
+    input.value = currSong.volume * 100;
+  });
 
-//         audio.play();
-//         renderFrame();
-//     };
-// };
+  // Sidebar toggle
+  const hamburger = document.querySelector(".hamburger");
+  if (hamburger) {
+    hamburger.addEventListener("click", () => {
+      document.querySelector(".left").style.left = "0%";
+      document.querySelector(".right").style.filter = "blur(3px)";
+    });
+  }
+
+  const cross = document.querySelector(".cross");
+  if (cross) {
+    cross.addEventListener("click", () => {
+      document.querySelector(".left").style.left = "-250%";
+      document.querySelector(".right").style.filter = "blur(0px)";
+    });
+  }
+}
+
+// Main initialization function
+async function initializePlayer() {
+  // Initialize audio context
+  initAudioContext();
+  
+  // Set up event listeners
+  setupEventListeners();
+
+  // Display albums
+  displayAlbums();
+
+  // Start with All Songs by default
+  currFolder = "All Songs";
+  loadSongs(currFolder);
+}
+
+// Start the player when the DOM is fully loaded
+document.addEventListener("DOMContentLoaded", initializePlayer);
