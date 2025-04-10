@@ -10,11 +10,6 @@ let currFolder = "";
 let isDragging = false;
 let songIndex = 0;
 
-// Audio Context variables
-let audioContext = null;
-let analyser = null;
-let visualizerSource = null;
-
 // Fixed sample data - eliminating the need for server-side folder reading
 const musicLibrary = {
   "All Songs": {
@@ -69,18 +64,14 @@ function secondsToMinutesSeconds(seconds) {
   return `${formattedMinutes}:${formattedSeconds}`;
 }
 
+// Function to get base path for assets
 function getBasePath() {
-  // For GitHub Pages deployment specifically at manthanthakor.github.io
-  if (window.location.hostname === "manthanthakor.github.io") {
-    return "/Pixel-Play-Portal/Quaver";  // Hard-coded path for GitHub Pages
-  }
-  
-  // For local development or other environments
   const path = window.location.pathname;
   const dirs = path.split("/");
   dirs.pop(); // Remove the filename
   return dirs.join("/");
 }
+
 // Function to display all available albums
 function displayAlbums() {
   const cardContainer = document.querySelector(".card-container");
@@ -97,13 +88,14 @@ function displayAlbums() {
     card.dataset.folder = folder;
 
     card.innerHTML = `
-      <div class="play">
-        <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="white" stroke-width="1.5"/>
-          <path d="M15.4137 13.059L10.6935 15.8458C9.93371 16.2944 9 15.7105 9 14.7868V9.21316C9 8.28947 9.93371 7.70561 10.6935 8.15421L15.4137 10.941C16.1954 11.4026 16.1954 12.5974 15.4137 13.059Z" stroke="white" stroke-width="1.5"/>
-        </svg>
+      <div class="pic">
+        <img src="${album.cover}" alt="${album.title}">
+        <div class="play">
+          <svg width="16" height="16" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5 20V4L19 12L5 20Z" stroke="#141B34" fill="#000" stroke-width="1.5" stroke-linejoin="round" />
+          </svg>
+        </div>
       </div>
-      <img src="${album.cover || 'img/default-cover.jpg'}" alt="${album.title}">
       <h2>${album.title}</h2>
       <p>${album.description}</p>
     `;
@@ -138,18 +130,14 @@ function loadSongs(folder) {
   songs.forEach((song, index) => {
     const li = document.createElement("li");
     li.innerHTML = `
-      <div class="info">
-        <div class="infoimg">
-          <img src="img/music.svg" alt="">
-        </div>
-        <div class="nameArtist">
+      <div class="songblock">
+        <img src="img/logo.svg" alt="">
+        <div class="info">
           <div>${song}</div>
           <div>Artist Name</div>
         </div>
       </div>
-      <div class="playnow">
-        <span>Play Now</span>
-      </div>
+      <img id="playnow" src="img/play.svg" alt="">
     `;
 
     songUl.appendChild(li);
@@ -168,57 +156,39 @@ function loadSongs(folder) {
   }
 }
 
-// Initialize audio context for visualizer
-function initAudioContext() {
-  if (!audioContext) {
-    try {
-      const AudioContext = window.AudioContext || window.webkitAudioContext;
-      audioContext = new AudioContext();
-      analyser = audioContext.createAnalyser();
-      analyser.fftSize = 256;
-    } catch (error) {
-      console.error("Error creating audio context:", error);
-    }
-  }
-}
-
-// Function to update audio visualizer connection with current song
-function updateAudioVisualizerConnection() {
-  try {
-    if (!audioContext || !analyser) {
-      initAudioContext();
-    }
-
-    // Disconnect previous source if it exists
-    if (visualizerSource) {
-      try {
-        visualizerSource.disconnect();
-      } catch (e) {
-        // Ignore disconnection errors
-      }
-    }
-    
-    // Create and connect new source
-    visualizerSource = audioContext.createMediaElementSource(currSong);
-    visualizerSource.connect(analyser);
-    analyser.connect(audioContext.destination);
-    
-    // Now create/update the visualizer display
-    createAudioVisualizer(document.querySelector(".music-viz"));
-  } catch (e) {
-    console.error("Error updating audio visualizer connection:", e);
-  }
-}
-
-// Function to create audio visualizer (now separated from the connection logic)
-function createAudioVisualizer(container) {
-  if (!container || !analyser) return;
+// Function to create audio visualizer
+function createAudioVisualizer(audioElement, container) {
+  if (!container) return;
 
   // Clear previous content
   container.innerHTML = "";
 
   try {
-    // Calculate buffer length from analyzer
+    // Create and set up audio context
+    const AudioContext = window.AudioContext || window.webkitAudioContext;
+    const context = new AudioContext();
+    const analyser = context.createAnalyser();
+
+    let source;
+
+    // Function to connect or reconnect the audio source
+    const connectSource = () => {
+      if (source) {
+        source.disconnect();
+      }
+      source = context.createMediaElementSource(audioElement);
+      source.connect(analyser);
+      analyser.connect(context.destination);
+    };
+
+    try {
+      connectSource();
+    } catch (e) {
+      console.log("Audio source already connected, continuing...");
+    }
+
+    // Set up analyzer
+    analyser.fftSize = 256;
     const bufferLength = analyser.frequencyBinCount;
 
     // Create canvas
@@ -331,34 +301,17 @@ function playMusic(songName, pause = false) {
       info.innerText = "Loading...";
     });
 
-    // Save current time and pause status before loading new song
-    const wasPlaying = !currSong.paused;
-    
     // Set up audio source using the provided URL or a base64 fallback
+    // For cross-domain compatibility, we're using a clever approach:
+    // We create a URL with the folder and song name, but we'll handle the error if it doesn't exist
     const songURL = `${getBasePath()}/song/${currFolder}/${songName}`;
 
-    // Create a new Audio element to avoid issues with changing sources
     currSong.src = songURL;
     currSong.load();
 
     // Set up event handlers
     currSong.oncanplay = () => {
-      // Initialize or update audio context
-      if (audioContext) {
-        // Resume audio context if it was suspended (needed for Chrome's autoplay policy)
-        if (audioContext.state === 'suspended') {
-          audioContext.resume();
-        }
-      }
-      
-      // Connect the new song to the visualizer
-      try {
-        updateAudioVisualizerConnection();
-      } catch (error) {
-        console.error("Error connecting to visualizer:", error);
-      }
-      
-      if (!pause && (wasPlaying || songIndex === 0)) {
+      if (!pause) {
         currSong.play().catch((error) => {
           console.error("Error playing audio:", error);
           document.querySelectorAll(".playbar #play").forEach((button) => {
@@ -369,7 +322,7 @@ function playMusic(songName, pause = false) {
 
       // Update UI
       document.querySelectorAll(".playbar #play").forEach((button) => {
-        button.src = pause || !wasPlaying ? "img/play.svg" : "img/pause.svg";
+        button.src = pause ? "img/play.svg" : "img/pause.svg";
       });
 
       document.querySelectorAll(".songinfo").forEach((info) => {
@@ -379,6 +332,9 @@ function playMusic(songName, pause = false) {
       document.querySelectorAll(".songtime").forEach((time) => {
         time.innerText = `00:00/${secondsToMinutesSeconds(currSong.duration)}`;
       });
+
+      // Create visualizer
+      createAudioVisualizer(currSong, document.querySelector(".music-viz"));
     };
 
     // Handle errors - use a fallback approach
@@ -416,11 +372,6 @@ function setupEventListeners() {
   document.querySelectorAll(".playbar #play").forEach((button) => {
     button.addEventListener("click", () => {
       if (currSong.paused) {
-        // Resume the audio context if it was suspended
-        if (audioContext && audioContext.state === 'suspended') {
-          audioContext.resume();
-        }
-        
         currSong.play();
         document.querySelectorAll(".playbar #play").forEach((btn) => {
           btn.src = "img/pause.svg";
@@ -541,9 +492,6 @@ function setupEventListeners() {
 
 // Main initialization function
 async function initializePlayer() {
-  // Initialize audio context
-  initAudioContext();
-  
   // Set up event listeners
   setupEventListeners();
 
